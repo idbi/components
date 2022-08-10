@@ -2,6 +2,7 @@ import React, { InputHTMLAttributes, useState } from "react";
 import { InputContainer } from "./styles";
 import { AiOutlineCheck } from "react-icons/ai";
 import { RiErrorWarningLine } from "react-icons/ri";
+import { theme } from "@/ThemeProvider/theme";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   leftAddon?: React.ReactNode;
@@ -49,12 +50,12 @@ export const TextInput: React.FC<InputProps> = ({
       <span>{rightAddon}</span>
       {error && (
         <span>
-          <RiErrorWarningLine size={24} color="#EE2316" />
+          <RiErrorWarningLine size={24} color={theme.color.ALERT[900]} />
         </span>
       )}
       {success && (
         <span>
-          <AiOutlineCheck size={20} color="#2DC96F" />
+          <AiOutlineCheck size={20} color={theme.color.SUCCESS[900]} />
         </span>
       )}
     </InputContainer>
