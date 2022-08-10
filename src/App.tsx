@@ -1,10 +1,14 @@
-import styled from "styled-components";
+import ButtonV2 from "./components/ButtonV2";
+import { Input } from "./components/Input";
 import PlayGround from "./components/Playground";
+import { TextInput } from "./components/TextInput";
+import GoogleIcon from "./icons/GoogleIcon";
 
 function App() {
   return (
     <PlayGround>
-      <h1>Hello</h1>
+      <TextInput value="Railly" disabled leftAddon={<GoogleIcon />} error />
+      <TextInput leftAddon={<GoogleIcon />} success />
     </PlayGround>
   );
 }

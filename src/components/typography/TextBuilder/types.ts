@@ -60,3 +60,5 @@ export type TColorNames = DefaultTheme["color"];
 export type TColorScales = {
   [intensity in keyof TColorNames[keyof TColorNames]]: string;
 };
+
+export type TColor = `${keyof TColorNames}/${keyof TColorScales}`;

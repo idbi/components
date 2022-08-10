@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3015",
     "build": "tsc && vite build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

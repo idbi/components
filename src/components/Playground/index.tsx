@@ -26,6 +26,8 @@ const Wrapper = styled.div`
 
   main {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
     height: 86vh;
     place-items: center;
   }
@@ -40,7 +42,7 @@ const PlayGround: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           width={40}
           height={40}
         />
-        <Heading.H1 size="md">ID Components Playground</Heading.H1>
+        <Heading.H1 size="sm">ID Components Playground</Heading.H1>
       </header>
       <main>{children}</main>
     </Wrapper>
