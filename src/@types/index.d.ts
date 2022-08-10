@@ -1,6 +1,6 @@
 declare global {
   declare module "styled-components" {
-    type Theme = import("../theme").Theme;
+    type Theme = import("../ThemeProvider/theme").Theme;
     export interface DefaultTheme extends Theme {}
   }
 }

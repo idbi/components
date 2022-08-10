@@ -1,0 +1,1 @@
+export { IconAdapter } from "./IconAdapter";

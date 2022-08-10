@@ -1,3 +1,7 @@
+import ThemDecorator from "./decorators/themeDecorator";
+
+export const decorators = [ThemDecorator];
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
