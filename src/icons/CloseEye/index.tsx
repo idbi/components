@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "../../Icon";
+import Icon from "../Icon";
 
 const CloseEye = (props: { color?: string; size: number }): JSX.Element => {
   const { color, size } = props;

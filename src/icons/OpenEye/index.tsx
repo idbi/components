@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "../../Icon";
+import Icon from "../Icon";
 
 const OpenEye = (props: { color?: string; size: number }): JSX.Element => {
   const { color, size } = props;

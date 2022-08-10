@@ -1,7 +1,11 @@
 import React from "react";
-import Icon from "../../Icon";
+import Icon from "../Icon";
 
-const ImageIcon = (props: { color: string; size: number; viewBox: string }): JSX.Element => {
+const ImageIcon = (props: {
+  color: string;
+  size: number;
+  viewBox: string;
+}): JSX.Element => {
   const { color, size, viewBox } = props;
   return (
     <Icon color={color} size={size} viewBox={viewBox} fill="none">

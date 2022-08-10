@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "../../Icon";
+import Icon from "../Icon";
 
 interface IProps {
   color?: string;
@@ -7,7 +7,11 @@ interface IProps {
   viewBox: string;
 }
 
-const CheckCircleIcon: React.FC<IProps> = ({ color, size, viewBox }): JSX.Element => {
+const CheckCircleIcon: React.FC<IProps> = ({
+  color,
+  size,
+  viewBox,
+}): JSX.Element => {
   return (
     <Icon color={color} size={size} viewBox={viewBox} fill="none">
       <path

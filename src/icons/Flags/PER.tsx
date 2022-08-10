@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import PropTypes from "prop-types";
-import Icon from "../../Icon.jsx";
+import Icon from "../Icon";
 import IconProps from "../IconProps";
 
 const IconResume: FC<IconProps> = (props) => {

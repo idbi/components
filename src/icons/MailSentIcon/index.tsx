@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "../../Icon";
+import Icon from "../Icon";
 
 const MailSentIcon = (props: { color?: string; size: number }): JSX.Element => {
   const { color, size } = props;

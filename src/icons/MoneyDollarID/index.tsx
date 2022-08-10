@@ -1,7 +1,10 @@
 import React from "react";
-import Icon from "../../Icon";
+import Icon from "../Icon";
 
-const MoneyDollarID = (props: { color?: string; size: number }): JSX.Element => {
+const MoneyDollarID = (props: {
+  color?: string;
+  size: number;
+}): JSX.Element => {
   const { color, size } = props;
   return (
     <Icon color={color} size={size} viewBox="0 0 23 24" fill="none">

@@ -1,13 +1,22 @@
 import React from "react";
-import Icon from "../../Icon";
+import Icon from "../Icon";
 
-const CookingIcon = (props: { color: string; size: number; viewBox: string }): JSX.Element => {
+const CookingIcon = (props: {
+  color: string;
+  size: number;
+  viewBox: string;
+}): JSX.Element => {
   const { color, size, viewBox } = props;
   return (
     <Icon color={color} size={size} viewBox={viewBox} fill="none">
       <path opacity={0.5} fill="url(#a)" d="M0 0h67v67H0z" />
       <defs>
-        <pattern id="a" patternContentUnits="objectBoundingBox" width={1} height={1}>
+        <pattern
+          id="a"
+          patternContentUnits="objectBoundingBox"
+          width={1}
+          height={1}
+        >
           <use xlinkHref="#b" transform="scale(.00195)" />
         </pattern>
         <image
