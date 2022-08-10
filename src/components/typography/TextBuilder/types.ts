@@ -1,6 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
-export interface ITextProps extends Omit<Partial<HTMLLabelElement>, "children">  {
+export interface ITextProps
+  extends Omit<Partial<HTMLLabelElement>, "children"> {
   as?: keyof typeof tagsMap;
   weight?: "light" | "regular" | "medium" | "bold";
   size?: keyof typeof Size;
@@ -10,7 +11,7 @@ export interface ITextProps extends Omit<Partial<HTMLLabelElement>, "children"> 
 }
 
 export interface ITextBuilderProps {
-  as: keyof typeof tagsMap 
+  as: keyof typeof tagsMap;
 }
 
 export enum FontWeight {
@@ -54,10 +55,7 @@ export const tagsMap = {
   label: "label",
 } as const;
 
-export type TColorNames = Pick<
-  DefaultTheme["color"],
-  "NEUTRAL" | "PRIMARY" | "SECONDARY" | "TERTIARY" | "QUATERNARY" | "STATE" | "ALERT" | "SUCCESS"
->;
+export type TColorNames = DefaultTheme["color"];
 
 export type TColorScales = {
   [intensity in keyof TColorNames[keyof TColorNames]]: string;

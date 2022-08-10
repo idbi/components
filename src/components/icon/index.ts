@@ -1,1 +1,0 @@
-export { IconAdapter } from "./IconAdapter";

@@ -4,7 +4,7 @@ const base: IButton = {
   full: false,
   noBorder: false,
   model: "primary",
-  rounded: false,
+  rounded: true,
   size: "big",
   children: "Hello world!",
 };

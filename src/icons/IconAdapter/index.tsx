@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import {
   TColorScales,
   TColorNames,
-} from "@/components/typography/TextBuilder/types";
+} from "@/components/Typography/TextBuilder/types";
 
 interface IPropTypes {
   color?: `${keyof TColorNames}/${keyof TColorScales}`;

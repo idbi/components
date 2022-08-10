@@ -1,7 +1,7 @@
 import React from "react";
 import * as s from "./styles";
 
-export interface IButton {
+export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   model?:
     | "primary"
     | "secondary"
@@ -15,7 +15,6 @@ export interface IButton {
   full?: boolean;
   rounded?: boolean;
   noBorder?: boolean;
-  children: React.ReactNode;
 }
 
 const Button: React.FC<IButton> = ({ children, ...props }) => {

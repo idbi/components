@@ -7,7 +7,7 @@ export const InputContainer = styled.div`
   gap: 8px;
   border-radius: 8px;
   border: 1px solid ${(props) => props.theme.color.NEUTRAL[300]};
-  background: ${(props) => props.theme.color.light};
+  background: #fff;
   min-height: 44px;
   ::placeholder {
     color: ${(props) => props.theme.color.NEUTRAL[500]};
