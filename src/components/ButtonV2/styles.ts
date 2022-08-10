@@ -23,7 +23,8 @@ export const Button = styled(BaseButton)<IButtonV2>`
   align-items: center;
   justify-content: center;
   transition: background 0.3s ease-out;
-  padding: 0.5rem 1rem;
+  padding: ${({ design }) => (design === "link" ? "0" : "0.5rem 1rem")};
+
   ${({ shape }) => getShape({ shape })};
   ${({ design, color }) => getDesign({ design, color })};
   ${({ fullWidth }) => getFullWidth({ fullWidth })};
@@ -31,13 +32,21 @@ export const Button = styled(BaseButton)<IButtonV2>`
   ${({ disabled }) => getDisabled({ disabled })};
 
   &:hover {
-    background-color: ${({ theme, color, design }) =>
-      getColor({ color, theme, design, hover: true })};
+    background-color: ${({ theme, color, design }) => {
+      if (design === "link") {
+        return "transparent";
+      }
+      return getColor({ color, theme, design, hover: true });
+    }};
   }
 
   &:active {
-    background-color: ${({ theme, color, design }) =>
-      getColor({ color, theme, design, hover: true })};
+    background-color: ${({ theme, color, design }) => {
+      if (design === "link") {
+        return "transparent";
+      }
+      return getColor({ color, theme, design, hover: true });
+    }};
   }
 
   &:focus {

@@ -49,6 +49,19 @@ export const getDesign = ({
         border: none;
         color: ${({ theme }) => getColor({ theme, color })};
       `;
+
+    case "link": {
+      return css`
+        background-color: transparent;
+        border: none;
+        color: ${({ theme }) => getColor({ theme, color })};
+
+        &:hover {
+          color: ${({ theme }) => getColor({ theme, color, hover: true })};
+          text-decoration: underline;
+        }
+      `;
+    }
     default:
       return css`
         background-color: ${({ theme }) => getColor({ theme, color })};
@@ -58,13 +71,13 @@ export const getDesign = ({
 };
 
 export const getColor = ({
-  color = "PRIMARY/900",
+  color = "SECONDARY/900",
   theme,
   design,
   hover,
 }: {
   theme: DefaultTheme;
-  design?: "solid" | "outline" | "flat";
+  design?: "solid" | "outline" | "flat" | "link";
   color?: TColor;
   hover?: boolean;
 }) => {

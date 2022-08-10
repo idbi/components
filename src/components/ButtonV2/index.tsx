@@ -4,8 +4,9 @@ import * as s from "./styles";
 
 export interface IButtonV2
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  as?: "button" | "a";
   shape?: "rounded" | "squared" | "circular";
-  design?: "solid" | "outline" | "flat";
+  design?: "solid" | "outline" | "flat" | "link";
   color?: TColor;
   fullWidth?: boolean;
   leftIcon?: React.ReactNode;

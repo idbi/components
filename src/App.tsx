@@ -9,6 +9,10 @@ function App() {
     <PlayGround>
       <TextInput value="Railly" disabled leftAddon={<GoogleIcon />} error />
       <TextInput leftAddon={<GoogleIcon />} success />
+      <ButtonV2 design="link" as="a">
+        Hello
+      </ButtonV2>
+      <ButtonV2 design="solid">Hello</ButtonV2>
     </PlayGround>
   );
 }
