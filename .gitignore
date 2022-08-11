@@ -8,9 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 package-lock.json
 
-build
 node_modules
-dist
 dist-ssr
 *.local
 
