@@ -1,12 +1,8 @@
-import { IButtonV2 } from "@/components/ButtonV2";
-import styled, { css, DefaultTheme } from "styled-components";
-import {
-  TColor,
-  TColorNames,
-  TColorScales,
-} from "@/components/Typography/TextBuilder/types";
+import { css, DefaultTheme } from "styled-components";
+import { TColor } from "@/components/Typography/TextBuilder/types";
+import { IButton } from "@/components/Button/types";
 
-export const getShape = ({ shape }: Pick<IButtonV2, "shape">) => {
+export const getShape = ({ shape }: Pick<IButton, "shape">) => {
   switch (shape) {
     case "rounded":
       return css`
@@ -30,7 +26,7 @@ export const getShape = ({ shape }: Pick<IButtonV2, "shape">) => {
 export const getDesign = ({
   design,
   color,
-}: Pick<IButtonV2, "design" | "color">) => {
+}: Pick<IButton, "design" | "color">) => {
   switch (design) {
     case "solid":
       return css`
@@ -152,7 +148,7 @@ export const getColor = ({
   return theme.color.PRIMARY[900];
 };
 
-export const getFullWidth = ({ fullWidth }: Pick<IButtonV2, "fullWidth">) => {
+export const getFullWidth = ({ fullWidth }: Pick<IButton, "fullWidth">) => {
   if (fullWidth) {
     return css`
       width: 100%;
@@ -163,7 +159,7 @@ export const getFullWidth = ({ fullWidth }: Pick<IButtonV2, "fullWidth">) => {
   `;
 };
 
-export const getIsLoading = ({ isLoading }: Pick<IButtonV2, "isLoading">) => {
+export const getIsLoading = ({ isLoading }: Pick<IButton, "isLoading">) => {
   if (isLoading) {
     return css`
       cursor: not-allowed;
@@ -176,7 +172,7 @@ export const getIsLoading = ({ isLoading }: Pick<IButtonV2, "isLoading">) => {
   `;
 };
 
-export const getDisabled = ({ disabled }: Pick<IButtonV2, "disabled">) => {
+export const getDisabled = ({ disabled }: Pick<IButton, "disabled">) => {
   if (disabled) {
     return css`
       cursor: not-allowed;

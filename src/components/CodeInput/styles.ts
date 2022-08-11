@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ICodeInputProps } from ".";
+import type { ICodeInputProps } from "./types";
 
 export const CodeInputContainer = styled.div<
   Omit<ICodeInputProps, "value" | "id">

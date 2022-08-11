@@ -3,18 +3,9 @@ import { InputContainer } from "./styles";
 import { AiOutlineCheck } from "react-icons/ai";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { theme } from "@/ThemeProvider/theme";
+import type { InputProps } from "./types";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  leftAddon?: React.ReactNode;
-  rightAddon?: React.ReactNode;
-  placeholder?: string;
-  // isDirty?: boolean;
-  // invalid?: boolean;
-  error?: boolean;
-  success?: boolean;
-}
-
-const TextInput: React.FC<InputProps> = ({
+export const TextInput: React.FC<InputProps> = ({
   type,
   leftAddon,
   rightAddon,
@@ -61,5 +52,3 @@ const TextInput: React.FC<InputProps> = ({
     </InputContainer>
   );
 };
-
-export default TextInput;

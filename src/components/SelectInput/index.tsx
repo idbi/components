@@ -1,39 +1,10 @@
 import { theme } from "@/ThemeProvider/theme";
-import React, { CSSProperties } from "react";
-import { FieldError } from "react-hook-form";
-import { FiAlertCircle, FiHelpCircle } from "react-icons/fi";
+import React from "react";
 import Skeleton from "react-loading-skeleton";
 import Select from "react-select";
 
 import { Container } from "./styles";
-
-interface OptionType {
-  value: string;
-  label: string;
-}
-
-interface Icons {
-  [any: string]: React.ReactElement;
-}
-
-const icons: Icons = {
-  information: <FiAlertCircle />,
-  question: <FiHelpCircle />,
-};
-
-interface SelectProps {
-  options: OptionType[];
-  placeholder?: string;
-  style?: CSSProperties;
-  loading?: boolean;
-  error?: FieldError;
-  firstOption?: OptionType;
-  initialValue?: OptionType | OptionType[];
-  onChange: (selectedOption: any) => void;
-  value?: OptionType | OptionType[];
-  isMulti?: boolean;
-  formatOptionLabel?: (option: OptionType) => React.ReactElement;
-}
+import type { OptionType, SelectProps } from "./types";
 
 const customStyles = {
   control: (base: { [key: string]: any }, state: any) => ({
@@ -47,7 +18,7 @@ const customStyles = {
     boxShadow: "none",
     cursor: "pointer",
   }),
-  singleValue: (provided: any, state: any) => {
+  singleValue: () => {
     return {
       color: theme.color.PRIMARY[900],
       fontWeight: 500,
@@ -68,7 +39,7 @@ const customStyles = {
   },
 };
 
-const SelectInput: React.FC<SelectProps> = ({
+export const SelectInput: React.FC<SelectProps> = ({
   formatOptionLabel,
   options,
   loading = false,
@@ -111,5 +82,3 @@ const SelectInput: React.FC<SelectProps> = ({
     </Container>
   );
 };
-
-export default SelectInput;
