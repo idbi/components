@@ -13,7 +13,30 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "build",
+    outDir: "dist",
+    lib: {
+      entry: path.resolve(__dirname, "src/index.js"),
+      name: "ID-Components",
+      fileName: "id-components",
+    },
+    rollupOptions: {
+      external: [
+        "react",
+        "react-dom",
+        "styled-components",
+        "react-loading-skeleton",
+        "react-select",
+      ],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "styled-components": "styled",
+          "react-loading-skeleton": "Skeleton",
+          "react-select": "Select",
+        },
+      },
+    },
   },
   resolve: {
     alias: {

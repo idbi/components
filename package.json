@@ -1,9 +1,9 @@
 {
   "name": "@idbi/components",
   "version": "0.1.0",
-  "main": "src/index.js",
+  "main": "dist/id-components.mjs",
   "files": [
-    "src/components/**/*"
+    "dist/"
   ],
   "repository": {
     "type": "git",
@@ -21,7 +21,6 @@
     "react-is": "18.2.0",
     "react-icons": "4.3.1",
     "react-select": "4.3.0",
-    "react-hook-form": "7.3.5",
     "styled-components": "5.3.5",
     "react-loading-skeleton": "2.2.0"
   },
