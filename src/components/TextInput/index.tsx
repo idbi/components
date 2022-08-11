@@ -14,7 +14,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   success?: boolean;
 }
 
-export const TextInput: React.FC<InputProps> = ({
+const TextInput: React.FC<InputProps> = ({
   type,
   leftAddon,
   rightAddon,
@@ -61,3 +61,5 @@ export const TextInput: React.FC<InputProps> = ({
     </InputContainer>
   );
 };
+
+export default TextInput;

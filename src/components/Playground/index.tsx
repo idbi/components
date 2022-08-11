@@ -37,7 +37,7 @@ const Wrapper = styled.div`
 const PlayGround: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <Wrapper>
-      <header>
+      {/* <header>
         <Image
           src="/id-logo.svg"
           alt="Letter I with color pink and a D with color blue"
@@ -45,7 +45,7 @@ const PlayGround: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           height={40}
         />
         <Heading.H1 size="sm">ID Components Playground</Heading.H1>
-      </header>
+      </header> */}
       <main>{children}</main>
     </Wrapper>
   );

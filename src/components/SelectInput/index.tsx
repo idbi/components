@@ -1,16 +1,11 @@
 import { theme } from "@/ThemeProvider/theme";
-import React, { memo, CSSProperties } from "react";
+import React, { CSSProperties } from "react";
 import { FieldError } from "react-hook-form";
 import { FiAlertCircle, FiHelpCircle } from "react-icons/fi";
 import Skeleton from "react-loading-skeleton";
 import Select from "react-select";
 
 import { Container } from "./styles";
-
-interface Tooltip {
-  type?: "information" | "question" | "warning";
-  message: string;
-}
 
 interface OptionType {
   value: string;
@@ -117,4 +112,4 @@ const SelectInput: React.FC<SelectProps> = ({
   );
 };
 
-export default memo(SelectInput);
+export default SelectInput;

@@ -1,5 +1,13 @@
 import { css } from "styled-components";
-import { DefaultSizes, FontWeight, ITextProps, Size, tagsMap, TColorNames, TColorScales } from "./types";
+import {
+  DefaultSizes,
+  FontWeight,
+  ITextProps,
+  Size,
+  tagsMap,
+  TColorNames,
+  TColorScales,
+} from "./types";
 
 export const baseStyles = css`
   font-family: "Poppins";
@@ -10,7 +18,13 @@ export const baseStyles = css`
 
 export const customStyles = (type: keyof typeof tagsMap) => {
   // use regex h1, h2, h3, h4, h5, h6
-  const isHeading = type === "h1" || type === "h2" || type === "h3" || type === "h4" || type === "h5" || type === "h6";
+  const isHeading =
+    type === "h1" ||
+    type === "h2" ||
+    type === "h3" ||
+    type === "h4" ||
+    type === "h5" ||
+    type === "h6";
   const defaultWeight = isHeading ? "bold" : "medium";
   const defaultSize = isHeading ? DefaultSizes[type] : DefaultSizes.text;
   const defaultColor = "PRIMARY/900";

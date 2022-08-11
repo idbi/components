@@ -13,7 +13,7 @@ export interface ICodeInputProps extends IInputProps {
 // WARN: Only one instance of CodeInput can be rendered at a time
 // It will be fixed soon if needed
 
-export const CodeInput: React.FC<ICodeInputProps> = ({
+const CodeInput: React.FC<ICodeInputProps> = ({
   id,
   value,
   length = 4,
@@ -38,3 +38,5 @@ export const CodeInput: React.FC<ICodeInputProps> = ({
     </CodeInputContainer>
   );
 };
+
+export default CodeInput;

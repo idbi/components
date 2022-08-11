@@ -1,7 +1,14 @@
 {
-  "name": "id-components",
-  "private": true,
+  "name": "@idbi/components",
   "version": "0.1.0",
+  "main": "src/index.js",
+  "files": [
+    "src/components/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:idbi/components.git"
+  },
   "scripts": {
     "dev": "vite --port 3015",
     "build": "tsc && vite build",

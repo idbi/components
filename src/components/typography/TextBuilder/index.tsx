@@ -4,7 +4,7 @@ import { baseStyles, customStyles } from "./styles";
 import { ITextBuilderProps, tagsMap } from "./types";
 
 const SC = styled.div<ITextBuilderProps>`
-  ${({ as }) => css`
+  ${({ as }) => `
     ${baseStyles}
     ${customStyles(as)}
   `}
