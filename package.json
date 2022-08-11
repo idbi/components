@@ -3,7 +3,9 @@
   "version": "0.2.0",
   "main": "dist/id-components.mjs",
   "files": [
-    "dist/"
+    "dist/",
+    "index.d.ts",
+    "src/**/*.d.ts"
   ],
   "repository": {
     "type": "git",

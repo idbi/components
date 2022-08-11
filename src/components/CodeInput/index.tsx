@@ -1,19 +1,12 @@
 import useCodeInput from "@/hooks";
-import React, { useEffect } from "react";
-import { IInputProps } from "../TextInput/styles";
+import React from "react";
 import { CodeInputContainer } from "./styles";
-
-export interface ICodeInputProps extends IInputProps {
-  id: string;
-  value?: string;
-  length?: number;
-  onChange?: (e: string) => void;
-}
+import type { ICodeInputProps } from "./types";
 
 // WARN: Only one instance of CodeInput can be rendered at a time
 // It will be fixed soon if needed
 
-const CodeInput: React.FC<ICodeInputProps> = ({
+export const CodeInput: React.FC<ICodeInputProps> = ({
   id,
   value,
   length = 4,
@@ -38,5 +31,3 @@ const CodeInput: React.FC<ICodeInputProps> = ({
     </CodeInputContainer>
   );
 };
-
-export default CodeInput;

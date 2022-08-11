@@ -1,13 +1,7 @@
 import { css } from "styled-components";
-import {
-  DefaultSizes,
-  FontWeight,
-  ITextProps,
-  Size,
-  tagsMap,
-  TColorNames,
-  TColorScales,
-} from "./types";
+import { tagsMap } from ".";
+import { DefaultSizes, FontWeight, Size } from "../utils";
+import type { ITextBuilderProps, TColorNames, TColorScales } from "./types";
 
 export const baseStyles = css`
   font-family: "Poppins";
@@ -29,7 +23,7 @@ export const customStyles = (type: keyof typeof tagsMap) => {
   const defaultSize = isHeading ? DefaultSizes[type] : DefaultSizes.text;
   const defaultColor = "PRIMARY/900";
 
-  return css<ITextProps>`
+  return css<ITextBuilderProps>`
     font-weight: ${({ weight = defaultWeight }) => FontWeight[weight] || "500"};
     font-size: ${({ size = defaultSize }) => {
       return Size[size] || size;
