@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
-export const InputContainer = styled.div<{
+export interface IInputProps {
   disabled?: boolean;
   error?: boolean;
   success?: boolean;
   isFocused?: boolean;
-}>`
+}
+
+export const InputContainer = styled.div<IInputProps>`
   padding: 0 14px;
   display: flex;
   align-items: center;
