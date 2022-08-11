@@ -40,13 +40,13 @@ export type TColorScales = {
 
 export type TColor = `${keyof TColorNames}/${keyof TColorScales}`;
 
-export declare type Heading = {
-  H1: (props: ITextProps) => JSX.Element;
-  H2: (props: ITextProps) => JSX.Element;
-  H3: (props: ITextProps) => JSX.Element;
-  H4: (props: ITextProps) => JSX.Element;
-  H5: (props: ITextProps) => JSX.Element;
-  H6: (props: ITextProps) => JSX.Element;
+export declare const Heading = {
+  H1: (props: ITextProps) => JSX.Element,
+  H2: (props: ITextProps) => JSX.Element,
+  H3: (props: ITextProps) => JSX.Element,
+  H4: (props: ITextProps) => JSX.Element,
+  H5: (props: ITextProps) => JSX.Element,
+  H6: (props: ITextProps) => JSX.Element,
 };
 
 export declare const Text = (props: ITextProps) => JSX.Element;
