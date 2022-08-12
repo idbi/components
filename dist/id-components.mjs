@@ -1,6 +1,6 @@
 import h, { css as a } from "styled-components";
 import { jsxs as E, jsx as i } from "react/jsx-runtime";
-import w, { useEffect as x, useState as C } from "react";
+import I, { useEffect as x, useState as C } from "react";
 import T from "react-loading-skeleton";
 import L from "react-select";
 const N = {
@@ -8,7 +8,7 @@ const N = {
   medium: 500,
   regular: 400,
   light: 300
-}, S = {
+}, y = {
   xs: "0.750rem",
   sm: "0.875rem	",
   md: "1.0rem",
@@ -120,7 +120,7 @@ const N = {
         break;
     }
   return r === "PRIMARY" || r === "SECONDARY" || r === "TERTIARY" || r === "QUATERNARY" || r === "STATE" || r === "ALERT" || r === "SUCCESS" ? t === 50 || t === 100 || t === 200 || t === 300 || t === 400 || t === 500 || t === 600 || t === 700 || t === 800 || t === 900 ? o.color[r][t] : o.color[r][900] : o.color.PRIMARY[900];
-}, y = ({ fullWidth: e }) => e ? a`
+}, w = ({ fullWidth: e }) => e ? a`
       width: 100%;
     ` : a`
     width: auto;
@@ -139,7 +139,7 @@ const N = {
   `, A = ({ size: e }) => {
   if (e)
     return a`
-      font-size: ${S[e] || e};
+      font-size: ${y[e] || e};
     `;
 }, Y = ({ align: e }) => {
   if (e)
@@ -163,7 +163,7 @@ const N = {
   ${({ size: e }) => A({ size: e })};
   ${({ shape: e }) => B({ shape: e })};
   ${({ design: e, color: o }) => v({ design: e, color: o })};
-  ${({ fullWidth: e }) => y({ fullWidth: e })};
+  ${({ fullWidth: e }) => w({ fullWidth: e })};
   ${({ isLoading: e }) => U({ isLoading: e })};
   ${({ disabled: e }) => D({ disabled: e })};
 
@@ -556,7 +556,7 @@ const M = h.div`
     })
   });
 }, j = h.div`
-  ${({ fullWidth: e }) => y({ fullWidth: e })};
+  ${({ fullWidth: e }) => w({ fullWidth: e })};
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -646,7 +646,7 @@ const M = h.div`
     d: "M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z",
     stroke: "none"
   })
-}), ce = w.forwardRef(({
+}), ce = I.forwardRef(({
   type: e,
   leftAddon: o,
   rightAddon: n,
@@ -655,12 +655,14 @@ const M = h.div`
   success: r,
   size: t,
   fullWidth: d,
-  onFocus: s,
-  onBlur: u,
+  onFocus: s = () => {
+  },
+  onBlur: u = () => {
+  },
   onChange: m,
   ...b
 }, F) => {
-  const [I, R] = C(!1);
+  const [S, R] = C(!1);
   return /* @__PURE__ */ E(j, {
     fullWidth: d,
     success: r,
@@ -669,17 +671,17 @@ const M = h.div`
     disabled: b.disabled,
     leftAddon: o,
     rightAddon: n,
-    isFocused: I,
+    isFocused: S,
     children: [o && /* @__PURE__ */ i("span", {
       className: "leftAddon",
       children: o
     }), /* @__PURE__ */ i("input", {
       ref: F,
-      onFocus: (k) => {
-        s && s(k), R(!0);
+      onFocus: async (k) => {
+        R(!0), await s(k);
       },
-      onBlur: (k) => {
-        u && u(k), R(!1);
+      onBlur: async (k) => {
+        R(!1), await u(k);
       },
       onChange: m,
       placeholder: l,
@@ -712,7 +714,7 @@ const M = h.div`
   const o = e === "h1" || e === "h2" || e === "h3" || e === "h4" || e === "h5" || e === "h6", n = o ? "bold" : "medium", l = o ? $[e] : $.text, c = "PRIMARY/900";
   return a`
     font-weight: ${({ weight: r = n }) => N[r] || "500"};
-    font-size: ${({ size: r = l }) => S[r] || r};
+    font-size: ${({ size: r = l }) => y[r] || r};
     color: ${({ theme: r, color: t = c }) => {
     const d = t == null ? void 0 : t.split("/")[0], s = +(t == null ? void 0 : t.split("/")[1]);
     return r.color[d][s];

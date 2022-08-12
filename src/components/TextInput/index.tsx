@@ -19,8 +19,8 @@ export const TextInput: React.FC<InputProps> = React.forwardRef<
       success,
       size,
       fullWidth,
-      onFocus,
-      onBlur,
+      onFocus = () => {},
+      onBlur = () => {},
       onChange,
       ...rest
     },
@@ -41,13 +41,13 @@ export const TextInput: React.FC<InputProps> = React.forwardRef<
         {leftAddon && <span className="leftAddon">{leftAddon}</span>}
         <input
           ref={ref}
-          onFocus={(e) => {
-            onFocus && onFocus(e);
+          onFocus={async (e) => {
             setIsFocused(true);
+            await onFocus(e);
           }}
-          onBlur={(e) => {
-            onBlur && onBlur(e);
+          onBlur={async (e) => {
             setIsFocused(false);
+            await onBlur(e);
           }}
           onChange={onChange}
           placeholder={placeholder}
