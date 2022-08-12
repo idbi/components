@@ -4,8 +4,6 @@ import { InputProps } from "./types";
 
 export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
   ${({ fullWidth }) => getFullWidth({ fullWidth })};
-  padding-left: ${({ leftAddon }) => leftAddon && "12px"};
-  padding-right: ${({ rightAddon }) => rightAddon && "12px"};
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -41,7 +39,7 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
     flex-grow: 1;
     border: none;
     outline: none;
-    padding: 10px 0;
+    padding: 10px 0px;
     background: transparent;
     letter-spacing: -0.04em;
     color: ${(props) => props.theme.color.NEUTRAL[700]};
@@ -53,6 +51,14 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
     }
   }
 
+  .leftAddon {
+    padding-left: 12px;
+  }
+
+  .rightAddon {
+    padding-right: 12px;
+  }
+
   span {
     color: ${(props) => props.theme.color.NEUTRAL[500]};
     ${({ size }) => getSize({ size })};
@@ -61,5 +67,9 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
     justify-content: center;
     letter-spacing: -0.04em;
     user-select: none;
+  }
+
+  .state {
+    padding-right: 12px;
   }
 `;

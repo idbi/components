@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
+const ENTRY_MODULE = "src/index.js";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -15,27 +17,12 @@ export default defineConfig({
   build: {
     outDir: "dist",
     lib: {
-      entry: path.resolve(__dirname, "src/index.js"),
+      entry: path.resolve(__dirname, ENTRY_MODULE),
       name: "ID-Components",
       fileName: "id-components",
     },
     rollupOptions: {
-      external: [
-        "react",
-        "react-dom",
-        "styled-components",
-        "react-loading-skeleton",
-        "react-select",
-      ],
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-          "styled-components": "styled",
-          "react-loading-skeleton": "Skeleton",
-          "react-select": "Select",
-        },
-      },
+      external: [/node_modules/],
     },
   },
   resolve: {

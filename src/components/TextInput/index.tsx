@@ -1,9 +1,9 @@
 import React, { InputHTMLAttributes, useState } from "react";
 import { InputContainer } from "./styles";
-import { AiOutlineCheck } from "react-icons/ai";
-import { RiErrorWarningLine } from "react-icons/ri";
 import { theme } from "@/ThemeProvider/theme";
 import type { InputProps } from "./types";
+import WarningIcon from "@/icons/WarningIcon";
+import CheckIcon from "@/icons/CheckIcon";
 
 export const TextInput: React.FC<InputProps> = ({
   type,
@@ -28,7 +28,7 @@ export const TextInput: React.FC<InputProps> = ({
       disabled={rest.disabled}
       isFocused={isFocused}
     >
-      <span>{leftAddon}</span>
+      {leftAddon && <span className="leftAddon">{leftAddon}</span>}
       <input
         onFocus={(e) => {
           onFocus && onFocus(e);
@@ -42,15 +42,15 @@ export const TextInput: React.FC<InputProps> = ({
         type={type}
         {...rest}
       />
-      <span>{rightAddon}</span>
+      {rightAddon && <span className="rightAddon">{rightAddon}</span>}
       {error && (
-        <span>
-          <RiErrorWarningLine size={24} color={theme.color.ALERT[900]} />
+        <span className="state">
+          <WarningIcon size={24} color={theme.color.ALERT[900]} />
         </span>
       )}
       {success && (
-        <span>
-          <AiOutlineCheck size={20} color={theme.color.SUCCESS[900]} />
+        <span className="state">
+          <CheckIcon size={20} color={theme.color.SUCCESS[900]} />
         </span>
       )}
     </InputContainer>

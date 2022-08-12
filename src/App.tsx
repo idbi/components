@@ -3,7 +3,6 @@ import { useState } from "react";
 import PlayGround from "./components/Playground";
 import { Heading, Text } from "./components/Typography";
 import { Button } from "./components/Button";
-import oGoogleIcon from "./icons/GoogleIcon";
 import styled from "styled-components";
 import GoogleIcon from "./icons/GoogleIcon";
 import { SelectInput } from "./components/SelectInput";
@@ -118,7 +117,14 @@ function App() {
           />
         </Flex>
         <Flex grow={10}>
-          <TextInput placeholder="Escribe tu número" size="sm" fullWidth />
+          <TextInput
+            error
+            leftAddon={<GoogleIcon size={20} />}
+            rightAddon={<GoogleIcon size={20} />}
+            placeholder="Escribe tu número"
+            size="sm"
+            fullWidth
+          />
         </Flex>
       </Flex>
       <Button
