@@ -9,7 +9,7 @@ import type { OptionType, SelectProps } from "./types";
 const customStyles = {
   control: (base: { [key: string]: any }, state: any) => ({
     ...base,
-    minHeight: 50,
+    minHeight: "45px",
     borderRadius: 10,
     backgroundColor: "#ffffff",
     border: `1px solid ${
@@ -35,6 +35,20 @@ const customStyles = {
     return {
       ...provided,
       display: "none",
+    };
+  },
+
+  indicatorContainer: (provided: any) => {
+    return {
+      ...provided,
+      padding: 0,
+    };
+  },
+  valueContainer: (provided: any) => {
+    return {
+      ...provided,
+      padding: 0,
+      paddingLeft: "7px",
     };
   },
 };

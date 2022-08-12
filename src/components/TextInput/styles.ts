@@ -1,14 +1,11 @@
+import { getFullWidth, getSize } from "@/ThemeProvider/utils";
 import styled from "styled-components";
+import { InputProps } from "./types";
 
-export interface IInputProps {
-  disabled?: boolean;
-  error?: boolean;
-  success?: boolean;
-  isFocused?: boolean;
-}
-
-export const InputContainer = styled.div<IInputProps>`
-  padding: 0 14px;
+export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
+  ${({ fullWidth }) => getFullWidth({ fullWidth })};
+  padding-left: ${({ leftAddon }) => leftAddon && "12px"};
+  padding-right: ${({ rightAddon }) => rightAddon && "12px"};
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -27,7 +24,7 @@ export const InputContainer = styled.div<IInputProps>`
       return theme.color.NEUTRAL[300];
     }};
   background: #fff;
-  min-height: 44px;
+  min-height: 45px;
   ::placeholder {
     color: ${(props) => props.theme.color.NEUTRAL[500]};
   }
@@ -40,12 +37,12 @@ export const InputContainer = styled.div<IInputProps>`
 
   > input {
     width: 100%;
+    ${({ size }) => getSize({ size })};
     flex-grow: 1;
     border: none;
     outline: none;
-    padding: 14px 0;
+    padding: 10px 0;
     background: transparent;
-    font: normal 16px "Poppins";
     letter-spacing: -0.04em;
     color: ${(props) => props.theme.color.NEUTRAL[700]};
 
@@ -58,6 +55,7 @@ export const InputContainer = styled.div<IInputProps>`
 
   span {
     color: ${(props) => props.theme.color.NEUTRAL[500]};
+    ${({ size }) => getSize({ size })};
     display: flex;
     align-items: center;
     justify-content: center;

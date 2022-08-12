@@ -1,8 +1,11 @@
+import { TSizes } from "../Typography/TextBuilder/types";
+
 export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   as?: "button" | "a";
   shape?: "rounded" | "squared" | "circular";
   design?: "solid" | "outline" | "flat" | "link";
   color?: TColor;
+  size?: TSizes;
   fullWidth?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;

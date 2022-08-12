@@ -6,9 +6,11 @@ export interface ITextProps
   extends Omit<Partial<HTMLLabelElement>, "children"> {
   as?: Tags;
   weight?: "light" | "regular" | "medium" | "bold";
-  size?: keyof typeof Size;
+  size?: TSizes;
   color?: TColor;
   align?: "left" | "center" | "right";
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
   children: React.ReactNode;
 }
 

@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
+    "strict": true,
     "module": "System",
     "moduleResolution": "Node",
     "noEmit": true,
@@ -17,7 +18,7 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["dist"],
+  "include": ["dist", "src"],
   "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -8,12 +8,12 @@ export const FontWeight = {
 };
 
 export const Size = {
-  xs: "0.750em",
-  sm: "0.875em	",
-  md: "1.0em",
-  lg: "1.250em",
-  xl: "1.5em",
-  xxl: "2.0em",
+  xs: "0.750rem",
+  sm: "0.875rem	",
+  md: "1.0rem",
+  lg: "1.250rem",
+  xl: "1.5rem",
+  xxl: "2.0rem",
 };
 
 export const DefaultSizes: {

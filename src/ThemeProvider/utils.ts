@@ -1,6 +1,7 @@
 import { css, DefaultTheme } from "styled-components";
 import { TColor } from "@/components/Typography/TextBuilder/types";
 import { IButton } from "@/components/Button/types";
+import { Size } from "@/components/Typography/utils";
 
 export const getShape = ({ shape }: Pick<IButton, "shape">) => {
   switch (shape) {
@@ -183,4 +184,11 @@ export const getDisabled = ({ disabled }: Pick<IButton, "disabled">) => {
     cursor: pointer;
     opacity: 1;
   `;
+};
+
+export const getSize = ({ size }: Pick<IButton, "size">) => {
+  if (size)
+    return css`
+      font-size: ${Size[size] || size};
+    `;
 };

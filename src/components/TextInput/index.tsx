@@ -12,6 +12,8 @@ export const TextInput: React.FC<InputProps> = ({
   placeholder,
   error,
   success,
+  size,
+  fullWidth,
   onFocus,
   onBlur,
   ...rest
@@ -19,7 +21,9 @@ export const TextInput: React.FC<InputProps> = ({
   const [isFocused, setIsFocused] = useState(false);
   return (
     <InputContainer
+      fullWidth={fullWidth}
       success={success}
+      size={size}
       error={error}
       disabled={rest.disabled}
       isFocused={isFocused}

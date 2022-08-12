@@ -6,6 +6,7 @@ import {
   getFullWidth,
   getIsLoading,
   getDisabled,
+  getSize,
 } from "@/ThemeProvider/utils";
 import type { IButton } from "./types";
 
@@ -18,13 +19,14 @@ export const BaseButton = styled.button`
 export const Button = styled(BaseButton)<IButton>`
   display: inline-flex;
   gap: 0.5rem;
-  font-size: 14px;
   font-weight: 500;
   align-items: center;
   justify-content: center;
   transition: background 0.3s ease-out;
-  padding: ${({ design }) => (design === "link" ? "0" : "0.5rem 1rem")};
+  padding: ${({ design }) => (design === "link" ? "0" : "0.5rem")};
+  min-height: ${({ design }) => (design === "link" ? "0" : "45px")};
 
+  ${({ size }) => getSize({ size })};
   ${({ shape }) => getShape({ shape })};
   ${({ design, color }) => getDesign({ design, color })};
   ${({ fullWidth }) => getFullWidth({ fullWidth })};
@@ -55,5 +57,9 @@ export const Button = styled(BaseButton)<IButton>`
 
   &:disabled {
     cursor: not-allowed;
+  }
+
+  &:disabled:hover {
+    ${({ design, color }) => getDesign({ design, color })};
   }
 `;
