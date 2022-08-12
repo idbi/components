@@ -1,13 +1,15 @@
+import { getTextAlign } from "@/ThemeProvider/utils";
 import { css } from "styled-components";
 import { tagsMap } from ".";
 import { DefaultSizes, FontWeight, Size } from "../utils";
 import type { ITextBuilderProps, TColorNames, TColorScales } from "./types";
 
-export const baseStyles = css`
+export const baseStyles = css<ITextBuilderProps>`
   font-family: "Poppins";
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.04em;
+  ${({ align }) => getTextAlign({ align })}
 `;
 
 export const customStyles = (type: keyof typeof tagsMap) => {

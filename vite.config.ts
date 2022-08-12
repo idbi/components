@@ -22,7 +22,25 @@ export default defineConfig({
       fileName: "id-components",
     },
     rollupOptions: {
-      external: [/node_modules/],
+      external: [
+        /node_modules/,
+        "react",
+        "react-dom",
+        "styled-components",
+        "react-loading-skeleton",
+        "react-select",
+        "react/jsx-runtime",
+      ],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "styled-components": "styled",
+          "react-loading-skeleton": "Skeleton",
+          "react-select": "Select",
+          "react/jsx-runtime": "react/jsx-runtime.js",
+        },
+      },
     },
   },
   resolve: {

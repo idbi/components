@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import PlayGround from "./components/Playground";
 import { Heading, Text } from "./components/Typography";
@@ -150,7 +149,13 @@ function App() {
       >
         Continuar como invitado
       </Button>
-      <Text size="xs" color="NEUTRAL/900" weight="light">
+      <Text
+        leftIcon={<GoogleIcon />}
+        align="center"
+        size="xs"
+        color="NEUTRAL/900"
+        weight="light"
+      >
         Al continuar, aceptas los{" "}
         <Button color="NEUTRAL/900" as="a" design="link">
           términos y condiciones
