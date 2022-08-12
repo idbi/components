@@ -116,14 +116,7 @@ function App() {
           />
         </Flex>
         <Flex grow={10}>
-          <TextInput
-            error
-            leftAddon={<GoogleIcon size={20} />}
-            rightAddon={<GoogleIcon size={20} />}
-            placeholder="Escribe tu número"
-            size="sm"
-            fullWidth
-          />
+          <TextInput placeholder="Escribe tu número" size="sm" fullWidth />
         </Flex>
       </Flex>
       <Button

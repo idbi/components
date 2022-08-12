@@ -1,5 +1,5 @@
 import { getFullWidth, getSize } from "@/ThemeProvider/utils";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { InputProps } from "./types";
 
 export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
@@ -43,6 +43,8 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
     background: transparent;
     letter-spacing: -0.04em;
     color: ${(props) => props.theme.color.NEUTRAL[700]};
+    padding-left: ${({ leftAddon }) => (!leftAddon ? "12px" : "0px")};
+    padding-right: ${({ rightAddon }) => (!rightAddon ? "12px" : "0px")};
 
     &:disabled {
       cursor: not-allowed;
