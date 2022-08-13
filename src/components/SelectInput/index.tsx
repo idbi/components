@@ -35,13 +35,17 @@ const customStyles = {
     return {
       ...provided,
       display: "none",
+      padding: 0,
     };
   },
 
-  indicatorContainer: (provided: any) => {
+  indicatorsContainer: (provided: any) => {
     return {
       ...provided,
-      padding: 0,
+      "> div": {
+        padding: "0",
+        paddingRight: "5px",
+      },
     };
   },
   valueContainer: (provided: any) => {

@@ -1,14 +1,14 @@
 import h, { css as a } from "styled-components";
 import { jsxs as E, jsx as i } from "react/jsx-runtime";
-import I, { useEffect as x, useState as C } from "react";
-import T from "react-loading-skeleton";
-import L from "react-select";
-const N = {
+import C, { useEffect as x, useState as T } from "react";
+import L from "react-loading-skeleton";
+import N from "react-select";
+const B = {
   bold: 700,
   medium: 500,
   regular: 400,
   light: 300
-}, y = {
+}, S = {
   xs: "0.750rem",
   sm: "0.875rem	",
   md: "1.0rem",
@@ -23,7 +23,7 @@ const N = {
   h5: "xs",
   h6: "xs",
   text: "md"
-}, B = ({ shape: e }) => {
+}, U = ({ shape: e }) => {
   switch (e) {
     case "rounded":
       return a`
@@ -87,8 +87,8 @@ const N = {
   design: n,
   hover: l
 }) => {
-  const c = e.split("/"), r = c[0];
-  let t = +c[1];
+  const s = e.split("/"), r = s[0];
+  let t = +s[1];
   if (l && t >= 300)
     switch (n) {
       case "solid":
@@ -120,37 +120,37 @@ const N = {
         break;
     }
   return r === "PRIMARY" || r === "SECONDARY" || r === "TERTIARY" || r === "QUATERNARY" || r === "STATE" || r === "ALERT" || r === "SUCCESS" ? t === 50 || t === 100 || t === 200 || t === 300 || t === 400 || t === 500 || t === 600 || t === 700 || t === 800 || t === 900 ? o.color[r][t] : o.color[r][900] : o.color.PRIMARY[900];
-}, w = ({ fullWidth: e }) => e ? a`
+}, y = ({ fullWidth: e }) => e ? a`
       width: 100%;
     ` : a`
     width: auto;
-  `, U = ({ isLoading: e }) => e ? a`
+  `, D = ({ isLoading: e }) => e ? a`
       cursor: not-allowed;
       opacity: 0.5;
     ` : a`
     cursor: pointer;
     opacity: 1;
-  `, D = ({ disabled: e }) => e ? a`
+  `, Y = ({ disabled: e }) => e ? a`
       cursor: not-allowed;
       opacity: 0.5;
     ` : a`
     cursor: pointer;
     opacity: 1;
-  `, A = ({ size: e }) => {
+  `, R = ({ size: e }) => {
   if (e)
     return a`
-      font-size: ${y[e] || e};
+      font-size: ${S[e] || e};
     `;
-}, Y = ({ align: e }) => {
+}, z = ({ align: e }) => {
   if (e)
     return a`
       text-align: ${e};
     `;
-}, z = h.button`
+}, P = h.button`
   background-color: transparent;
   cursor: pointer;
   border: none;
-`, P = h(z)`
+`, H = h(P)`
   display: inline-flex;
   gap: 0.5rem;
   font-weight: 500;
@@ -160,12 +160,12 @@ const N = {
   padding: ${({ design: e }) => e === "link" ? "0" : "0.5rem"};
   min-height: ${({ design: e }) => e === "link" ? "0" : "45px"};
 
-  ${({ size: e }) => A({ size: e })};
-  ${({ shape: e }) => B({ shape: e })};
+  ${({ size: e }) => R({ size: e })};
+  ${({ shape: e }) => U({ shape: e })};
   ${({ design: e, color: o }) => v({ design: e, color: o })};
-  ${({ fullWidth: e }) => w({ fullWidth: e })};
-  ${({ isLoading: e }) => U({ isLoading: e })};
-  ${({ disabled: e }) => D({ disabled: e })};
+  ${({ fullWidth: e }) => y({ fullWidth: e })};
+  ${({ isLoading: e }) => D({ isLoading: e })};
+  ${({ disabled: e }) => Y({ disabled: e })};
 
   &:hover {
     background-color: ${({ theme: e, color: o, design: n }) => n === "link" ? "transparent" : f({ color: o, theme: e, design: n, hover: !0 })};
@@ -186,67 +186,67 @@ const N = {
   &:disabled:hover {
     ${({ design: e, color: o }) => v({ design: e, color: o })};
   }
-`, ne = ({
+`, re = ({
   children: e,
   ...o
-}) => /* @__PURE__ */ E(P, {
+}) => /* @__PURE__ */ E(H, {
   ...o,
   children: [o.leftIcon, e, o.rightIcon]
 });
-function H(e, o, n) {
+function M(e, o, n) {
   const l = () => {
-    const c = document.querySelectorAll("input");
-    return Array.from(c).filter(
+    const s = document.querySelectorAll("input");
+    return Array.from(s).filter(
       (t) => t.className === o
     );
   };
   x(() => {
-    const c = (r) => {
+    const s = (r) => {
       r.key === "Backspace" && setTimeout(() => {
         const t = l(), d = document.activeElement;
         d.value = "";
-        const s = t.indexOf(d);
-        s > 0 && t[s - 1].focus();
+        const c = t.indexOf(d);
+        c > 0 && t[c - 1].focus();
       }, 0);
     };
-    return document.addEventListener("keydown", c), () => document.removeEventListener("keydown", c);
+    return document.addEventListener("keydown", s), () => document.removeEventListener("keydown", s);
   }, []), x(() => {
-    const c = (r) => {
+    const s = (r) => {
       if (r.key !== "Backspace") {
         const t = r.key.toLowerCase();
         setTimeout(() => {
           if (t.length === 1) {
-            const d = l(), s = document.activeElement;
-            s.value = t;
-            const u = d.indexOf(s);
+            const d = l(), c = document.activeElement;
+            c.value = t;
+            const u = d.indexOf(c);
             u < d.length - 1 && d[u + 1].focus();
           }
         }, 0);
       }
     };
-    return document.addEventListener("keydown", c), () => document.removeEventListener("keydown", c);
+    return document.addEventListener("keydown", s), () => document.removeEventListener("keydown", s);
   }, []), x(() => {
     if (e) {
-      const c = (r) => {
+      const s = (r) => {
         const t = r.key.toLowerCase();
         (t.length === 1 || t === "backspace") && setTimeout(() => {
-          const s = l().map((u) => u.value).join("");
-          e(s);
+          const c = l().map((u) => u.value).join("");
+          e(c);
         }, 0);
       };
-      return document.addEventListener("keydown", c), () => document.removeEventListener("keydown", c);
+      return document.addEventListener("keydown", s), () => document.removeEventListener("keydown", s);
     }
   }, []), x(() => {
     if (n) {
-      const c = l(), r = n.split("");
-      c.forEach((t, d) => {
-        const s = r[d];
-        s && (t.value = s);
+      const s = l(), r = n.split("");
+      s.forEach((t, d) => {
+        const c = r[d];
+        c && (t.value = c);
       });
     }
   }, [n]);
 }
-const M = h.div`
+const O = h.div`
   display: grid;
   grid-template-columns: repeat(${(e) => e.length}, 1fr);
   grid-gap: 0.5rem;
@@ -281,27 +281,27 @@ const M = h.div`
       border-color: ${(e) => e.theme.color.QUATERNARY[900]};
     }
   }
-`, re = ({
+`, ie = ({
   id: e,
   value: o,
   length: n = 4,
   error: l,
-  success: c,
+  success: s,
   onChange: r = (d) => {
   },
   ...t
-}) => (H(r, e, o), /* @__PURE__ */ i(M, {
+}) => (M(r, e, o), /* @__PURE__ */ i(O, {
   length: n,
   error: l,
-  success: c,
+  success: s,
   children: Array.from({
     length: n
-  }).map((d, s) => /* @__PURE__ */ i("input", {
-    id: s.toString(),
+  }).map((d, c) => /* @__PURE__ */ i("input", {
+    id: c.toString(),
     className: e,
     maxLength: 1,
     ...t
-  }, s))
+  }, c))
 })), g = {
   color: {
     NEUTRAL: {
@@ -402,7 +402,7 @@ const M = h.div`
       900: "#2DC96F"
     }
   }
-}, O = h.div`
+}, W = h.div`
   position: relative;
   width: 100%;
 
@@ -485,7 +485,7 @@ const M = h.div`
   & > span {
     width: 100%;
   }
-`, W = {
+`, j = {
   control: (e, o) => ({
     ...e,
     minHeight: "45px",
@@ -506,57 +506,61 @@ const M = h.div`
   }),
   indicatorSeparator: (e) => ({
     ...e,
-    display: "none"
-  }),
-  indicatorContainer: (e) => ({
-    ...e,
+    display: "none",
     padding: 0
+  }),
+  indicatorsContainer: (e) => ({
+    ...e,
+    "> div": {
+      padding: "0",
+      paddingRight: "5px"
+    }
   }),
   valueContainer: (e) => ({
     ...e,
     padding: 0,
     paddingLeft: "7px"
   })
-}, ie = ({
+}, se = ({
   formatOptionLabel: e,
   options: o,
   loading: n = !1,
   style: l,
-  error: c,
+  error: s,
   firstOption: r,
   initialValue: t,
   value: d,
-  onChange: s,
+  onChange: c,
   isMulti: u,
   placeholder: m
 }) => {
-  const b = r || {
+  const F = r || {
     label: "Seleccione una opci\xF3n",
     value: ""
-  }, F = [...o];
-  return /* @__PURE__ */ i(O, {
+  }, b = [...o];
+  return /* @__PURE__ */ i(W, {
     style: l,
-    hasError: !!c,
-    children: n ? /* @__PURE__ */ i(T, {
+    hasError: !!s,
+    children: n ? /* @__PURE__ */ i(L, {
       style: {
         borderRadius: 10
       },
       className: "loading-skeleton",
       height: 46,
       width: "100%"
-    }) : /* @__PURE__ */ i(L, {
+    }) : /* @__PURE__ */ i(N, {
       placeholder: m,
       value: d || void 0,
-      defaultValue: t || b,
-      options: F,
-      onChange: s,
-      styles: W,
+      defaultValue: t || F,
+      options: b,
+      onChange: c,
+      styles: j,
       isMulti: u,
       formatOptionLabel: e
     })
   });
-}, j = h.div`
-  ${({ fullWidth: e }) => w({ fullWidth: e })};
+}, V = h.div`
+  ${({ fullWidth: e }) => y({ fullWidth: e })};
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -575,8 +579,9 @@ const M = h.div`
   transition: border 0.3s ease-out;
 
   > input {
+    position: relative;
     width: 100%;
-    ${({ size: e }) => A({ size: e })};
+    ${({ size: e }) => R({ size: e })};
     flex-grow: 1;
     border: none;
     outline: none;
@@ -586,6 +591,7 @@ const M = h.div`
     color: ${(e) => e.theme.color.NEUTRAL[700]};
     padding-left: ${({ leftAddon: e }) => e ? "0px" : "12px"};
     padding-right: ${({ rightAddon: e }) => e ? "0px" : "12px"};
+    padding-right: ${({ success: e, error: o }) => (e || o) && "35px"};
 
     &:disabled {
       cursor: not-allowed;
@@ -604,7 +610,7 @@ const M = h.div`
 
   span {
     color: ${(e) => e.theme.color.NEUTRAL[500]};
-    ${({ size: e }) => A({ size: e })};
+    ${({ size: e }) => R({ size: e })};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -614,8 +620,10 @@ const M = h.div`
 
   .state {
     padding-right: 12px;
+    position: absolute;
+    right: 25px;
   }
-`, V = (e) => /* @__PURE__ */ i("svg", {
+`, Q = (e) => /* @__PURE__ */ i("svg", {
   stroke: "currentColor",
   fill: "currentColor",
   strokeWidth: 0,
@@ -633,7 +641,7 @@ const M = h.div`
       d: "M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"
     })]
   })
-}), Q = (e) => /* @__PURE__ */ i("svg", {
+}), K = (e) => /* @__PURE__ */ i("svg", {
   stroke: "currentColor",
   fill: "currentColor",
   strokeWidth: 0,
@@ -646,81 +654,81 @@ const M = h.div`
     d: "M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z",
     stroke: "none"
   })
-}), ce = I.forwardRef(({
+}), ce = C.forwardRef(({
   type: e,
   leftAddon: o,
   rightAddon: n,
   placeholder: l,
-  error: c,
+  error: s,
   success: r,
   size: t,
   fullWidth: d,
-  onFocus: s = () => {
-  },
-  onBlur: u = () => {
-  },
-  onChange: m,
+  name: c,
+  onFocus: u,
+  onBlur: m,
+  onChange: F,
   ...b
-}, F) => {
-  const [S, R] = C(!1);
-  return /* @__PURE__ */ E(j, {
+}, I) => {
+  const [w, A] = T(!1);
+  return /* @__PURE__ */ E(V, {
     fullWidth: d,
     success: r,
     size: t,
-    error: c,
+    error: s,
     disabled: b.disabled,
     leftAddon: o,
     rightAddon: n,
-    isFocused: S,
+    isFocused: w,
     children: [o && /* @__PURE__ */ i("span", {
       className: "leftAddon",
       children: o
     }), /* @__PURE__ */ i("input", {
-      ref: F,
-      onFocus: async (k) => {
-        R(!0), await s(k);
+      ref: I,
+      onFocus: (k) => {
+        u && u(k), A(!0);
       },
-      onBlur: async (k) => {
-        R(!1), await u(k);
+      onBlur: (k) => {
+        m && m(k), A(!1);
       },
-      onChange: m,
+      onChange: F,
       placeholder: l,
       type: e,
+      name: c,
       ...b
     }), n && /* @__PURE__ */ i("span", {
       className: "rightAddon",
       children: n
-    }), c && /* @__PURE__ */ i("span", {
+    }), s && /* @__PURE__ */ i("span", {
       className: "state",
-      children: /* @__PURE__ */ i(V, {
+      children: /* @__PURE__ */ i(Q, {
         size: 24,
         color: g.color.ALERT[900]
       })
     }), r && /* @__PURE__ */ i("span", {
       className: "state",
-      children: /* @__PURE__ */ i(Q, {
+      children: /* @__PURE__ */ i(K, {
         size: 20,
         color: g.color.SUCCESS[900]
       })
     })]
   });
-}), K = a`
+}), q = a`
   font-family: "Poppins";
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.04em;
-  ${({ align: e }) => Y({ align: e })}
-`, q = (e) => {
-  const o = e === "h1" || e === "h2" || e === "h3" || e === "h4" || e === "h5" || e === "h6", n = o ? "bold" : "medium", l = o ? $[e] : $.text, c = "PRIMARY/900";
+  ${({ align: e }) => z({ align: e })}
+`, _ = (e) => {
+  const o = e === "h1" || e === "h2" || e === "h3" || e === "h4" || e === "h5" || e === "h6", n = o ? "bold" : "medium", l = o ? $[e] : $.text, s = "PRIMARY/900";
   return a`
-    font-weight: ${({ weight: r = n }) => N[r] || "500"};
-    font-size: ${({ size: r = l }) => y[r] || r};
-    color: ${({ theme: r, color: t = c }) => {
-    const d = t == null ? void 0 : t.split("/")[0], s = +(t == null ? void 0 : t.split("/")[1]);
-    return r.color[d][s];
+    font-weight: ${({ weight: r = n }) => B[r] || "500"};
+    font-size: ${({ size: r = l }) => S[r] || r};
+    color: ${({ theme: r, color: t = s }) => {
+    const d = t == null ? void 0 : t.split("/")[0], c = +(t == null ? void 0 : t.split("/")[1]);
+    return r.color[d][c];
   }};
   `;
-}, _ = {
+}, G = {
   h1: "h1",
   h2: "h2",
   h3: "h3",
@@ -731,21 +739,21 @@ const M = h.div`
   span: "span",
   strong: "strong",
   label: "label"
-}, G = h.div`
-  ${K}
+}, J = h.div`
+  ${q}
   ${({
   as: e
-}) => q(e)}
+}) => _(e)}
 `, p = ({
   as: e,
   ...o
 }) => {
-  const n = _[e];
-  return /* @__PURE__ */ i(G, {
+  const n = G[e];
+  return /* @__PURE__ */ i(J, {
     as: n,
     ...o
   });
-}, se = {
+}, ae = {
   H1: (e) => /* @__PURE__ */ i(p, {
     as: "h1",
     ...e
@@ -770,11 +778,11 @@ const M = h.div`
     as: "h6",
     ...e
   })
-}, J = h.div`
+}, X = h.div`
   display: flex;
   align-items: center;
   gap: 8px;
-`, ae = (e) => e.rightIcon || e.leftIcon ? /* @__PURE__ */ E(J, {
+`, le = (e) => e.rightIcon || e.leftIcon ? /* @__PURE__ */ E(X, {
   children: [e.leftIcon, /* @__PURE__ */ i(p, {
     as: e.as || "p",
     ...e
@@ -784,10 +792,10 @@ const M = h.div`
   ...e
 });
 export {
-  ne as Button,
-  re as CodeInput,
-  se as Heading,
-  ie as SelectInput,
-  ae as Text,
+  re as Button,
+  ie as CodeInput,
+  ae as Heading,
+  se as SelectInput,
+  le as Text,
   ce as TextInput
 };
