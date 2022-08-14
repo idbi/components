@@ -206,7 +206,7 @@ const H = {
   ${({ fullWidth: e }) => N({ fullWidth: e })};
   ${({ isLoading: e }) => W({ isLoading: e })};
   ${({ disabled: e }) => O({ disabled: e })};
-  ${({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: s, pb: d, pt: u, pr: p, pl: b, py: E, px: $ }) => Q({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: s, pb: d, pt: u, pr: p, pl: b, py: E, px: $ })};
+  ${({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: d, pb: s, pt: u, pr: p, pl: b, py: E, px: $ }) => Q({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: d, pb: s, pt: u, pr: p, pl: b, py: E, px: $ })};
 
   &:hover {
     background-color: ${({ theme: e, color: n, design: t }) => t === "link" ? "transparent" : h({ color: n, theme: e, design: t, hover: !0 })};
@@ -244,10 +244,10 @@ function q(e, n, t) {
   k(() => {
     const a = (i) => {
       i.key === "Backspace" && setTimeout(() => {
-        const o = l(), s = document.activeElement;
-        s.value = "";
-        const d = o.indexOf(s);
-        d > 0 && o[d - 1].focus();
+        const o = l(), d = document.activeElement;
+        d.value = "";
+        const s = o.indexOf(d);
+        s > 0 && o[s - 1].focus();
       }, 0);
     };
     return document.addEventListener("keydown", a), () => document.removeEventListener("keydown", a);
@@ -257,10 +257,10 @@ function q(e, n, t) {
         const o = i.key.toLowerCase();
         setTimeout(() => {
           if (o.length === 1) {
-            const s = l(), d = document.activeElement;
-            d.value = o;
-            const u = s.indexOf(d);
-            u < s.length - 1 && s[u + 1].focus();
+            const d = l(), s = document.activeElement;
+            s.value = o;
+            const u = d.indexOf(s);
+            u < d.length - 1 && d[u + 1].focus();
           }
         }, 0);
       }
@@ -271,8 +271,8 @@ function q(e, n, t) {
       const a = (i) => {
         const o = i.key.toLowerCase();
         (o.length === 1 || o === "backspace") && setTimeout(() => {
-          const d = l().map((u) => u.value).join("");
-          e(d);
+          const s = l().map((u) => u.value).join("");
+          e(s);
         }, 0);
       };
       return document.addEventListener("keydown", a), () => document.removeEventListener("keydown", a);
@@ -280,9 +280,9 @@ function q(e, n, t) {
   }, []), k(() => {
     if (t) {
       const a = l(), i = t.split("");
-      a.forEach((o, s) => {
-        const d = i[s];
-        d && (o.value = d);
+      a.forEach((o, d) => {
+        const s = i[d];
+        s && (o.value = s);
       });
     }
   }, [t]);
@@ -319,8 +319,8 @@ const _ = Y`
     font-weight: ${({ weight: i = t }) => H[i] || "500"};
     font-size: ${({ size: i = l }) => L[i] || i};
     color: ${({ theme: i, color: o = a }) => {
-    const s = o == null ? void 0 : o.split("/")[0], d = +(o == null ? void 0 : o.split("/")[1]);
-    return i.color[s][d];
+    const d = o == null ? void 0 : o.split("/")[0], s = +(o == null ? void 0 : o.split("/")[1]);
+    return i.color[d][s];
   }};
   `;
 }, X = {
@@ -432,7 +432,7 @@ const _ = Y`
   length: t = 4,
   errorMessage: l,
   success: a,
-  onChange: i = (s) => {
+  onChange: i = (d) => {
   },
   ...o
 }) => (q(i, e, n), /* @__PURE__ */ m(oe, {
@@ -442,12 +442,12 @@ const _ = Y`
     errorMessage: l,
     children: Array.from({
       length: t
-    }).map((s, d) => /* @__PURE__ */ r("input", {
-      id: d.toString(),
+    }).map((d, s) => /* @__PURE__ */ r("input", {
+      id: s.toString(),
       className: e,
       maxLength: 1,
       ...o
-    }, d))
+    }, s))
   }), l && /* @__PURE__ */ r(A, {
     shouldAppear: Boolean(l),
     children: /* @__PURE__ */ r(R, {
@@ -638,8 +638,8 @@ const _ = Y`
   error: a,
   firstOption: i,
   initialValue: o,
-  value: s,
-  onChange: d,
+  value: d,
+  onChange: s,
   isMulti: u,
   placeholder: p,
   label: b
@@ -666,10 +666,10 @@ const _ = Y`
       width: "100%"
     }) : /* @__PURE__ */ r(V, {
       placeholder: p,
-      value: s || void 0,
+      value: d || void 0,
       defaultValue: o || E,
       options: $,
-      onChange: d,
+      onChange: s,
       styles: ie,
       isMulti: u,
       formatOptionLabel: e
@@ -778,8 +778,8 @@ const _ = Y`
   error: a,
   success: i,
   size: o,
-  fullWidth: s,
-  name: d,
+  fullWidth: d,
+  name: s,
   infoMessage: u,
   onFocus: p,
   onBlur: b,
@@ -789,7 +789,7 @@ const _ = Y`
   const [w, y] = z(!1), T = !a && !i && u && w;
   return /* @__PURE__ */ m(D, {
     children: [/* @__PURE__ */ m(ae, {
-      fullWidth: s,
+      fullWidth: d,
       success: i,
       size: o,
       error: a,
@@ -811,7 +811,7 @@ const _ = Y`
         onChange: E,
         placeholder: l,
         type: e,
-        name: d,
+        name: s,
         ...$
       }), t && /* @__PURE__ */ r("span", {
         className: "rightAddon",
@@ -960,20 +960,20 @@ const _ = Y`
     viewBox: a,
     active: i,
     borderRadius: o,
-    variant: s
+    variant: d
   } = e;
   return /* @__PURE__ */ r(ue, {
     active: i,
     size: l || 24,
     borderRadius: o || "50%",
-    variant: s || "V1",
+    variant: d || "V1",
     color: t,
     children: /* @__PURE__ */ r(fe, {
       active: i,
       color: t,
       size: l || 24,
       viewBox: a || "0 0 32 32",
-      variant: s || "V1",
+      variant: d || "V1",
       children: n
     })
   });
@@ -1021,7 +1021,10 @@ const _ = Y`
   fullWidth: a,
   ...i
 }, o) => {
-  const [s, d] = z(!1);
+  const d = {
+    ...i,
+    ref: o
+  }, [s, u] = z(!1);
   return /* @__PURE__ */ m(de, {
     fullWidth: a,
     children: [/* @__PURE__ */ m("div", {
@@ -1033,7 +1036,7 @@ const _ = Y`
         color: "NEUTRAL/700",
         children: e
       }), n === "password" && /* @__PURE__ */ r("span", {
-        onClick: () => d(!s),
+        onClick: () => u(!s),
         children: s ? /* @__PURE__ */ r(me, {
           size: 20
         }) : /* @__PURE__ */ r(he, {
@@ -1045,7 +1048,7 @@ const _ = Y`
       infoMessage: l,
       fullWidth: a,
       type: s ? "text" : n,
-      ...i
+      ...d
     }), t && /* @__PURE__ */ r(A, {
       shouldAppear: Boolean(t),
       children: /* @__PURE__ */ r(R, {

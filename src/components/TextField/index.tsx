@@ -6,12 +6,12 @@ import { TextFieldContainer } from "./styles";
 import { WithAnimation } from "@/utils/WithAnimation";
 import CloseEye from "@/icons/CloseEye";
 import OpenEye from "@/icons/OpenEye";
-import { Button } from "../Button";
 
 export const TextField: React.FC<TextFieldProps> = React.forwardRef<
   HTMLInputElement,
   TextFieldProps
 >(({ label, type, errorMessage, infoMessage, fullWidth, ...rest }, ref) => {
+  const restProps = { ...rest, ref };
   const [showPassword, setShowPassword] = useState(false);
   return (
     <TextFieldContainer fullWidth={fullWidth}>
@@ -30,7 +30,7 @@ export const TextField: React.FC<TextFieldProps> = React.forwardRef<
         infoMessage={infoMessage}
         fullWidth={fullWidth}
         type={showPassword ? "text" : type}
-        {...rest}
+        {...restProps}
       />
       {errorMessage && (
         <WithAnimation shouldAppear={Boolean(errorMessage)}>

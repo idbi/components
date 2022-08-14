@@ -107,29 +107,6 @@ function App() {
         fullWidth
       />
 
-      <SelectField
-        label="Prefijo"
-        onChange={() => {}}
-        options={[
-          { label: "+51", value: "PE" },
-          { label: "+52", value: "MX" },
-          { label: "+53", value: "CU" },
-          { label: "+54", value: "AR" },
-          { label: "+55", value: "BR" },
-          { label: "+56", value: "CL" },
-          { label: "+57", value: "CO" },
-          { label: "+58", value: "VE" },
-          { label: "+591", value: "BO" },
-        ]}
-        placeholder="+51"
-        formatOptionLabel={(option) => (
-          <Flex gap="8px">
-            <GoogleIcon size={20} />
-            {option.label}
-          </Flex>
-        )}
-      />
-
       {/* <CodeInput id="code" errorMessage="Ingresa un código válido" /> */}
 
       <Button shape="circular" size="sm" fullWidth>
