@@ -52,3 +52,20 @@ export declare const Heading = {
 };
 
 export declare const Text = (props: ITextProps) => JSX.Element;
+
+export interface Spacing {
+  p?: number | string;
+  py?: number | string;
+  px?: number | string;
+  pt?: number | string;
+  pb?: number | string;
+  pr?: number | string;
+  pl?: number | string;
+  m?: number | string;
+  mt?: number | string;
+  mb?: number | string;
+  mr?: number | string;
+  ml?: number | string;
+  mx?: number | string;
+  my?: number | string;
+}

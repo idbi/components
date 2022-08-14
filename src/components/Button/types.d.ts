@@ -1,6 +1,8 @@
-import { TSizes } from "../Typography/TextBuilder/types";
+import { Spacing, TSizes } from "../Typography/TextBuilder/types";
 
-export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IButton
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    Spacing {
   as?: "button" | "a" | React.ElementType;
   to?: string;
   shape?: "rounded" | "squared" | "circular";

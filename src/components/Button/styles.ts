@@ -7,6 +7,7 @@ import {
   getIsLoading,
   getDisabled,
   getSize,
+  getSpacing,
 } from "@/ThemeProvider/utils";
 import type { IButton } from "./types";
 
@@ -23,7 +24,7 @@ export const Button = styled(BaseButton)<IButton>`
   align-items: center;
   justify-content: center;
   transition: background 0.3s ease-out;
-  padding: ${({ design }) => (design === "link" ? "0" : "0.5rem")};
+  padding: ${({ design }) => (design === "link" ? "0" : "0.7rem")};
   min-height: ${({ design }) => (design === "link" ? "0" : "45px")};
 
   ${({ size }) => getSize({ size })};
@@ -32,6 +33,8 @@ export const Button = styled(BaseButton)<IButton>`
   ${({ fullWidth }) => getFullWidth({ fullWidth })};
   ${({ isLoading }) => getIsLoading({ isLoading })};
   ${({ disabled }) => getDisabled({ disabled })};
+  ${({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px }) =>
+    getSpacing({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px })};
 
   &:hover {
     background-color: ${({ theme, color, design }) => {

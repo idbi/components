@@ -1,6 +1,7 @@
 import { css, DefaultTheme } from "styled-components";
 import {
   ITextBuilderProps,
+  Spacing,
   TColor,
 } from "@/components/Typography/TextBuilder/types";
 import { IButton } from "@/components/Button/types";
@@ -189,11 +190,10 @@ export const getDisabled = ({ disabled }: Pick<IButton, "disabled">) => {
   `;
 };
 
-export const getSize = ({ size }: Pick<IButton, "size">) => {
-  if (size)
-    return css`
-      font-size: ${Size[size] || size};
-    `;
+export const getSize = ({ size = "sm" }: Pick<IButton, "size">) => {
+  return css`
+    font-size: ${Size[size] || size};
+  `;
 };
 
 export const getTextAlign = ({ align }: Pick<ITextBuilderProps, "align">) => {
@@ -201,4 +201,94 @@ export const getTextAlign = ({ align }: Pick<ITextBuilderProps, "align">) => {
     return css`
       text-align: ${align};
     `;
+};
+
+// TODO: Get Spacing: mb, mt, ml, mr, pb, pt, pl, pr
+
+export const getSpacing = (props: Spacing) => {
+  let finalSpacing = "";
+  if (props.m) {
+    finalSpacing += `
+      margin-top: ${props.m};
+      margin-bottom: ${props.m};
+      margin-left: ${props.m};
+      margin-right: ${props.m};
+    `;
+  }
+  if (props.mb) {
+    finalSpacing += `
+      margin-bottom: ${props.mb};
+    `;
+  }
+  if (props.mt) {
+    finalSpacing += `
+      margin-top: ${props.mt};
+    `;
+  }
+  if (props.ml) {
+    finalSpacing += `
+      margin-left: ${props.ml};
+    `;
+  }
+  if (props.mr) {
+    finalSpacing += `
+      margin-right: ${props.mr};
+    `;
+  }
+  if (props.mx) {
+    finalSpacing += `
+      margin-left: ${props.mx};
+      margin-right: ${props.mx};
+    `;
+  }
+  if (props.my) {
+    finalSpacing += `
+      margin-top: ${props.my};
+      margin-bottom: ${props.my};
+    `;
+  }
+  if (props.p) {
+    finalSpacing += `
+      padding-top: ${props.p};
+      padding-bottom: ${props.p};
+      padding-left: ${props.p};
+      padding-right: ${props.p};
+    `;
+  }
+  if (props.pb) {
+    finalSpacing += `
+      padding-bottom: ${props.pb};
+    `;
+  }
+  if (props.pt) {
+    finalSpacing += `
+      padding-top: ${props.pt};
+    `;
+  }
+  if (props.pl) {
+    finalSpacing += `
+      padding-left: ${props.pl};
+    `;
+  }
+  if (props.pr) {
+    finalSpacing += `
+      padding-right: ${props.pr};
+    `;
+  }
+  if (props.px) {
+    finalSpacing += `
+      padding-left: ${props.px};
+      padding-right: ${props.px};
+    `;
+  }
+  if (props.py) {
+    finalSpacing += `
+      padding-top: ${props.py};
+      padding-bottom: ${props.py};
+    `;
+  }
+
+  return css`
+    ${finalSpacing}
+  `;
 };

@@ -2,9 +2,10 @@ import { theme } from "@/ThemeProvider/theme";
 import React from "react";
 import Skeleton from "react-loading-skeleton";
 import Select from "react-select";
+import { Text } from "../Typography";
 
 import { Container } from "./styles";
-import type { OptionType, SelectProps } from "./types";
+import type { OptionType, SelectFieldProps } from "./types";
 
 const customStyles = {
   control: (base: { [key: string]: any }, state: any) => ({
@@ -22,7 +23,7 @@ const customStyles = {
     return {
       color: theme.color.PRIMARY[900],
       fontWeight: 500,
-      fontSize: 14,
+      fontSize: "14px",
     };
   },
   placeholder: (defaultStyles: any) => {
@@ -44,7 +45,7 @@ const customStyles = {
       ...provided,
       "> div": {
         padding: "0",
-        paddingRight: "5px",
+        paddingRight: "3px",
       },
     };
   },
@@ -52,12 +53,12 @@ const customStyles = {
     return {
       ...provided,
       padding: 0,
-      paddingLeft: "7px",
+      paddingLeft: "6px",
     };
   },
 };
 
-export const SelectInput: React.FC<SelectProps> = ({
+export const SelectField: React.FC<SelectFieldProps> = ({
   formatOptionLabel,
   options,
   loading = false,
@@ -69,6 +70,7 @@ export const SelectInput: React.FC<SelectProps> = ({
   onChange,
   isMulti,
   placeholder,
+  label,
 }) => {
   const firstSelectOption: OptionType = firstOption || {
     label: "Seleccione una opción",
@@ -78,6 +80,11 @@ export const SelectInput: React.FC<SelectProps> = ({
 
   return (
     <Container style={style} hasError={!!error}>
+      {label && (
+        <Text as="label" align="left" size="sm" color="NEUTRAL/700">
+          {label}
+        </Text>
+      )}
       {loading ? (
         <Skeleton
           style={{ borderRadius: 10 }}

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import type { ICodeInputProps } from "./types";
 
-export const CodeInputContainer = styled.div<
+export const InputsContainer = styled.div<
   Omit<ICodeInputProps, "value" | "id">
 >`
   display: grid;
   grid-template-columns: repeat(${(props) => props.length}, 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: 22px;
   align-items: center;
 
   > input {
@@ -18,8 +18,8 @@ export const CodeInputContainer = styled.div<
     width: 45px;
     height: 45px;
     border: 1px solid
-      ${({ theme, error, success }) => {
-        if (error) {
+      ${({ theme, errorMessage, success }) => {
+        if (errorMessage) {
           return theme.color.ALERT[900];
         }
         if (success) {
@@ -46,4 +46,11 @@ export const CodeInputContainer = styled.div<
       border-color: ${(props) => props.theme.color.QUATERNARY[900]};
     }
   }
+`;
+
+export const CodeInputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 `;

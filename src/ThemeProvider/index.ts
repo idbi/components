@@ -104,7 +104,6 @@ const GlobalStyle = createGlobalStyle`
 
   input, textarea, select, button {
     font-weight: 400;
-    font-size: 16px;
     font-family: 'Poppins', sans-serif;
   }
 `;
