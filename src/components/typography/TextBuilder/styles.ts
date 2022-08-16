@@ -1,4 +1,4 @@
-import { getTextAlign } from "@/ThemeProvider/utils";
+import { getSpacing, getTextAlign } from "@/ThemeProvider/utils";
 import { css } from "styled-components";
 import { tagsMap } from ".";
 import { DefaultSizes, FontWeight, Size } from "../utils";
@@ -10,6 +10,8 @@ export const baseStyles = css<ITextBuilderProps>`
   line-height: 24px;
   letter-spacing: -0.04em;
   ${({ align }) => getTextAlign({ align })}
+  ${({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px }) =>
+    getSpacing({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px })};
 `;
 
 export const customStyles = (type: keyof typeof tagsMap) => {

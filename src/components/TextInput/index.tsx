@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, forwardRef } from "react";
 import { InputContainer } from "./styles";
 import { theme } from "@/ThemeProvider/theme";
 import type { InputProps } from "./types";
@@ -7,7 +7,7 @@ import CheckIcon from "@/icons/CheckIcon";
 import { Text } from "../Typography";
 import { WithAnimation } from "@/utils/WithAnimation";
 
-export const TextInput: React.FC<InputProps> = React.forwardRef<
+export const TextInput: React.FC<InputProps> = forwardRef<
   HTMLInputElement,
   InputProps
 >(

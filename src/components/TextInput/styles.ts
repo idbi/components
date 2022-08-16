@@ -13,7 +13,7 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
       if (error) {
         return theme.color.ALERT[900];
       }
-      if (success) {
+      if (success && isFocused) {
         return theme.color.SUCCESS[900];
       }
       if (isFocused) {

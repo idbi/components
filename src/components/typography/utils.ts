@@ -13,7 +13,10 @@ export const Size = {
   md: "1.0rem",
   lg: "1.250rem",
   xl: "1.5rem",
-  xxl: "2.0rem",
+  "2xl": "1.875rem",
+  "3xl": "2.0rem",
+  "4xl": "2.5rem",
+  "5xl": "3.0rem",
 };
 
 export const DefaultSizes: {
@@ -25,5 +28,5 @@ export const DefaultSizes: {
   h4: "sm",
   h5: "xs",
   h6: "xs",
-  text: "md",
+  text: "sm",
 };

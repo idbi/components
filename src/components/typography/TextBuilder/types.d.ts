@@ -14,7 +14,7 @@ export interface ITextProps
   children: React.ReactNode;
 }
 
-export interface ITextBuilderProps extends ITextProps {
+export interface ITextBuilderProps extends ITextProps, Spacing {
   as: Tags;
 }
 
@@ -30,7 +30,16 @@ export type Tags =
   | "strong"
   | "label";
 
-export type TSizes = "xs" | "sm" | "md" | "lg" | "xl";
+export type TSizes =
+  | "xs"
+  | "sm"
+  | "md"
+  | "lg"
+  | "xl"
+  | "2xl"
+  | "3xl"
+  | "4xl"
+  | "5xl";
 
 export type TLevelHeading = 1 | 2 | 3 | 4 | 5 | 6;
 
