@@ -8,7 +8,7 @@ export const baseStyles = css<ITextBuilderProps>`
   font-family: "Poppins";
   font-style: normal;
   line-height: 24px;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.04rem;
   ${({ align }) => getTextAlign({ align })}
   ${({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px }) =>
     getSpacing({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px })};

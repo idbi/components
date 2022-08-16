@@ -4,6 +4,7 @@ import { InputProps } from "./types";
 
 export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
   ${({ fullWidth }) => getFullWidth({ fullWidth })};
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -34,7 +35,6 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
   transition: border 0.3s ease-out;
 
   > input {
-    position: relative;
     width: 100%;
     ${({ size }) => getSize({ size })};
     flex-grow: 1;
@@ -46,7 +46,7 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
     color: ${(props) => props.theme.color.NEUTRAL[700]};
     padding-left: ${({ leftAddon }) => (!leftAddon ? "12px" : "0px")};
     padding-right: ${({ rightAddon }) => (!rightAddon ? "12px" : "0px")};
-    padding-right: ${({ success, error }) => (success || error) && "30px"};
+    padding-right: ${({ success, error }) => (success || error) && "2.5rem"};
 
     &:disabled {
       cursor: not-allowed;
@@ -74,8 +74,7 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
   }
 
   .state {
-    padding-right: 12px;
     position: absolute;
-    right: 25px;
+    right: 1rem;
   }
 `;

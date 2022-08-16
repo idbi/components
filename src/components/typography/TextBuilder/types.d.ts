@@ -3,7 +3,8 @@ import { tagsMap } from ".";
 import { Size } from "../utils";
 
 export interface ITextProps
-  extends Omit<Partial<HTMLLabelElement>, "children"> {
+  extends Omit<Partial<HTMLLabelElement>, "children">,
+    Spacing {
   as?: Tags;
   weight?: "light" | "regular" | "medium" | "bold";
   size?: TSizes;
@@ -14,7 +15,7 @@ export interface ITextProps
   children: React.ReactNode;
 }
 
-export interface ITextBuilderProps extends ITextProps, Spacing {
+export interface ITextBuilderProps extends ITextProps {
   as: Tags;
 }
 
