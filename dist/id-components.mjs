@@ -314,7 +314,7 @@ const _ = D`
   font-family: "Poppins";
   font-style: normal;
   line-height: 24px;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.04rem;
   ${({ align: e }) => Q({ align: e })}
   ${({ m: e, mb: n, mt: t, mr: c, ml: a, my: r, mx: o, p: s, pb: d, pt: u, pr: f, pl: m, py: x, px: b }) => B({ m: e, mb: n, mt: t, mr: c, ml: a, my: r, mx: o, p: s, pb: d, pt: u, pr: f, pl: m, py: x, px: b })};
 `, J = (e) => {
@@ -681,6 +681,7 @@ const _ = D`
   });
 }, ae = h.div`
   ${({ fullWidth: e }) => N({ fullWidth: e })};
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -699,7 +700,6 @@ const _ = D`
   transition: border 0.3s ease-out;
 
   > input {
-    position: relative;
     width: 100%;
     ${({ size: e }) => F({ size: e })};
     flex-grow: 1;
@@ -711,7 +711,7 @@ const _ = D`
     color: ${(e) => e.theme.color.NEUTRAL[700]};
     padding-left: ${({ leftAddon: e }) => e ? "0px" : "12px"};
     padding-right: ${({ rightAddon: e }) => e ? "0px" : "12px"};
-    padding-right: ${({ success: e, error: n }) => (e || n) && "30px"};
+    padding-right: ${({ success: e, error: n }) => (e || n) && "2.5rem"};
 
     &:disabled {
       cursor: not-allowed;
@@ -739,9 +739,8 @@ const _ = D`
   }
 
   .state {
-    padding-right: 12px;
     position: absolute;
-    right: 25px;
+    right: 1rem;
   }
 `, ce = (e) => /* @__PURE__ */ i("svg", {
   stroke: "currentColor",
