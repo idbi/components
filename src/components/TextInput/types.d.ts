@@ -11,5 +11,3 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   success?: boolean;
   infoMessage?: string;
 }
-
-export declare const TextInput: (props: InputProps) => JSX.Element;

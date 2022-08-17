@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { Button } from "./components/Button";
+import PlayGround from "./components/Playground";
+import { CodeInput } from "./types";
 
 const Layout = styled.main`
   display: flex;
@@ -10,7 +13,17 @@ const Layout = styled.main`
 `;
 
 function App() {
-  return <Layout>Hello</Layout>;
+  return (
+    <PlayGround>
+      <Button>Hello</Button>
+      <Button>Hello</Button>
+      <Button>Hello</Button>
+      <Button>Hello</Button>
+      <Button>Hello</Button>
+      {/* <CodeInput /> */}
+      {/* <SelectField> */}
+    </PlayGround>
+  );
 }
 
 export default App;

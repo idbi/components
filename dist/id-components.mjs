@@ -1071,6 +1071,5 @@ export {
   ke as Heading,
   Re as SelectField,
   k as Text,
-  Fe as TextField,
-  se as TextInput
+  Fe as TextField
 };
