@@ -1032,7 +1032,7 @@ const _ = D`
   }, [f, m] = z(!1);
   return /* @__PURE__ */ p(de, {
     fullWidth: o,
-    children: [/* @__PURE__ */ p("div", {
+    children: [e && /* @__PURE__ */ p("div", {
       className: "label-container",
       children: [/* @__PURE__ */ i(k, {
         as: "label",
