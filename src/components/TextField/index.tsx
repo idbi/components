@@ -19,16 +19,18 @@ export const TextField: React.FC<TextFieldProps> = forwardRef<
     const [showPassword, setShowPassword] = useState(false);
     return (
       <TextFieldContainer fullWidth={fullWidth}>
-        <div className="label-container">
-          <Text as="label" align="left" size="sm" color="NEUTRAL/700">
-            {label}
-          </Text>
-          {type === "password" && (
-            <span onClick={() => setShowPassword(!showPassword)}>
-              {showPassword ? <OpenEye size={20} /> : <CloseEye size={20} />}
-            </span>
-          )}
-        </div>
+        {label && (
+          <div className="label-container">
+            <Text as="label" align="left" size="sm" color="NEUTRAL/700">
+              {label}
+            </Text>
+            {type === "password" && (
+              <span onClick={() => setShowPassword(!showPassword)}>
+                {showPassword ? <OpenEye size={20} /> : <CloseEye size={20} />}
+              </span>
+            )}
+          </div>
+        )}
         <TextInput
           error={Boolean(error)}
           success={success || (!error && isDirty)}
