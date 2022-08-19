@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { Button } from "./components/Button";
 import PlayGround from "./components/Playground";
-import { CodeInput } from "./types";
 
 const Layout = styled.main`
   display: flex;
@@ -15,13 +13,7 @@ const Layout = styled.main`
 function App() {
   return (
     <PlayGround>
-      <Button>Hello</Button>
-      <Button>Hello</Button>
-      <Button>Hello</Button>
-      <Button>Hello</Button>
-      <Button>Hello</Button>
-      {/* <CodeInput /> */}
-      {/* <SelectField> */}
+      <span className="fi fi-gr"></span> <span className="fi fi-gr fis"></span>
     </PlayGround>
   );
 }

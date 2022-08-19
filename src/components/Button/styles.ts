@@ -8,7 +8,7 @@ import {
   getDisabled,
   getSize,
   getSpacing,
-} from "@/ThemeProvider/utils";
+} from "@/theme/utils";
 import type { IButton } from "./types";
 
 export const BaseButton = styled.button`

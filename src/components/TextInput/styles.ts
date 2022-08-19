@@ -1,4 +1,4 @@
-import { getFullWidth, getSize } from "@/ThemeProvider/utils";
+import { getFullWidth, getSize } from "@/theme/utils";
 import styled from "styled-components";
 import { InputProps } from "./types";
 

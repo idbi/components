@@ -1,4 +1,4 @@
-import { getSpacing, getTextAlign } from "@/ThemeProvider/utils";
+import { getSpacing, getTextAlign } from "@/theme/utils";
 import { css } from "styled-components";
 import { tagsMap } from ".";
 import { DefaultSizes, FontWeight, Size } from "../utils";

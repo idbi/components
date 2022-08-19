@@ -1,6 +1,6 @@
 import { useState, forwardRef } from "react";
 import { InputContainer } from "./styles";
-import { theme } from "@/ThemeProvider/theme";
+import { theme } from "@/theme";
 import type { InputProps } from "./types";
 import WarningIcon from "@/icons/WarningIcon";
 import CheckIcon from "@/icons/CheckIcon";

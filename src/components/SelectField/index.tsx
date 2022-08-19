@@ -1,4 +1,4 @@
-import { theme } from "@/ThemeProvider/theme";
+import { theme } from "@/theme";
 import React from "react";
 import Skeleton from "react-loading-skeleton";
 import Select from "react-select";
