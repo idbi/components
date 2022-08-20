@@ -13,6 +13,8 @@ export interface ITextProps
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   children: React.ReactNode;
+  onClick?: () => void;
+  onKeyUpCapture?: (e: React.KeyboardEvent) => void;
 }
 
 export interface ITextBuilderProps extends ITextProps {
@@ -27,6 +29,7 @@ export type Tags =
   | "h5"
   | "h6"
   | "p"
+  | "li"
   | "span"
   | "strong"
   | "label";

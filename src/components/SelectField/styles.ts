@@ -8,6 +8,10 @@ export const Container = styled.div<ContainerProps>`
   position: relative;
   width: 100%;
 
+  img {
+    margin-right: 0.25rem;
+  }
+
   label {
     display: inline-block;
     margin-bottom: 0.25rem;

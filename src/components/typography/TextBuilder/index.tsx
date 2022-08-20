@@ -13,6 +13,7 @@ export const tagsMap: {
   h5: "h5",
   h6: "h6",
   p: "p",
+  li: "li",
   span: "span",
   strong: "strong",
   label: "label",

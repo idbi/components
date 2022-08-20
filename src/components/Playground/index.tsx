@@ -14,7 +14,8 @@ const Image = styled.img`
 const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
-  background-color: ${({ theme }) => theme.color.PRIMARY[50]};
+  height: 100%;
+  background-color: ${({ theme }) => theme.color.NEUTRAL[700]};
   padding-left: 20px;
   padding-right: 20px;
 

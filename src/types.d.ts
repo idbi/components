@@ -3,3 +3,4 @@ export { CodeInput } from "./components/CodeInput/types";
 export { SelectField } from "./components/SelectField/types";
 export { TextField } from "./components/TextField/types";
 export { Heading, Text } from "./components/Typography/TextBuilder/types";
+export { CustomSelect } from "./components/CustomSelect/types";

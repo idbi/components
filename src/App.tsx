@@ -1,19 +1,69 @@
-import styled from "styled-components";
 import PlayGround from "./components/Playground";
-
-const Layout = styled.main`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  padding: 0 25px;
-  gap: 13px;
-`;
+import { useState } from "react";
 
 function App() {
+  const [country, setCountry] = useState({
+    label: "Perú",
+    value: "pe",
+  });
   return (
     <PlayGround>
-      <span className="fi fi-gr"></span> <span className="fi fi-gr fis"></span>
+      {/* <SelectField
+        options={countries.map((country: any) => ({
+          value: country.alpha2,
+          label: country.prefix,
+        }))}
+        value={{
+          value: "pe-Perú",
+          label: "51",
+        }}
+        onChange={(value) => console.log(value)}
+        formatOptionLabel={(option) => (
+          <div className="option">
+            <img
+              width="16"
+              height="12"
+              src={`/flags/4x3/${option.value.split("-")[0]}.svg`}
+            />
+            +{option.label}
+          </div>
+        )}
+      /> */}
+      {/* <CustomSelect
+        options={countries.map((country: any) => ({
+          value: country.alpha2,
+          label: country.name,
+        }))}
+        placeholder="Busca un país"
+        value={country}
+        onChange={(value) => setCountry(value)}
+        formatOptionLabel={(option) => (
+          <div>
+            <img
+              width="20"
+              height="16"
+              style={{
+                marginRight: 8,
+              }}
+              src={`/flags/4x3/${option.value}.svg`}
+            />
+            {option.label} - {option.value.toUpperCase()}
+          </div>
+        )}
+        formatSelectedOption={(option) => (
+          <div>
+            <img
+              width="20"
+              height="16"
+              style={{
+                marginRight: 8,
+              }}
+              src={`/flags/4x3/${option.value}.svg`}
+            />
+            {option.value.toUpperCase()}
+          </div>
+        )}
+      /> */}
     </PlayGround>
   );
 }

@@ -161,7 +161,7 @@
     font-weight: ${({weight:i=t})=>P[i]||"500"};
     font-size: ${({size:i=s})=>T[i]||i};
     color: ${({theme:i,color:n=c})=>{const l=n==null?void 0:n.split("/")[0],d=+(n==null?void 0:n.split("/")[1]);return i.color[l][d]}};
-  `},J={h1:"h1",h2:"h2",h3:"h3",h4:"h4",h5:"h5",h6:"h6",p:"p",span:"span",strong:"strong",label:"label"},X=g.default.div`
+  `},J={h1:"h1",h2:"h2",h3:"h3",h4:"h4",h5:"h5",h6:"h6",p:"p",li:"li",span:"span",strong:"strong",label:"label"},X=g.default.div`
   ${K}
   ${({as:e})=>G(e)}
 `,$=({as:e,...o})=>{const t=J[e];return r.jsx(X,{as:t,...o})},ee={H1:e=>r.jsx($,{as:"h1",...e}),H2:e=>r.jsx($,{as:"h2",...e}),H3:e=>r.jsx($,{as:"h3",...e}),H4:e=>r.jsx($,{as:"h4",...e}),H5:e=>r.jsx($,{as:"h5",...e}),H6:e=>r.jsx($,{as:"h6",...e})},te=g.default.div`
@@ -209,9 +209,13 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
-`,re=({id:e,value:o,length:t=4,errorMessage:s,success:c,onChange:i=l=>{},...n})=>(Q(i,e,o),r.jsxs(ne,{children:[r.jsx(oe,{length:t,success:c,errorMessage:s,children:Array.from({length:t}).map((l,d)=>r.jsx("input",{id:d.toString(),className:e,maxLength:1,...n},d))}),s&&r.jsx(w,{shouldAppear:Boolean(s),children:r.jsx(k,{size:"xs",weight:"light",color:"ALERT/900",children:s})})]})),v={color:{NEUTRAL:{50:"#F5F5F5",100:"#EBEBEB",200:"#dfdfdf",300:"#bfbfbf",400:"#9f9f9f",500:"#808080",600:"#404040",700:"#404040",800:"#202020",900:"#000000"},PRIMARY:{50:"#F1F2F9",100:"#E6E8F4",200:"#DDDFF0",300:"#BBBFE2",400:"#999FD3",500:"#777fc5",600:"#545fb6",700:"#414a98",800:"#333a76",900:"#242954"},SECONDARY:{20:"#F7F5FF",50:"#EFEBFF",100:"#E6E0FF",200:"#d0c5ff",300:"#d0c5ff",400:"#b9a8ff",500:"#a18cff",600:"#8a6fff",700:"#7252ff",800:"#5b35ff",900:"#4318FF"},TERTIARY:{50:"#FFFAFC",100:"#FFF5F9",200:"#ffeff5",300:"#ffe0eb",400:"#ffd0e1",500:"#ffc1d7",600:"#ffb1cd",700:"#FFA1C3",800:"#ff92b9",900:"#FF82AF"},QUATERNARY:{50:"#FBFCFE",100:"#F2F6FD",200:"#ebf1fc",300:"#D8E4FA",400:"#c4d6f8",500:"#b0c8f5",600:"#9cbbf3",700:"#88adf0",800:"#75a0ed",900:"#6192EB"},STATE:{50:"#FFFBF5",100:"#FEF7EB",200:"#fef3e3",300:"#fde7c6",400:"#fcdba9",500:"#fbcf8d",600:"#fac270",700:"#f9b654",800:"#f8aa38",900:"#F79E1B"},ALERT:{50:"#FFFBF5",100:"#FEEDEC",200:"#fde3e2",300:"#fbc8c5",400:"#f9ada8",500:"#f7918b",600:"#f4756d",700:"#F25A50",800:"#F03E33",900:"#EE2316"},SUCCESS:{50:"#F7FDFA",100:"#EEFBF4",200:"#e4f9ed",300:"#c9f3db",400:"#aeedc9",500:"#93e7b7",600:"#78e1a4",700:"#5DDB92",800:"#42D580",900:"#2DC96F"}}},ie=g.default.div`
+`,re=({id:e,value:o,length:t=4,errorMessage:s,success:c,onChange:i=l=>{},...n})=>(Q(i,e,o),r.jsxs(ne,{children:[r.jsx(oe,{length:t,success:c,errorMessage:s,children:Array.from({length:t}).map((l,d)=>r.jsx("input",{id:d.toString(),className:e,maxLength:1,...n},d))}),s&&r.jsx(w,{shouldAppear:Boolean(s),children:r.jsx(k,{size:"xs",weight:"light",color:"ALERT/900",children:s})})]})),v={color:{NEUTRAL:{50:"#F5F5F5",100:"#EBEBEB",200:"#dfdfdf",300:"#bfbfbf",400:"#9f9f9f",500:"#808080",600:"#404040",700:"#383838",800:"#202020",900:"#000000"},PRIMARY:{50:"#F1F2F9",100:"#E6E8F4",200:"#DDDFF0",300:"#BBBFE2",400:"#999FD3",500:"#777fc5",600:"#545fb6",700:"#414a98",800:"#333a76",900:"#242954"},SECONDARY:{20:"#F7F5FF",50:"#EFEBFF",100:"#E6E0FF",200:"#d0c5ff",300:"#d0c5ff",400:"#b9a8ff",500:"#a18cff",600:"#8a6fff",700:"#7252ff",800:"#5b35ff",900:"#4318FF"},TERTIARY:{50:"#FFFAFC",100:"#FFF5F9",200:"#ffeff5",300:"#ffe0eb",400:"#ffd0e1",500:"#ffc1d7",600:"#ffb1cd",700:"#FFA1C3",800:"#ff92b9",900:"#FF82AF"},QUATERNARY:{50:"#FBFCFE",100:"#F2F6FD",200:"#ebf1fc",300:"#D8E4FA",400:"#c4d6f8",500:"#b0c8f5",600:"#9cbbf3",700:"#88adf0",800:"#75a0ed",900:"#6192EB"},STATE:{50:"#FFFBF5",100:"#FEF7EB",200:"#fef3e3",300:"#fde7c6",400:"#fcdba9",500:"#fbcf8d",600:"#fac270",700:"#f9b654",800:"#f8aa38",900:"#F79E1B"},ALERT:{50:"#FFFBF5",100:"#FEEDEC",200:"#fde3e2",300:"#fbc8c5",400:"#f9ada8",500:"#f7918b",600:"#f4756d",700:"#F25A50",800:"#F03E33",900:"#EE2316"},SUCCESS:{50:"#F7FDFA",100:"#EEFBF4",200:"#e4f9ed",300:"#c9f3db",400:"#aeedc9",500:"#93e7b7",600:"#78e1a4",700:"#5DDB92",800:"#42D580",900:"#2DC96F"}}},ie=g.default.div`
   position: relative;
   width: 100%;
+
+  img {
+    margin-right: 0.25rem;
+  }
 
   label {
     display: inline-block;

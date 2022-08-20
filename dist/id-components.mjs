@@ -335,6 +335,7 @@ const _ = D`
   h5: "h5",
   h6: "h6",
   p: "p",
+  li: "li",
   span: "span",
   strong: "strong",
   label: "label"
@@ -471,7 +472,7 @@ const _ = D`
       400: "#9f9f9f",
       500: "#808080",
       600: "#404040",
-      700: "#404040",
+      700: "#383838",
       800: "#202020",
       900: "#000000"
     },
@@ -564,6 +565,10 @@ const _ = D`
 }, re = h.div`
   position: relative;
   width: 100%;
+
+  img {
+    margin-right: 0.25rem;
+  }
 
   label {
     display: inline-block;

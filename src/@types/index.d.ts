@@ -4,3 +4,5 @@ declare global {
     export interface DefaultTheme extends Theme {}
   }
 }
+
+declare module "*.json";
