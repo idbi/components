@@ -6,7 +6,7 @@ import { Text } from "../Typography";
 import { OptionsManager, Wrapper } from "./styles";
 import { ICustomSelect } from "./types";
 
-const CustomSelect = forwardRef(
+export const CustomSelect = forwardRef(
   <
     T extends {
       label: string;
@@ -118,5 +118,3 @@ const CustomSelect = forwardRef(
     );
   }
 );
-
-export default CustomSelect;
