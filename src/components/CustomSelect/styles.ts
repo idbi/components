@@ -55,6 +55,7 @@ export const OptionsManager = styled.ul`
   background-color: #fff;
   gap: 0.5rem;
   position: absolute;
+  z-index: 1;
   border-radius: 0.5rem;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   padding: 0;

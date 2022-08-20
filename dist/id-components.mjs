@@ -1,6 +1,6 @@
 import g, { css as s, keyframes as V } from "styled-components";
 import { jsxs as b, jsx as r, Fragment as H } from "react/jsx-runtime";
-import { useEffect as S, forwardRef as N, useState as F, useCallback as T } from "react";
+import { useEffect as S, forwardRef as z, useState as F, useCallback as T } from "react";
 import O from "react-loading-skeleton";
 import Q from "react-select";
 const j = {
@@ -304,7 +304,7 @@ const ee = V`
     opacity: 1;
     transform: translateY(0);
   }
-`, z = g.div`
+`, N = g.div`
   opacity: 0;
   ${({ shouldAppear: e }) => e && s`
       animation: ${ee} 0.2s ease-in;
@@ -453,7 +453,7 @@ const ee = V`
       maxLength: 1,
       ...o
     }, d))
-  }), l && /* @__PURE__ */ r(z, {
+  }), l && /* @__PURE__ */ r(N, {
     shouldAppear: Boolean(l),
     children: /* @__PURE__ */ r(k, {
       size: "xs",
@@ -778,7 +778,7 @@ const ee = V`
     d: "M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z",
     stroke: "none"
   })
-}), M = N(({
+}), M = z(({
   type: e,
   leftAddon: n,
   rightAddon: t,
@@ -837,7 +837,7 @@ const ee = V`
           color: R.color.SUCCESS[900]
         })
       })]
-    }), C && /* @__PURE__ */ r(z, {
+    }), C && /* @__PURE__ */ r(N, {
       shouldAppear: C,
       children: /* @__PURE__ */ r(k, {
         size: "xs",
@@ -1021,7 +1021,7 @@ const ee = V`
       strokeLinecap: "round"
     })
   });
-}, Ie = N(({
+}, Ie = z(({
   label: e,
   type: n,
   error: t,
@@ -1060,7 +1060,7 @@ const ee = V`
       fullWidth: o,
       type: h ? "text" : n,
       ...u
-    }), t && /* @__PURE__ */ r(z, {
+    }), t && /* @__PURE__ */ r(N, {
       shouldAppear: Boolean(t),
       children: /* @__PURE__ */ r(k, {
         size: "xs",
@@ -1142,6 +1142,7 @@ const ee = V`
   background-color: #fff;
   gap: 0.5rem;
   position: absolute;
+  z-index: 1;
   border-radius: 0.5rem;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   padding: 0;
@@ -1161,7 +1162,7 @@ const ee = V`
       }
     }
   }
-`, Ne = N(({
+`, ze = z(({
   isMobile: e,
   value: n,
   options: t,
@@ -1227,7 +1228,7 @@ const ee = V`
             E.key === "Enter" && A(f.label);
           },
           children: o ? o(f) : f.label
-        }, f.value))
+        }, f.label))
       })]
     })]
   });
@@ -1235,7 +1236,7 @@ const ee = V`
 export {
   ye as Button,
   Se as CodeInput,
-  Ne as CustomSelect,
+  ze as CustomSelect,
   Ce as Heading,
   Te as SelectField,
   k as Text,

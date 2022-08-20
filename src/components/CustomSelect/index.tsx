@@ -1,6 +1,6 @@
 import DownArrowIcon from "@/icons/DownArrowIcon";
 import SearchIcon from "@/icons/SearchIcon";
-import { forwardRef, useCallback, useEffect, useRef, useState } from "react";
+import { forwardRef, useCallback, useState } from "react";
 import { TextInput } from "../TextInput";
 import { Text } from "../Typography";
 import { OptionsManager, Wrapper } from "./styles";
@@ -98,7 +98,7 @@ export const CustomSelect = forwardRef(
                 <Text
                   as="li"
                   color="NEUTRAL/700"
-                  key={option.value}
+                  key={option.label}
                   className={option.value === value.value ? "selected" : ""}
                   tabIndex={0}
                   onClick={() => updateName(option.label)}
