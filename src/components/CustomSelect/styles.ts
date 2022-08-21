@@ -52,7 +52,7 @@ export const OptionsManager = styled.ul<{
   maxOptionsHeight?: number;
   fullWidthOptions?: boolean;
 }>`
-  width: ${({ fullWidthOptions }) => (fullWidthOptions ? "100%" : "auto")};
+  width: ${({ fullWidthOptions }) => (fullWidthOptions ? "100%" : "15rem")};
   max-height: ${({ maxOptionsHeight }) =>
     maxOptionsHeight ? `${maxOptionsHeight}px` : "auto"};
   display: flex;

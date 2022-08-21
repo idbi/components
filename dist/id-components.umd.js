@@ -473,7 +473,7 @@
     background-color: ${({theme:e})=>e.color.QUATERNARY[100]};
   }
 `,Ie=b.default.ul`
-  width: ${({fullWidthOptions:e})=>e?"100%":"auto"};
+  width: ${({fullWidthOptions:e})=>e?"100%":"15rem"};
   max-height: ${({maxOptionsHeight:e})=>e?`${e}px`:"auto"};
   display: flex;
   flex-direction: column;

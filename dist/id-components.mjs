@@ -1152,7 +1152,7 @@ const ce = q`
     background-color: ${({ theme: e }) => e.color.QUATERNARY[100]};
   }
 `, Te = g.ul`
-  width: ${({ fullWidthOptions: e }) => e ? "100%" : "auto"};
+  width: ${({ fullWidthOptions: e }) => e ? "100%" : "15rem"};
   max-height: ${({ maxOptionsHeight: e }) => e ? `${e}px` : "auto"};
   display: flex;
   flex-direction: column;
