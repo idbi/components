@@ -1,14 +1,14 @@
-import g, { css as s, keyframes as V } from "styled-components";
-import { jsxs as b, jsx as r, Fragment as H } from "react/jsx-runtime";
-import { useEffect as S, forwardRef as z, useState as F, useCallback as T } from "react";
-import O from "react-loading-skeleton";
-import Q from "react-select";
-const j = {
+import g, { css as c, keyframes as q } from "styled-components";
+import { jsxs as b, jsx as r, Fragment as _ } from "react/jsx-runtime";
+import { useEffect as C, forwardRef as N, useState as S, useRef as G, useCallback as L } from "react";
+import J from "react-loading-skeleton";
+import X from "react-select";
+const ee = {
   bold: 700,
   medium: 500,
   regular: 400,
   light: 300
-}, B = {
+}, P = {
   xs: "0.750rem",
   sm: "0.875rem	",
   md: "1.0rem",
@@ -18,7 +18,7 @@ const j = {
   "3xl": "2.0rem",
   "4xl": "2.5rem",
   "5xl": "3.0rem"
-}, L = {
+}, M = {
   h1: "xl",
   h2: "lg",
   h3: "md",
@@ -26,49 +26,49 @@ const j = {
   h5: "xs",
   h6: "xs",
   text: "sm"
-}, Z = ({ shape: e }) => {
+}, te = ({ shape: e }) => {
   switch (e) {
     case "rounded":
-      return s`
+      return c`
         border-radius: 10px;
       `;
     case "squared":
-      return s`
+      return c`
         border-radius: 0;
       `;
     case "circular":
-      return s`
+      return c`
         border-radius: 25px;
       `;
     default:
-      return s`
+      return c`
         border-radius: 10px;
       `;
   }
-}, U = ({
+}, H = ({
   design: e,
   color: n
 }) => {
   switch (e) {
     case "solid":
-      return s`
+      return c`
         background-color: ${({ theme: t }) => $({ theme: t, color: n })};
         color: #fff;
       `;
     case "outline":
-      return s`
+      return c`
         background-color: transparent;
         border: 1px solid ${({ theme: t }) => $({ theme: t, color: n })};
         color: ${({ theme: t }) => $({ theme: t, color: n })};
       `;
     case "flat":
-      return s`
+      return c`
         background-color: transparent;
         border: none;
         color: ${({ theme: t }) => $({ theme: t, color: n })};
       `;
     case "link":
-      return s`
+      return c`
         background-color: transparent;
         border: none;
         color: ${({ theme: t }) => $({ theme: t, color: n })};
@@ -79,7 +79,7 @@ const j = {
         }
       `;
     default:
-      return s`
+      return c`
         background-color: ${({ theme: t }) => $({ theme: t, color: n })};
         color: #fff;
       `;
@@ -123,30 +123,30 @@ const j = {
         break;
     }
   return i === "PRIMARY" || i === "SECONDARY" || i === "TERTIARY" || i === "QUATERNARY" || i === "STATE" || i === "ALERT" || i === "SUCCESS" ? o === 50 || o === 100 || o === 200 || o === 300 || o === 400 || o === 500 || o === 600 || o === 700 || o === 800 || o === 900 ? n.color[i][o] : n.color[i][900] : n.color.PRIMARY[900];
-}, Y = ({ fullWidth: e }) => e ? s`
+}, W = ({ fullWidth: e }) => e ? c`
       width: 100%;
-    ` : s`
+    ` : c`
     width: auto;
-  `, K = ({ isLoading: e }) => e ? s`
+  `, ne = ({ isLoading: e }) => e ? c`
       cursor: not-allowed;
       opacity: 0.5;
-    ` : s`
+    ` : c`
     cursor: pointer;
     opacity: 1;
-  `, q = ({ disabled: e }) => e ? s`
+  `, oe = ({ disabled: e }) => e ? c`
       cursor: not-allowed;
       opacity: 0.5;
-    ` : s`
+    ` : c`
     cursor: pointer;
     opacity: 1;
-  `, I = ({ size: e = "sm" }) => s`
-    font-size: ${B[e] || e};
-  `, _ = ({ align: e }) => {
+  `, z = ({ size: e = "sm" }) => c`
+    font-size: ${P[e] || e};
+  `, re = ({ align: e }) => {
   if (e)
-    return s`
+    return c`
       text-align: ${e};
     `;
-}, D = (e) => {
+}, O = (e) => {
   let n = "";
   return e.m && (n += `
       margin-top: ${e.m};
@@ -186,14 +186,14 @@ const j = {
     `), e.py && (n += `
       padding-top: ${e.py};
       padding-bottom: ${e.py};
-    `), s`
+    `), c`
     ${n}
   `;
-}, G = g.button`
+}, ie = g.button`
   background-color: transparent;
   cursor: pointer;
   border: none;
-`, J = g(G)`
+`, ae = g(ie)`
   display: inline-flex;
   gap: 0.5rem;
   font-weight: 500;
@@ -203,13 +203,13 @@ const j = {
   padding: ${({ design: e }) => e === "link" ? "0" : "0.7rem"};
   min-height: ${({ design: e }) => e === "link" ? "0" : "45px"};
 
-  ${({ size: e }) => I({ size: e })};
-  ${({ shape: e }) => Z({ shape: e })};
-  ${({ design: e, color: n }) => U({ design: e, color: n })};
-  ${({ fullWidth: e }) => Y({ fullWidth: e })};
-  ${({ isLoading: e }) => K({ isLoading: e })};
-  ${({ disabled: e }) => q({ disabled: e })};
-  ${({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: c, pb: d, pt: u, pr: h, pl: m, py: x, px: p }) => D({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: c, pb: d, pt: u, pr: h, pl: m, py: x, px: p })};
+  ${({ size: e }) => z({ size: e })};
+  ${({ shape: e }) => te({ shape: e })};
+  ${({ design: e, color: n }) => H({ design: e, color: n })};
+  ${({ fullWidth: e }) => W({ fullWidth: e })};
+  ${({ isLoading: e }) => ne({ isLoading: e })};
+  ${({ disabled: e }) => oe({ disabled: e })};
+  ${({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: s, pb: d, pt: u, pr: f, pl: m, py: E, px: p }) => O({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: s, pb: d, pt: u, pr: f, pl: m, py: E, px: p })};
 
   &:hover {
     background-color: ${({ theme: e, color: n, design: t }) => t === "link" ? "transparent" : $({ color: n, theme: e, design: t, hover: !0 })};
@@ -228,48 +228,48 @@ const j = {
   }
 
   &:disabled:hover {
-    ${({ design: e, color: n }) => U({ design: e, color: n })};
+    ${({ design: e, color: n }) => H({ design: e, color: n })};
   }
-`, ye = ({
+`, Be = ({
   children: e,
   ...n
-}) => /* @__PURE__ */ b(J, {
+}) => /* @__PURE__ */ b(ae, {
   ...n,
   children: [n.leftIcon, e, n.rightIcon]
 });
-function X(e, n, t) {
+function le(e, n, t) {
   const l = () => {
     const a = document.querySelectorAll("input");
     return Array.from(a).filter(
       (o) => o.className === n
     );
   };
-  S(() => {
+  C(() => {
     const a = (i) => {
       i.key === "Backspace" && setTimeout(() => {
-        const o = l(), c = document.activeElement;
-        c.value = "";
-        const d = o.indexOf(c);
+        const o = l(), s = document.activeElement;
+        s.value = "";
+        const d = o.indexOf(s);
         d > 0 && o[d - 1].focus();
       }, 0);
     };
     return document.addEventListener("keydown", a), () => document.removeEventListener("keydown", a);
-  }, []), S(() => {
+  }, []), C(() => {
     const a = (i) => {
       if (i.key !== "Backspace") {
         const o = i.key.toLowerCase();
         setTimeout(() => {
           if (o.length === 1) {
-            const c = l(), d = document.activeElement;
+            const s = l(), d = document.activeElement;
             d.value = o;
-            const u = c.indexOf(d);
-            u < c.length - 1 && c[u + 1].focus();
+            const u = s.indexOf(d);
+            u < s.length - 1 && s[u + 1].focus();
           }
         }, 0);
       }
     };
     return document.addEventListener("keydown", a), () => document.removeEventListener("keydown", a);
-  }, []), S(() => {
+  }, []), C(() => {
     if (e) {
       const a = (i) => {
         const o = i.key.toLowerCase();
@@ -280,17 +280,17 @@ function X(e, n, t) {
       };
       return document.addEventListener("keydown", a), () => document.removeEventListener("keydown", a);
     }
-  }, []), S(() => {
+  }, []), C(() => {
     if (t) {
       const a = l(), i = t.split("");
-      a.forEach((o, c) => {
-        const d = i[c];
+      a.forEach((o, s) => {
+        const d = i[s];
         d && (o.value = d);
       });
     }
   }, [t]);
 }
-const ee = V`
+const ce = q`
   0% {
     opacity: 0;
     transform: translateY(-4px);
@@ -304,30 +304,31 @@ const ee = V`
     opacity: 1;
     transform: translateY(0);
   }
-`, N = g.div`
+`, U = g.div`
   opacity: 0;
-  ${({ shouldAppear: e }) => e && s`
-      animation: ${ee} 0.2s ease-in;
+  ${({ shouldAppear: e }) => e && c`
+      animation: ${ce} 0.2s ease-in;
       animation-fill-mode: forwards;
     `}
-`, te = s`
+`, se = c`
+  display: inline-block;
   font-family: "Poppins";
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.04rem;
-  ${({ align: e }) => _({ align: e })}
-  ${({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: c, pb: d, pt: u, pr: h, pl: m, py: x, px: p }) => D({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: c, pb: d, pt: u, pr: h, pl: m, py: x, px: p })};
-`, ne = (e) => {
-  const n = e === "h1" || e === "h2" || e === "h3" || e === "h4" || e === "h5" || e === "h6", t = n ? "bold" : "medium", l = n ? L[e] : L.text, a = "PRIMARY/900";
-  return s`
-    font-weight: ${({ weight: i = t }) => j[i] || "500"};
-    font-size: ${({ size: i = l }) => B[i] || i};
+  ${({ align: e }) => re({ align: e })}
+  ${({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: s, pb: d, pt: u, pr: f, pl: m, py: E, px: p }) => O({ m: e, mb: n, mt: t, mr: l, ml: a, my: i, mx: o, p: s, pb: d, pt: u, pr: f, pl: m, py: E, px: p })};
+`, de = (e) => {
+  const n = e === "h1" || e === "h2" || e === "h3" || e === "h4" || e === "h5" || e === "h6", t = n ? "bold" : "medium", l = n ? M[e] : M.text, a = "PRIMARY/900";
+  return c`
+    font-weight: ${({ weight: i = t }) => ee[i] || "500"};
+    font-size: ${({ size: i = l }) => P[i] || i};
     color: ${({ theme: i, color: o = a }) => {
-    const c = o == null ? void 0 : o.split("/")[0], d = +(o == null ? void 0 : o.split("/")[1]);
-    return i.color[c][d];
+    const s = o == null ? void 0 : o.split("/")[0], d = +(o == null ? void 0 : o.split("/")[1]);
+    return i.color[s][d];
   }};
   `;
-}, oe = {
+}, ue = {
   h1: "h1",
   h2: "h2",
   h3: "h3",
@@ -339,21 +340,21 @@ const ee = V`
   span: "span",
   strong: "strong",
   label: "label"
-}, re = g.div`
-  ${te}
+}, fe = g.div`
+  ${se}
   ${({
   as: e
-}) => ne(e)}
+}) => de(e)}
 `, v = ({
   as: e,
   ...n
 }) => {
-  const t = oe[e];
-  return /* @__PURE__ */ r(re, {
+  const t = ue[e];
+  return /* @__PURE__ */ r(fe, {
     as: t,
     ...n
   });
-}, Ce = {
+}, Ye = {
   H1: (e) => /* @__PURE__ */ r(v, {
     as: "h1",
     ...e
@@ -378,12 +379,12 @@ const ee = V`
     as: "h6",
     ...e
   })
-}, ie = g.div`
+}, he = g.div`
   display: flex;
   align-items: center;
   gap: 8px;
   transition: 0.3s ease-out;
-`, k = (e) => e.rightIcon || e.leftIcon ? /* @__PURE__ */ b(ie, {
+`, w = (e) => e.rightIcon || e.leftIcon ? /* @__PURE__ */ b(he, {
   children: [e.leftIcon, /* @__PURE__ */ r(v, {
     as: e.as || "p",
     ...e
@@ -391,7 +392,7 @@ const ee = V`
 }) : /* @__PURE__ */ r(v, {
   as: e.as || "p",
   ...e
-}), ae = g.div`
+}), me = g.div`
   display: grid;
   grid-template-columns: repeat(${(e) => e.length}, 1fr);
   grid-gap: 22px;
@@ -426,43 +427,43 @@ const ee = V`
       border-color: ${(e) => e.theme.color.QUATERNARY[900]};
     }
   }
-`, le = g.div`
+`, ge = g.div`
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 10px;
-`, Se = ({
+`, De = ({
   id: e,
   value: n,
   length: t = 4,
   errorMessage: l,
   success: a,
-  onChange: i = (c) => {
+  onChange: i = (s) => {
   },
   ...o
-}) => (X(i, e, n), /* @__PURE__ */ b(le, {
-  children: [/* @__PURE__ */ r(ae, {
+}) => (le(i, e, n), /* @__PURE__ */ b(ge, {
+  children: [/* @__PURE__ */ r(me, {
     length: t,
     success: a,
     errorMessage: l,
     children: Array.from({
       length: t
-    }).map((c, d) => /* @__PURE__ */ r("input", {
+    }).map((s, d) => /* @__PURE__ */ r("input", {
       id: d.toString(),
       className: e,
       maxLength: 1,
       ...o
     }, d))
-  }), l && /* @__PURE__ */ r(N, {
+  }), l && /* @__PURE__ */ r(U, {
     shouldAppear: Boolean(l),
-    children: /* @__PURE__ */ r(k, {
+    children: /* @__PURE__ */ r(w, {
       size: "xs",
       weight: "light",
       color: "ALERT/900",
       children: l
     })
   })]
-})), R = {
+})), A = {
   color: {
     NEUTRAL: {
       50: "#F5F5F5",
@@ -562,7 +563,7 @@ const ee = V`
       900: "#2DC96F"
     }
   }
-}, ce = g.div`
+}, pe = g.div`
   position: relative;
   width: 100%;
 
@@ -603,24 +604,24 @@ const ee = V`
   & > span {
     width: 100%;
   }
-`, se = {
+`, be = {
   control: (e, n) => ({
     ...e,
     minHeight: "45px",
     borderRadius: 10,
     backgroundColor: "#ffffff",
-    border: `1px solid ${n.isFocused ? R.color.QUATERNARY[900] : R.color.NEUTRAL[300]}`,
+    border: `1px solid ${n.isFocused ? A.color.QUATERNARY[900] : A.color.NEUTRAL[300]}`,
     boxShadow: "none",
     cursor: "pointer"
   }),
   singleValue: () => ({
-    color: R.color.PRIMARY[900],
+    color: A.color.PRIMARY[900],
     fontWeight: 500,
     fontSize: "14px"
   }),
   placeholder: (e) => ({
     ...e,
-    color: R.color.NEUTRAL[700]
+    color: A.color.NEUTRAL[700]
   }),
   indicatorSeparator: (e) => ({
     ...e,
@@ -639,7 +640,7 @@ const ee = V`
     padding: 0,
     paddingLeft: "6px"
   })
-}, Te = ({
+}, Me = ({
   formatOptionLabel: e,
   options: n,
   loading: t = !1,
@@ -647,45 +648,45 @@ const ee = V`
   error: a,
   firstOption: i,
   initialValue: o,
-  value: c,
+  value: s,
   onChange: d,
   isMulti: u,
-  placeholder: h,
+  placeholder: f,
   label: m
 }) => {
-  const x = i || {
+  const E = i || {
     label: "Seleccione una opci\xF3n",
     value: ""
   }, p = [...n];
-  return /* @__PURE__ */ b(ce, {
+  return /* @__PURE__ */ b(pe, {
     style: l,
     hasError: !!a,
-    children: [m && /* @__PURE__ */ r(k, {
+    children: [m && /* @__PURE__ */ r(w, {
       as: "label",
       align: "left",
       size: "sm",
       color: "NEUTRAL/700",
       children: m
-    }), t ? /* @__PURE__ */ r(O, {
+    }), t ? /* @__PURE__ */ r(J, {
       style: {
         borderRadius: 10
       },
       className: "loading-skeleton",
       height: 46,
       width: "100%"
-    }) : /* @__PURE__ */ r(Q, {
-      placeholder: h,
-      value: c || void 0,
-      defaultValue: o || x,
+    }) : /* @__PURE__ */ r(X, {
+      placeholder: f,
+      value: s || void 0,
+      defaultValue: o || E,
       options: p,
       onChange: d,
-      styles: se,
+      styles: be,
       isMulti: u,
       formatOptionLabel: e
     })]
   });
-}, de = g.div`
-  ${({ fullWidth: e }) => Y({ fullWidth: e })};
+}, xe = g.div`
+  ${({ fullWidth: e }) => W({ fullWidth: e })};
   position: relative;
   display: flex;
   align-items: center;
@@ -706,7 +707,7 @@ const ee = V`
 
   > input {
     width: 100%;
-    ${({ size: e }) => I({ size: e })};
+    ${({ size: e }) => z({ size: e })};
     flex-grow: 1;
     border: none;
     outline: none;
@@ -735,7 +736,7 @@ const ee = V`
 
   span {
     color: ${(e) => e.theme.color.NEUTRAL[500]};
-    ${({ size: e }) => I({ size: e })};
+    ${({ size: e }) => z({ size: e })};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -747,7 +748,7 @@ const ee = V`
     position: absolute;
     right: 1rem;
   }
-`, ue = (e) => /* @__PURE__ */ r("svg", {
+`, $e = (e) => /* @__PURE__ */ r("svg", {
   stroke: "currentColor",
   fill: "currentColor",
   strokeWidth: 0,
@@ -765,7 +766,7 @@ const ee = V`
       d: "M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"
     })]
   })
-}), fe = (e) => /* @__PURE__ */ r("svg", {
+}), Ee = (e) => /* @__PURE__ */ r("svg", {
   stroke: "currentColor",
   fill: "currentColor",
   strokeWidth: 0,
@@ -778,7 +779,7 @@ const ee = V`
     d: "M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z",
     stroke: "none"
   })
-}), M = z(({
+}), V = N(({
   type: e,
   leftAddon: n,
   rightAddon: t,
@@ -786,37 +787,37 @@ const ee = V`
   error: a,
   success: i,
   size: o,
-  fullWidth: c,
+  fullWidth: s,
   name: d,
   infoMessage: u,
-  onFocus: h,
+  onFocus: f,
   onBlur: m,
-  onChange: x,
+  onChange: E,
   ...p
-}, w) => {
-  const [y, A] = F(!1), C = !a && !i && u && y;
-  return /* @__PURE__ */ b(H, {
-    children: [/* @__PURE__ */ b(de, {
-      fullWidth: c,
+}, I) => {
+  const [k, F] = S(!1), y = !a && !i && u && k;
+  return /* @__PURE__ */ b(_, {
+    children: [/* @__PURE__ */ b(xe, {
+      fullWidth: s,
       success: i,
       size: o,
       error: a,
       disabled: p.disabled,
       leftAddon: n,
       rightAddon: t,
-      isFocused: y,
+      isFocused: k,
       children: [n && /* @__PURE__ */ r("span", {
         className: "leftAddon",
         children: n
       }), /* @__PURE__ */ r("input", {
-        ref: w,
-        onFocus: (f) => {
-          h && h(f), A(!0);
+        ref: I,
+        onFocus: (R) => {
+          f && f(R), F(!0);
         },
-        onBlur: (f) => {
-          m && m(f), A(!1);
+        onBlur: (R) => {
+          m && m(R), F(!1);
         },
-        onChange: x,
+        onChange: E,
         placeholder: l,
         type: e,
         name: d,
@@ -826,27 +827,27 @@ const ee = V`
         children: t
       }), a && /* @__PURE__ */ r("span", {
         className: "state",
-        children: /* @__PURE__ */ r(ue, {
+        children: /* @__PURE__ */ r($e, {
           size: 24,
-          color: R.color.ALERT[900]
+          color: A.color.ALERT[900]
         })
       }), i && /* @__PURE__ */ r("span", {
         className: "state",
-        children: /* @__PURE__ */ r(fe, {
+        children: /* @__PURE__ */ r(Ee, {
           size: 20,
-          color: R.color.SUCCESS[900]
+          color: A.color.SUCCESS[900]
         })
       })]
-    }), C && /* @__PURE__ */ r(N, {
-      shouldAppear: C,
-      children: /* @__PURE__ */ r(k, {
+    }), y && /* @__PURE__ */ r(U, {
+      shouldAppear: y,
+      children: /* @__PURE__ */ r(w, {
         size: "xs",
         color: "QUATERNARY/900",
         children: u
       })
     })]
   });
-}), he = g.div`
+}), ve = g.div`
   width: ${(e) => e.fullWidth ? "100%" : "auto"};
 
   .label-container {
@@ -859,7 +860,7 @@ const ee = V`
     margin-bottom: 0.25rem;
     padding-left: 0.05rem;
   }
-`, me = g.div`
+`, we = g.div`
   width: ${(e) => e.size}px;
   height: ${(e) => e.size}px;
   position: relative;
@@ -899,8 +900,8 @@ const ee = V`
     background: #fff;
   }
 
-  ${(e) => e.variant == "V1" && s`
-      ${(n) => n.active && s`
+  ${(e) => e.variant == "V1" && c`
+      ${(n) => n.active && c`
           &::before {
             content: "";
             position: absolute;
@@ -920,8 +921,8 @@ const ee = V`
           }
         `}
     `}
-  ${(e) => e.variant == "V2" && s`
-      ${(n) => n.active && s`
+  ${(e) => e.variant == "V2" && c`
+      ${(n) => n.active && c`
           &::before {
             content: "";
             position: absolute;
@@ -941,7 +942,7 @@ const ee = V`
           }
         `}
     `}
-`, ge = g.svg`
+`, Re = g.svg`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -949,18 +950,18 @@ const ee = V`
   width: ${(e) => e.size}px;
   height: ${(e) => e.size}px;
   fill: ${(e) => e.color || e.theme.color.PRIMARY[900]};
-  ${(e) => e.variant === "V1" && s`
-      ${(n) => n.active && s`
+  ${(e) => e.variant === "V1" && c`
+      ${(n) => n.active && c`
           fill: #fff;
         `}
     `}
-  ${(e) => e.variant === "V2" && s`
+  ${(e) => e.variant === "V2" && c`
       fill: ${(n) => n.theme.color.NEUTRAL[400]};
-      ${(n) => n.active && s`
+      ${(n) => n.active && c`
           fill: ${(t) => t.color || t.theme.color.PRIMARY[900]};
         `}
     `}
-`, P = (e) => {
+`, Q = (e) => {
   const {
     children: n,
     color: t,
@@ -968,29 +969,29 @@ const ee = V`
     viewBox: a,
     active: i,
     borderRadius: o,
-    variant: c
+    variant: s
   } = e;
-  return /* @__PURE__ */ r(me, {
+  return /* @__PURE__ */ r(we, {
     active: i,
     size: l || 24,
     borderRadius: o || "50%",
-    variant: c || "V1",
+    variant: s || "V1",
     color: t,
-    children: /* @__PURE__ */ r(ge, {
+    children: /* @__PURE__ */ r(Re, {
       active: i,
       color: t,
       size: l || 24,
       viewBox: a || "0 0 32 32",
-      variant: c || "V1",
+      variant: s || "V1",
       children: n
     })
   });
-}, pe = (e) => {
+}, ke = (e) => {
   const {
     color: n,
     size: t
   } = e;
-  return /* @__PURE__ */ r(P, {
+  return /* @__PURE__ */ r(Q, {
     color: n,
     size: t,
     viewBox: "0 0 22 13",
@@ -1002,12 +1003,12 @@ const ee = V`
       strokeLinecap: "round"
     })
   });
-}, be = (e) => {
+}, Ae = (e) => {
   const {
     color: n,
     size: t
   } = e;
-  return /* @__PURE__ */ r(P, {
+  return /* @__PURE__ */ r(Q, {
     color: n,
     size: t,
     viewBox: "0 0 22 19",
@@ -1021,7 +1022,7 @@ const ee = V`
       strokeLinecap: "round"
     })
   });
-}, Ie = z(({
+}, He = N(({
   label: e,
   type: n,
   error: t,
@@ -1029,47 +1030,62 @@ const ee = V`
   success: a,
   infoMessage: i,
   fullWidth: o,
-  ...c
+  ...s
 }, d) => {
   const u = {
-    ...c,
+    ...s,
     ref: d
-  }, [h, m] = F(!1);
-  return /* @__PURE__ */ b(he, {
+  }, [f, m] = S(!1);
+  return /* @__PURE__ */ b(ve, {
     fullWidth: o,
     children: [e && /* @__PURE__ */ b("div", {
       className: "label-container",
-      children: [/* @__PURE__ */ r(k, {
+      children: [/* @__PURE__ */ r(w, {
         as: "label",
         align: "left",
         size: "sm",
         color: "NEUTRAL/700",
         children: e
       }), n === "password" && /* @__PURE__ */ r("span", {
-        onClick: () => m(!h),
-        children: h ? /* @__PURE__ */ r(be, {
+        onClick: () => m(!f),
+        children: f ? /* @__PURE__ */ r(Ae, {
           size: 20
-        }) : /* @__PURE__ */ r(pe, {
+        }) : /* @__PURE__ */ r(ke, {
           size: 20
         })
       })]
-    }), /* @__PURE__ */ r(M, {
+    }), /* @__PURE__ */ r(V, {
       error: Boolean(t),
       success: a || !t && l,
       infoMessage: i,
       fullWidth: o,
-      type: h ? "text" : n,
+      type: f ? "text" : n,
       ...u
-    }), t && /* @__PURE__ */ r(N, {
+    }), t && /* @__PURE__ */ r(U, {
       shouldAppear: Boolean(t),
-      children: /* @__PURE__ */ r(k, {
+      children: /* @__PURE__ */ r(w, {
         size: "xs",
         color: "ALERT/900",
         children: t
       })
     })]
   });
-}), xe = (e) => /* @__PURE__ */ r("svg", {
+}), Fe = (e, n) => {
+  C(() => {
+    const t = (l) => {
+      if (Array.isArray(e)) {
+        for (const a of e)
+          if (!l.target || !a.current || a.current.contains(l.target))
+            return;
+      } else if (!l.target || !e.current || e.current.contains(l.target))
+        return;
+      n(l);
+    };
+    return document.addEventListener("mousedown", t), document.addEventListener("touchstart", t), () => {
+      document.removeEventListener("mousedown", t), document.removeEventListener("touchstart", t);
+    };
+  }, [e, n]);
+}, ye = (e) => /* @__PURE__ */ r("svg", {
   height: e.size || 16,
   width: e.size || 16,
   fill: "none",
@@ -1079,7 +1095,7 @@ const ee = V`
     d: "M12 5.333v2.534l-4 3.067-4-3.067V5.333L8 8.4l4-3.067Z",
     fill: "#6B6B6B"
   })
-}), $e = (e) => /* @__PURE__ */ r("svg", {
+}), Ce = (e) => /* @__PURE__ */ r("svg", {
   height: 13,
   width: 14,
   fill: "none",
@@ -1091,7 +1107,7 @@ const ee = V`
     d: "M5.821 1.606a4.715 4.715 0 1 0 0 9.43 4.715 4.715 0 0 0 0-9.43ZM.125 6.32A5.696 5.696 0 1 1 10.178 9.99l2.553 2.547a.49.49 0 0 1-.693.695l-2.553-2.55A5.696 5.696 0 0 1 .125 6.32Z",
     fill: "#242954"
   })
-}), ve = g.div`
+}), Se = g.div`
   position: relative;
   width: ${({ fullWidth: e }) => e ? "100%" : "auto"};
   ::selection {
@@ -1135,8 +1151,9 @@ const ee = V`
     border-radius: 0.5rem;
     background-color: ${({ theme: e }) => e.color.QUATERNARY[100]};
   }
-`, Ee = g.ul`
-  width: 15rem;
+`, Te = g.ul`
+  width: ${({ fullWidthOptions: e }) => e ? "100%" : "auto"};
+  max-height: ${({ maxOptionsHeight: e }) => e ? `${e}px` : "auto"};
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -1151,7 +1168,6 @@ const ee = V`
   .options {
     margin: 0;
     padding: 2px 0;
-    max-height: 11rem;
     overflow-y: auto;
     li {
       padding: 1.2rem 0.5rem;
@@ -1162,83 +1178,102 @@ const ee = V`
       }
     }
   }
-`, ze = z(({
-  isMobile: e,
-  value: n,
-  options: t,
-  placeholder: l = "Seleccione una opci\xF3n",
-  fullWidth: a,
-  onChange: i,
-  formatOptionLabel: o,
-  formatSelectedOption: c
-}, d) => {
-  const [u, h] = F(t), [m, x] = F(""), [p, w] = F(!1);
-  console.log({
-    options: t
-  }), console.log({
-    renderedOptions: u
+`, Pe = N(({
+  label: e,
+  searchable: n = !0,
+  isMobile: t,
+  autoSize: l,
+  value: a,
+  options: i,
+  placeholder: o = "Seleccione una opci\xF3n",
+  fullWidth: s,
+  fullWidthOptions: d,
+  onChange: u,
+  formatOptionLabel: f,
+  formatSelectedOption: m
+}, E) => {
+  const p = G(null), [I, k] = S(i), [F, y] = S(""), [R, T] = S(!1);
+  Fe(p, () => {
+    T(!1);
   });
-  const y = T(() => {
-    const f = t.filter((E) => E.label.toLowerCase().includes(m.toLowerCase()));
-    h(f);
-  }, [t, n]), A = T((f) => {
-    i(t.find((E) => E.label === f)), w(!1), x(""), h(t);
-  }, [y]), C = T((f) => {
-    x(f.target.value);
-    const E = t.filter((W) => W.label.toLowerCase().includes(f.target.value.toLowerCase()));
-    h(E);
-  }, []);
-  return /* @__PURE__ */ b(ve, {
-    fullWidth: a,
-    children: [/* @__PURE__ */ b("div", {
+  const j = L(() => {
+    const h = i.filter((x) => x.label.toLowerCase().includes(F.toLowerCase()));
+    k(h);
+  }, [i, a]), B = L((h) => {
+    u(i.find((x) => x.label === h)), T(!1), y(""), k(i);
+  }, [j]), Z = L((h) => {
+    y(h.target.value);
+    const x = i.filter((Y) => Y.label.toLowerCase().includes(h.target.value.toLowerCase()));
+    k(x);
+  }, []), K = () => {
+    const h = p.current;
+    if (h) {
+      const x = h.getBoundingClientRect(), D = window.innerHeight - x.bottom - 20;
+      return console.log(D), D;
+    }
+  };
+  return /* @__PURE__ */ b(Se, {
+    fullWidth: s,
+    ref: p,
+    children: [e && /* @__PURE__ */ r(w, {
+      as: "label",
+      align: "left",
+      size: "sm",
+      color: "NEUTRAL/700",
+      pl: "0.05rem",
+      mb: "0.25rem",
+      children: e
+    }), /* @__PURE__ */ b("div", {
       className: "select-btn",
-      onClick: () => w(!p),
+      onClick: () => T(!R),
       tabIndex: 0,
-      onKeyUpCapture: (f) => {
-        f.key === "Enter" && w(!p);
+      onKeyUpCapture: (h) => {
+        h.key === "Enter" && T(!R);
       },
-      children: [/* @__PURE__ */ r(k, {
+      children: [/* @__PURE__ */ r(w, {
         as: "span",
         color: "NEUTRAL/700",
         mr: "0.5rem",
-        children: c ? c(n) : o ? o(n) : n.label
-      }), /* @__PURE__ */ r(xe, {
+        children: m ? m(a) : f ? f(a) : a.label
+      }), /* @__PURE__ */ r(ye, {
         size: 20
       })]
-    }), p && /* @__PURE__ */ b(Ee, {
-      children: [/* @__PURE__ */ r("div", {
+    }), R && /* @__PURE__ */ b(Te, {
+      maxOptionsHeight: l ? K() : 285,
+      fullWidthOptions: d,
+      children: [n && /* @__PURE__ */ r("div", {
         className: "search-box",
-        children: /* @__PURE__ */ r(M, {
-          leftAddon: /* @__PURE__ */ r($e, {}),
+        children: /* @__PURE__ */ r(V, {
+          leftAddon: /* @__PURE__ */ r(Ce, {}),
           type: "text",
-          placeholder: l,
-          value: m,
-          onChange: C,
+          placeholder: o,
+          value: F,
+          onChange: Z,
           fullWidth: !0
         })
       }), /* @__PURE__ */ r("div", {
         className: "options",
-        children: u.map((f) => /* @__PURE__ */ r(k, {
+        children: I.map((h) => /* @__PURE__ */ r(w, {
           as: "li",
           color: "NEUTRAL/700",
-          className: f.value === n.value ? "selected" : "",
+          className: h.value === a.value ? "selected" : "",
           tabIndex: 0,
-          onClick: () => A(f.label),
-          onKeyUpCapture: (E) => {
-            E.key === "Enter" && A(f.label);
+          onClick: () => B(h.label),
+          onKeyUpCapture: (x) => {
+            x.key === "Enter" && B(h.label);
           },
-          children: o ? o(f) : f.label
-        }, f.label))
+          children: f ? f(h) : h.label
+        }, h.label))
       })]
     })]
   });
 });
 export {
-  ye as Button,
-  Se as CodeInput,
-  ze as CustomSelect,
-  Ce as Heading,
-  Te as SelectField,
-  k as Text,
-  Ie as TextField
+  Be as Button,
+  De as CodeInput,
+  Pe as CustomSelect,
+  Ye as Heading,
+  Me as SelectField,
+  w as Text,
+  He as TextField
 };

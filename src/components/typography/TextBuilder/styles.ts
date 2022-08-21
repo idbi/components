@@ -5,6 +5,7 @@ import { DefaultSizes, FontWeight, Size } from "../utils";
 import type { ITextBuilderProps, TColorNames, TColorScales } from "./types";
 
 export const baseStyles = css<ITextBuilderProps>`
+  display: inline-block;
   font-family: "Poppins";
   font-style: normal;
   line-height: 24px;

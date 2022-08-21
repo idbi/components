@@ -1,5 +1,8 @@
 import PlayGround from "./components/Playground";
 import { useState } from "react";
+import { CustomSelect } from "@/components/CustomSelect";
+import countries from "@/countries.json";
+import { SelectField } from "./components/SelectField";
 
 function App() {
   const [country, setCountry] = useState({
@@ -29,7 +32,8 @@ function App() {
           </div>
         )}
       /> */}
-      {/* <CustomSelect
+      <CustomSelect
+        label="País"
         options={countries.map((country: any) => ({
           value: country.alpha2,
           label: country.name,
@@ -63,7 +67,10 @@ function App() {
             {option.value.toUpperCase()}
           </div>
         )}
-      /> */}
+        autoSize
+        fullWidth
+        searchable={false}
+      />
     </PlayGround>
   );
 }

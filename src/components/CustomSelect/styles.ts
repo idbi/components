@@ -48,8 +48,13 @@ export const Wrapper = styled.div<{
   }
 `;
 
-export const OptionsManager = styled.ul`
-  width: 15rem;
+export const OptionsManager = styled.ul<{
+  maxOptionsHeight?: number;
+  fullWidthOptions?: boolean;
+}>`
+  width: ${({ fullWidthOptions }) => (fullWidthOptions ? "100%" : "auto")};
+  max-height: ${({ maxOptionsHeight }) =>
+    maxOptionsHeight ? `${maxOptionsHeight}px` : "auto"};
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -64,7 +69,6 @@ export const OptionsManager = styled.ul`
   .options {
     margin: 0;
     padding: 2px 0;
-    max-height: 11rem;
     overflow-y: auto;
     li {
       padding: 1.2rem 0.5rem;

@@ -1,4 +1,4 @@
-import useCodeInput from "@/hooks";
+import useCodeInput from "@/hooks/useCodeInput";
 import { WithAnimation } from "@/utils/WithAnimation";
 import React from "react";
 import { Text } from "../Typography";
