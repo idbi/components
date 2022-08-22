@@ -73,7 +73,6 @@ export const CustomSelect = forwardRef(
         const wrapperRect = (wrapper as any).getBoundingClientRect();
         const windowHeight = window.innerHeight;
         const maxHeight = windowHeight - wrapperRect.bottom - 20;
-        console.log(maxHeight);
         return maxHeight;
       }
     };
@@ -131,9 +130,9 @@ export const CustomSelect = forwardRef(
             <div className="options">
               {renderedOptions.map((option) => (
                 <Text
+                  key={`${option.label}-${option.value}`}
                   as="li"
                   color="NEUTRAL/700"
-                  key={option.label}
                   className={option.value === value.value ? "selected" : ""}
                   tabIndex={0}
                   onClick={() => updateName(option.label)}

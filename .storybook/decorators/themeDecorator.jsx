@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "@/ThemeProvider";
-import { theme } from "@/ThemeProvider/theme";
+import GlobalStyle from "@/theme/provider";
+import { theme } from "@/theme";
 
 const ThemDecorator = (Story) => {
   return (
