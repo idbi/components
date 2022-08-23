@@ -1337,7 +1337,8 @@ const ce = J`
         width: n,
         height: n,
         src: e || De,
-        alt: "profile"
+        alt: "profile",
+        referrerPolicy: "no-referrer"
       }), /* @__PURE__ */ r(ae, {
         type: "button",
         size: "lg",

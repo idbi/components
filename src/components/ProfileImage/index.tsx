@@ -41,6 +41,7 @@ export const ProfileImage: React.FC<IProfileImage> = ({
           height={size}
           src={imageUrl || DefaultProfile}
           alt="profile"
+          referrerPolicy="no-referrer"
         />
         <Button
           type="button"
