@@ -35,6 +35,7 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
   transition: border 0.3s ease-out;
 
   > input {
+    border-radius: 8px;
     width: 100%;
     ${({ size }) => getSize({ size })};
     flex-grow: 1;

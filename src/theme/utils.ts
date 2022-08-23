@@ -19,7 +19,7 @@ export const getShape = ({ shape }: Pick<IButton, "shape">) => {
       `;
     case "circular":
       return css`
-        border-radius: 50%;
+        border-radius: 10rem;
       `;
     default:
       return css`

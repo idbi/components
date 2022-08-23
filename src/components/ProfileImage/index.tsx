@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { Button } from "../Button";
+import { Text } from "../Typography";
 import { ProfileImageContainer } from "./styles";
 import { IProfileImage } from "./types";
 import DefaultProfile from "/public/default-profile.svg";
@@ -25,27 +26,32 @@ export const ProfileImage: React.FC<IProfileImage> = ({
 
   return (
     <ProfileImageContainer size={size}>
-      <input
-        type="file"
-        accept="image/png, image/jpeg"
-        onChange={handleChange}
-        ref={inputRef}
-      />
-      <img
-        width={size}
-        height={size}
-        src={imageUrl || DefaultProfile}
-        alt="profile"
-      />
-      <Button
-        type="button"
-        size="lg"
-        design="flat"
-        shape="circular"
-        onClick={() => inputRef.current?.click()}
-      >
-        +
-      </Button>
+      <Text color="NEUTRAL/400" weight="regular" size="xs">
+        Agrega tu foto
+      </Text>
+      <div className="profile-input__container">
+        <input
+          type="file"
+          accept="image/png, image/jpeg"
+          onChange={handleChange}
+          ref={inputRef}
+        />
+        <img
+          width={size}
+          height={size}
+          src={imageUrl || DefaultProfile}
+          alt="profile"
+        />
+        <Button
+          type="button"
+          size="lg"
+          design="flat"
+          shape="circular"
+          onClick={() => inputRef.current?.click()}
+        >
+          +
+        </Button>
+      </div>
     </ProfileImageContainer>
   );
 };
