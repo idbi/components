@@ -41,7 +41,7 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
     border: none;
     outline: none;
     padding: 10px 0px;
-    background: transparent;
+    background-color: #fff;
     letter-spacing: -0.04em;
     color: ${(props) => props.theme.color.NEUTRAL[700]};
     padding-left: ${({ leftAddon }) => (!leftAddon ? "12px" : "0px")};

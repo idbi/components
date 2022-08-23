@@ -11,7 +11,7 @@ export const getShape = ({ shape }: Pick<IButton, "shape">) => {
   switch (shape) {
     case "rounded":
       return css`
-        border-radius: 10px;
+        border-radius: 0.625rem;
       `;
     case "squared":
       return css`
@@ -19,11 +19,11 @@ export const getShape = ({ shape }: Pick<IButton, "shape">) => {
       `;
     case "circular":
       return css`
-        border-radius: 25px;
+        border-radius: 50%;
       `;
     default:
       return css`
-        border-radius: 10px;
+        border-radius: 0.625rem;
       `;
   }
 };
@@ -40,13 +40,13 @@ export const getDesign = ({
       `;
     case "outline":
       return css`
-        background-color: transparent;
+        background-color: white;
         border: 1px solid ${({ theme }) => getColor({ theme, color })};
         color: ${({ theme }) => getColor({ theme, color })};
       `;
     case "flat":
       return css`
-        background-color: transparent;
+        background-color: white;
         border: none;
         color: ${({ theme }) => getColor({ theme, color })};
       `;
