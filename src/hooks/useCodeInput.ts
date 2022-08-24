@@ -80,9 +80,15 @@ export default function useCodeInput(
   useEffect(() => {
     if (value) {
       const codeInputs = getCodeInputs();
+      console.log({ codeInputs: codeInputs.map((input) => input.value) });
+      const codeInputValues = codeInputs.map((input) => input.value);
       const valueArray = value.split("");
+      const currentValueArray =
+        valueArray.length === codeInputValues.length
+          ? valueArray
+          : codeInputValues;
       codeInputs.forEach((input, index) => {
-        const newValue = valueArray[index];
+        const newValue = currentValueArray[index];
         if (newValue) {
           input.value = newValue;
         }

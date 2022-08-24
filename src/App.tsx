@@ -2,18 +2,16 @@ import PlayGround from "./components/Playground";
 import { useState } from "react";
 import { ProfileImage } from "./components/ProfileImage";
 import { Button } from "./components/Button";
+import { CodeInput } from "./components/CodeInput";
+import { Loader } from "./components/Loader";
 
 function App() {
-  const [imageSrc, setImageSrc] = useState<{ file: File; url: string }>();
-
+  const [code, setCode] = useState("");
+  console.log({ code });
   return (
     <PlayGround>
-      <ProfileImage
-        imageUrl={imageSrc?.url}
-        onChange={(src) => setImageSrc(src)}
-        size={128}
-      />
-      <Button shape="circular">Continuar con correo electrónico</Button>
+      <Loader />
+      {/* // CustomSelect Margin */}
     </PlayGround>
   );
 }

@@ -16,7 +16,6 @@ export const ProfileImage: React.FC<IProfileImage> = ({
     const file = e.target.files?.[0] as File;
     if (file) {
       const url = URL.createObjectURL(file);
-      console.log({ file, url });
       onChange({
         file,
         url,

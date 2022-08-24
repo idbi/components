@@ -6,3 +6,4 @@ export { Heading } from "@/components/Typography/Heading";
 export { Text } from "@/components/Typography/Text";
 export { CustomSelect } from "@/components/CustomSelect";
 export { ProfileImage } from "@/components/ProfileImage";
+export { Loader } from "@/components/Loader";

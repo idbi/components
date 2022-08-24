@@ -65,14 +65,13 @@ export const OptionsManager = styled.ul<{
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   padding: 0;
   padding: 0.438rem 0.313rem;
-
   .options {
     margin: 0;
     padding: 2px 0;
     overflow-y: auto;
     li {
-      padding: 1.2rem 0.5rem;
-      margin: 0 0.313rem;
+      padding: 0.875rem 0.5rem;
+      margin: 0.5rem 0.313rem;
       &:focus {
         border-radius: 0.5rem;
         outline: 2px solid ${({ theme }) => theme.color.SECONDARY[900]};
