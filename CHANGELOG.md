@@ -1,3 +1,7 @@
+## [0.5.4](https://github.com/idbi/components/compare/v0.5.3...v0.5.4) (2022-08-26)
+
+
+
 ## [0.5.3](https://github.com/idbi/components/compare/v0.5.2...v0.5.3) (2022-08-26)
 
 
@@ -36,21 +40,6 @@
 * add loader component ([42bc459](https://github.com/idbi/components/commit/42bc4595f8a504112c513b231e28bcf3c874984d))
 * add new props to CustomSelect ([f49c015](https://github.com/idbi/components/commit/f49c015f9ab4791cf21548d04e48d9ffeeafa1e1))
 * add stories components ([068e63f](https://github.com/idbi/components/commit/068e63f54b6633a39cc43aaec7c68a1ad0b0609d))
-
-
-
-# [0.4.0](https://github.com/idbi/components/compare/v0.3.3...v0.4.0) (2022-08-16)
-
-
-### Bug Fixes
-
-* pass ref to TextInput ([eef684e](https://github.com/idbi/components/commit/eef684e9c081426e18012893052b92f3033ebb3b))
-
-
-### Features
-
-* add spacing to TextBuilder ([1ff54fb](https://github.com/idbi/components/commit/1ff54fb93ea6f5999f6f62f294c0674a057c57cd))
-* add TextField & SelecField ([e5c1177](https://github.com/idbi/components/commit/e5c1177a180771de3a5849f6b6054c5fd54d0b36))
 
 
 
