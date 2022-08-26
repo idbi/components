@@ -62,9 +62,7 @@ jobs:
           node-version: '18.x'
           cache: 'npm'
           registry-url: 'https://npm.pkg.github.com'
-          # Defaults to the user or organization that owns the workflow file
-          scope: '@octocat'
       - run: npm ci
-      - run: npm publish --verbose
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
