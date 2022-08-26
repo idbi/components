@@ -3,7 +3,7 @@
   "version": "0.5.11",
   "main": "dist/id-components.mjs",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@idbi/components"
+    "registry": "https://npm.pkg.github.com/@idbi"
   },
   "files": [
     "dist/",
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/idbi/components.git"
+    "url": "https://github.com/idbi/components"
   },
   "scripts": {
     "dev": "vite --port 3015",
