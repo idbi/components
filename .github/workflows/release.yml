@@ -61,8 +61,6 @@ jobs:
         with:
           node-version: '18.x'
           cache: 'npm'
-          scope: '@${{ github.repository_owner }}'
-          registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm publish
         env:
