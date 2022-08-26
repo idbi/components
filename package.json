@@ -1,6 +1,6 @@
 {
   "name": "@idbi/components",
-  "version": "0.5.19",
+  "version": "0.5.20",
   "main": "dist/id-components.mjs",
   "private": true,
   "files": [
