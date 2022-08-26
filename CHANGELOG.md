@@ -1,4 +1,8 @@
-# 0.6.0 (2022-08-26)
+## [0.6.1](https://github.com/idbi/components/compare/v0.6.0...v0.6.1) (2022-08-26)
+
+
+
+# [0.6.0](https://github.com/idbi/components/compare/e7780669cdb3530fad34d820d41fa64ad26b1463...v0.6.0) (2022-08-26)
 
 
 ### Bug Fixes
