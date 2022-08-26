@@ -1,0 +1,59 @@
+name: Release
+
+permissions:
+  contents: write
+
+on:
+  #  # Scan changed files in PRs, block on new issues only (existing issues ignored)
+  #  pull_request: { }
+  #
+  #  # Scan all files on branches, block on any issues
+  push:
+    branches:
+      - "main"
+
+  # Schedule this job to run at a certain time, using cron syntax
+  # Note that * is a special character in YAML so you have to quote this string
+  # schedule:
+  #   - cron: '30 0 1,15 * *' # scheduled for 00:30 UTC on both the 1st and 15th of the month
+
+  # Allows you to run this workflow manually from the Actions tab
+#  workflow_dispatch:
+#
+#  workflow_run:
+#    workflows: [ "semgrep"]
+#    branches: [ main ]
+#    types:
+#      - completed
+
+jobs:
+  publish-release:
+    name: "Publish Release"
+    runs-on: "ubuntu-latest"
+    outputs:
+      version: ${{ steps.changelog.outputs.tag }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Conventional Changelog Action
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v3
+        with:
+          github-token: ${{ secrets.github_token }}
+          skip-git-pull: "true"
+          skip-on-empty: "false"
+          skip-version-file: true
+          create-summary: true
+          fallback-version: '0.0.1'
+      - name: Create Release
+        uses: actions/create-release@v1
+        if: steps.changelog.outputs.skipped != 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+        with:
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
