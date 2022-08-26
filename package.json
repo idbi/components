@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:idbi/components.git"
+    "url": "https://github.com:idbi/components.git"
   },
   "scripts": {
     "dev": "vite --port 3015",
