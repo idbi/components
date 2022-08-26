@@ -1,3 +1,7 @@
+## [0.5.1](https://github.com/idbi/components/compare/v0.5.0...v0.5.1) (2022-08-26)
+
+
+
 # [0.5.0](https://github.com/idbi/components/compare/v0.4.0...v0.5.0) (2022-08-26)
 
 
@@ -69,21 +73,6 @@
 ### Performance Improvements
 
 * reduce bundle size ([9bf3bd8](https://github.com/idbi/components/commit/9bf3bd8e16f2cc8224cdae95fd4d1763d52e3c6f))
-
-
-
-## [0.3.1](https://github.com/idbi/components/compare/v0.3.0...v0.3.1) (2022-08-12)
-
-
-### Bug Fixes
-
-* adapt styles after 1st usage ([f4a40eb](https://github.com/idbi/components/commit/f4a40ebe06da5afee4b3e638f9dff90f0b13cfd9))
-* declare heading as const ([860270f](https://github.com/idbi/components/commit/860270fff644d4f0b6030e9d91314ab91d2317e4))
-
-
-### Features
-
-* add dist v0.3.1 ([01630e3](https://github.com/idbi/components/commit/01630e35af6a3e9610488fb7cc0b675907b6f3ac))
 
 
 
