@@ -65,6 +65,6 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: '@octocat'
       - run: npm ci
-      - run: npm publish
+      - run: npm publish --verbose
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
