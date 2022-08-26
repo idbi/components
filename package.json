@@ -2,9 +2,6 @@
   "name": "@idbi/components",
   "version": "0.5.16",
   "main": "dist/id-components.mjs",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@idbi"
-  },
   "files": [
     "dist/",
     "index.d.ts",
