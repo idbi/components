@@ -1,3 +1,7 @@
+## [0.5.3](https://github.com/idbi/components/compare/v0.5.2...v0.5.3) (2022-08-26)
+
+
+
 ## [0.5.2](https://github.com/idbi/components/compare/v0.5.1...v0.5.2) (2022-08-26)
 
 
@@ -47,22 +51,6 @@
 
 * add spacing to TextBuilder ([1ff54fb](https://github.com/idbi/components/commit/1ff54fb93ea6f5999f6f62f294c0674a057c57cd))
 * add TextField & SelecField ([e5c1177](https://github.com/idbi/components/commit/e5c1177a180771de3a5849f6b6054c5fd54d0b36))
-
-
-
-## [0.3.3](https://github.com/idbi/components/compare/v0.3.2...v0.3.3) (2022-08-13)
-
-
-### Bug Fixes
-
-* add ReactForwardRef to TextInput ([c568f9e](https://github.com/idbi/components/commit/c568f9ef73c65229c67885f5fb28ef7d5a1a42f2))
-* handle success & error icons with position absolute ([02f0bcf](https://github.com/idbi/components/commit/02f0bcfd5ed0edf5f3b35382a05b7e2d1ca007e5))
-* make onFocus & onBlur async ([3def39f](https://github.com/idbi/components/commit/3def39fd8d41194684295c6a63ab656d9fb60aaf))
-
-
-### Features
-
-* add dist v0.3.2 ([5dc8166](https://github.com/idbi/components/commit/5dc81663807582ff3bcb6c363929a2ce92e88076))
 
 
 
