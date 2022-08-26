@@ -62,7 +62,8 @@ jobs:
           node-version: '18.x'
           cache: 'npm'
           registry-url: 'https://npm.pkg.github.com'
-      - run: npm ci
+          scope: '@idbi'
+      - run: npm install
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.github_token }}
