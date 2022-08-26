@@ -1,3 +1,7 @@
+## [0.5.16](https://github.com/idbi/components/compare/v0.5.15...v0.5.16) (2022-08-26)
+
+
+
 ## [0.5.15](https://github.com/idbi/components/compare/v0.5.14...v0.5.15) (2022-08-26)
 
 
@@ -11,10 +15,6 @@
 
 
 ## [0.5.12](https://github.com/idbi/components/compare/v0.5.11...v0.5.12) (2022-08-26)
-
-
-
-## [0.5.11](https://github.com/idbi/components/compare/v0.5.10...v0.5.11) (2022-08-26)
 
 
 
