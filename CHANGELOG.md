@@ -1,3 +1,12 @@
+## [0.6.3](https://github.com/idbi/components/compare/v0.6.2...v0.6.3) (2022-08-29)
+
+
+### Bug Fixes
+
+* package ([5fb13b5](https://github.com/idbi/components/commit/5fb13b561e5b538e2c1a453d0b69833ecea8374b))
+
+
+
 ## [0.6.2](https://github.com/idbi/components/compare/v0.6.1...v0.6.2) (2022-08-27)
 
 
