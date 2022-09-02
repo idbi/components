@@ -1,6 +1,8 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Button } from "./components/Button";
 import { Card } from "./components/Card";
+import { Collapsible } from "./components/Collapsible";
 import PlayGround from "./components/Playground";
 import { StickyHeader } from "./components/StickyHeader";
 import CheckIcon from "./icons/CheckIcon";
@@ -19,14 +21,30 @@ const ProfileOption = styled.div`
 `;
 
 function App() {
+  const [open, setOpen] = useState(false);
   return (
-    <div style={{ backgroundColor: "#fff", height: "200vh" }}>
-      <StickyHeader
-        onBack={() => {
-          console.log("back");
-        }}
-        backLabel="Back"
-        profileImageUrl="https://avatars.githubusercontent.com/u/51397083?v=4"
+    <PlayGround>
+      <Collapsible
+        open={open}
+        setOpen={setOpen}
+        label="Profile"
+        content={
+          <ProfileOption>
+            <div className="left-box">
+              <GoogleIcon />
+              <div>
+                <h3>Google</h3>
+                <p>
+                  <span>
+                    <CheckIcon />
+                  </span>
+                  <span>Verified</span>
+                </p>
+              </div>
+            </div>
+            <Button>Change</Button>
+          </ProfileOption>
+        }
       />
       {/* <Card
         design="primary"
@@ -90,7 +108,7 @@ function App() {
         )}
         withSeparator
       /> */}
-    </div>
+    </PlayGround>
   );
 }
 

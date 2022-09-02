@@ -8,3 +8,5 @@ export { CustomSelect } from "@/components/CustomSelect";
 export { ProfileImage } from "@/components/ProfileImage";
 export { Loader } from "@/components/Loader";
 export { Card } from "@/components/Card";
+export { Collapsible } from "@/components/Collapsible";
+export { StickyHeader } from "./components/StickyHeader";

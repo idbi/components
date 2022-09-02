@@ -113,6 +113,20 @@ export const theme = {
       900: "#2DC96F",
     },
   },
+  effect: {
+    darkShadow: {
+      4: "0px 0px 4px 1px rgba(139, 139, 139, 0.32)",
+      6: "0px 1px 6px rgba(60, 60, 60, 0.2)",
+      8: "0px 1px 6px rgba(107, 107, 107, 0.2)",
+      12: "0px 0px 12px 2px #F6F6F6",
+      24: "0px 0px 24px 4px rgba(0, 14, 51, 0.2)",
+      30: "0px 10px 30px rgba(0, 0, 0, 0.08)",
+    },
+    lightShadow: {
+      2: "0px 0px 2px 1px rgba(149, 178, 254, 0.2)",
+      16: "0px 4px 16px rgba(153, 181, 255, 0.2)",
+    },
+  },
 };
 
 export type Theme = typeof theme;
