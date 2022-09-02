@@ -1,6 +1,6 @@
 {
   "name": "@idbi/components",
-  "version": "0.5.0",
+  "version": "0.6.3",
   "main": "dist/id-components.mjs",
   "files": [
     "dist/",
@@ -8,8 +8,8 @@
     "src/**/*.d.ts"
   ],
   "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com:idbi/components.git"
+    "url": "https://github.com/idbi/components.git",
+    "type": "git"
   },
   "scripts": {
     "dev": "vite --port 3015",

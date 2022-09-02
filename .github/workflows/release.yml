@@ -1,0 +1,78 @@
+name: Release
+
+permissions:
+  contents: write
+on:
+  push:
+    branches:
+      - "main"
+
+
+  # Allows you to run this workflow manually from the Actions tab
+#  workflow_dispatch:
+#
+#  workflow_run:
+#    workflows: [ "semgrep"]
+#    branches: [ main ]
+#    types:
+#      - completed
+
+jobs:
+  publish-release:
+    name: "Publish Release"
+    runs-on: "ubuntu-latest"
+    outputs:
+      version: ${{ steps.changelog.outputs.tag }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.email "bot@idbi.pe"
+          git config user.name "ID BOT"
+
+      - name: Conventional Changelog Action
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v3
+        with:
+          github-token: ${{ secrets.github_token }}
+          skip-git-pull: "true"
+          skip-on-empty: "false"
+          create-summary: true
+          fallback-version: '0.0.1'
+      - name: Create Release
+        uses: actions/create-release@v1
+        if: steps.changelog.outputs.skipped != 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+        with:
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
+
+#      # Setup .npmrc file to publish to npm
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: 'v16.13.2'
+#          registry-url: 'https://registry.npmjs.org'
+#          scope: '@idbi'
+#      # Publish to npm
+#      - run: npm publish --access public
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Setup .npmrc file to publish to GitHub Packages
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: ${{ github.repository_owner }}
+      - run: npm ci
+      - name: Publish to GitHub Package Registry
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PAT }}
