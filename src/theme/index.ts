@@ -1,6 +1,8 @@
 export const theme = {
   color: {
     NEUTRAL: {
+      0: "#FFFFFF",
+      20: "#FFFFFF",
       50: "#F5F5F5",
       100: "#EBEBEB",
       200: "#dfdfdf",
@@ -14,6 +16,7 @@ export const theme = {
     },
 
     PRIMARY: {
+      0: "#FFFFFF",
       50: "#F1F2F9",
       100: "#E6E8F4",
       200: "#DDDFF0",
@@ -27,6 +30,7 @@ export const theme = {
     },
 
     SECONDARY: {
+      0: "#FFFFFF",
       20: "#F7F5FF",
       50: "#EFEBFF",
       100: "#E6E0FF",
@@ -41,6 +45,7 @@ export const theme = {
     },
 
     TERTIARY: {
+      0: "#FFFFFF",
       50: "#FFFAFC",
       100: "#FFF5F9",
       200: "#ffeff5",
@@ -53,6 +58,7 @@ export const theme = {
       900: "#FF82AF",
     },
     QUATERNARY: {
+      0: "#FFFFFF",
       50: "#FBFCFE",
       100: "#F2F6FD",
       200: "#ebf1fc",
@@ -66,6 +72,7 @@ export const theme = {
     },
 
     STATE: {
+      0: "#FFFFFF",
       50: "#FFFBF5",
       100: "#FEF7EB",
       200: "#fef3e3",
@@ -79,6 +86,7 @@ export const theme = {
     },
 
     ALERT: {
+      0: "#FFFFFF",
       50: "#FFFBF5",
       100: "#FEEDEC",
       200: "#fde3e2",
@@ -92,6 +100,7 @@ export const theme = {
     },
 
     SUCCESS: {
+      0: "#FFFFFF",
       50: "#F7FDFA",
       100: "#EEFBF4",
       200: "#e4f9ed",

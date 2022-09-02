@@ -7,3 +7,4 @@ export { Text } from "@/components/Typography/Text";
 export { CustomSelect } from "@/components/CustomSelect";
 export { ProfileImage } from "@/components/ProfileImage";
 export { Loader } from "@/components/Loader";
+export { Card } from "@/components/Card";

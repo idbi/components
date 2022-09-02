@@ -6,3 +6,4 @@ export { Heading, Text } from "./components/Typography/TextBuilder/types";
 export { CustomSelect } from "./components/CustomSelect/types";
 export { ProfileImage } from "./components/ProfileImage/types";
 export { Loader } from "./components/Loader/types";
+export { Card } from "./components/Card/types";
