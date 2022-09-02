@@ -1,3 +1,12 @@
+# [0.7.0](https://github.com/idbi/components/compare/v0.6.3...v0.7.0) (2022-09-02)
+
+
+### Features
+
+* udpate dist build ([2d6d4c0](https://github.com/idbi/components/commit/2d6d4c06f93691d606ee22984d3e265b6a8481ec))
+
+
+
 ## [0.6.3](https://github.com/idbi/components/compare/v0.6.2...v0.6.3) (2022-08-29)
 
 
