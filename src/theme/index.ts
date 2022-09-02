@@ -1,6 +1,8 @@
 export const theme = {
   color: {
     NEUTRAL: {
+      0: "#FFFFFF",
+      20: "#FFFFFF",
       50: "#F5F5F5",
       100: "#EBEBEB",
       200: "#dfdfdf",
@@ -14,6 +16,7 @@ export const theme = {
     },
 
     PRIMARY: {
+      0: "#FFFFFF",
       50: "#F1F2F9",
       100: "#E6E8F4",
       200: "#DDDFF0",
@@ -27,6 +30,7 @@ export const theme = {
     },
 
     SECONDARY: {
+      0: "#FFFFFF",
       20: "#F7F5FF",
       50: "#EFEBFF",
       100: "#E6E0FF",
@@ -41,6 +45,7 @@ export const theme = {
     },
 
     TERTIARY: {
+      0: "#FFFFFF",
       50: "#FFFAFC",
       100: "#FFF5F9",
       200: "#ffeff5",
@@ -53,6 +58,7 @@ export const theme = {
       900: "#FF82AF",
     },
     QUATERNARY: {
+      0: "#FFFFFF",
       50: "#FBFCFE",
       100: "#F2F6FD",
       200: "#ebf1fc",
@@ -66,6 +72,7 @@ export const theme = {
     },
 
     STATE: {
+      0: "#FFFFFF",
       50: "#FFFBF5",
       100: "#FEF7EB",
       200: "#fef3e3",
@@ -79,6 +86,7 @@ export const theme = {
     },
 
     ALERT: {
+      0: "#FFFFFF",
       50: "#FFFBF5",
       100: "#FEEDEC",
       200: "#fde3e2",
@@ -92,6 +100,7 @@ export const theme = {
     },
 
     SUCCESS: {
+      0: "#FFFFFF",
       50: "#F7FDFA",
       100: "#EEFBF4",
       200: "#e4f9ed",
@@ -102,6 +111,20 @@ export const theme = {
       700: "#5DDB92",
       800: "#42D580",
       900: "#2DC96F",
+    },
+  },
+  effect: {
+    darkShadow: {
+      4: "0px 0px 4px 1px rgba(139, 139, 139, 0.32)",
+      6: "0px 1px 6px rgba(60, 60, 60, 0.2)",
+      8: "0px 1px 6px rgba(107, 107, 107, 0.2)",
+      12: "0px 0px 12px 2px #F6F6F6",
+      24: "0px 0px 24px 4px rgba(0, 14, 51, 0.2)",
+      30: "0px 10px 30px rgba(0, 0, 0, 0.08)",
+    },
+    lightShadow: {
+      2: "0px 0px 2px 1px rgba(149, 178, 254, 0.2)",
+      16: "0px 4px 16px rgba(153, 181, 255, 0.2)",
     },
   },
 };

@@ -15,17 +15,17 @@ const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
   height: 100%;
-  background-color: ${({ theme }) => theme.color.NEUTRAL[700]};
+  background-color: ${({ theme }) => theme.color.NEUTRAL[0]};
   padding-left: 20px;
   padding-right: 20px;
 
-  header {
+  /* header {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 7vh;
     gap: 20px;
-  }
+  } */
 
   main {
     display: grid;

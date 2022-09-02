@@ -1,4 +1,4 @@
-import { Spacing, TSizes } from "../Typography/TextBuilder/types";
+import { Spacing, TColor, TSizes } from "../Typography/TextBuilder/types";
 
 export interface IButton
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,

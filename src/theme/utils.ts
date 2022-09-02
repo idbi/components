@@ -126,6 +126,7 @@ export const getColor = ({
 
   if (
     colorName === "PRIMARY" ||
+    colorName === "NEUTRAL" ||
     colorName === "SECONDARY" ||
     colorName === "TERTIARY" ||
     colorName === "QUATERNARY" ||

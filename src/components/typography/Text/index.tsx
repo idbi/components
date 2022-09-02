@@ -3,7 +3,7 @@ import { TextBuilder } from "../TextBuilder";
 import { ITextProps } from "../TextBuilder/types";
 import { TextContainer } from "./styles";
 
-export const Text = (props: ITextProps) => {
+export const Text: React.FC<ITextProps> = (props) => {
   if (props.rightIcon || props.leftIcon) {
     return (
       <TextContainer>
