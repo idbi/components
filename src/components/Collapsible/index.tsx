@@ -1,7 +1,10 @@
 import CheckboxIcon from "@/icons/CheckboxIcon";
-import { CollapsibleContent } from "@radix-ui/react-collapsible";
 import { Text } from "../Typography";
-import { CollapsibleSC, CollapsibleTriggerSC } from "./styles";
+import {
+  CollapsibleContentSC,
+  CollapsibleSC,
+  CollapsibleTriggerSC,
+} from "./styles";
 import { ICollapsibleProps } from "./types";
 
 export const Collapsible: React.FC<ICollapsibleProps> = ({
@@ -16,7 +19,7 @@ export const Collapsible: React.FC<ICollapsibleProps> = ({
         <Text>{label}</Text>
         <CheckboxIcon isChecked={open} />
       </CollapsibleTriggerSC>
-      <CollapsibleContent>{content}</CollapsibleContent>
+      <CollapsibleContentSC>{content}</CollapsibleContentSC>
     </CollapsibleSC>
   );
 };

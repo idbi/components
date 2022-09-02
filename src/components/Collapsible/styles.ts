@@ -37,7 +37,7 @@ export const close = keyframes`
   }
 `;
 
-export const CollapsibleContent = styled(CollapsiblePrimitive.Content)`
+export const CollapsibleContentSC = styled(CollapsiblePrimitive.Content)`
   overflow: hidden;
   &[data-state="open"] {
     animation: ${open} 300ms ease-out;

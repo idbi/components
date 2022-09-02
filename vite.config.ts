@@ -30,6 +30,7 @@ export default defineConfig({
         "react-loading-skeleton",
         "react-select",
         "react/jsx-runtime",
+        "@radix-ui/react-collapsible",
       ],
       output: {
         globals: {
@@ -39,6 +40,7 @@ export default defineConfig({
           "react-loading-skeleton": "Skeleton",
           "react-select": "Select",
           "react/jsx-runtime": "react/jsx-runtime.js",
+          "@radix-ui/react-collapsible": "@radix-ui/react-collapsible",
         },
       },
     },
