@@ -19,13 +19,13 @@ const Wrapper = styled.div`
   padding-left: 20px;
   padding-right: 20px;
 
-  header {
+  /* header {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 7vh;
     gap: 20px;
-  }
+  } */
 
   main {
     display: grid;
