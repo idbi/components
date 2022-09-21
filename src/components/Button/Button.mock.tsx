@@ -1,5 +1,5 @@
-import { IButton } from "./types";
 import GoogleIcon from "@/icons/GoogleIcon";
+import { IButton } from "./types";
 
 const base: IButton = {
   children: "Base Button",

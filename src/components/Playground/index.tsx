@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import { Heading } from "../Typography";
+// import { Heading } from "../Typography";
 
-const Image = styled.img`
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-`;
+// const Image = styled.img`
+//   display: flex;
+//   flex-flow: column wrap;
+//   align-items: center;
+//   justify-content: center;
+//   border-radius: 10px;
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+//   cursor: pointer;
+// `;
 
 const Wrapper = styled.div`
   width: 100vw;

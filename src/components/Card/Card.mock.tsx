@@ -21,27 +21,27 @@ const base: ICard = {
     {
       leftIcon: <GoogleIcon />,
       label: "Mis datos",
-      onClick: () => console.log("Mis datos"),
+      // onClick: () => console.log("Mis datos"),
     },
     {
       leftIcon: <GoogleIcon />,
       label: "Mis tarjetas",
-      onClick: () => console.log("Mis tarjetas"),
+      // onClick: () => console.log("Mis tarjetas"),
     },
     {
       leftIcon: <GoogleIcon />,
       label: "Mis pedidos",
-      onClick: () => console.log("Mis pedidos"),
+      // onClick: () => console.log("Mis pedidos"),
     },
     {
       leftIcon: <GoogleIcon />,
       label: "Mis direcciones",
-      onClick: () => console.log("Mis direcciones"),
+      // onClick: () => console.log("Mis direcciones"),
     },
     {
       leftIcon: <GoogleIcon />,
       label: "Mis empresas",
-      onClick: () => console.log("Mis empresas"),
+      // onClick: () => console.log("Mis empresas"),
     },
   ],
 

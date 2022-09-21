@@ -7,6 +7,7 @@ export const useOnClickOutside = <TRef extends HTMLElement>(
   useEffect(() => {
     const listener = (event: MouseEvent | TouchEvent) => {
       if (Array.isArray(ref)) {
+        // eslint-disable-next-line no-restricted-syntax
         for (const r of ref) {
           if (
             !event.target ||

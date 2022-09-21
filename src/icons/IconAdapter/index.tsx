@@ -17,8 +17,8 @@ export const IconAdapter: React.FC<IPropTypes> = ({
   icon: Component,
   ...props
 }) => {
-  const colorName = color?.split("/")[0] as keyof TColorNames;
-  const intensity = +color?.split("/")[1] as keyof TColorScales;
+  const colorName = color.split("/")[0] as keyof TColorNames;
+  const intensity = +color.split("/")[1] as keyof TColorScales;
 
   const StyledIcon = styled(Component)`
     ${({ theme }) => css`

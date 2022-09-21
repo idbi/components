@@ -1,13 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { useState, forwardRef } from "react";
-import { InputContainer } from "./styles";
 import { theme } from "@/theme";
-import type { InputProps } from "./types";
 import WarningIcon from "@/icons/WarningIcon";
 import CheckIcon from "@/icons/CheckIcon";
-import { Text } from "../Typography";
 import { WithAnimation } from "@/utils/WithAnimation";
+import { Text } from "../Typography";
+import type { InputProps } from "./types";
+import { InputContainer } from "./styles";
 
-export const TextInput: React.FC<InputProps> = forwardRef<
+const TextInput: React.FC<InputProps> = forwardRef<
   HTMLInputElement,
   InputProps
 >(
@@ -84,3 +85,6 @@ export const TextInput: React.FC<InputProps> = forwardRef<
     );
   }
 );
+
+TextInput.displayName = "TextInput";
+export { TextInput };

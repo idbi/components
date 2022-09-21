@@ -1,5 +1,5 @@
-import { ICollapsibleProps } from "./types";
 import GoogleIcon from "@/icons/GoogleIcon";
+import { ICollapsibleProps } from "./types";
 import { Button } from "../Button";
 
 const base: ICollapsibleProps = {

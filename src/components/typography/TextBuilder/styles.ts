@@ -1,8 +1,28 @@
-import { getSpacing, getTextAlign } from "@/theme/utils";
 import { css } from "styled-components";
-import { tagsMap } from ".";
-import { DefaultSizes, FontWeight, Size } from "../utils";
-import type { ITextBuilderProps, TColorNames, TColorScales } from "./types";
+import { DefaultSizes, FontWeight, Size } from "@/components/Typography/utils";
+import { getSpacing, getTextAlign } from "@/theme/utils";
+import type {
+  ITextBuilderProps,
+  Tags,
+  TColorNames,
+  TColorScales,
+} from "./types";
+
+export const tagsMap: {
+  [key: string]: Tags;
+} = {
+  h1: "h1",
+  h2: "h2",
+  h3: "h3",
+  h4: "h4",
+  h5: "h5",
+  h6: "h6",
+  p: "p",
+  li: "li",
+  span: "span",
+  strong: "strong",
+  label: "label",
+};
 
 export const baseStyles = css<ITextBuilderProps>`
   display: inline-block;
@@ -35,7 +55,7 @@ export const customStyles = (type: keyof typeof tagsMap) => {
     }};
     color: ${({ theme, color = defaultColor }) => {
       const colorName = color?.split("/")[0] as keyof TColorNames;
-      const intensity = +color?.split("/")[1] as keyof TColorScales;
+      const intensity = Number(color?.split("/")[1]) as keyof TColorScales;
 
       return theme.color[colorName][intensity];
     }};

@@ -3,7 +3,6 @@ import { Button } from "../Button";
 import { Text } from "../Typography";
 import { ProfileImageContainer } from "./styles";
 import { IProfileImage } from "./types";
-import DefaultProfile from "/public/default-profile.svg";
 
 export const ProfileImage: React.FC<IProfileImage> = ({
   imageUrl,
@@ -38,7 +37,7 @@ export const ProfileImage: React.FC<IProfileImage> = ({
         <img
           width={size}
           height={size}
-          src={imageUrl || DefaultProfile}
+          src={imageUrl || "/default-profile.svg"}
           alt="profile"
           referrerPolicy="no-referrer"
         />
