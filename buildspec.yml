@@ -6,7 +6,7 @@ phases:
       nodejs: 16
   pre_build:
     commands:
-      - npm install
+      - npm ci
   build:
     commands:
       - npm run build-storybook
