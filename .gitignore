@@ -272,3 +272,6 @@ fabric.properties
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/webstorm,node,yarn
+
+# Storybook
+storybook-static
