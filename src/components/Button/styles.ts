@@ -37,20 +37,20 @@ export const Button = styled(BaseButton)<IButton>`
     getSpacing({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px })};
 
   &:hover {
-    background-color: ${({ theme, color, design }) => {
+    background-color: ${({ color, design }) => {
       if (design === "link") {
         return "transparent";
       }
-      return getColor({ color, theme, design, hover: true });
+      return getColor({ color, design, hover: true });
     }};
   }
 
   &:active {
-    background-color: ${({ theme, color, design }) => {
+    background-color: ${({ color, design }) => {
       if (design === "link") {
         return "transparent";
       }
-      return getColor({ color, theme, design, hover: true });
+      return getColor({ color, design, hover: true });
     }};
   }
 

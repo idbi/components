@@ -1,19 +1,82 @@
-import { css, DefaultTheme } from "styled-components";
-import type {
+import { css } from "styled-components";
+import {
   ITextBuilderProps,
   Spacing,
   TColor,
 } from "@/components/Typography/TextBuilder/types";
 import { IButton } from "@/components/Button/types";
 import { Size } from "@/components/Typography/utils";
+import { theme } from ".";
+
+export const getShape = ({ shape }: Pick<IButton, "shape">) => {
+  switch (shape) {
+    case "rounded":
+      return css`
+        border-radius: 0.625rem;
+      `;
+    case "squared":
+      return css`
+        border-radius: 0;
+      `;
+    case "circular":
+      return css`
+        border-radius: 10rem;
+      `;
+    default:
+      return css`
+        border-radius: 0.625rem;
+      `;
+  }
+};
+
+export const getDesign = ({
+  design,
+  color,
+}: Pick<IButton, "design" | "color">) => {
+  switch (design) {
+    case "solid":
+      return css`
+        background-color: ${() => getColor({ color })};
+        color: #fff;
+      `;
+    case "outline":
+      return css`
+        background-color: white;
+        border: 1px solid ${() => getColor({ color })};
+        color: ${() => getColor({ color })};
+      `;
+    case "flat":
+      return css`
+        background-color: white;
+        border: none;
+        color: ${() => getColor({ color })};
+      `;
+
+    case "link": {
+      return css`
+        background-color: transparent;
+        border: none;
+        color: ${() => getColor({ color })};
+
+        &:hover {
+          color: ${() => getColor({ color, hover: true })};
+          text-decoration: underline;
+        }
+      `;
+    }
+    default:
+      return css`
+        background-color: ${() => getColor({ color })};
+        color: #fff;
+      `;
+  }
+};
 
 export const getColor = ({
   color = "SECONDARY/900",
-  theme,
   design,
   hover,
 }: {
-  theme: DefaultTheme;
   design?: "solid" | "outline" | "flat" | "link";
   color?: TColor;
   hover?: boolean;
