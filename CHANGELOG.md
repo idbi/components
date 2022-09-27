@@ -1,3 +1,12 @@
+## [0.10.1](https://github.com/idbi/components/compare/v0.10.0...v0.10.1) (2022-09-27)
+
+
+### Bug Fixes
+
+* update theme import ([ff9042a](https://github.com/idbi/components/commit/ff9042a144c66c9e83a440bf731162f525327e1d))
+
+
+
 # [0.10.0](https://github.com/idbi/components/compare/v0.9.1...v0.10.0) (2022-09-27)
 
 
@@ -33,15 +42,6 @@
 ### Features
 
 * udpate dist build ([2d6d4c0](https://github.com/idbi/components/commit/2d6d4c06f93691d606ee22984d3e265b6a8481ec))
-
-
-
-## [0.6.3](https://github.com/idbi/components/compare/v0.6.2...v0.6.3) (2022-08-29)
-
-
-### Bug Fixes
-
-* package ([5fb13b5](https://github.com/idbi/components/commit/5fb13b561e5b538e2c1a453d0b69833ecea8374b))
 
 
 
