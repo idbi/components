@@ -10,6 +10,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
+package-lock.json
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -273,4 +274,13 @@ fabric.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/webstorm,node,yarn
 
+.github
+
 storybook-static
+.eslintignore
+.eslintrc.yml
+.gitignore
+.npmignore
+buildspec.yml
+CHANGELOG.md
+package-lock.json
