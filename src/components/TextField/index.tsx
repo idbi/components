@@ -1,13 +1,15 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState, forwardRef } from "react";
+import { WithAnimation } from "@/utils/WithAnimation";
+import CloseEye from "@/icons/CloseEye";
+import OpenEye from "@/icons/OpenEye";
 import { TextFieldProps } from "./types";
 import { Text } from "../Typography";
 import { TextInput } from "../TextInput";
 import { TextFieldContainer } from "./styles";
-import { WithAnimation } from "@/utils/WithAnimation";
-import CloseEye from "@/icons/CloseEye";
-import OpenEye from "@/icons/OpenEye";
 
-export const TextField: React.FC<TextFieldProps> = forwardRef<
+const TextField: React.FC<TextFieldProps> = forwardRef<
   HTMLInputElement,
   TextFieldProps
 >(
@@ -50,3 +52,7 @@ export const TextField: React.FC<TextFieldProps> = forwardRef<
     );
   }
 );
+
+TextField.displayName = "TextField";
+
+export { TextField };

@@ -15,7 +15,7 @@ export const CodeInput: React.FC<ICodeInputProps> = ({
   length = 4,
   errorMessage,
   success,
-  onChange = (e) => {},
+  onChange = () => {},
   ...rest
 }) => {
   useCodeInput(onChange, id, value);

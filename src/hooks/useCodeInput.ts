@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { useEffect } from "react";
 
 export default function useCodeInput(
@@ -74,13 +75,11 @@ export default function useCodeInput(
       document.addEventListener("keydown", handleKeyDown);
       return () => document.removeEventListener("keydown", handleKeyDown);
     }
-    return;
   }, []);
 
   useEffect(() => {
     if (value) {
       const codeInputs = getCodeInputs();
-      console.log({ codeInputs: codeInputs.map((input) => input.value) });
       const codeInputValues = codeInputs.map((input) => input.value);
       const valueArray = value.split("");
       const currentValueArray =

@@ -23,7 +23,14 @@ settings:
   import/resolver:
     typescript: true
     node: true
+ignorePatterns:
+  - "node_modules/"
+  - "dist/"
+  - "**/*.js"
+  - "**/*.jsx"
+  - "**/*.d.ts"
 rules:
+  import/no-extraneous-dependencies: off
   import/extensions:
     - error
     - ignorePackages
@@ -44,6 +51,8 @@ rules:
   react/prop-types: off
   react/require-default-props: off
   react/no-array-index-key: off
+  react/destructuring-assignment: off
+  consistent-return: off
   prettier/prettier:
     - error
     - endOfLine: auto

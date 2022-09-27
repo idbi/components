@@ -1,4 +1,4 @@
-import { TSizes } from "./TextBuilder/types";
+import type { TSizes } from "./TextBuilder/types";
 
 export const FontWeight = {
   bold: 700,

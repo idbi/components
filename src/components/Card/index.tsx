@@ -1,5 +1,4 @@
 import React from "react";
-import styled, { css } from "styled-components";
 import { CardWrapper } from "./styles";
 import { ICard } from "./types";
 
@@ -16,10 +15,8 @@ export const Card: React.FC<ICard> = ({
       {header && <header>{header}</header>}
       {options && optionsFormatter && (
         <ul>
-          {options.map((option, index) => (
-            <>
-              <li key={option.value}>{optionsFormatter(option)}</li>
-            </>
+          {options.map((option) => (
+            <li key={option.value}>{optionsFormatter(option)}</li>
           ))}
         </ul>
       )}

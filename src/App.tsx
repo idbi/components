@@ -1,10 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Button } from "./components/Button";
-import { Card } from "./components/Card";
 import { Collapsible } from "./components/Collapsible";
 import PlayGround from "./components/Playground";
-import { StickyHeader } from "./components/StickyHeader";
 import CheckIcon from "./icons/CheckIcon";
 import GoogleIcon from "./icons/GoogleIcon";
 

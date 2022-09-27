@@ -1,6 +1,5 @@
 import ArrowBackIcon from "@/icons/ArrowBackIcon";
 import { Text } from "../Typography";
-import DefaultProfile from "/public/default-profile.svg";
 import { StickyHeaderContainer } from "./styles";
 import { IStickyHeaderProps } from "./types";
 
@@ -18,7 +17,7 @@ export const StickyHeader: React.FC<IStickyHeaderProps> = ({
       <img
         width={28}
         height={28}
-        src={profileImageUrl || DefaultProfile}
+        src={profileImageUrl || "/default-profile.svg"}
         alt="profile"
         referrerPolicy="no-referrer"
       />
