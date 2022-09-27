@@ -17,6 +17,7 @@ export const Size = {
   "3xl": "2.0rem",
   "4xl": "2.5rem",
   "5xl": "3.0rem",
+  "6xl": "3.5rem",
 };
 
 export const DefaultSizes: {
