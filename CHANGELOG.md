@@ -1,3 +1,12 @@
+# [0.12.0](https://github.com/idbi/components/compare/v0.11.0...v0.12.0) (2022-09-27)
+
+
+### Features
+
+* add linter rules ([42cb9fc](https://github.com/idbi/components/commit/42cb9fc1e2c28d654fa3d2f2592e01dbc2ef086d))
+
+
+
 # [0.11.0](https://github.com/idbi/components/compare/v0.10.1...v0.11.0) (2022-09-27)
 
 
@@ -32,16 +41,6 @@
 
 
 ## [0.9.1](https://github.com/idbi/components/compare/v0.9.0...v0.9.1) (2022-09-23)
-
-
-
-# [0.9.0](https://github.com/idbi/components/compare/v0.7.0...v0.9.0) (2022-09-22)
-
-
-### Features
-
-* add buildspec to handle continuous deployment. ([044ef25](https://github.com/idbi/components/commit/044ef259c9a9085c52dbb1c75c25b2365351f66b))
-* add npmignore ([f878840](https://github.com/idbi/components/commit/f878840825c80969c5224a56acb358b00054d1f4))
 
 
 
