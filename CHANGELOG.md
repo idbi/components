@@ -1,3 +1,13 @@
+## [0.12.1](https://github.com/idbi/components/compare/v0.12.0...v0.12.1) (2022-09-27)
+
+
+### Bug Fixes
+
+* delete double scoped functions ([20ed0fd](https://github.com/idbi/components/commit/20ed0fd64c55aeac2bf70e240ef786d282cdf49f))
+* resolve theme import & add build ([2e8fe00](https://github.com/idbi/components/commit/2e8fe006c0ebfa639240e7267331fdae62bea527))
+
+
+
 # [0.12.0](https://github.com/idbi/components/compare/v0.11.0...v0.12.0) (2022-09-27)
 
 
@@ -37,10 +47,6 @@
 ### Features
 
 * update build ([73d7ebf](https://github.com/idbi/components/commit/73d7ebf159c3d99b12312f3836895e1aeb70ac7b))
-
-
-
-## [0.9.1](https://github.com/idbi/components/compare/v0.9.0...v0.9.1) (2022-09-23)
 
 
 
