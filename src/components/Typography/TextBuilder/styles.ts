@@ -7,6 +7,7 @@ import type {
   TColorNames,
   TColorScales,
 } from "./types";
+import { theme } from "@/theme";
 
 export const tagsMap: {
   [key: string]: Tags;
@@ -53,7 +54,7 @@ export const customStyles = (type: keyof typeof tagsMap) => {
     font-size: ${({ size = defaultSize }) => {
       return Size[size] || size;
     }};
-    color: ${({ theme, color = defaultColor }) => {
+    color: ${({ color = defaultColor }) => {
       const colorName = color?.split("/")[0] as keyof TColorNames;
       const intensity = Number(color?.split("/")[1]) as keyof TColorScales;
 
