@@ -1,4 +1,4 @@
-import { css, DefaultTheme } from "styled-components";
+import { css } from "styled-components";
 import {
   ITextBuilderProps,
   Spacing,
@@ -6,6 +6,7 @@ import {
 } from "@/components/Typography/TextBuilder/types";
 import { IButton } from "@/components/Button/types";
 import { Size } from "@/components/Typography/utils";
+import { theme } from ".";
 
 export const getShape = ({ shape }: Pick<IButton, "shape">) => {
   switch (shape) {
@@ -35,37 +36,37 @@ export const getDesign = ({
   switch (design) {
     case "solid":
       return css`
-        background-color: ${({ theme }) => getColor({ theme, color })};
+        background-color: ${() => getColor({ color })};
         color: #fff;
       `;
     case "outline":
       return css`
         background-color: white;
-        border: 1px solid ${({ theme }) => getColor({ theme, color })};
-        color: ${({ theme }) => getColor({ theme, color })};
+        border: 1px solid ${() => getColor({ color })};
+        color: ${() => getColor({ color })};
       `;
     case "flat":
       return css`
         background-color: white;
         border: none;
-        color: ${({ theme }) => getColor({ theme, color })};
+        color: ${() => getColor({ color })};
       `;
 
     case "link": {
       return css`
         background-color: transparent;
         border: none;
-        color: ${({ theme }) => getColor({ theme, color })};
+        color: ${() => getColor({ color })};
 
         &:hover {
-          color: ${({ theme }) => getColor({ theme, color, hover: true })};
+          color: ${() => getColor({ color, hover: true })};
           text-decoration: underline;
         }
       `;
     }
     default:
       return css`
-        background-color: ${({ theme }) => getColor({ theme, color })};
+        background-color: ${() => getColor({ color })};
         color: #fff;
       `;
   }
@@ -73,11 +74,9 @@ export const getDesign = ({
 
 export const getColor = ({
   color = "SECONDARY/900",
-  theme,
   design,
   hover,
 }: {
-  theme: DefaultTheme;
   design?: "solid" | "outline" | "flat" | "link";
   color?: TColor;
   hover?: boolean;
