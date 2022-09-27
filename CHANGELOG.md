@@ -1,3 +1,12 @@
+# [0.11.0](https://github.com/idbi/components/compare/v0.10.1...v0.11.0) (2022-09-27)
+
+
+### Features
+
+* update build ([d761370](https://github.com/idbi/components/commit/d76137032c3fa3eabbc81b2e216683416b04e0f8))
+
+
+
 ## [0.10.1](https://github.com/idbi/components/compare/v0.10.0...v0.10.1) (2022-09-27)
 
 
@@ -33,15 +42,6 @@
 
 * add buildspec to handle continuous deployment. ([044ef25](https://github.com/idbi/components/commit/044ef259c9a9085c52dbb1c75c25b2365351f66b))
 * add npmignore ([f878840](https://github.com/idbi/components/commit/f878840825c80969c5224a56acb358b00054d1f4))
-
-
-
-# [0.7.0](https://github.com/idbi/components/compare/v0.6.3...v0.7.0) (2022-09-02)
-
-
-### Features
-
-* udpate dist build ([2d6d4c0](https://github.com/idbi/components/commit/2d6d4c06f93691d606ee22984d3e265b6a8481ec))
 
 
 
