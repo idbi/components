@@ -1,3 +1,4 @@
+import { theme } from "@/theme";
 import styled, { keyframes } from "styled-components";
 
 const rotate = keyframes`
@@ -73,7 +74,7 @@ export const LoaderContainer = styled.div`
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.color.PRIMARY[900]};
+    background-color: ${() => theme.color.PRIMARY[900]};
     animation: ${scale} 1s linear infinite;
   }
   .idbi-loading > div > div:last-child {
@@ -81,6 +82,6 @@ export const LoaderContainer = styled.div`
   }
   .idbi-loading > div > div:last-child > div > div {
     animation-delay: -0.5s;
-    background-color: ${({ theme }) => theme.color.TERTIARY[900]};
+    background-color: ${() => theme.color.TERTIARY[900]};
   }
 `;

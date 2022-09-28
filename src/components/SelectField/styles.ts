@@ -1,3 +1,4 @@
+import { theme } from "@/theme";
 import styled from "styled-components";
 
 interface ContainerProps {
@@ -37,7 +38,7 @@ export const Container = styled.div<ContainerProps>`
   > small {
     display: block;
     font: normal 11px Poppins;
-    color: ${({ theme }) => theme.color.ALERT[900]};
+    color: ${() => theme.color.ALERT[900]};
     margin-left: 2px;
     margin-top: 3px;
   }
