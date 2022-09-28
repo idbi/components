@@ -1,13 +1,13 @@
+import { theme } from "@/theme";
+import { getSpacing, getTextAlign } from "@/theme/utils";
 import { css } from "styled-components";
 import { DefaultSizes, FontWeight, Size } from "@/components/Typography/utils";
-import { getSpacing, getTextAlign } from "@/theme/utils";
 import type {
   ITextBuilderProps,
   Tags,
   TColorNames,
   TColorScales,
 } from "./types";
-import { theme } from "@/theme";
 
 export const tagsMap: {
   [key: string]: Tags;

@@ -26,7 +26,7 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
   background: #fff;
   min-height: 45px;
   ::placeholder {
-    color: ${(props) => props.theme.color.NEUTRAL[500]};
+    color: ${() => theme.color.NEUTRAL[500]};
   }
 
   background-color: ${({ disabled }) =>
@@ -66,7 +66,7 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
   }
 
   span {
-    color: ${(props) => props.theme.color.NEUTRAL[500]};
+    color: ${() => theme.color.NEUTRAL[500]};
     ${({ size }) => getSize({ size })};
     display: flex;
     align-items: center;

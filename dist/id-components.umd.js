@@ -366,7 +366,7 @@
   background: #fff;
   min-height: 45px;
   ::placeholder {
-    color: ${e=>e.theme.color.NEUTRAL[500]};
+    color: ${()=>s.color.NEUTRAL[500]};
   }
 
   background-color: ${({disabled:e})=>e?s.color.NEUTRAL[100]:"#fff"};
@@ -405,7 +405,7 @@
   }
 
   span {
-    color: ${e=>e.theme.color.NEUTRAL[500]};
+    color: ${()=>s.color.NEUTRAL[500]};
     ${({size:e})=>z({size:e})};
     display: flex;
     align-items: center;
