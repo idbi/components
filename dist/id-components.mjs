@@ -912,7 +912,7 @@ const le = S`
   background: #fff;
   min-height: 45px;
   ::placeholder {
-    color: ${(e) => e.theme.color.NEUTRAL[500]};
+    color: ${() => d.color.NEUTRAL[500]};
   }
 
   background-color: ${({ disabled: e }) => e ? d.color.NEUTRAL[100] : "#fff"};
@@ -951,7 +951,7 @@ const le = S`
   }
 
   span {
-    color: ${(e) => e.theme.color.NEUTRAL[500]};
+    color: ${() => d.color.NEUTRAL[500]};
     ${({ size: e }) => N({ size: e })};
     display: flex;
     align-items: center;
