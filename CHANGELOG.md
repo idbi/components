@@ -1,3 +1,12 @@
+## [0.12.3](https://github.com/idbi/components/compare/v0.12.2...v0.12.3) (2022-09-28)
+
+
+### Bug Fixes
+
+* rename all theme imports II ([ccb5f4e](https://github.com/idbi/components/commit/ccb5f4ecff63c5e9e906a66835be9816e22d3858))
+
+
+
 ## [0.12.2](https://github.com/idbi/components/compare/v0.12.1...v0.12.2) (2022-09-28)
 
 
@@ -32,15 +41,6 @@
 ### Features
 
 * update build ([d761370](https://github.com/idbi/components/commit/d76137032c3fa3eabbc81b2e216683416b04e0f8))
-
-
-
-## [0.10.1](https://github.com/idbi/components/compare/v0.10.0...v0.10.1) (2022-09-27)
-
-
-### Bug Fixes
-
-* update theme import ([ff9042a](https://github.com/idbi/components/commit/ff9042a144c66c9e83a440bf731162f525327e1d))
 
 
 
