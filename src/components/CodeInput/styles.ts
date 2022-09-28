@@ -1,3 +1,4 @@
+import { theme } from "@/theme";
 import styled from "styled-components";
 import type { ICodeInputProps } from "./types";
 
@@ -18,7 +19,7 @@ export const InputsContainer = styled.div<
     width: 45px;
     height: 45px;
     border: 1px solid
-      ${({ theme, errorMessage, success }) => {
+      ${({ errorMessage, success }) => {
         if (errorMessage) {
           return theme.color.ALERT[900];
         }
@@ -31,19 +32,19 @@ export const InputsContainer = styled.div<
     background: #fff;
     font: normal 16px "Poppins";
     letter-spacing: -0.04em;
-    color: ${(props) => props.theme.color.NEUTRAL[700]};
+    color: ${() => theme.color.NEUTRAL[700]};
 
     transition: background 0.3s ease-out;
     transition: border 0.3s ease-out;
 
     &:disabled {
       cursor: not-allowed;
-      background-color: ${(props) => props.theme.color.NEUTRAL[100]};
-      color: ${(props) => props.theme.color.NEUTRAL[500]};
+      background-color: ${() => theme.color.NEUTRAL[100]};
+      color: ${() => theme.color.NEUTRAL[500]};
     }
 
     &:focus {
-      border-color: ${(props) => props.theme.color.QUATERNARY[900]};
+      border-color: ${() => theme.color.QUATERNARY[900]};
     }
   }
 `;

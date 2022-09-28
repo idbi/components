@@ -1,3 +1,4 @@
+import { theme } from "@/theme";
 import styled from "styled-components";
 
 export const StickyHeaderContainer = styled.header`
@@ -11,7 +12,7 @@ export const StickyHeaderContainer = styled.header`
   z-index: 1;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  box-shadow: ${({ theme }) => theme.effect.darkShadow[6]};
+  box-shadow: ${() => theme.effect.darkShadow[6]};
 
   button {
     display: flex;
