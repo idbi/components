@@ -1,3 +1,12 @@
+## [0.12.2](https://github.com/idbi/components/compare/v0.12.1...v0.12.2) (2022-09-28)
+
+
+### Bug Fixes
+
+* rename all theme imports ([3388bc5](https://github.com/idbi/components/commit/3388bc57773b9041b13bc6bbc6a942a82747b1eb))
+
+
+
 ## [0.12.1](https://github.com/idbi/components/compare/v0.12.0...v0.12.1) (2022-09-27)
 
 
@@ -32,21 +41,6 @@
 ### Bug Fixes
 
 * update theme import ([ff9042a](https://github.com/idbi/components/commit/ff9042a144c66c9e83a440bf731162f525327e1d))
-
-
-
-# [0.10.0](https://github.com/idbi/components/compare/v0.9.1...v0.10.0) (2022-09-27)
-
-
-### Bug Fixes
-
-* delete typography directory ([f7375e2](https://github.com/idbi/components/commit/f7375e2e11120ddbe629e46b28a3398132d40e7c))
-* restore Typography directory ([0c707ff](https://github.com/idbi/components/commit/0c707ff0c5ccde135f53c3eb25e4bbca5a44f443))
-
-
-### Features
-
-* update build ([73d7ebf](https://github.com/idbi/components/commit/73d7ebf159c3d99b12312f3836895e1aeb70ac7b))
 
 
 
