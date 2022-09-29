@@ -1,3 +1,7 @@
+## [0.12.4](https://github.com/idbi/components/compare/v0.12.3...v0.12.4) (2022-09-29)
+
+
+
 ## [0.12.3](https://github.com/idbi/components/compare/v0.12.2...v0.12.3) (2022-09-28)
 
 
@@ -32,15 +36,6 @@
 ### Features
 
 * add linter rules ([42cb9fc](https://github.com/idbi/components/commit/42cb9fc1e2c28d654fa3d2f2592e01dbc2ef086d))
-
-
-
-# [0.11.0](https://github.com/idbi/components/compare/v0.10.1...v0.11.0) (2022-09-27)
-
-
-### Features
-
-* update build ([d761370](https://github.com/idbi/components/commit/d76137032c3fa3eabbc81b2e216683416b04e0f8))
 
 
 
