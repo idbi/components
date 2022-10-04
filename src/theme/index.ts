@@ -112,6 +112,10 @@ export const theme = {
       800: "#42D580",
       900: "#2DC96F",
     },
+
+    OTHER: {
+      color1: "#151E5A",
+    },
   },
   effect: {
     darkShadow: {
