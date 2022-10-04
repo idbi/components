@@ -53,7 +53,7 @@ export type TColorScales = {
   [intensity in keyof TColorNames[keyof TColorNames]]: string;
 };
 
-export type TColor = `${keyof TColorNames}/${keyof TColorScales}`;
+export type TColor = `${keyof TColorNames}/${keyof TColorScales}` | string;
 
 export declare const Heading = {
   H1: (props: ITextProps) => JSX.Element,
