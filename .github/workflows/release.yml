@@ -75,4 +75,4 @@ jobs:
       - name: Publish to GitHub Package Registry
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.PAT }}
+          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}

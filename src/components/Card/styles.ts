@@ -1,3 +1,4 @@
+import { theme } from "@/theme";
 import styled, { css } from "styled-components";
 import { ICard } from "./types";
 
@@ -44,7 +45,7 @@ export const CardWrapper = styled.section<CardWrapperProps>`
         }
       `}
   }
-  ${({ theme, design }) => {
+  ${({ design }) => {
     switch (design) {
       case "primary":
         return css`

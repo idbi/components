@@ -1,6 +1,7 @@
+import { theme } from "@/theme";
+import { getSpacing, getTextAlign } from "@/theme/utils";
 import { css } from "styled-components";
 import { DefaultSizes, FontWeight, Size } from "@/components/Typography/utils";
-import { getSpacing, getTextAlign } from "@/theme/utils";
 import type {
   ITextBuilderProps,
   Tags,
@@ -53,7 +54,7 @@ export const customStyles = (type: keyof typeof tagsMap) => {
     font-size: ${({ size = defaultSize }) => {
       return Size[size] || size;
     }};
-    color: ${({ theme, color = defaultColor }) => {
+    color: ${({ color = defaultColor }) => {
       const colorName = color?.split("/")[0] as keyof TColorNames;
       const intensity = Number(color?.split("/")[1]) as keyof TColorScales;
 

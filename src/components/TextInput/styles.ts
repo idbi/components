@@ -1,3 +1,4 @@
+import { theme } from "@/theme";
 import { getFullWidth, getSize } from "@/theme/utils";
 import styled from "styled-components";
 import { InputProps } from "./types";
@@ -10,7 +11,7 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
   gap: 0.5rem;
   border-radius: 8px;
   border: 1px solid
-    ${({ theme, error, success, isFocused }) => {
+    ${({ error, success, isFocused }) => {
       if (error) {
         return theme.color.ALERT[900];
       }
@@ -25,10 +26,10 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
   background: #fff;
   min-height: 45px;
   ::placeholder {
-    color: ${(props) => props.theme.color.NEUTRAL[500]};
+    color: ${() => theme.color.NEUTRAL[500]};
   }
 
-  background-color: ${({ theme, disabled }) =>
+  background-color: ${({ disabled }) =>
     disabled ? theme.color.NEUTRAL[100] : "#fff"};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "auto")};
   transition: background 0.3s ease-out;
@@ -44,15 +45,15 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
     padding: 10px 0px;
     background-color: #fff;
     letter-spacing: -0.04em;
-    color: ${(props) => props.theme.color.NEUTRAL[700]};
+    color: ${() => theme.color.NEUTRAL[700]};
     padding-left: ${({ leftAddon }) => (!leftAddon ? "12px" : "0px")};
     padding-right: ${({ rightAddon }) => (!rightAddon ? "12px" : "0px")};
     padding-right: ${({ success, error }) => (success || error) && "2.5rem"};
 
     &:disabled {
       cursor: not-allowed;
-      background-color: ${(props) => props.theme.color.NEUTRAL[100]};
-      color: ${(props) => props.theme.color.NEUTRAL[500]};
+      background-color: ${() => theme.color.NEUTRAL[100]};
+      color: ${() => theme.color.NEUTRAL[500]};
     }
   }
 
@@ -65,7 +66,7 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
   }
 
   span {
-    color: ${(props) => props.theme.color.NEUTRAL[500]};
+    color: ${() => theme.color.NEUTRAL[500]};
     ${({ size }) => getSize({ size })};
     display: flex;
     align-items: center;
