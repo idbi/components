@@ -17,7 +17,10 @@ const Activator = styled.div`
   }
 `;
 
-export const DropdownMenu = ({ options, activator }: IDropdownMenu) => {
+export const DropdownMenu: React.FC<IDropdownMenu> = ({
+  options,
+  activator,
+}) => {
   const { x, y, reference, floating, strategy, update, refs } = useFloating({
     placement: "bottom-end",
   });
