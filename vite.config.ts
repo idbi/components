@@ -31,6 +31,7 @@ export default defineConfig({
         "react-select",
         "react/jsx-runtime",
         "@radix-ui/react-collapsible",
+        "@floating-ui/react-dom",
       ],
       output: {
         globals: {
@@ -41,6 +42,7 @@ export default defineConfig({
           "react-select": "Select",
           "react/jsx-runtime": "react/jsx-runtime.js",
           "@radix-ui/react-collapsible": "@radix-ui/react-collapsible",
+          "@floating-ui/react-dom": "@floating-ui/react-dom",
         },
       },
     },

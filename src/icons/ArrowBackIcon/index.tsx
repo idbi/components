@@ -1,9 +1,16 @@
-const ArrowBackIcon = (props: { size?: number; color?: string }) => (
+import { MouseEvent } from "react";
+
+const ArrowBackIcon = (props: {
+  size?: number;
+  color?: string;
+  onClick?: (e: MouseEvent | TouchEvent) => void;
+}) => (
   <svg
     width={props.size || 8}
     height={props.size || 12}
     fill="none"
     viewBox="0 0 8 12"
+    onClick={props.onClick}
     {...props}
   >
     <path
