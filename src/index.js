@@ -11,3 +11,5 @@ export { Card } from "@/components/Card";
 export { Collapsible } from "@/components/Collapsible";
 export { StickyHeader } from "@/components/StickyHeader";
 export { DropdownMenu } from "@/components/dropdowns/DropdownMenu";
+export { CardModal } from "@/components/modals/CardModal";
+export { MultipleOptionsModal } from "@/components/modals/MultipleOptionsModal";

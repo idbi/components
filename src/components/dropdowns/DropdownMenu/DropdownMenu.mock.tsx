@@ -5,7 +5,7 @@ import TicketIcon from "@/icons/TicketIcon";
 import WarningIcon from "@/icons/WarningIcon";
 import { DropdownOptions, IDropdownMenu } from "./types";
 
-const options_base: DropdownOptions = [
+export const options_base: DropdownOptions = [
   {
     text: "Hoy",
     onClick: () => alert("hoy"),
@@ -22,7 +22,7 @@ const options_base: DropdownOptions = [
   },
 ];
 
-const options_withIcons: DropdownOptions = [
+export const options_withIcons: DropdownOptions = [
   {
     text: "Descargar reporte",
     onClick: () => alert("descargar reporte"),
@@ -46,9 +46,10 @@ const options_withIcons: DropdownOptions = [
   },
 ];
 
-const options_withSubOptions: DropdownOptions = [
+export const options_withSubOptions: DropdownOptions = [
   {
     text: "Descargar",
+    description: "Seleccione una opción",
     options: [
       {
         text: "Reporte",
@@ -63,6 +64,7 @@ const options_withSubOptions: DropdownOptions = [
   },
   {
     text: "Imprimir",
+    description: "Seleccione una opción",
     options: [
       {
         text: "Reporte consolidado",
