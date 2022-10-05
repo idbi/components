@@ -10,6 +10,9 @@ import { IMultipleOptionsModal } from "./types";
 const base: IMultipleOptionsModal = {
   onClose: () => {},
   options: options_base,
+  defaultDescription: "",
+  defaultTitle: "Acciones",
+  optionsInCenter: true,
 };
 
 const withIcons: IMultipleOptionsModal = {
@@ -17,6 +20,8 @@ const withIcons: IMultipleOptionsModal = {
   options: options_withIcons,
   contentLocation: "center",
   contentLocationInDesktop: "left",
+  defaultTitle: "Acciones",
+  optionsInCenter: false,
 };
 
 const withSubOptions: IMultipleOptionsModal = {
@@ -24,6 +29,7 @@ const withSubOptions: IMultipleOptionsModal = {
   options: options_withSubOptions,
   defaultDescription: "Seleccione la acción a realizar",
   contentLocation: "right",
+  defaultTitle: "Acciones",
   contentLocationInDesktop: "bottom",
 };
 

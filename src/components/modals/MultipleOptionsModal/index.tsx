@@ -17,7 +17,9 @@ export const MultipleOptionsModal: React.FC<IMultipleOptionsModal> = ({
   onClose,
   contentLocation,
   contentLocationInDesktop,
-  defaultDescription = " ",
+  defaultDescription = "",
+  defaultTitle = "",
+  optionsInCenter = false,
 }) => {
   const [selectedIndex, setSelectedIndex] = useState<null | number>(null);
 
@@ -43,12 +45,14 @@ export const MultipleOptionsModal: React.FC<IMultipleOptionsModal> = ({
               <ArrowBackIcon onClick={() => setSelectedIndex(null)} />
             )}
             <Text as="h2" size="md">
-              {selectedSubMenu?.text || "Acciones"}
+              {selectedSubMenu?.text || defaultTitle}
             </Text>
           </s.TitleWrapper>
-          <Text color="NEUTRAL/400" size="sm" weight="regular">
-            {selectedSubMenu?.description || defaultDescription}
-          </Text>
+          {defaultDescription.length > 0 && (
+            <Text color="NEUTRAL/400" size="sm" weight="regular">
+              {selectedSubMenu?.description || defaultDescription}
+            </Text>
+          )}
         </s.Header>
 
         <s.OptionsContainer>
@@ -62,6 +66,7 @@ export const MultipleOptionsModal: React.FC<IMultipleOptionsModal> = ({
                   onClick={() => {
                     if (!option.loading && !option.disabled) option.onClick();
                   }}
+                  optionsInCenter={optionsInCenter}
                 >
                   {option.text} {option.loading ? Loader : option.icon}
                 </s.Option>
@@ -69,6 +74,7 @@ export const MultipleOptionsModal: React.FC<IMultipleOptionsModal> = ({
                 <s.Option
                   key={`option-${i}`}
                   onClick={() => setSelectedIndex(i)}
+                  optionsInCenter={optionsInCenter}
                 >
                   {option.text}{" "}
                   <div style={{ transform: "rotateY(180deg)" }}>
@@ -86,6 +92,7 @@ export const MultipleOptionsModal: React.FC<IMultipleOptionsModal> = ({
               onClick={() => {
                 if (!option.loading && !option.disabled) option.onClick();
               }}
+              optionsInCenter={optionsInCenter}
             >
               {option.text} {option.loading ? Loader : option.icon}
             </s.Option>

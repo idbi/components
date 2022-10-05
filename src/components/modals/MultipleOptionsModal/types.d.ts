@@ -7,6 +7,8 @@ export interface IMultipleOptionsModal {
   contentLocation?: "bottom" | "top" | "left" | "right" | "center";
   contentLocationInDesktop?: "bottom" | "top" | "left" | "right" | "center";
   defaultDescription?: string;
+  defaultTitle?: string;
+  optionsInCenter?: boolean;
 }
 
 export declare const MultipleOptionsModal: (props: IMultipleOptionsModal) => JSX.Element;

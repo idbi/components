@@ -15,8 +15,6 @@ export const TitleWrapper = styled.div`
 
 export const Header = styled.div`
   padding: 0 20px;
-  margin-bottom: 20px;
-
   & > :nth-child(2) {
     margin-top: 5px;
   }
@@ -30,21 +28,26 @@ export const Header = styled.div`
 export const OptionsContainer = styled.ul`
   color: ${() => theme.color.NEUTRAL[700]};
   padding: 0;
-  margin: 20px 0;
+  margin: 10px 0;
   list-style-type: none;
   font-size: 14px;
 `;
 
-export const Option = styled.li<{ disabled?: boolean; alert?: boolean }>`
+export const Option = styled.li<{
+  disabled?: boolean;
+  alert?: boolean;
+  optionsInCenter?: boolean;
+}>`
   background-color: ${({ alert }) =>
     alert ? theme.color.ALERT[100] : "white"};
   color: ${({ alert }) => (alert ? theme.color.ALERT[900] : "inherit")};
   min-height: 50px;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${({ optionsInCenter }) =>
+    optionsInCenter ? "center" : "space-between"};
   align-items: center;
-  gap: 5px;
+  gap: ${({ optionsInCenter }) => (optionsInCenter ? "10px" : "5px")};
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};;
 
