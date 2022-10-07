@@ -1,10 +1,10 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { CardModal } from ".";
-import { ICardModal } from "./types";
+import { CardModal } from "./Container";
+import { ICardModal } from "../types";
 import { mockCardModalProps } from "./CardModal.mock";
 
 export default {
-  title: "components/CardModal",
+  title: "modales/CardModal",
   component: CardModal,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

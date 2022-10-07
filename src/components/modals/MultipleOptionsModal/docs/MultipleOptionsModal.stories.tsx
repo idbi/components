@@ -1,10 +1,10 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { MultipleOptionsModal } from ".";
-import { IMultipleOptionsModal } from "./types";
+import { MultipleOptionsModal } from "./Container";
+import { IMultipleOptionsModal } from "../types";
 import { mockMultipleOptionsModalProps } from "./MultipleOptionsModal.mock";
 
 export default {
-  title: "components/MultipleOptionsModal",
+  title: "modales/MultipleOptionsModal",
   component: MultipleOptionsModal,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
