@@ -8,13 +8,14 @@ interface CardModalType {
   height?: string;
   maxWidth?: string;
   width?: string;
+  background?: string;
   overflow?: string;
   contentLocation?: "bottom" | "top" | "left" | "right" | "center";
   contentLocationInDesktop?: "bottom" | "top" | "left" | "right" | "center";
 }
 
 export const StyledCardModal = styled.div<CardModalType>`
-  background-color: white;
+  background-color: ${(props) => props.background || "#fff"};
   border-radius: ${(props) =>
     props.borderRadius ? props.borderRadius : "15px"};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "90vh")};

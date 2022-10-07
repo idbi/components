@@ -19,6 +19,7 @@ const base: ICardModal = {
       Doloremque.
     </p>
   ),
+  background: "#fff",
 };
 
 const fullPageInMobile: ICardModal = {

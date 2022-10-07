@@ -21,6 +21,7 @@ export const CardModal: React.FC<ICardModal> = ({
   contentLocationInDesktop = "center",
   closeIcon,
   closeIconInDesktop,
+  background = "#fff",
 }) => {
   return (
     <ModalContainer
@@ -38,6 +39,7 @@ export const CardModal: React.FC<ICardModal> = ({
         height={height}
         maxWidth={maxWidth}
         width={width}
+        background={background}
         overflow={overflow}
         contentLocation={contentLocation}
         contentLocationInDesktop={contentLocationInDesktop}
