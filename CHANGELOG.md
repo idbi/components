@@ -1,3 +1,20 @@
+# [0.14.0](https://github.com/idbi/components/compare/v0.13.0...v0.14.0) (2022-10-07)
+
+
+### Bug Fixes
+
+* close MultipleOptionsModal when selecting and option if it has no sub options ([48b3db1](https://github.com/idbi/components/commit/48b3db1c254370b7df1a9366134cfcd213622285))
+* ischecked warning and theme import ([e47fd98](https://github.com/idbi/components/commit/e47fd98518235b9bbd7b31ddbbf839799f439848))
+
+
+### Features
+
+* add background property in CardModal ([9a105c8](https://github.com/idbi/components/commit/9a105c8cf17ed96970745c627dd18843ede2a0e7))
+* StickyHeader with option to change the right content ([44f03f4](https://github.com/idbi/components/commit/44f03f47f08d7a249a86753ab0cd5e8c6d0799b1))
+* update build ([1c7dfd1](https://github.com/idbi/components/commit/1c7dfd1ede784859cee7a212405391ccd6e6d2e1))
+
+
+
 # [0.13.0](https://github.com/idbi/components/compare/v0.12.4...v0.13.0) (2022-10-05)
 
 
@@ -38,16 +55,6 @@
 ### Bug Fixes
 
 * rename all theme imports ([3388bc5](https://github.com/idbi/components/commit/3388bc57773b9041b13bc6bbc6a942a82747b1eb))
-
-
-
-## [0.12.1](https://github.com/idbi/components/compare/v0.12.0...v0.12.1) (2022-09-27)
-
-
-### Bug Fixes
-
-* delete double scoped functions ([20ed0fd](https://github.com/idbi/components/commit/20ed0fd64c55aeac2bf70e240ef786d282cdf49f))
-* resolve theme import & add build ([2e8fe00](https://github.com/idbi/components/commit/2e8fe006c0ebfa639240e7267331fdae62bea527))
 
 
 
