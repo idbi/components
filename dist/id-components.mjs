@@ -1622,7 +1622,7 @@ const Ve = g.div`
     children: [/* @__PURE__ */ i($, {
       children: n
     }), /* @__PURE__ */ i(Xe, {
-      ischecked: e
+      ischecked: e || !1
     })]
   }), /* @__PURE__ */ i(tt, {
     children: a

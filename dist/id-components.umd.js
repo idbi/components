@@ -697,7 +697,7 @@
   &[data-state="closed"] {
     animation: ${rt} 300ms ease-out;
   }
-`,it=({open:e,setOpen:r,label:o,content:n})=>t.jsxs(Re,{open:e,onOpenChange:r,children:[t.jsxs(et,{children:[t.jsx($,{children:o}),t.jsx(Je,{ischecked:e})]}),t.jsx(ot,{children:n})]}),T=e=>t.jsx("svg",{width:e.size||8,height:e.size||12,fill:"none",viewBox:"0 0 8 12",onClick:e.onClick,...e,children:t.jsx("path",{d:"m3.069 6.003 4.73-4.49a.634.634 0 0 0 0-.928L7.384.192A.705.705 0 0 0 6.895 0a.705.705 0 0 0-.489.192L.774 5.537a.634.634 0 0 0-.202.465c0 .177.071.342.202.466l5.627 5.34c.13.124.304.192.49.192a.706.706 0 0 0 .488-.192l.415-.393a.634.634 0 0 0 0-.928L3.069 6.003Z",fill:"#151E5A"})}),nt=g.default.header`
+`,it=({open:e,setOpen:r,label:o,content:n})=>t.jsxs(Re,{open:e,onOpenChange:r,children:[t.jsxs(et,{children:[t.jsx($,{children:o}),t.jsx(Je,{ischecked:e||!1})]}),t.jsx(ot,{children:n})]}),T=e=>t.jsx("svg",{width:e.size||8,height:e.size||12,fill:"none",viewBox:"0 0 8 12",onClick:e.onClick,...e,children:t.jsx("path",{d:"m3.069 6.003 4.73-4.49a.634.634 0 0 0 0-.928L7.384.192A.705.705 0 0 0 6.895 0a.705.705 0 0 0-.489.192L.774 5.537a.634.634 0 0 0-.202.465c0 .177.071.342.202.466l5.627 5.34c.13.124.304.192.49.192a.706.706 0 0 0 .488-.192l.415-.393a.634.634 0 0 0 0-.928L3.069 6.003Z",fill:"#151E5A"})}),nt=g.default.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
