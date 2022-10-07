@@ -21,3 +21,9 @@ export const Base = Template.bind({});
 Base.args = {
   ...mockStickyHeaderProps.base,
 } as IStickyHeaderProps;
+
+export const ChangeRightContent = Template.bind({});
+
+ChangeRightContent.args = {
+  ...mockStickyHeaderProps.changeRightContent,
+} as IStickyHeaderProps;
