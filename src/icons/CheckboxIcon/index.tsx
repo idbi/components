@@ -1,7 +1,7 @@
 const CheckboxIcon = (props: {
   size?: number;
   color?: string;
-  isChecked: boolean;
+  ischecked: boolean;
 }) => (
   <svg
     width={props.size || 24}
@@ -10,7 +10,7 @@ const CheckboxIcon = (props: {
     viewBox="0 0 24 25"
     {...props}
   >
-    {props.isChecked ? (
+    {props.ischecked ? (
       <>
         <path
           fillRule="evenodd"

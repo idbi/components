@@ -64,7 +64,10 @@ export const MultipleOptionsModal: React.FC<IMultipleOptionsModal> = ({
                   alert={option.alert}
                   disabled={option.disabled || option.loading}
                   onClick={() => {
-                    if (!option.loading && !option.disabled) option.onClick();
+                    if (!option.loading && !option.disabled) {
+                      option.onClick();
+                      onClose();
+                    }
                   }}
                   optionsInCenter={optionsInCenter}
                 >
@@ -73,7 +76,9 @@ export const MultipleOptionsModal: React.FC<IMultipleOptionsModal> = ({
               ) : (
                 <s.Option
                   key={`option-${i}`}
-                  onClick={() => setSelectedIndex(i)}
+                  onClick={() => {
+                    setSelectedIndex(i);
+                  }}
                   optionsInCenter={optionsInCenter}
                 >
                   {option.text}{" "}

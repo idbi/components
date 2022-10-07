@@ -1,6 +1,6 @@
 import g, { css as l, keyframes as w } from "styled-components";
 import { jsxs as m, jsx as i, Fragment as B } from "react/jsx-runtime";
-import { useEffect as L, forwardRef as H, useState as A, useRef as M, useCallback as S, useMemo as le } from "react";
+import { useEffect as I, forwardRef as H, useState as C, useRef as M, useCallback as S, useMemo as le } from "react";
 import ce from "react-loading-skeleton";
 import se from "react-select";
 import * as Y from "@radix-ui/react-collapsible";
@@ -28,7 +28,7 @@ const fe = {
   h5: "xs",
   h6: "xs",
   text: "sm"
-}, s = {
+}, c = {
   color: {
     NEUTRAL: {
       0: "#FFFFFF",
@@ -217,8 +217,8 @@ const fe = {
   design: t,
   hover: n
 }) => {
-  const d = e.split("/"), o = d[0];
-  let r = +d[1];
+  const a = e.split("/"), o = a[0];
+  let r = +a[1];
   if (n && r >= 300)
     switch (t) {
       case "solid":
@@ -249,7 +249,7 @@ const fe = {
         r -= 100;
         break;
     }
-  return o === "PRIMARY" || o === "NEUTRAL" || o === "SECONDARY" || o === "TERTIARY" || o === "QUATERNARY" || o === "STATE" || o === "ALERT" || o === "SUCCESS" ? r === 50 || r === 100 || r === 200 || r === 300 || r === 400 || r === 500 || r === 600 || r === 700 || r === 800 || r === 900 ? s.color[o][r] : s.color[o][900] : s.color.PRIMARY[900];
+  return o === "PRIMARY" || o === "NEUTRAL" || o === "SECONDARY" || o === "TERTIARY" || o === "QUATERNARY" || o === "STATE" || o === "ALERT" || o === "SUCCESS" ? r === 50 || r === 100 || r === 200 || r === 300 || r === 400 || r === 500 || r === 600 || r === 700 || r === 800 || r === 900 ? c.color[o][r] : c.color[o][900] : c.color.PRIMARY[900];
 }, ee = ({ fullWidth: e }) => e ? l`
       width: 100%;
     ` : l`
@@ -319,7 +319,7 @@ const fe = {
   background-color: transparent;
   cursor: pointer;
   border: none;
-`, ve = g(be)`
+`, $e = g(be)`
   display: inline-flex;
   gap: 0.5rem;
   font-weight: 500;
@@ -335,7 +335,7 @@ const fe = {
   ${({ fullWidth: e }) => ee({ fullWidth: e })};
   ${({ isLoading: e }) => me({ isLoading: e })};
   ${({ disabled: e }) => pe({ disabled: e })};
-  ${({ m: e, mb: t, mt: n, mr: d, ml: o, my: r, mx: a, p: u, pb: f, pt: h, pr: c, pl: p, py: $, px: b }) => te({ m: e, mb: t, mt: n, mr: d, ml: o, my: r, mx: a, p: u, pb: f, pt: h, pr: c, pl: p, py: $, px: b })};
+  ${({ m: e, mb: t, mt: n, mr: a, ml: o, my: r, mx: d, p: u, pb: f, pt: h, pr: s, pl: p, py: v, px: b }) => te({ m: e, mb: t, mt: n, mr: a, ml: o, my: r, mx: d, p: u, pb: f, pt: h, pr: s, pl: p, py: v, px: b })};
 
   &:hover {
     background-color: ${({ color: e, design: t }) => t === "link" ? "transparent" : y({ color: e, design: t, hover: !0 })};
@@ -356,38 +356,38 @@ const fe = {
   &:disabled:hover {
     ${({ design: e, color: t }) => Q({ design: e, color: t })};
   }
-`, $e = ({
+`, ve = ({
   children: e,
   ...t
-}) => /* @__PURE__ */ m(ve, {
+}) => /* @__PURE__ */ m($e, {
   ...t,
   children: [t.leftIcon, e, t.rightIcon]
 });
 function we(e, t, n) {
-  const d = () => {
+  const a = () => {
     const o = document.querySelectorAll("input");
     return Array.from(o).filter(
-      (a) => a.className === t
+      (d) => d.className === t
     );
   };
-  L(() => {
+  I(() => {
     const o = (r) => {
       r.key === "Backspace" && setTimeout(() => {
-        const a = d(), u = document.activeElement;
+        const d = a(), u = document.activeElement;
         u.value = "";
-        const f = a.indexOf(u);
-        f > 0 && a[f - 1].focus();
+        const f = d.indexOf(u);
+        f > 0 && d[f - 1].focus();
       }, 0);
     };
     return document.addEventListener("keydown", o), () => document.removeEventListener("keydown", o);
-  }, []), L(() => {
+  }, []), I(() => {
     const o = (r) => {
       if (r.key !== "Backspace") {
-        const a = r.key.toLowerCase();
+        const d = r.key.toLowerCase();
         setTimeout(() => {
-          if (a.length === 1) {
-            const u = d(), f = document.activeElement;
-            f.value = a;
+          if (d.length === 1) {
+            const u = a(), f = document.activeElement;
+            f.value = d;
             const h = u.indexOf(f);
             h < u.length - 1 && u[h + 1].focus();
           }
@@ -395,23 +395,23 @@ function we(e, t, n) {
       }
     };
     return document.addEventListener("keydown", o), () => document.removeEventListener("keydown", o);
-  }, []), L(() => {
+  }, []), I(() => {
     if (e) {
       const o = (r) => {
-        const a = r.key.toLowerCase();
-        (a.length === 1 || a === "backspace") && setTimeout(() => {
-          const f = d().map((h) => h.value).join("");
+        const d = r.key.toLowerCase();
+        (d.length === 1 || d === "backspace") && setTimeout(() => {
+          const f = a().map((h) => h.value).join("");
           e(f);
         }, 0);
       };
       return document.addEventListener("keydown", o), () => document.removeEventListener("keydown", o);
     }
-  }, []), L(() => {
+  }, []), I(() => {
     if (n) {
-      const o = d(), r = o.map((f) => f.value), a = n.split(""), u = a.length === r.length ? a : r;
+      const o = a(), r = o.map((f) => f.value), d = n.split(""), u = d.length === r.length ? d : r;
       o.forEach((f, h) => {
-        const c = u[h];
-        c && (f.value = c);
+        const s = u[h];
+        s && (f.value = s);
       });
     }
   }, [n]);
@@ -455,15 +455,15 @@ const ke = w`
   line-height: 24px;
   letter-spacing: -0.04rem;
   ${({ align: e }) => xe({ align: e })}
-  ${({ m: e, mb: t, mt: n, mr: d, ml: o, my: r, mx: a, p: u, pb: f, pt: h, pr: c, pl: p, py: $, px: b }) => te({ m: e, mb: t, mt: n, mr: d, ml: o, my: r, mx: a, p: u, pb: f, pt: h, pr: c, pl: p, py: $, px: b })};
+  ${({ m: e, mb: t, mt: n, mr: a, ml: o, my: r, mx: d, p: u, pb: f, pt: h, pr: s, pl: p, py: v, px: b }) => te({ m: e, mb: t, mt: n, mr: a, ml: o, my: r, mx: d, p: u, pb: f, pt: h, pr: s, pl: p, py: v, px: b })};
 `, Re = (e) => {
-  const t = e === "h1" || e === "h2" || e === "h3" || e === "h4" || e === "h5" || e === "h6", n = t ? "bold" : "medium", d = t ? j[e] : j.text, o = "PRIMARY/900";
+  const t = e === "h1" || e === "h2" || e === "h3" || e === "h4" || e === "h5" || e === "h6", n = t ? "bold" : "medium", a = t ? j[e] : j.text, o = "PRIMARY/900";
   return l`
     font-weight: ${({ weight: r = n }) => fe[r] || "500"};
-    font-size: ${({ size: r = d }) => J[r] || r};
+    font-size: ${({ size: r = a }) => J[r] || r};
     color: ${({ color: r = o }) => {
-    const a = r == null ? void 0 : r.split("/")[0], u = Number(r == null ? void 0 : r.split("/")[1]);
-    return s.color[a][u];
+    const d = r == null ? void 0 : r.split("/")[0], u = Number(r == null ? void 0 : r.split("/")[1]);
+    return c.color[d][u];
   }};
   `;
 }, Ae = g.div`
@@ -471,7 +471,7 @@ const ke = w`
   ${({
   as: e
 }) => Re(e)}
-`, R = ({
+`, A = ({
   as: e,
   ...t
 }) => {
@@ -481,27 +481,27 @@ const ke = w`
     ...t
   });
 }, Et = {
-  H1: (e) => /* @__PURE__ */ i(R, {
+  H1: (e) => /* @__PURE__ */ i(A, {
     as: "h1",
     ...e
   }),
-  H2: (e) => /* @__PURE__ */ i(R, {
+  H2: (e) => /* @__PURE__ */ i(A, {
     as: "h2",
     ...e
   }),
-  H3: (e) => /* @__PURE__ */ i(R, {
+  H3: (e) => /* @__PURE__ */ i(A, {
     as: "h3",
     ...e
   }),
-  H4: (e) => /* @__PURE__ */ i(R, {
+  H4: (e) => /* @__PURE__ */ i(A, {
     as: "h4",
     ...e
   }),
-  H5: (e) => /* @__PURE__ */ i(R, {
+  H5: (e) => /* @__PURE__ */ i(A, {
     as: "h5",
     ...e
   }),
-  H6: (e) => /* @__PURE__ */ i(R, {
+  H6: (e) => /* @__PURE__ */ i(A, {
     as: "h6",
     ...e
   })
@@ -510,12 +510,12 @@ const ke = w`
   align-items: center;
   gap: 8px;
   transition: 0.3s ease-out;
-`, v = (e) => e.rightIcon || e.leftIcon ? /* @__PURE__ */ m(Ce, {
-  children: [e.leftIcon, /* @__PURE__ */ i(R, {
+`, $ = (e) => e.rightIcon || e.leftIcon ? /* @__PURE__ */ m(Ce, {
+  children: [e.leftIcon, /* @__PURE__ */ i(A, {
     as: e.as || "p",
     ...e
   }), e.rightIcon]
-}) : /* @__PURE__ */ i(R, {
+}) : /* @__PURE__ */ i(A, {
   as: e.as || "p",
   ...e
 }), Ee = g.div`
@@ -533,24 +533,24 @@ const ke = w`
     width: 45px;
     height: 45px;
     border: 1px solid
-      ${({ errorMessage: e, success: t }) => e ? s.color.ALERT[900] : t ? s.color.SUCCESS[900] : s.color.NEUTRAL[300]};
+      ${({ errorMessage: e, success: t }) => e ? c.color.ALERT[900] : t ? c.color.SUCCESS[900] : c.color.NEUTRAL[300]};
     border-radius: 8px;
     background: #fff;
     font: normal 16px "Poppins";
     letter-spacing: -0.04em;
-    color: ${() => s.color.NEUTRAL[700]};
+    color: ${() => c.color.NEUTRAL[700]};
 
     transition: background 0.3s ease-out;
     transition: border 0.3s ease-out;
 
     &:disabled {
       cursor: not-allowed;
-      background-color: ${() => s.color.NEUTRAL[100]};
-      color: ${() => s.color.NEUTRAL[500]};
+      background-color: ${() => c.color.NEUTRAL[100]};
+      color: ${() => c.color.NEUTRAL[500]};
     }
 
     &:focus {
-      border-color: ${() => s.color.QUATERNARY[900]};
+      border-color: ${() => c.color.QUATERNARY[900]};
     }
   }
 `, Le = g.div`
@@ -562,31 +562,31 @@ const ke = w`
   id: e,
   value: t,
   length: n = 4,
-  errorMessage: d,
+  errorMessage: a,
   success: o,
   onChange: r = () => {
   },
-  ...a
+  ...d
 }) => (we(r, e, t), /* @__PURE__ */ m(Le, {
   children: [/* @__PURE__ */ i(Ee, {
     length: n,
     success: o,
-    errorMessage: d,
+    errorMessage: a,
     children: Array.from({
       length: n
     }).map((u, f) => /* @__PURE__ */ i("input", {
       id: f.toString(),
       className: e,
       maxLength: 1,
-      ...a
+      ...d
     }, f))
-  }), d && /* @__PURE__ */ i(W, {
-    shouldAppear: Boolean(d),
-    children: /* @__PURE__ */ i(v, {
+  }), a && /* @__PURE__ */ i(W, {
+    shouldAppear: Boolean(a),
+    children: /* @__PURE__ */ i($, {
       size: "xs",
       weight: "light",
       color: "ALERT/900",
-      children: d
+      children: a
     })
   })]
 })), Ie = g.div`
@@ -622,7 +622,7 @@ const ke = w`
   > small {
     display: block;
     font: normal 11px Poppins;
-    color: ${() => s.color.ALERT[900]};
+    color: ${() => c.color.ALERT[900]};
     margin-left: 2px;
     margin-top: 3px;
   }
@@ -636,18 +636,18 @@ const ke = w`
     minHeight: "45px",
     borderRadius: 10,
     backgroundColor: "#ffffff",
-    border: `1px solid ${t.isFocused ? s.color.QUATERNARY[900] : s.color.NEUTRAL[300]}`,
+    border: `1px solid ${t.isFocused ? c.color.QUATERNARY[900] : c.color.NEUTRAL[300]}`,
     boxShadow: "none",
     cursor: "pointer"
   }),
   singleValue: () => ({
-    color: s.color.PRIMARY[900],
+    color: c.color.PRIMARY[900],
     fontWeight: 500,
     fontSize: "14px"
   }),
   placeholder: (e) => ({
     ...e,
-    color: s.color.NEUTRAL[700]
+    color: c.color.NEUTRAL[700]
   }),
   indicatorSeparator: (e) => ({
     ...e,
@@ -670,24 +670,24 @@ const ke = w`
   formatOptionLabel: e,
   options: t,
   loading: n = !1,
-  style: d,
+  style: a,
   error: o,
   firstOption: r,
-  initialValue: a,
+  initialValue: d,
   value: u,
   onChange: f,
   isMulti: h,
-  placeholder: c,
+  placeholder: s,
   label: p
 }) => {
-  const $ = r || {
+  const v = r || {
     label: "Seleccione una opci\xF3n",
     value: ""
   }, b = [...t];
   return /* @__PURE__ */ m(Ie, {
-    style: d,
+    style: a,
     hasError: !!o,
-    children: [p && /* @__PURE__ */ i(v, {
+    children: [p && /* @__PURE__ */ i($, {
       as: "label",
       align: "left",
       size: "sm",
@@ -701,9 +701,9 @@ const ke = w`
       height: 46,
       width: "100%"
     }) : /* @__PURE__ */ i(se, {
-      placeholder: c,
+      placeholder: s,
       value: u || void 0,
-      defaultValue: a || $,
+      defaultValue: d || v,
       options: b,
       onChange: f,
       styles: Te,
@@ -730,7 +730,7 @@ const ke = w`
   &:hover ::before {
     width: ${(e) => e.size * 2}px;
     height: ${(e) => e.size * 2}px;
-    background: ${(e) => e.theme.color.NEUTRAL[50]};
+    background: ${() => c.color.NEUTRAL[50]};
   }
   &::after {
     content: "";
@@ -759,7 +759,7 @@ const ke = w`
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: ${(n) => n.color || n.theme.color.PRIMARY[900]};
+            background: ${(n) => n.color || c.color.PRIMARY[900]};
             width: ${(n) => n.size * 2}px;
             height: ${(n) => n.size * 2}px;
             border-radius: ${(n) => n.borderRadius || "50%"};
@@ -768,7 +768,7 @@ const ke = w`
           &:hover ::before {
             width: ${(n) => n.size * 2}px;
             height: ${(n) => n.size * 2}px;
-            background: ${(n) => n.color || n.theme.color.PRIMARY[900]};
+            background: ${(n) => n.color || c.color.PRIMARY[900]};
           }
         `}
     `}
@@ -789,7 +789,7 @@ const ke = w`
           &:hover ::before {
             width: ${(n) => n.size * 2}px;
             height: ${(n) => n.size * 2}px;
-            background: ${(n) => n.theme.color.NEUTRAL[50]};
+            background: ${() => c.color.NEUTRAL[50]};
           }
         `}
     `}
@@ -800,38 +800,38 @@ const ke = w`
   transform: translate(-50%, -50%);
   width: ${(e) => e.size}px;
   height: ${(e) => e.size}px;
-  fill: ${(e) => e.color || e.theme.color.PRIMARY[900]};
+  fill: ${(e) => e.color || c.color.PRIMARY[900]};
   ${(e) => e.variant === "V1" && l`
       ${(t) => t.active && l`
           fill: #fff;
         `}
     `}
   ${(e) => e.variant === "V2" && l`
-      fill: ${(t) => t.theme.color.NEUTRAL[400]};
+      fill: ${() => c.color.NEUTRAL[400]};
       ${(t) => t.active && l`
-          fill: ${(n) => n.color || n.theme.color.PRIMARY[900]};
+          fill: ${(n) => n.color || c.color.PRIMARY[900]};
         `}
     `}
 `, ie = (e) => {
   const {
     children: t,
     color: n,
-    size: d,
+    size: a,
     viewBox: o,
     active: r,
-    borderRadius: a,
+    borderRadius: d,
     variant: u
   } = e;
   return /* @__PURE__ */ i(ze, {
     active: r,
-    size: d || 24,
-    borderRadius: a || "50%",
+    size: a || 24,
+    borderRadius: d || "50%",
     variant: u || "V1",
     color: n,
     children: /* @__PURE__ */ i(Se, {
       active: r,
       color: n,
-      size: d || 24,
+      size: a || 24,
       viewBox: o || "0 0 32 32",
       variant: u || "V1",
       children: t
@@ -912,14 +912,14 @@ const ke = w`
   gap: 0.5rem;
   border-radius: 8px;
   border: 1px solid
-    ${({ error: e, success: t, isFocused: n }) => e ? s.color.ALERT[900] : t && n ? s.color.SUCCESS[900] : n ? s.color.QUATERNARY[900] : s.color.NEUTRAL[300]};
+    ${({ error: e, success: t, isFocused: n }) => e ? c.color.ALERT[900] : t && n ? c.color.SUCCESS[900] : n ? c.color.QUATERNARY[900] : c.color.NEUTRAL[300]};
   background: #fff;
   min-height: 45px;
   ::placeholder {
-    color: ${() => s.color.NEUTRAL[500]};
+    color: ${() => c.color.NEUTRAL[500]};
   }
 
-  background-color: ${({ disabled: e }) => e ? s.color.NEUTRAL[100] : "#fff"};
+  background-color: ${({ disabled: e }) => e ? c.color.NEUTRAL[100] : "#fff"};
   cursor: ${({ disabled: e }) => e ? "not-allowed" : "auto"};
   transition: background 0.3s ease-out;
   transition: border 0.3s ease-out;
@@ -934,15 +934,15 @@ const ke = w`
     padding: 10px 0px;
     background-color: #fff;
     letter-spacing: -0.04em;
-    color: ${() => s.color.NEUTRAL[700]};
+    color: ${() => c.color.NEUTRAL[700]};
     padding-left: ${({ leftAddon: e }) => e ? "0px" : "12px"};
     padding-right: ${({ rightAddon: e }) => e ? "0px" : "12px"};
     padding-right: ${({ success: e, error: t }) => (e || t) && "2.5rem"};
 
     &:disabled {
       cursor: not-allowed;
-      background-color: ${() => s.color.NEUTRAL[100]};
-      color: ${() => s.color.NEUTRAL[500]};
+      background-color: ${() => c.color.NEUTRAL[100]};
+      color: ${() => c.color.NEUTRAL[500]};
     }
   }
 
@@ -955,7 +955,7 @@ const ke = w`
   }
 
   span {
-    color: ${() => s.color.NEUTRAL[500]};
+    color: ${() => c.color.NEUTRAL[500]};
     ${({ size: e }) => U({ size: e })};
     display: flex;
     align-items: center;
@@ -972,24 +972,24 @@ const ke = w`
   type: e,
   leftAddon: t,
   rightAddon: n,
-  placeholder: d,
+  placeholder: a,
   error: o,
   success: r,
-  size: a,
+  size: d,
   fullWidth: u,
   name: f,
   infoMessage: h,
-  onFocus: c,
+  onFocus: s,
   onBlur: p,
-  onChange: $,
+  onChange: v,
   ...b
-}, C) => {
-  const [F, I] = A(!1), E = !o && !r && h && F;
+}, E) => {
+  const [F, R] = C(!1), L = !o && !r && h && F;
   return /* @__PURE__ */ m(B, {
     children: [/* @__PURE__ */ m(He, {
       fullWidth: u,
       success: r,
-      size: a,
+      size: d,
       error: o,
       disabled: b.disabled,
       leftAddon: t,
@@ -999,15 +999,15 @@ const ke = w`
         className: "leftAddon",
         children: t
       }), /* @__PURE__ */ i("input", {
-        ref: C,
+        ref: E,
         onFocus: (T) => {
-          c && c(T), I(!0);
+          s && s(T), R(!0);
         },
         onBlur: (T) => {
-          p && p(T), I(!1);
+          p && p(T), R(!1);
         },
-        onChange: $,
-        placeholder: d,
+        onChange: v,
+        placeholder: a,
         type: e,
         name: f,
         ...b
@@ -1018,18 +1018,18 @@ const ke = w`
         className: "state",
         children: /* @__PURE__ */ i(De, {
           size: 24,
-          color: s.color.ALERT[900]
+          color: c.color.ALERT[900]
         })
       }), r && /* @__PURE__ */ i("span", {
         className: "state",
         children: /* @__PURE__ */ i(Be, {
           size: 20,
-          color: s.color.SUCCESS[900]
+          color: c.color.SUCCESS[900]
         })
       })]
-    }), E && /* @__PURE__ */ i(W, {
-      shouldAppear: E,
-      children: /* @__PURE__ */ i(v, {
+    }), L && /* @__PURE__ */ i(W, {
+      shouldAppear: L,
+      children: /* @__PURE__ */ i($, {
         size: "xs",
         color: "QUATERNARY/900",
         children: h
@@ -1055,29 +1055,29 @@ const Me = g.div`
   label: e,
   type: t,
   error: n,
-  isDirty: d,
+  isDirty: a,
   success: o,
   infoMessage: r,
-  fullWidth: a,
+  fullWidth: d,
   ...u
 }, f) => {
   const h = {
     ...u,
     ref: f
-  }, [c, p] = A(!1);
+  }, [s, p] = C(!1);
   return /* @__PURE__ */ m(Me, {
-    fullWidth: a,
+    fullWidth: d,
     children: [e && /* @__PURE__ */ m("div", {
       className: "label-container",
-      children: [/* @__PURE__ */ i(v, {
+      children: [/* @__PURE__ */ i($, {
         as: "label",
         align: "left",
         size: "sm",
         color: "NEUTRAL/700",
         children: e
       }), t === "password" && /* @__PURE__ */ i("span", {
-        onClick: () => p(!c),
-        children: c ? /* @__PURE__ */ i(Ue, {
+        onClick: () => p(!s),
+        children: s ? /* @__PURE__ */ i(Ue, {
           size: 20
         }) : /* @__PURE__ */ i(Ne, {
           size: 20
@@ -1085,14 +1085,14 @@ const Me = g.div`
       })]
     }), /* @__PURE__ */ i(P, {
       error: Boolean(n),
-      success: o || !n && d,
+      success: o || !n && a,
       infoMessage: r,
-      fullWidth: a,
-      type: c ? "text" : t,
+      fullWidth: d,
+      type: s ? "text" : t,
       ...h
     }), n && /* @__PURE__ */ i(W, {
       shouldAppear: Boolean(n),
-      children: /* @__PURE__ */ i(v, {
+      children: /* @__PURE__ */ i($, {
         size: "xs",
         color: "ALERT/900",
         children: n
@@ -1102,15 +1102,15 @@ const Me = g.div`
 });
 Ye.displayName = "TextField";
 const ne = (e, t) => {
-  L(() => {
-    const n = (d) => {
+  I(() => {
+    const n = (a) => {
       if (Array.isArray(e)) {
         for (const o of e)
-          if (!d.target || !o.current || o.current.contains(d.target))
+          if (!a.target || !o.current || o.current.contains(a.target))
             return;
-      } else if (!d.target || !e.current || e.current.contains(d.target))
+      } else if (!a.target || !e.current || e.current.contains(a.target))
         return;
-      t(d);
+      t(a);
     };
     return document.addEventListener("mousedown", n), document.addEventListener("touchstart", n), () => {
       document.removeEventListener("mousedown", n), document.removeEventListener("touchstart", n);
@@ -1157,7 +1157,7 @@ const ne = (e, t) => {
     padding: 10px 12px;
     min-height: 45px;
     background: #fff;
-    border: 1px solid ${() => s.color.NEUTRAL[300]};
+    border: 1px solid ${() => c.color.NEUTRAL[300]};
     border-radius: 0.5rem;
     justify-content: space-between;
   }
@@ -1175,12 +1175,12 @@ const ne = (e, t) => {
 
   li.selected {
     border-radius: 0.5rem;
-    background-color: ${() => s.color.QUATERNARY[200]};
+    background-color: ${() => c.color.QUATERNARY[200]};
   }
 
   .options li:hover {
     border-radius: 0.5rem;
-    background-color: ${() => s.color.QUATERNARY[100]};
+    background-color: ${() => c.color.QUATERNARY[100]};
   }
 `, Oe = g.ul`
   width: ${({ fullWidthOptions: e }) => e ? "100%" : "15rem"};
@@ -1204,7 +1204,7 @@ const ne = (e, t) => {
       margin: 0.5rem 0.313rem;
       &:focus {
         border-radius: 0.5rem;
-        outline: 2px solid ${() => s.color.SECONDARY[900]};
+        outline: 2px solid ${() => c.color.SECONDARY[900]};
       }
     }
   }
@@ -1212,24 +1212,24 @@ const ne = (e, t) => {
   label: e,
   searchable: t = !0,
   autoSize: n,
-  value: d,
+  value: a,
   options: o,
   placeholder: r = "Seleccione una opci\xF3n",
-  fullWidth: a,
+  fullWidth: d,
   fullWidthOptions: u,
   onChange: f,
   formatOptionLabel: h,
-  formatSelectedOption: c
+  formatSelectedOption: s
 }) => {
-  const p = M(null), [$, b] = A(o), [C, F] = A(""), [I, E] = A(!1);
+  const p = M(null), [v, b] = C(o), [E, F] = C(""), [R, L] = C(!1);
   ne(p, () => {
-    E(!1);
+    L(!1);
   });
   const T = S(() => {
-    const x = o.filter((k) => k.label.toLowerCase().includes(C.toLowerCase()));
+    const x = o.filter((k) => k.label.toLowerCase().includes(E.toLowerCase()));
     b(x);
-  }, [o, d]), Z = S((x) => {
-    f(o.find((k) => k.label === x)), E(!1), F(""), b(o);
+  }, [o, a]), Z = S((x) => {
+    f(o.find((k) => k.label === x)), L(!1), F(""), b(o);
   }, [T]), ae = S((x) => {
     F(x.target.value);
     const k = o.filter((V) => V.label.toLowerCase().includes(x.target.value.toLowerCase()));
@@ -1242,9 +1242,9 @@ const ne = (e, t) => {
     }
   };
   return /* @__PURE__ */ m(Pe, {
-    fullWidth: a,
+    fullWidth: d,
     ref: p,
-    children: [e && /* @__PURE__ */ i(v, {
+    children: [e && /* @__PURE__ */ i($, {
       as: "label",
       align: "left",
       size: "sm",
@@ -1254,20 +1254,20 @@ const ne = (e, t) => {
       children: e
     }), /* @__PURE__ */ m("div", {
       className: "select-btn",
-      onClick: () => E(!I),
+      onClick: () => L(!R),
       tabIndex: 0,
       onKeyUpCapture: (x) => {
-        x.key === "Enter" && E(!I);
+        x.key === "Enter" && L(!R);
       },
-      children: [/* @__PURE__ */ i(v, {
+      children: [/* @__PURE__ */ i($, {
         as: "span",
         color: "NEUTRAL/700",
         mr: "0.5rem",
-        children: c ? c(d) : h ? h(d) : d.label
+        children: s ? s(a) : h ? h(a) : a.label
       }), /* @__PURE__ */ i(re, {
         size: 20
       })]
-    }), I && /* @__PURE__ */ m(Oe, {
+    }), R && /* @__PURE__ */ m(Oe, {
       maxOptionsHeight: n ? de() : 285,
       fullWidthOptions: u,
       children: [t && /* @__PURE__ */ i("div", {
@@ -1276,16 +1276,16 @@ const ne = (e, t) => {
           leftAddon: /* @__PURE__ */ i(We, {}),
           type: "text",
           placeholder: r,
-          value: C,
+          value: E,
           onChange: ae,
           fullWidth: !0
         })
       }), /* @__PURE__ */ i("div", {
         className: "options",
-        children: $.map((x) => /* @__PURE__ */ i(v, {
+        children: v.map((x) => /* @__PURE__ */ i($, {
           as: "li",
           color: "NEUTRAL/700",
-          className: x.value === d.value ? "selected" : "",
+          className: x.value === a.value ? "selected" : "",
           tabIndex: 0,
           onClick: () => Z(x.label),
           onKeyUpCapture: (k) => {
@@ -1335,10 +1335,10 @@ const Ve = g.div`
   size: t = 128,
   onChange: n
 }) => {
-  const d = M(null);
+  const a = M(null);
   return /* @__PURE__ */ m(Ve, {
     size: t,
-    children: [/* @__PURE__ */ i(v, {
+    children: [/* @__PURE__ */ i($, {
       color: "NEUTRAL/400",
       weight: "regular",
       size: "xs",
@@ -1350,30 +1350,30 @@ const Ve = g.div`
         accept: "image/png, image/jpeg",
         onChange: (r) => {
           var u;
-          const a = (u = r.target.files) == null ? void 0 : u[0];
-          if (a) {
-            const f = URL.createObjectURL(a);
+          const d = (u = r.target.files) == null ? void 0 : u[0];
+          if (d) {
+            const f = URL.createObjectURL(d);
             n({
-              file: a,
+              file: d,
               url: f
             });
           }
         },
-        ref: d
+        ref: a
       }), /* @__PURE__ */ i("img", {
         width: t,
         height: t,
         src: e || "/default-profile.svg",
         alt: "profile",
         referrerPolicy: "no-referrer"
-      }), /* @__PURE__ */ i($e, {
+      }), /* @__PURE__ */ i(ve, {
         type: "button",
         size: "lg",
         design: "flat",
         shape: "circular",
         onClick: () => {
           var r;
-          return (r = d.current) == null ? void 0 : r.click();
+          return (r = a.current) == null ? void 0 : r.click();
         },
         children: "+"
       })]
@@ -1448,7 +1448,7 @@ const Ve = g.div`
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: ${() => s.color.PRIMARY[900]};
+    background-color: ${() => c.color.PRIMARY[900]};
     animation: ${Qe} 1s linear infinite;
   }
   .idbi-loading > div > div:last-child {
@@ -1456,7 +1456,7 @@ const Ve = g.div`
   }
   .idbi-loading > div > div:last-child > div > div {
     animation-delay: -0.5s;
-    background-color: ${() => s.color.TERTIARY[900]};
+    background-color: ${() => c.color.TERTIARY[900]};
   }
 `, zt = () => /* @__PURE__ */ i(Ke, {
   children: /* @__PURE__ */ i("div", {
@@ -1523,21 +1523,21 @@ const Ve = g.div`
         `;
     case "secondary":
       return l`
-          background-color: ${s.color.QUATERNARY[300]};
+          background-color: ${c.color.QUATERNARY[300]};
         `;
     case "flat":
       return l`
           background-color: transparent;
         `;
     default:
-      return s.color.NEUTRAL[100];
+      return c.color.NEUTRAL[100];
   }
 }};
 `, St = ({
   design: e = "primary",
   header: t,
   options: n,
-  optionsFormatter: d,
+  optionsFormatter: a,
   content: o,
   withSeparator: r
 }) => /* @__PURE__ */ m(_e, {
@@ -1545,10 +1545,10 @@ const Ve = g.div`
   withSeparator: r,
   children: [t && /* @__PURE__ */ i("header", {
     children: t
-  }), n && d && /* @__PURE__ */ i("ul", {
-    children: n.map((a) => /* @__PURE__ */ i("li", {
-      children: d(a)
-    }, a.value))
+  }), n && a && /* @__PURE__ */ i("ul", {
+    children: n.map((d) => /* @__PURE__ */ i("li", {
+      children: a(d)
+    }, d.value))
   }), o && o]
 }), Xe = (e) => /* @__PURE__ */ i("svg", {
   width: e.size || 24,
@@ -1556,7 +1556,7 @@ const Ve = g.div`
   fill: "none",
   viewBox: "0 0 24 25",
   ...e,
-  children: e.isChecked ? /* @__PURE__ */ m(B, {
+  children: e.ischecked ? /* @__PURE__ */ m(B, {
     children: [/* @__PURE__ */ i("path", {
       fillRule: "evenodd",
       clipRule: "evenodd",
@@ -1577,7 +1577,7 @@ const Ve = g.div`
 }), qe = g(Y.Root)`
   width: 100%;
   background-color: #fff;
-  box-shadow: ${() => s.effect.darkShadow[4]};
+  box-shadow: ${() => c.effect.darkShadow[4]};
   border-radius: 0.5rem;
 `, Ge = g(Y.Trigger)`
   display: flex;
@@ -1614,18 +1614,18 @@ const Ve = g.div`
   open: e,
   setOpen: t,
   label: n,
-  content: d
+  content: a
 }) => /* @__PURE__ */ m(qe, {
   open: e,
   onOpenChange: t,
   children: [/* @__PURE__ */ m(Ge, {
-    children: [/* @__PURE__ */ i(v, {
+    children: [/* @__PURE__ */ i($, {
       children: n
     }), /* @__PURE__ */ i(Xe, {
-      isChecked: e
+      ischecked: e
     })]
   }), /* @__PURE__ */ i(tt, {
-    children: d
+    children: a
   })]
 }), z = (e) => /* @__PURE__ */ i("svg", {
   width: e.size || 8,
@@ -1649,7 +1649,7 @@ const Ve = g.div`
   z-index: 1;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  box-shadow: ${() => s.effect.darkShadow[6]};
+  box-shadow: ${() => c.effect.darkShadow[6]};
 
   button {
     display: flex;
@@ -1671,16 +1671,17 @@ const Ve = g.div`
 `, Ut = ({
   onBack: e,
   backLabel: t,
-  profileImageUrl: n
+  profileImageUrl: n,
+  rightContent: a
 }) => /* @__PURE__ */ m(it, {
   children: [/* @__PURE__ */ m("button", {
     type: "button",
     onClick: e,
-    children: [/* @__PURE__ */ i(z, {}), /* @__PURE__ */ i(v, {
+    children: [/* @__PURE__ */ i(z, {}), /* @__PURE__ */ i($, {
       color: "NEUTRAL/900",
       children: t
     })]
-  }), /* @__PURE__ */ i("img", {
+  }), a || /* @__PURE__ */ i("img", {
     width: 28,
     height: 28,
     src: n || "/default-profile.svg",
@@ -1706,7 +1707,7 @@ const Ve = g.div`
   borderWidth: e.borderWidth,
   margin: e.margin
 }), oe = g.ul`
-  color: ${() => s.color.OTHER.color1};
+  color: ${() => c.color.OTHER.color1};
   background-color: white;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   border: 1px solid #59a5fc;
@@ -1759,10 +1760,10 @@ const Ve = g.div`
   ${({ alert: e }) => {
   if (e)
     return l`
-        background-color: ${s.color.ALERT[100]};
-        color: ${s.color.ALERT[900]};
+        background-color: ${c.color.ALERT[100]};
+        color: ${c.color.ALERT[900]};
         &:hover {
-          background-color: ${s.color.ALERT[200]};
+          background-color: ${c.color.ALERT[200]};
         }
       `;
 }}
@@ -1774,20 +1775,20 @@ const Ve = g.div`
   text: e,
   options: t
 }) => {
-  const [n, d] = A(!1), o = M(null), r = (a) => {
-    if (o.current && clearTimeout(o.current), a) {
-      d(!0);
+  const [n, a] = C(!1), o = M(null), r = (d) => {
+    if (o.current && clearTimeout(o.current), d) {
+      a(!0);
       return;
     }
     o.current = setTimeout(() => {
-      n !== a && d(a);
+      n !== d && a(d);
     }, 50);
   };
   return /* @__PURE__ */ m(D, {
     onMouseEnter: () => r(!0),
     onMouseLeave: () => r(!1),
     active: n,
-    onClick: (a) => a.stopPropagation(),
+    onClick: (d) => d.stopPropagation(),
     children: [e, " ", /* @__PURE__ */ i("div", {
       style: {
         transform: "rotateY(180deg)"
@@ -1795,12 +1796,12 @@ const Ve = g.div`
       children: /* @__PURE__ */ i(z, {})
     }), n && /* @__PURE__ */ i(ot, {
       children: /* @__PURE__ */ i(oe, {
-        children: t.map((a, u) => /* @__PURE__ */ m(D, {
-          alert: a.alert,
-          onClick: (f) => a.disabled || a.loading ? f.stopPropagation() : a.onClick(),
-          disabled: a.disabled || a.loading,
-          loading: a.loading,
-          children: [a.text, " ", a.loading ? /* @__PURE__ */ i("div", {
+        children: t.map((d, u) => /* @__PURE__ */ m(D, {
+          alert: d.alert,
+          onClick: (f) => d.disabled || d.loading ? f.stopPropagation() : d.onClick(),
+          disabled: d.disabled || d.loading,
+          loading: d.loading,
+          children: [d.text, " ", d.loading ? /* @__PURE__ */ i("div", {
             style: {
               width: "24px"
             },
@@ -1808,7 +1809,7 @@ const Ve = g.div`
               width: "20px",
               height: "20px"
             })
-          }) : a.icon]
+          }) : d.icon]
         }, `suboption-${u}`))
       })
     })]
@@ -1821,7 +1822,7 @@ const Ve = g.div`
   }, `option-${n}`) : /* @__PURE__ */ m(D, {
     disabled: t.disabled || t.loading,
     alert: t.alert,
-    onClick: t.disabled || t.loading ? (d) => d.stopPropagation() : t.onClick,
+    onClick: t.disabled || t.loading ? (a) => a.stopPropagation() : t.onClick,
     loading: t.loading,
     children: [t.text, " ", t.loading ? /* @__PURE__ */ i("div", {
       style: {
@@ -1846,35 +1847,35 @@ const Ve = g.div`
 }) => {
   const {
     x: n,
-    y: d,
+    y: a,
     reference: o,
     floating: r,
-    strategy: a,
+    strategy: d,
     update: u,
     refs: f
   } = he({
     placement: "bottom-end"
-  }), [h, c] = A(!1);
-  return L(() => {
+  }), [h, s] = C(!1);
+  return I(() => {
     if (!(!f.reference.current || !f.floating.current))
       return ue(f.reference.current, f.floating.current, u);
   }, [h, u]), ne(f.reference, () => {
-    c(!1);
+    s(!1);
   }), /* @__PURE__ */ m("div", {
     ref: o,
     children: [/* @__PURE__ */ i(lt, {
-      onClick: () => c(!h),
+      onClick: () => s(!h),
       children: t || /* @__PURE__ */ i(re, {
         size: 25
       })
     }), h && /* @__PURE__ */ i("div", {
       ref: r,
       style: {
-        position: a,
-        top: d != null ? d : 0,
+        position: d,
+        top: a != null ? a : 0,
         left: n != null ? n : 0
       },
-      onClick: () => c(!h),
+      onClick: () => s(!h),
       children: /* @__PURE__ */ i(dt, {
         options: e
       })
@@ -1913,11 +1914,11 @@ const Ve = g.div`
   },
   backdropOpacity: t,
   zIndex: n
-}) => (L(() => (document.body.style.overflow = "hidden", () => {
+}) => (I(() => (document.body.style.overflow = "hidden", () => {
   document.body.style.overflow = "visible";
 }), []), /* @__PURE__ */ i(st, {
-  onClick: (d) => {
-    d.stopPropagation(), e();
+  onClick: (a) => {
+    a.stopPropagation(), e();
   },
   opacity: t,
   zIndex: n
@@ -2077,23 +2078,23 @@ const Ve = g.div`
   children: e,
   onClose: t,
   backdropOpacity: n,
-  zIndex: d,
+  zIndex: a,
   contentLocation: o = "center",
   contentLocationInDesktop: r = "center"
 }) => /* @__PURE__ */ m(B, {
   children: [/* @__PURE__ */ i(ht, {
     onClose: t,
     backdropOpacity: n,
-    zIndex: d || 4
+    zIndex: a || 4
   }), /* @__PURE__ */ i(ut, {
-    zIndex: d || 4,
+    zIndex: a || 4,
     contentLocation: o,
     contentLocationInDesktop: r,
-    onClick: (a) => a.stopPropagation(),
+    onClick: (d) => d.stopPropagation(),
     children: e
   })]
 }), gt = g.div`
-  background-color: white;
+  background-color: ${(e) => e.background || "#fff"};
   border-radius: ${(e) => e.borderRadius ? e.borderRadius : "15px"};
   max-height: ${(e) => e.maxHeight ? e.maxHeight : "90vh"};
   height: ${(e) => e.height ? e.height : "auto"};
@@ -2213,40 +2214,42 @@ const Ve = g.div`
   children: e,
   onClose: t,
   backdropOpacity: n,
-  padding: d,
+  padding: a,
   borderRadius: o,
   borderRadiusInDesktop: r,
-  maxHeight: a,
+  maxHeight: d,
   height: u,
   maxWidth: f,
   width: h,
-  zIndex: c,
+  zIndex: s,
   overflow: p,
-  contentLocation: $ = "center",
+  contentLocation: v = "center",
   contentLocationInDesktop: b = "center",
-  closeIcon: C,
-  closeIconInDesktop: F
+  closeIcon: E,
+  closeIconInDesktop: F,
+  background: R = "#fff"
 }) => /* @__PURE__ */ i(ft, {
   onClose: t,
   backdropOpacity: n,
-  zIndex: c,
-  contentLocation: $,
+  zIndex: s,
+  contentLocation: v,
   contentLocationInDesktop: b,
   children: /* @__PURE__ */ m(gt, {
-    padding: d,
+    padding: a,
     borderRadius: o,
     borderRadiusInDesktop: r,
-    maxHeight: a,
+    maxHeight: d,
     height: u,
     maxWidth: f,
     width: h,
+    background: R,
     overflow: p,
-    contentLocation: $,
+    contentLocation: v,
     contentLocationInDesktop: b,
-    children: [(C || F) && /* @__PURE__ */ i(mt, {
+    children: [(E || F) && /* @__PURE__ */ i(mt, {
       onClick: t,
       closeIconInDesktop: F,
-      closeIcon: C,
+      closeIcon: E,
       children: /* @__PURE__ */ i(ct, {})
     }), e]
   })
@@ -2258,7 +2261,7 @@ const Ve = g.div`
   display: flex;
   align-items: center;
   gap: 10px;
-`, vt = g.div`
+`, $t = g.div`
   padding: 0 20px;
   & > :nth-child(2) {
     margin-top: 5px;
@@ -2268,15 +2271,15 @@ const Ve = g.div`
   img {
     cursor: pointer;
   }
-`, $t = g.ul`
-  color: ${() => s.color.NEUTRAL[700]};
+`, vt = g.ul`
+  color: ${() => c.color.NEUTRAL[700]};
   padding: 0;
   margin: 10px 0;
   list-style-type: none;
   font-size: 14px;
 `, N = g.li`
-  background-color: ${({ alert: e }) => e ? s.color.ALERT[100] : "white"};
-  color: ${({ alert: e }) => e ? s.color.ALERT[900] : "inherit"};
+  background-color: ${({ alert: e }) => e ? c.color.ALERT[100] : "white"};
+  color: ${({ alert: e }) => e ? c.color.ALERT[900] : "inherit"};
   min-height: 50px;
   padding: 0 20px;
   display: flex;
@@ -2310,74 +2313,76 @@ const Ve = g.div`
   options: e,
   onClose: t,
   contentLocation: n,
-  contentLocationInDesktop: d,
+  contentLocationInDesktop: a,
   defaultDescription: o = "",
   defaultTitle: r = "",
-  optionsInCenter: a = !1
+  optionsInCenter: d = !1
 }) => {
-  const [u, f] = A(null), h = le(() => {
+  const [u, f] = C(null), h = le(() => {
     if (u === null)
       return null;
-    const c = e[u];
-    if (c && "options" in c)
-      return c;
+    const s = e[u];
+    if (s && "options" in s)
+      return s;
   }, [u, e]);
   return /* @__PURE__ */ i(pt, {
     maxWidth: "500px",
     padding: "20px 0",
     onClose: t,
     contentLocation: n || "bottom",
-    contentLocationInDesktop: d || "center",
+    contentLocationInDesktop: a || "center",
     closeIcon: !0,
     children: /* @__PURE__ */ m(xt, {
-      children: [/* @__PURE__ */ m(vt, {
+      children: [/* @__PURE__ */ m($t, {
         children: [/* @__PURE__ */ m(bt, {
           children: [h && /* @__PURE__ */ i(z, {
             onClick: () => f(null)
-          }), /* @__PURE__ */ i(v, {
+          }), /* @__PURE__ */ i($, {
             as: "h2",
             size: "md",
             children: (h == null ? void 0 : h.text) || r
           })]
-        }), o.length > 0 && /* @__PURE__ */ i(v, {
+        }), o.length > 0 && /* @__PURE__ */ i($, {
           color: "NEUTRAL/400",
           size: "sm",
           weight: "regular",
           children: (h == null ? void 0 : h.description) || o
         })]
-      }), /* @__PURE__ */ m($t, {
-        children: [!h && e.map((c, p) => "onClick" in c ? /* @__PURE__ */ m(N, {
-          alert: c.alert,
-          disabled: c.disabled || c.loading,
+      }), /* @__PURE__ */ m(vt, {
+        children: [!h && e.map((s, p) => "onClick" in s ? /* @__PURE__ */ m(N, {
+          alert: s.alert,
+          disabled: s.disabled || s.loading,
           onClick: () => {
-            !c.loading && !c.disabled && c.onClick();
+            !s.loading && !s.disabled && (s.onClick(), t());
           },
-          optionsInCenter: a,
-          children: [c.text, " ", c.loading ? G : c.icon]
+          optionsInCenter: d,
+          children: [s.text, " ", s.loading ? G : s.icon]
         }, `option-${p}`) : /* @__PURE__ */ m(N, {
-          onClick: () => f(p),
-          optionsInCenter: a,
-          children: [c.text, " ", /* @__PURE__ */ i("div", {
+          onClick: () => {
+            f(p);
+          },
+          optionsInCenter: d,
+          children: [s.text, " ", /* @__PURE__ */ i("div", {
             style: {
               transform: "rotateY(180deg)"
             },
             children: /* @__PURE__ */ i(z, {})
           })]
-        }, `option-${p}`)), h == null ? void 0 : h.options.map((c, p) => /* @__PURE__ */ m(N, {
-          alert: c.alert,
-          disabled: c.disabled || c.loading,
+        }, `option-${p}`)), h == null ? void 0 : h.options.map((s, p) => /* @__PURE__ */ m(N, {
+          alert: s.alert,
+          disabled: s.disabled || s.loading,
           onClick: () => {
-            !c.loading && !c.disabled && c.onClick();
+            !s.loading && !s.disabled && s.onClick();
           },
-          optionsInCenter: a,
-          children: [c.text, " ", c.loading ? G : c.icon]
+          optionsInCenter: d,
+          children: [s.text, " ", s.loading ? G : s.icon]
         }, `suboption-${p}`))]
       })]
     })
   });
 };
 export {
-  $e as Button,
+  ve as Button,
   St as Card,
   pt as CardModal,
   Lt as CodeInput,
@@ -2390,6 +2395,6 @@ export {
   Tt as ProfileImage,
   It as SelectField,
   Ut as StickyHeader,
-  v as Text,
+  $ as Text,
   Ye as TextField
 };

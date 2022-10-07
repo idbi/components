@@ -7,6 +7,7 @@ export const StickyHeader: React.FC<IStickyHeaderProps> = ({
   onBack,
   backLabel,
   profileImageUrl,
+  rightContent,
 }) => {
   return (
     <StickyHeaderContainer>
@@ -14,13 +15,15 @@ export const StickyHeader: React.FC<IStickyHeaderProps> = ({
         <ArrowBackIcon />
         <Text color="NEUTRAL/900">{backLabel}</Text>
       </button>
-      <img
-        width={28}
-        height={28}
-        src={profileImageUrl || "/default-profile.svg"}
-        alt="profile"
-        referrerPolicy="no-referrer"
-      />
+      {rightContent || (
+        <img
+          width={28}
+          height={28}
+          src={profileImageUrl || "/default-profile.svg"}
+          alt="profile"
+          referrerPolicy="no-referrer"
+        />
+      )}
     </StickyHeaderContainer>
   );
 };

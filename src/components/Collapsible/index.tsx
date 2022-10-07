@@ -17,7 +17,7 @@ export const Collapsible: React.FC<ICollapsibleProps> = ({
     <CollapsibleSC open={open} onOpenChange={setOpen}>
       <CollapsibleTriggerSC>
         <Text>{label}</Text>
-        <CheckboxIcon isChecked={open} />
+        <CheckboxIcon ischecked={open} />
       </CollapsibleTriggerSC>
       <CollapsibleContentSC>{content}</CollapsibleContentSC>
     </CollapsibleSC>

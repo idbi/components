@@ -11,6 +11,7 @@ export interface ICardModal extends ModalContainerProps {
   maxWidth?: string;
   width?: string;
   overflow?: string;
+  background?: string;
   closeIcon?: boolean;
   closeIconInDesktop?: boolean;
 }
