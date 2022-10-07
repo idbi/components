@@ -5,9 +5,9 @@ import {
   CollapsibleSC,
   CollapsibleTriggerSC,
 } from "./styles";
-import { ICollapsibleProps } from "./types";
+import { ICollapsible } from "./types";
 
-export const Collapsible: React.FC<ICollapsibleProps> = ({
+export const Collapsible: React.FC<ICollapsible> = ({
   open,
   setOpen,
   label,
@@ -17,7 +17,7 @@ export const Collapsible: React.FC<ICollapsibleProps> = ({
     <CollapsibleSC open={open} onOpenChange={setOpen}>
       <CollapsibleTriggerSC>
         <Text>{label}</Text>
-        <CheckboxIcon ischecked={open} />
+        <CheckboxIcon ischecked={open || false} />
       </CollapsibleTriggerSC>
       <CollapsibleContentSC>{content}</CollapsibleContentSC>
     </CollapsibleSC>
