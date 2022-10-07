@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from ".";
 import MQ from "./media-query";
 
 const GlobalStyle = createGlobalStyle`
@@ -16,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
       width: 0.5em;
     }
     &::-webkit-scrollbar-thumb {
-      background: ${(props) => props.theme.color.PRIMARY[900]};
+      background: ${() => theme.color.PRIMARY[900]};
       border-radius: 0.25em;
     }
   }
@@ -49,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
       width: 0.5em;
     }
     &::-webkit-scrollbar-thumb {
-      background: ${(props) => props.theme.color.PRIMARY[900]};
+      background: ${() => theme.color.PRIMARY[900]};
       border-radius: 0.25em;
     }
   }

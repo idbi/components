@@ -1,3 +1,4 @@
+import { theme } from "@/theme";
 import styled, { css } from "styled-components";
 
 export const WrappSC = styled.div`
@@ -19,7 +20,7 @@ export const WrappSC = styled.div`
   &:hover ::before {
     width: ${(props) => props.size * 2}px;
     height: ${(props) => props.size * 2}px;
-    background: ${(props) => props.theme.color.NEUTRAL[50]};
+    background: ${() => theme.color.NEUTRAL[50]};
   }
   &::after {
     content: "";
@@ -53,7 +54,7 @@ export const WrappSC = styled.div`
             left: 50%;
             transform: translate(-50%, -50%);
             background: ${(props) =>
-              props.color || props.theme.color.PRIMARY[900]};
+              props.color || theme.color.PRIMARY[900]};
             width: ${(props) => props.size * 2}px;
             height: ${(props) => props.size * 2}px;
             border-radius: ${(props) => props.borderRadius || "50%"};
@@ -63,7 +64,7 @@ export const WrappSC = styled.div`
             width: ${(props) => props.size * 2}px;
             height: ${(props) => props.size * 2}px;
             background: ${(props) =>
-              props.color || props.theme.color.PRIMARY[900]};
+              props.color || theme.color.PRIMARY[900]};
           }
         `}
     `}
@@ -88,7 +89,7 @@ export const WrappSC = styled.div`
           &:hover ::before {
             width: ${(props) => props.size * 2}px;
             height: ${(props) => props.size * 2}px;
-            background: ${(props) => props.theme.color.NEUTRAL[50]};
+            background: ${() => theme.color.NEUTRAL[50]};
           }
         `}
     `}
@@ -101,7 +102,7 @@ export const SvgSC = styled.svg`
   transform: translate(-50%, -50%);
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
-  fill: ${(props) => props.color || props.theme.color.PRIMARY[900]};
+  fill: ${(props) => props.color || theme.color.PRIMARY[900]};
   ${(props) =>
     props.variant === "V1" &&
     css`
@@ -114,11 +115,11 @@ export const SvgSC = styled.svg`
   ${(props) =>
     props.variant === "V2" &&
     css`
-      fill: ${(props) => props.theme.color.NEUTRAL[400]};
+      fill: ${() => theme.color.NEUTRAL[400]};
       ${(props) =>
         props.active &&
         css`
-          fill: ${(props) => props.color || props.theme.color.PRIMARY[900]};
+          fill: ${(props) => props.color || theme.color.PRIMARY[900]};
         `}
     `}
 `;
