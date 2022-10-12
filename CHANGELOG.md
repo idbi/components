@@ -1,3 +1,20 @@
+# [0.15.0](https://github.com/idbi/components/compare/v0.14.0...v0.15.0) (2022-10-12)
+
+
+### Bug Fixes
+
+* run CardModal and MultipleOptionsModal in storybook ([f2684fb](https://github.com/idbi/components/commit/f2684fb702e9932b693210245a0abb7ac6d3a162))
+* run Collapsible in storybook ([f3c7efd](https://github.com/idbi/components/commit/f3c7efded7d34e7837e7587a5676c39468dc9ac3))
+
+
+### Features
+
+* add ConfirmationCard and ConfirmationCardV2 ([be2a4ec](https://github.com/idbi/components/commit/be2a4ec23f55bf53c4a92be58884b1a510aee58f))
+* add hook useMediaQueryScreen ([140b529](https://github.com/idbi/components/commit/140b5294c73b97a71297b28ebb646c1416df8fb9))
+* update build ([e5c7e71](https://github.com/idbi/components/commit/e5c7e71dcea6768189723a31ef0ecbc5036f911f))
+
+
+
 # [0.14.0](https://github.com/idbi/components/compare/v0.13.0...v0.14.0) (2022-10-07)
 
 
@@ -46,15 +63,6 @@
 ### Bug Fixes
 
 * rename all theme imports II ([ccb5f4e](https://github.com/idbi/components/commit/ccb5f4ecff63c5e9e906a66835be9816e22d3858))
-
-
-
-## [0.12.2](https://github.com/idbi/components/compare/v0.12.1...v0.12.2) (2022-09-28)
-
-
-### Bug Fixes
-
-* rename all theme imports ([3388bc5](https://github.com/idbi/components/commit/3388bc57773b9041b13bc6bbc6a942a82747b1eb))
 
 
 
