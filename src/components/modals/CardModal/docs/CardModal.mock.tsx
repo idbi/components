@@ -1,5 +1,5 @@
 /* eslint-disable no-alert */
-import { ICardModal } from "./types";
+import { ICardModal } from "../types";
 
 const base: ICardModal = {
   contentLocation: "bottom",

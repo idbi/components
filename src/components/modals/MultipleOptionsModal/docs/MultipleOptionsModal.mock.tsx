@@ -5,7 +5,7 @@ import {
   options_withIcons,
   options_withSubOptions,
 } from "@/components/dropdowns/DropdownMenu/DropdownMenu.mock";
-import { IMultipleOptionsModal } from "./types";
+import { IMultipleOptionsModal } from "../types";
 
 const base: IMultipleOptionsModal = {
   onClose: () => {},

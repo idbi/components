@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Collapsible } from ".";
-import { ICollapsibleProps } from "./types";
+import { Collapsible } from "./Container";
+import { ICollapsible } from "../types";
 import { mockCollapsibleProps } from "./Collapsible.mock";
 
 export default {
@@ -20,11 +20,4 @@ export const Base = Template.bind({});
 
 Base.args = {
   ...mockCollapsibleProps.base,
-} as ICollapsibleProps;
-
-export const Open = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-
-Open.args = {
-  ...mockCollapsibleProps.open,
-} as ICollapsibleProps;
+} as ICollapsible;

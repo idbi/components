@@ -9,3 +9,7 @@ export { Loader } from "./components/Loader/types";
 export { Card } from "./components/Card/types";
 export { Collapsible } from "./components/Collapsible/types";
 export { StickyHeader } from "./components/StickyHeader/types";
+export { CardModal } from "./components/modals/CardModal/types";
+export { MultipleOptionsModal } from "./components/modals/MultipleOptionsModal/types";
+export { ConfirmationCard } from "./components/confirmations/ConfirmationCard";
+export { ConfirmationCardV2 } from "./components/confirmations/ConfirmationCardV2";
