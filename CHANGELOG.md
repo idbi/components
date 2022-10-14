@@ -1,3 +1,19 @@
+# [0.17.0](https://github.com/idbi/components/compare/v0.16.0...v0.17.0) (2022-10-14)
+
+
+### Bug Fixes
+
+* fix types of CardModal ([08cec73](https://github.com/idbi/components/commit/08cec73b90d3af3fb10d316696c3db882f2690fc))
+* lint ([259d2ec](https://github.com/idbi/components/commit/259d2ec90653e430e1ebe4ac06f88dfbbe793b02))
+
+
+### Features
+
+* add OrderStatusBadge ([ea0ae44](https://github.com/idbi/components/commit/ea0ae44fe942c081978f68a238c1df0bcccc4013))
+* update build ([b83c7eb](https://github.com/idbi/components/commit/b83c7ebf968711de83290dadd9a9dbeced8353de))
+
+
+
 # [0.16.0](https://github.com/idbi/components/compare/v0.15.0...v0.16.0) (2022-10-14)
 
 
@@ -64,10 +80,6 @@
 * add property to center options in MultipleOptionsModal ([8245091](https://github.com/idbi/components/commit/82450911ae54e1cf7c1d499c98e4f3d77c1cb6f2))
 * update build ([a023d29](https://github.com/idbi/components/commit/a023d29423eb9a0b2b7ad25a90bb29c3a5298449))
 * update build ([903cc62](https://github.com/idbi/components/commit/903cc62e96be0b22e60ca38bc6a99ecd8864de12))
-
-
-
-## [0.12.4](https://github.com/idbi/components/compare/v0.12.3...v0.12.4) (2022-09-29)
 
 
 
