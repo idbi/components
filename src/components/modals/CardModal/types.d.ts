@@ -4,6 +4,7 @@ import type { Spacing, TColor, TSizes } from "../Typography/TextBuilder/types";
 
 export interface ICardModal extends ModalContainerProps {
   padding?: string;
+  backdropOpacity?: number;
   borderRadius?: string;
   borderRadiusInDesktop?: string;
   maxHeight?: string;
