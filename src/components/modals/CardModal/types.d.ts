@@ -1,10 +1,9 @@
 import { DropdownOptions } from "@/components/dropdowns/MultipleOptionsDropdown";
-import { ModalContainerProps } from "../ModalContainer";
+import { IModalContainer } from "../ModalContainer/types";
 import type { Spacing, TColor, TSizes } from "../Typography/TextBuilder/types";
 
-export interface ICardModal extends ModalContainerProps {
+export interface ICardModal extends IModalContainer {
   padding?: string;
-  backdropOpacity?: number;
   borderRadius?: string;
   borderRadiusInDesktop?: string;
   maxHeight?: string;

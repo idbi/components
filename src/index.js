@@ -13,5 +13,6 @@ export { StickyHeader } from "@/components/StickyHeader";
 export { DropdownMenu } from "@/components/dropdowns/DropdownMenu";
 export { CardModal } from "@/components/modals/CardModal";
 export { MultipleOptionsModal } from "@/components/modals/MultipleOptionsModal";
-export { ConfirmationCard } from "@/components/confirmations/ConfirmationCard"
-export { ConfirmationCardV2 } from "@/components/confirmations/ConfirmationCardV2"
+export { ConfirmationCard } from "@/components/confirmations/ConfirmationCard";
+export { ConfirmationCardV2 } from "@/components/confirmations/ConfirmationCardV2";
+export { OrderStatusBadge } from '@/components/badges/OrderStatusBadge';
