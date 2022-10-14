@@ -43,7 +43,7 @@ export const Container = styled.span<IContainer>`
       return css`
         background: ${theme.color.STATUS.CANCELED[0]};
         color: ${theme.color.STATUS.CANCELED[1]};
-    `;
+      `;
     if (statusName === "preparing")
       return css`
         background: ${theme.color.STATUS.PREPARING[0]};
