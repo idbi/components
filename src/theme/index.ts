@@ -116,6 +116,45 @@ export const theme = {
     OTHER: {
       color1: "#151E5A",
     },
+
+    STATUS: {
+      DEFAULT: {
+        0: "#F5F5F5",
+        1: "#808080",
+      },
+      DRAFT: {
+        0: "#F5F5F5",
+        1: "#808080",
+      },
+      PENDING: {
+        0: "#DFDFDF",
+        1: "#404040",
+      },
+      REJECTED: {
+        0: "#FDE3E2",
+        1: "#EE2316",
+      },
+      ACCEPTED: {
+        0: "#D0C5FF",
+        1: "#4318FF",
+      },
+      CANCELED: {
+        0: "#FDE3E2",
+        1: "#EE2316",
+      },
+      PREPARING: {
+        0: "#FEF3E3",
+        1: "#F79E1B",
+      },
+      READYFORPICKUP: {
+        0: "#FFEFF5",
+        1: "#FF82AF",
+      },
+      DELIVERED: {
+        0: "#E4F9ED",
+        1: "#2DC96F",
+      },
+    },
   },
   effect: {
     darkShadow: {
