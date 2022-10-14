@@ -1,13 +1,8 @@
-import React, { FC, MouseEvent, useEffect } from "react";
+import React, { FC, useEffect } from "react";
 import { StyledBackdrop } from "./style";
+import { IBackdrop } from "./types";
 
-export interface BackdropType {
-  onClose?: (e?: MouseEvent<HTMLElement>) => void;
-  backdropOpacity?: number;
-  zIndex?: number;
-}
-
-const Backdrop: FC<BackdropType> = ({
+const Backdrop: FC<IBackdrop> = ({
   onClose = () => {},
   backdropOpacity,
   zIndex,

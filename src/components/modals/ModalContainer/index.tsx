@@ -1,14 +1,9 @@
-import React, { ReactNode } from "react";
-import Backdrop, { BackdropType } from "./Backdrop/index";
+import React from "react";
+import Backdrop from "./Backdrop/index";
 import { Content } from "./styles";
+import { IModalContainer } from "./types";
 
-export interface ModalContainerProps extends BackdropType {
-  children: ReactNode;
-  contentLocation?: "bottom" | "top" | "left" | "right" | "center";
-  contentLocationInDesktop?: "bottom" | "top" | "left" | "right" | "center";
-}
-
-export const ModalContainer: React.FC<ModalContainerProps> = ({
+export const ModalContainer: React.FC<IModalContainer> = ({
   children,
   onClose,
   backdropOpacity,
