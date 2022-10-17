@@ -1,3 +1,18 @@
+# [0.18.0](https://github.com/idbi/components/compare/v0.17.0...v0.18.0) (2022-10-17)
+
+
+### Bug Fixes
+
+* fix section name for modals ([6777bd3](https://github.com/idbi/components/commit/6777bd3a4e4db9676f4479830e85398dc125b0e0))
+* fix texts for OrderStatusBadge ([df91c36](https://github.com/idbi/components/commit/df91c360310d6a006102069cb9b40db53c3cc9b1))
+
+
+### Features
+
+* update build ([9d6847e](https://github.com/idbi/components/commit/9d6847e658960cdf79e3deb5f07ece3c8fd0d7e8))
+
+
+
 # [0.17.0](https://github.com/idbi/components/compare/v0.16.0...v0.17.0) (2022-10-14)
 
 
@@ -59,27 +74,6 @@
 * add background property in CardModal ([9a105c8](https://github.com/idbi/components/commit/9a105c8cf17ed96970745c627dd18843ede2a0e7))
 * StickyHeader with option to change the right content ([44f03f4](https://github.com/idbi/components/commit/44f03f47f08d7a249a86753ab0cd5e8c6d0799b1))
 * update build ([1c7dfd1](https://github.com/idbi/components/commit/1c7dfd1ede784859cee7a212405391ccd6e6d2e1))
-
-
-
-# [0.13.0](https://github.com/idbi/components/compare/v0.12.4...v0.13.0) (2022-10-05)
-
-
-### Bug Fixes
-
-* export DropdownMenu in index.js ([d3c91b2](https://github.com/idbi/components/commit/d3c91b293c3c833e9baed5fa6db70196eb829019))
-
-
-### Features
-
-* add CardModel component ([3143db5](https://github.com/idbi/components/commit/3143db5c5c46add92ff1c453f8ed8dfb0b1a782f))
-* add DropdownMenu ([16f300f](https://github.com/idbi/components/commit/16f300fa97abdd034eda05c5e62a0976c683426d))
-* add IconClose ([ab15040](https://github.com/idbi/components/commit/ab1504032a2b8fec02591c56989a3e3104e8d127))
-* add ModalContainer ([7249376](https://github.com/idbi/components/commit/7249376c03148c2f7ee74adc84c09f8760fd446b))
-* add MultipleOptionsModal ([c94902a](https://github.com/idbi/components/commit/c94902a969a3f8c06b41d788e9ddef77dbaa01f7))
-* add property to center options in MultipleOptionsModal ([8245091](https://github.com/idbi/components/commit/82450911ae54e1cf7c1d499c98e4f3d77c1cb6f2))
-* update build ([a023d29](https://github.com/idbi/components/commit/a023d29423eb9a0b2b7ad25a90bb29c3a5298449))
-* update build ([903cc62](https://github.com/idbi/components/commit/903cc62e96be0b22e60ca38bc6a99ecd8864de12))
 
 
 
