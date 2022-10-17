@@ -4,7 +4,7 @@ import { ICardModal } from "../types";
 import { mockCardModalProps } from "./CardModal.mock";
 
 export default {
-  title: "modales/CardModal",
+  title: "modals/CardModal",
   component: CardModal,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
