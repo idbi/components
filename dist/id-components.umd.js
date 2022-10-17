@@ -1213,7 +1213,7 @@
       `;if(e==="canceled")return d.css`
         background: ${c.color.STATUS.CANCELED[0]};
         color: ${c.color.STATUS.CANCELED[1]};
-    `;if(e==="preparing")return d.css`
+      `;if(e==="preparing")return d.css`
         background: ${c.color.STATUS.PREPARING[0]};
         color: ${c.color.STATUS.PREPARING[1]};
       `;if(e==="readyforpickup")return d.css`
@@ -1223,4 +1223,4 @@
         background: ${c.color.STATUS.DELIVERED[0]};
         color: ${c.color.STATUS.DELIVERED[1]};
       `}};
-`,ne={default:"...",draft:"Borrador",pending:"Pendiente",rejected:"Aceptado",accepted:"Preparando",canceled:"Anulado",preparing:"Preparando",readyforpickup:"Listo para recojo",delivered:"Entregado"},Zt=({statusName:e})=>{const r=o=>ne[o]||ne.default;return t.jsx(Xt,{statusName:e,children:r(e)})};g.Button=S,g.Card=$e,g.CardModal=re,g.CodeInput=Le,g.Collapsible=it,g.ConfirmationCard=Ut,g.ConfirmationCardV2=Vt,g.CustomSelect=Q,g.DropdownMenu=pt,g.Heading=Ee,g.Loader=Qe,g.MultipleOptionsModal=Et,g.OrderStatusBadge=Zt,g.ProfileImage=Ge,g.SelectField=We,g.StickyHeader=dt,g.Text=w,g.TextField=q,Object.defineProperties(g,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});
+`,ne={default:"...",draft:"Borrador",pending:"Pendiente",rejected:"Rechazado",accepted:"Aceptado",canceled:"Anulado",preparing:"Preparando",readyforpickup:"Listo para recojo",delivered:"Entregado"},Zt=({statusName:e})=>{const r=o=>ne[o]||ne.default;return t.jsx(Xt,{statusName:e,children:r(e)})};g.Button=S,g.Card=$e,g.CardModal=re,g.CodeInput=Le,g.Collapsible=it,g.ConfirmationCard=Ut,g.ConfirmationCardV2=Vt,g.CustomSelect=Q,g.DropdownMenu=pt,g.Heading=Ee,g.Loader=Qe,g.MultipleOptionsModal=Et,g.OrderStatusBadge=Zt,g.ProfileImage=Ge,g.SelectField=We,g.StickyHeader=dt,g.Text=w,g.TextField=q,Object.defineProperties(g,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

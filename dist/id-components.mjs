@@ -1,6 +1,6 @@
 import f, { css as c, keyframes as k } from "styled-components";
 import { jsxs as p, jsx as r, Fragment as j } from "react/jsx-runtime";
-import { useEffect as E, forwardRef as Y, useState as R, useRef as H, useCallback as W, useMemo as se } from "react";
+import { useEffect as E, forwardRef as Y, useState as C, useRef as H, useCallback as W, useMemo as se } from "react";
 import fe from "react-loading-skeleton";
 import ue from "react-select";
 import * as M from "@radix-ui/react-collapsible";
@@ -218,39 +218,39 @@ const pe = {
   switch (e) {
     case "solid":
       return c`
-        background-color: ${() => C({ color: t })};
+        background-color: ${() => R({ color: t })};
         color: #fff;
       `;
     case "outline":
       return c`
         background-color: white;
-        border: 1px solid ${() => C({ color: t })};
-        color: ${() => C({ color: t })};
+        border: 1px solid ${() => R({ color: t })};
+        color: ${() => R({ color: t })};
       `;
     case "flat":
       return c`
         background-color: white;
         border: none;
-        color: ${() => C({ color: t })};
+        color: ${() => R({ color: t })};
       `;
     case "link":
       return c`
         background-color: transparent;
         border: none;
-        color: ${() => C({ color: t })};
+        color: ${() => R({ color: t })};
 
         &:hover {
-          color: ${() => C({ color: t, hover: !0 })};
+          color: ${() => R({ color: t, hover: !0 })};
           text-decoration: underline;
         }
       `;
     default:
       return c`
-        background-color: ${() => C({ color: t })};
+        background-color: ${() => R({ color: t })};
         color: #fff;
       `;
   }
-}, C = ({
+}, R = ({
   color: e = "SECONDARY/900",
   design: t,
   hover: n
@@ -376,11 +376,11 @@ const pe = {
   ${({ m: e, mb: t, mt: n, mr: a, ml: o, my: i, mx: l, p: h, pb: m, pt: u, pr: s, pl: g, py: w, px: b }) => ne({ m: e, mb: t, mt: n, mr: a, ml: o, my: i, mx: l, p: h, pb: m, pt: u, pr: s, pl: g, py: w, px: b })};
 
   &:hover {
-    background-color: ${({ color: e, design: t }) => t === "link" ? "transparent" : C({ color: e, design: t, hover: !0 })};
+    background-color: ${({ color: e, design: t }) => t === "link" ? "transparent" : R({ color: e, design: t, hover: !0 })};
   }
 
   &:active {
-    background-color: ${({ color: e, design: t }) => t === "link" ? "transparent" : C({ color: e, design: t, hover: !0 })};
+    background-color: ${({ color: e, design: t }) => t === "link" ? "transparent" : R({ color: e, design: t, hover: !0 })};
   }
 
   &:focus {
@@ -454,7 +454,7 @@ function Ae(e, t, n) {
     }
   }, [n]);
 }
-const Ce = k`
+const Re = k`
   0% {
     opacity: 0;
     transform: translateY(-4px);
@@ -471,10 +471,10 @@ const Ce = k`
 `, V = f.div`
   opacity: 0;
   ${({ shouldAppear: e }) => e && c`
-      animation: ${Ce} 0.2s ease-in;
+      animation: ${Re} 0.2s ease-in;
       animation-fill-mode: forwards;
     `}
-`, Re = {
+`, Ce = {
   h1: "h1",
   h2: "h2",
   h3: "h3",
@@ -513,7 +513,7 @@ const Ce = k`
   as: e,
   ...t
 }) => {
-  const n = Re[e];
+  const n = Ce[e];
   return /* @__PURE__ */ r(Te, {
     as: n,
     ...t
@@ -1022,7 +1022,7 @@ const Ce = k`
   onChange: w,
   ...b
 }, S) => {
-  const [y, F] = R(!1), N = !o && !i && u && y;
+  const [y, F] = C(!1), N = !o && !i && u && y;
   return /* @__PURE__ */ p(j, {
     children: [/* @__PURE__ */ p(Ye, {
       fullWidth: h,
@@ -1102,7 +1102,7 @@ const He = f.div`
   const u = {
     ...h,
     ref: m
-  }, [s, g] = R(!1);
+  }, [s, g] = C(!1);
   return /* @__PURE__ */ p(He, {
     fullWidth: l,
     children: [e && /* @__PURE__ */ p("div", {
@@ -1259,7 +1259,7 @@ const oe = (e, t) => {
   formatOptionLabel: u,
   formatSelectedOption: s
 }) => {
-  const g = H(null), [w, b] = R(o), [S, y] = R(""), [F, N] = R(!1);
+  const g = H(null), [w, b] = C(o), [S, y] = C(""), [F, N] = C(!1);
   oe(g, () => {
     N(!1);
   });
@@ -1813,7 +1813,7 @@ const Je = f.div`
   text: e,
   options: t
 }) => {
-  const [n, a] = R(!1), o = H(null), i = (l) => {
+  const [n, a] = C(!1), o = H(null), i = (l) => {
     if (o.current && clearTimeout(o.current), l) {
       a(!0);
       return;
@@ -1893,7 +1893,7 @@ const Je = f.div`
     refs: m
   } = he({
     placement: "bottom-end"
-  }), [u, s] = R(!1);
+  }), [u, s] = C(!1);
   return E(() => {
     if (!(!m.reference.current || !m.floating.current))
       return me(m.reference.current, m.floating.current, h);
@@ -2356,7 +2356,7 @@ const Je = f.div`
   defaultTitle: i = "",
   optionsInCenter: l = !1
 }) => {
-  const [h, m] = R(null), u = se(() => {
+  const [h, m] = C(null), u = se(() => {
     if (h === null)
       return null;
     const s = e[h];
@@ -2428,13 +2428,13 @@ const Je = f.div`
   font-size: 1rem;
   line-height: 1.5rem;
   color: #383838;
-`, Ct = f.p`
+`, Rt = f.p`
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 21px;
   color: #808080;
   margin: 15px 0;
-`, Rt = f.div`
+`, Ct = f.div`
   margin-top: 30px;
   padding-top: 20px;
   display: flex;
@@ -2471,9 +2471,9 @@ const Je = f.div`
 }) => /* @__PURE__ */ p(At, {
   children: [t, /* @__PURE__ */ r(Ft, {
     children: e
-  }), /* @__PURE__ */ r(Ct, {
+  }), /* @__PURE__ */ r(Rt, {
     children: n
-  }), /* @__PURE__ */ p(Rt, {
+  }), /* @__PURE__ */ p(Ct, {
     children: [/* @__PURE__ */ r(L, {
       design: "flat",
       fullWidth: !0,
@@ -2543,7 +2543,7 @@ const Je = f.div`
   }
 `;
 function Ut(e = "(min-width: 768px)") {
-  const [t, n] = R({
+  const [t, n] = C({
     matches: window.innerWidth > (() => {
       const o = e.match(/(\d+)/);
       return o ? o[0] : 768;
@@ -2652,7 +2652,7 @@ const tr = ({
     return c`
         background: ${d.color.STATUS.CANCELED[0]};
         color: ${d.color.STATUS.CANCELED[1]};
-    `;
+      `;
   if (e === "preparing")
     return c`
         background: ${d.color.STATUS.PREPARING[0]};
@@ -2673,8 +2673,8 @@ const tr = ({
   default: "...",
   draft: "Borrador",
   pending: "Pendiente",
-  rejected: "Aceptado",
-  accepted: "Preparando",
+  rejected: "Rechazado",
+  accepted: "Aceptado",
   canceled: "Anulado",
   preparing: "Preparando",
   readyforpickup: "Listo para recojo",
