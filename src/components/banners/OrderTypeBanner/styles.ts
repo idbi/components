@@ -14,6 +14,6 @@ export const Container = styled.div`
   color: #fc2250;
   border-radius: 8px;
   p {
-    padding-bottom: 17px;
+    padding-bottom: 18px;
   }
 `;

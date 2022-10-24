@@ -30,4 +30,3 @@ export { Backdrop } from "./components/modals/ModalContainer/Backdrop/types";
 export { ModalContainer } from "./components/modals/ModalContainer/types";
 export { CardModal } from "./components/modals/CardModal/types";
 export { MultipleOptionsModal } from "./components/modals/MultipleOptionsModal/types";
-
