@@ -1,6 +1,6 @@
 import GoogleIcon from "@/icons/GoogleIcon";
 import styled from "styled-components";
-import { Button } from "../Button";
+import { Button } from "../../Button";
 import { ICard } from "./types";
 
 const ProfileOption = styled.div`
