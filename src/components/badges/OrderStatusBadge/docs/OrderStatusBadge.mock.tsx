@@ -1,13 +1,14 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-alert */
 import { IOrderStatusBadge } from "../types";
 
-const defaultStatus: IOrderStatusBadge = { statusName: "default" };
-const draftStatus: IOrderStatusBadge = { statusName: "draft" };
-const pendingStatus: IOrderStatusBadge = { statusName: "pending" };
-const rejectedStatus: IOrderStatusBadge = { statusName: "rejected" };
-const acceptedStatus: IOrderStatusBadge = { statusName: "accepted" };
-const canceledStatus: IOrderStatusBadge = { statusName: "canceled" };
-const preparingStatus: IOrderStatusBadge = { statusName: "preparing" };
+const defaultStatus: IOrderStatusBadge = { statusName: "default", removeBackground: false, text:"" };
+const draftStatus: IOrderStatusBadge = { statusName: "draft", removeBackground: false, text:"" };
+const pendingStatus: IOrderStatusBadge = { statusName: "pending", removeBackground: false, text:"" };
+const rejectedStatus: IOrderStatusBadge = { statusName: "rejected", removeBackground: false, text:"" };
+const acceptedStatus: IOrderStatusBadge = { statusName: "accepted", removeBackground: false, text:"" };
+const canceledStatus: IOrderStatusBadge = { statusName: "canceled" , removeBackground: false, text:""};
+const preparingStatus: IOrderStatusBadge = { statusName: "preparing", removeBackground: false, text:"" };
 const readyforpickupStatus: IOrderStatusBadge = {
   statusName: "readyforpickup",
 };
