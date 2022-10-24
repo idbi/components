@@ -22,6 +22,8 @@ export const CardModal: React.FC<ICardModal> = ({
   closeIcon,
   closeIconInDesktop,
   background = "#fff",
+  boxShadow,
+  boxShadowInDesktop,
 }) => {
   return (
     <ModalContainer
@@ -30,6 +32,8 @@ export const CardModal: React.FC<ICardModal> = ({
       zIndex={zIndex}
       contentLocation={contentLocation}
       contentLocationInDesktop={contentLocationInDesktop}
+      boxShadow={boxShadow}
+      boxShadowInDesktop={boxShadowInDesktop}
     >
       <StyledCardModal
         padding={padding}

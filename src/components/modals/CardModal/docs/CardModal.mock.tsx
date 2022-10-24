@@ -20,6 +20,7 @@ const base: ICardModal = {
     </p>
   ),
   background: "#fff",
+  boxShadowInDesktop: "0px 0px 24px 4px rgba(0, 12, 51, 0.08)",
 };
 
 const fullPageInMobile: ICardModal = {

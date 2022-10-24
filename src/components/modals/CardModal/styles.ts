@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { styleScroll } from "../../../theme/scroll";
 
 interface CardModalType {
   borderRadius?: string;
@@ -12,6 +13,8 @@ interface CardModalType {
   overflow?: string;
   contentLocation?: "bottom" | "top" | "left" | "right" | "center";
   contentLocationInDesktop?: "bottom" | "top" | "left" | "right" | "center";
+  boxShadow?: string;
+  boxShadowInDesktop?: string;
 }
 
 export const StyledCardModal = styled.div<CardModalType>`
@@ -25,7 +28,7 @@ export const StyledCardModal = styled.div<CardModalType>`
   padding: ${(props) => (props.padding ? props.padding : "1.5rem")};
   overflow: ${(props) => props.overflow || "hidden"};
   cursor: auto;
-  box-shadow: 0px 0px 24px 4px rgba(0, 12, 51, 0.05);
+
   ${(props) => {
     if (props.contentLocation && props.contentLocation === "bottom")
       return css`
@@ -120,6 +123,7 @@ export const StyledCardModal = styled.div<CardModalType>`
         }
       `;
   }}
+  ${styleScroll}
 `;
 
 interface CloseIconProps {
