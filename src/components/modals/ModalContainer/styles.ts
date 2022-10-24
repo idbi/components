@@ -49,6 +49,8 @@ export const Content = styled.div<{
   useSiteBar?: boolean;
   contentLocation: "bottom" | "top" | "left" | "right" | "center";
   contentLocationInDesktop: "bottom" | "top" | "left" | "right" | "center";
+  boxShadow?: string;
+  boxShadowInDesktop?: string;
 }>`
   position: fixed;
   max-height: 100vh;
@@ -59,6 +61,8 @@ export const Content = styled.div<{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: ${(props) =>
+    props.boxShadow || "0px 0px 24px 4px rgba(0, 12, 51, 0.05)"};
 
   @keyframes fadeIn {
     from {
@@ -165,4 +169,8 @@ export const Content = styled.div<{
         }
       `;
   }}
+  @media screen and (min-width: 1024px) {
+    box-shadow: ${(props) =>
+      props.boxShadowInDesktop || "0px 0px 24px 4px rgba(0, 12, 51, 0.05)"};
+  }
 `;
