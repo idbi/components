@@ -16,9 +16,15 @@ const StatusDiccionary = {
 
 export const OrderStatusBadge: React.FC<IOrderStatusBadge> = ({
   statusName,
+  text,
+  removeBackground,
 }) => {
   const getStatus = (status: StatusType) =>
     StatusDiccionary[status] || StatusDiccionary.default;
 
-  return <Container statusName={statusName}>{getStatus(statusName)}</Container>;
+  return (
+    <Container statusName={statusName} removeBackground={removeBackground}>
+      {text || getStatus(statusName)}
+    </Container>
+  );
 };

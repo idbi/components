@@ -4,6 +4,8 @@ export type StatusType = "default" | "draft" | "pending" | "rejected" | "accepte
 
 export interface IOrderStatusBadge {
   statusName: StatusType;
+  removeBackground?: boolean;
+  text?: string;
 }
 
 export declare const OrderStatusBadge: (props: IOrderStatusBadge) => JSX.Element;

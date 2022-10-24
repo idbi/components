@@ -4,7 +4,7 @@ import { ICard } from "./types";
 import { mockCardProps } from "./Card.mock";
 
 export default {
-  title: "components/Card",
+  title: "cards/Card",
   component: Card,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

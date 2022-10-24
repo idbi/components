@@ -14,6 +14,8 @@ export interface ICardModal extends IModalContainer {
   background?: string;
   closeIcon?: boolean;
   closeIconInDesktop?: boolean;
+  boxShadow?: string;
+  boxShadowInDesktop?: string;
 }
 
 export declare const CardModal: (props: ICardModal) => JSX.Element;

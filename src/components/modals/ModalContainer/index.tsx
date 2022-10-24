@@ -10,6 +10,8 @@ export const ModalContainer: React.FC<IModalContainer> = ({
   zIndex,
   contentLocation = "center",
   contentLocationInDesktop = "center",
+  boxShadow,
+  boxShadowInDesktop,
 }) => {
   return (
     <>
@@ -23,6 +25,8 @@ export const ModalContainer: React.FC<IModalContainer> = ({
         contentLocation={contentLocation}
         contentLocationInDesktop={contentLocationInDesktop}
         onClick={(e) => e.stopPropagation()}
+        boxShadow={boxShadow}
+        boxShadowInDesktop={boxShadowInDesktop}
       >
         {children}
       </Content>

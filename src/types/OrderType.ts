@@ -1,0 +1,1 @@
+export type OrderType = "on-table" | "on-room" | "delivery" | "pick-up";
