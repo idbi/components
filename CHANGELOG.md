@@ -1,3 +1,30 @@
+# [0.19.0](https://github.com/idbi/components/compare/v0.18.0...v0.19.0) (2022-10-24)
+
+
+### Bug Fixes
+
+* export new components and add types ([59d0fd3](https://github.com/idbi/components/commit/59d0fd353304235d336ac352edb4bdee67236527))
+* general ([4b84bf0](https://github.com/idbi/components/commit/4b84bf0a9374384739ed802cdc2ed094e622bdad))
+
+
+### Features
+
+*  create TotalsCard ([fcc10c0](https://github.com/idbi/components/commit/fcc10c0662e52a191b5d552853749e5a40a52a44))
+* add folder fot global types ([fdc93f4](https://github.com/idbi/components/commit/fdc93f4615a47ca1945cb631e0f138d191f88b74))
+* add new icons for my orders ([b982428](https://github.com/idbi/components/commit/b9824288916e982951e9cedc4868debc71301d8d))
+* add objects to style scroll ([c82b47d](https://github.com/idbi/components/commit/c82b47d37bf21e98a99b4e034265d639409d9480))
+* add property to modify box shadow of CardModal ([bde9a2f](https://github.com/idbi/components/commit/bde9a2f4da690bad7d8c27bbced286bd19b2a9e6))
+* add property to modify box shadow of CardModal ([8c4bb69](https://github.com/idbi/components/commit/8c4bb69354ff82f5143da57a95df544382e7d90a))
+* add property to remove background and edit text in Badge ([862db6d](https://github.com/idbi/components/commit/862db6d5b9930661738664f051304d02b562a4a3))
+* create Checkbox ([e4f2122](https://github.com/idbi/components/commit/e4f212206c445b8dc32fec45be065502297cfcfa))
+* create CurrentStatusCard ([caabe43](https://github.com/idbi/components/commit/caabe43697fca0e5aab384994770497020646a25))
+* create OrderTypeBanner ([2947d6e](https://github.com/idbi/components/commit/2947d6ebd5f9522df94fcacb3336b02bf58061c3))
+* create Radio ([725c0dc](https://github.com/idbi/components/commit/725c0dcbb261b0b87a82ff78fc56c54d4d595262))
+* create StatusBanner ([280784c](https://github.com/idbi/components/commit/280784c5762f3c5147a58e72962382505efc041b))
+* update build ([b9304e9](https://github.com/idbi/components/commit/b9304e9c6e3ab3746b4fe9a0ad5ed6a858a8fa2d))
+
+
+
 # [0.18.0](https://github.com/idbi/components/compare/v0.17.0...v0.18.0) (2022-10-17)
 
 
@@ -57,23 +84,6 @@
 * add ConfirmationCard and ConfirmationCardV2 ([be2a4ec](https://github.com/idbi/components/commit/be2a4ec23f55bf53c4a92be58884b1a510aee58f))
 * add hook useMediaQueryScreen ([140b529](https://github.com/idbi/components/commit/140b5294c73b97a71297b28ebb646c1416df8fb9))
 * update build ([e5c7e71](https://github.com/idbi/components/commit/e5c7e71dcea6768189723a31ef0ecbc5036f911f))
-
-
-
-# [0.14.0](https://github.com/idbi/components/compare/v0.13.0...v0.14.0) (2022-10-07)
-
-
-### Bug Fixes
-
-* close MultipleOptionsModal when selecting and option if it has no sub options ([48b3db1](https://github.com/idbi/components/commit/48b3db1c254370b7df1a9366134cfcd213622285))
-* ischecked warning and theme import ([e47fd98](https://github.com/idbi/components/commit/e47fd98518235b9bbd7b31ddbbf839799f439848))
-
-
-### Features
-
-* add background property in CardModal ([9a105c8](https://github.com/idbi/components/commit/9a105c8cf17ed96970745c627dd18843ede2a0e7))
-* StickyHeader with option to change the right content ([44f03f4](https://github.com/idbi/components/commit/44f03f47f08d7a249a86753ab0cd5e8c6d0799b1))
-* update build ([1c7dfd1](https://github.com/idbi/components/commit/1c7dfd1ede784859cee7a212405391ccd6e6d2e1))
 
 
 
