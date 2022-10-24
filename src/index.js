@@ -7,12 +7,24 @@ export { Text } from "@/components/Typography/Text";
 export { CustomSelect } from "@/components/CustomSelect";
 export { ProfileImage } from "@/components/ProfileImage";
 export { Loader } from "@/components/Loader";
-export { Card } from "@/components/cards/Card";
 export { Collapsible } from "@/components/Collapsible";
 export { StickyHeader } from "@/components/StickyHeader";
 export { DropdownMenu } from "@/components/dropdowns/DropdownMenu";
-export { CardModal } from "@/components/modals/CardModal";
-export { MultipleOptionsModal } from "@/components/modals/MultipleOptionsModal";
+// BADGES
+export { OrderStatusBadge } from '@/components/badges/OrderStatusBadge';
+// BANNERS
+export { OrderTypeBanner } from '@/components/banners/OrderTypeBanner';
+export { StatusBanner } from '@/components/banners/StatusBanner';
+// CARDS
+export { Card } from "@/components/cards/Card";
+export { CurrentStatusCard } from "@/components/cards/CurrentStatusCard";
+export { TotalsCard } from "@/components/cards/TotalsCard";
+// CONFIRMATIONS
 export { ConfirmationCard } from "@/components/confirmations/ConfirmationCard";
 export { ConfirmationCardV2 } from "@/components/confirmations/ConfirmationCardV2";
-export { OrderStatusBadge } from '@/components/badges/OrderStatusBadge';
+//FORMS
+export { Checkbox } from "@/components/forms/Checkbox";
+export { Radio } from "@/components/forms/Radio";
+// MODALS
+export { CardModal } from "@/components/modals/CardModal";
+export { MultipleOptionsModal } from "@/components/modals/MultipleOptionsModal";
