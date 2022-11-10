@@ -7,6 +7,7 @@ export interface IModalContainer extends IBackdrop {
   contentLocationInDesktop?: "bottom" | "top" | "left" | "right" | "center";
   boxShadow?: string;
   boxShadowInDesktop?: string;
+  fullWidth?: boolean;
 }
 
 export declare const ModalContainer: (props: IModalContainer) => JSX.Element;

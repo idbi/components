@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Button } from "./components/Button";
 import { Collapsible } from "./components/Collapsible";
+import { ConfirmationCardV3 } from "./components/confirmations/ConfirmationCardV3";
 import PlayGround from "./components/Playground";
 import CheckIcon from "./icons/CheckIcon";
 import GoogleIcon from "./icons/GoogleIcon";
@@ -22,7 +23,41 @@ function App() {
   const [open, setOpen] = useState(false);
   return (
     <PlayGround>
-      <Collapsible
+      <ConfirmationCardV3
+        title="Crear cotización"
+        content="Elige como deseas crear la cotizacion"
+        options={[
+          {
+            content: (
+              <span>
+                Crear <b>borrador</b>
+              </span>
+            ),
+            onClick: () => alert("Crear y finalizar"),
+          },
+          {
+            content: (
+              <span>
+                Crear y <b>finalizar</b>
+              </span>
+            ),
+            onClick: () => alert("Crear y finalizar"),
+          },
+          {
+            content: "Crear",
+            type: "primary",
+            onClick: () => alert("Crear"),
+          },
+        ]}
+        cancelOptions={[
+          {
+            content: "Cancelar",
+            onClick: () => alert("Cancelar"),
+          },
+        ]}
+      />
+
+      {/* <Collapsible
         open={open}
         setOpen={setOpen}
         label="Profile"
@@ -43,7 +78,7 @@ function App() {
             <Button>Change</Button>
           </ProfileOption>
         }
-      />
+      /> */}
       {/* <Card
         design="primary"
         options={[

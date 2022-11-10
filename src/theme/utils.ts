@@ -32,12 +32,13 @@ export const getShape = ({ shape }: Pick<IButton, "shape">) => {
 export const getDesign = ({
   design,
   color,
-}: Pick<IButton, "design" | "color">) => {
+  fontColor,
+}: Pick<IButton, "design" | "color" | "fontColor">) => {
   switch (design) {
     case "solid":
       return css`
         background-color: ${() => getColor({ color })};
-        color: #fff;
+        color: ${fontColor ? getColor({ color: fontColor }) : "#fff"};
       `;
     case "outline":
       return css`
@@ -134,6 +135,7 @@ export const getColor = ({
     colorName === "SUCCESS"
   ) {
     if (
+      colorScale === 0 ||
       colorScale === 50 ||
       colorScale === 100 ||
       colorScale === 200 ||

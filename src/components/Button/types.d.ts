@@ -8,6 +8,7 @@ export interface IButton
   shape?: "rounded" | "squared" | "circular";
   design?: "solid" | "outline" | "flat" | "link";
   color?: TColor;
+  fontColor?: TColor;
   size?: TSizes;
   fullWidth?: boolean;
   leftIcon?: React.ReactNode;
