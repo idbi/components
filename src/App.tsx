@@ -7,6 +7,9 @@ import PlayGround from "./components/Playground";
 import { UploadImage } from "./components/files-upload/UploadImage";
 import CheckIcon from "./icons/CheckIcon";
 import GoogleIcon from "./icons/GoogleIcon";
+import { PictureIcon } from "./icons-v2/PictureIcon";
+import { SectionCard } from "./components/cards/SectionCard";
+import { theme } from "./theme";
 
 const ProfileOption = styled.div`
   display: flex;
@@ -25,10 +28,19 @@ function App() {
   return (
     <PlayGround>
       {/* <UploadImage setImageFile={() => {}} placeholder="Sube una imágen aquí" /> */}
-      <UploadImage
+      {/* <UploadImage
         onChange={() => {}}
         initialImgUrl="https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg"
-      />
+      /> */}
+      <SectionCard
+        title="Datos de la cotización"
+        icon={<PictureIcon />}
+        headerAside={
+          <span style={{ color: theme.color.SECONDARY[900] }}>Cambiar</span>
+        }
+      >
+        {/* <input type="text" /> */}
+      </SectionCard>
       {/* <IconV2 size={50}><IconClose /></IconV2> */}
       {/* <ConfirmationCardV3
         title="Crear cotización"
