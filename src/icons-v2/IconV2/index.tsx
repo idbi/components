@@ -1,5 +1,5 @@
 import React from "react";
-import { IProps } from "./types";
+import { IIconV2 } from "./types";
 import * as s from "./styles";
 
 export const IconV2 = ({
@@ -7,7 +7,7 @@ export const IconV2 = ({
   size,
   children,
   ...rest
-}: IProps) => {
+}: IIconV2) => {
   return (
     <s.Svg
       color={color}

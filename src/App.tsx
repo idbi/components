@@ -10,6 +10,7 @@ import GoogleIcon from "./icons/GoogleIcon";
 import { PictureIcon } from "./icons-v2/PictureIcon";
 import { SectionCard } from "./components/cards/SectionCard";
 import { theme } from "./theme";
+import { ClientCard } from "./components/cards/ClientCard";
 
 const ProfileOption = styled.div`
   display: flex;
@@ -32,15 +33,23 @@ function App() {
         onChange={() => {}}
         initialImgUrl="https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg"
       /> */}
-      <SectionCard
+      <ClientCard
+        name="Andrea Perez Vasquez"
+        img={{
+          src: "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?cs=srgb&dl=pexels-masha-raymers-2726111.jpg&fm=jpg",
+        }}
+        idNumber="77867856"
+        otherSections={['Test: asd', 'Other: aaa']}
+      />
+      {/* <SectionCard
         title="Datos de la cotización"
         icon={<PictureIcon />}
         headerAside={
           <span style={{ color: theme.color.SECONDARY[900] }}>Cambiar</span>
         }
       >
-        {/* <input type="text" /> */}
-      </SectionCard>
+        <input type="text" />
+      </SectionCard> */}
       {/* <IconV2 size={50}><IconClose /></IconV2> */}
       {/* <ConfirmationCardV3
         title="Crear cotización"
