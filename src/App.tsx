@@ -4,6 +4,7 @@ import { Button } from "./components/Button";
 import { Collapsible } from "./components/Collapsible";
 import { ConfirmationCardV3 } from "./components/confirmations/ConfirmationCardV3";
 import PlayGround from "./components/Playground";
+import { UploadImage } from "./components/files-upload/UploadImage";
 import CheckIcon from "./icons/CheckIcon";
 import GoogleIcon from "./icons/GoogleIcon";
 
@@ -23,7 +24,13 @@ function App() {
   const [open, setOpen] = useState(false);
   return (
     <PlayGround>
-      <ConfirmationCardV3
+      {/* <UploadImage setImageFile={() => {}} placeholder="Sube una imágen aquí" /> */}
+      <UploadImage
+        onChange={() => {}}
+        initialImgUrl="https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg"
+      />
+      {/* <IconV2 size={50}><IconClose /></IconV2> */}
+      {/* <ConfirmationCardV3
         title="Crear cotización"
         content="Elige como deseas crear la cotizacion"
         options={[
@@ -55,7 +62,7 @@ function App() {
             onClick: () => alert("Cancelar"),
           },
         ]}
-      />
+      /> */}
 
       {/* <Collapsible
         open={open}
