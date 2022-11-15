@@ -60,12 +60,13 @@ function App() {
         }}
       /> */}
       {/* <ClientCard
-        name="Andrea Perez Vasquez"
-        img={{
-          src: "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?cs=srgb&dl=pexels-masha-raymers-2726111.jpg&fm=jpg",
-        }}
+        name="Andrea"
+        lastName="Perez Vasquez"
+        // img={{
+        //   src: "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?cs=srgb&dl=pexels-masha-raymers-2726111.jpg&fm=jpg",
+        // }}
         idNumber="77867856"
-        otherSections={['Test: asd', 'Other: aaa']}
+        otherSections={["Test: asd", "Other: aaa"]}
       /> */}
       {/* <SectionCard
         title="Datos de la cotización"

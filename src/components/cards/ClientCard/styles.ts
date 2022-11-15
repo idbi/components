@@ -10,11 +10,7 @@ export const Card = styled.div`
   font-size: 14px;
 `;
 
-export const Img = styled.img`
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  object-fit: cover;
+export const ImgWrapper = styled.div`
   margin-right: 10px;
   flex-shrink: 0;
 `;
