@@ -11,6 +11,7 @@ import { PictureIcon } from "./icons-v2/PictureIcon";
 import { SectionCard } from "./components/cards/SectionCard";
 import { theme } from "./theme";
 import { ClientCard } from "./components/cards/ClientCard";
+import { EditQuantityInput } from "./components/forms/EditQuantityInput";
 
 const ProfileOption = styled.div`
   display: flex;
@@ -26,6 +27,8 @@ const ProfileOption = styled.div`
 
 function App() {
   const [open, setOpen] = useState(false);
+  const [input, setInput] = useState<null | number>(null);
+
   return (
     <PlayGround>
       {/* <UploadImage setImageFile={() => {}} placeholder="Sube una imágen aquí" /> */}
@@ -33,14 +36,30 @@ function App() {
         onChange={() => {}}
         initialImgUrl="https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg"
       /> */}
-      <ClientCard
+
+      <EditQuantityInput
+        onSetQuantity={(val) => {
+          console.log("running", val);
+          setInput(val > 0 ? val : null);
+        }}
+        value={input}
+        minimumQuantity={0}
+        hasError={input === null}
+        measureUnit="u."
+        onDelete={() => {
+          console.log("delete");
+        }}
+        // variant='card'
+        // disabled
+      />
+      {/* <ClientCard
         name="Andrea Perez Vasquez"
         img={{
           src: "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?cs=srgb&dl=pexels-masha-raymers-2726111.jpg&fm=jpg",
         }}
         idNumber="77867856"
         otherSections={['Test: asd', 'Other: aaa']}
-      />
+      /> */}
       {/* <SectionCard
         title="Datos de la cotización"
         icon={<PictureIcon />}
