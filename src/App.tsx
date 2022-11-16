@@ -16,6 +16,7 @@ import { ModalContainer } from "./components/modals/ModalContainer";
 import { CardModal } from "./components/modals/CardModal";
 import { UploadMultipleImages } from "./components/files-upload/UploadMultipleImages";
 import CartProduct from "./components/product-cards/CartProduct";
+import ProductDetailsCard from "./components/product-cards/ProductDetailsCard";
 
 const ProfileOption = styled.div`
   display: flex;
@@ -41,7 +42,20 @@ function App() {
         initialImgUrl="https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg"
       /> */}
 
-      <CartProduct
+      <ProductDetailsCard
+        img={{
+          src: "https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg",
+        }}
+        name="Paquete de blueberries (0.9 kg)"
+        unitPrice={20}
+        total={20}
+        comment=""
+        quantity={2}
+        currencySymbol="S/"
+        discount={{ discountedAmount: 5, label: "-10% desc. de S/25.00" }}
+        // disabled
+      />
+      {/* <CartProduct
         img={{
           src: "https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg",
         }}
@@ -55,7 +69,7 @@ function App() {
         currencySymbol="S/"
         onDeleteProduct={() => {}}
         discount={{ discountedAmount: 5, label: "-10% desc. de S/25.00" }}
-      />
+      /> */}
 
       {/* <UploadMultipleImages onChange={(val) => console.log(val)} /> */}
 
