@@ -4,7 +4,6 @@ import { Button } from "./components/Button";
 import { Collapsible } from "./components/Collapsible";
 import { ConfirmationCardV3 } from "./components/confirmations/ConfirmationCardV3";
 import PlayGround from "./components/Playground";
-import { UploadImage } from "./components/files-upload/UploadImage";
 import CheckIcon from "./icons/CheckIcon";
 import GoogleIcon from "./icons/GoogleIcon";
 import { PictureIcon } from "./icons-v2/PictureIcon";
@@ -13,6 +12,9 @@ import { theme } from "./theme";
 import { ClientCard } from "./components/cards/ClientCard";
 import { EditQuantityInput } from "./components/forms/EditQuantityInput";
 import UserProfileIcon from "./components/image-containers/UserProfileIcon";
+import { ModalContainer } from "./components/modals/ModalContainer";
+import { CardModal } from "./components/modals/CardModal";
+import { UploadMultipleImages } from "./components/files-upload/UploadMultipleImages";
 
 const ProfileOption = styled.div`
   display: flex;
@@ -37,6 +39,8 @@ function App() {
         onChange={() => {}}
         initialImgUrl="https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg"
       /> */}
+
+      <UploadMultipleImages onChange={(val) => console.log(val)} />
 
       {/* <UserProfileIcon
         // img={{
@@ -78,39 +82,47 @@ function App() {
         <input type="text" />
       </SectionCard> */}
       {/* <IconV2 size={50}><IconClose /></IconV2> */}
-      {/* <ConfirmationCardV3
-        title="Crear cotización"
-        content="Elige como deseas crear la cotizacion"
-        options={[
-          {
-            content: (
-              <span>
-                Crear <b>borrador</b>
-              </span>
-            ),
-            onClick: () => alert("Crear y finalizar"),
-          },
-          {
-            content: (
-              <span>
-                Crear y <b>finalizar</b>
-              </span>
-            ),
-            onClick: () => alert("Crear y finalizar"),
-          },
-          {
-            content: "Crear",
-            type: "primary",
-            onClick: () => alert("Crear"),
-          },
-        ]}
-        cancelOptions={[
-          {
-            content: "Cancelar",
-            onClick: () => alert("Cancelar"),
-          },
-        ]}
-      /> */}
+      {/* <CardModal
+        background="transparent"
+        boxShadowInDesktop="none"
+        padding="0 10px"
+        contentLocation="bottom"
+        maxWidth="700px"
+      >
+        <ConfirmationCardV3
+          title="Crear cotización"
+          content="Elige como deseas crear la cotizacion"
+          options={[
+            {
+              content: (
+                <span>
+                  Crear <b>borrador</b>
+                </span>
+              ),
+              onClick: () => alert("Crear y finalizar"),
+            },
+            {
+              content: (
+                <span>
+                  Crear y <b>finalizar</b>
+                </span>
+              ),
+              onClick: () => alert("Crear y finalizar"),
+            },
+            {
+              content: "Crear",
+              type: "primary",
+              onClick: () => alert("Crear"),
+            },
+          ]}
+          cancelOptions={[
+            {
+              content: "Cancelar",
+              onClick: () => alert("Cancelar"),
+            },
+          ]}
+        />
+      </CardModal> */}
 
       {/* <Collapsible
         open={open}
