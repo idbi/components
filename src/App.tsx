@@ -17,6 +17,7 @@ import { CardModal } from "./components/modals/CardModal";
 import { UploadMultipleImages } from "./components/files-upload/UploadMultipleImages";
 import CartProduct from "./components/product-cards/CartProduct";
 import ProductDetailsCard from "./components/product-cards/ProductDetailsCard";
+import { ButtonSwitch } from "./components/buttons/ButtonsSwitch";
 
 const ProfileOption = styled.div`
   display: flex;
@@ -33,6 +34,7 @@ const ProfileOption = styled.div`
 function App() {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState<null | number>(null);
+  const [selected, setSelected] = useState("");
 
   return (
     <PlayGround>
@@ -42,7 +44,18 @@ function App() {
         initialImgUrl="https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg"
       /> */}
 
-      <ProductDetailsCard
+      <div>
+        <ButtonSwitch
+          options={[
+            { label: "Agregar productos", value: "ADD" },
+            { label: "Detalles de la cotización", value: "DETAILS" },
+          ]}
+          selected={selected}
+          onSelect={(val) => setSelected(val)}
+          fullWidth
+        />
+      </div>
+      {/* <ProductDetailsCard
         img={{
           src: "https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg",
         }}
@@ -54,7 +67,7 @@ function App() {
         currencySymbol="S/"
         discount={{ discountedAmount: 5, label: "-10% desc. de S/25.00" }}
         // disabled
-      />
+      /> */}
       {/* <CartProduct
         img={{
           src: "https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg",
