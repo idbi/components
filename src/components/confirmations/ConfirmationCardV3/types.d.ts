@@ -7,7 +7,7 @@ export interface IOption {
 }
 
 export interface IConfirmationCardV3 {
-  title: string;
+  title?: string;
   content?: ReactNode;
   options: (IOption & { type?: "primary" | "secondary" })[];
   cancelOptions: IOption[];
