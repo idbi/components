@@ -2,7 +2,7 @@ import React from "react";
 import { IIconV2 } from "../IconV2/types";
 import { IconV2 } from "../IconV2";
 
-const IdentificationIcon = (props: IIconV2) => {
+export const IdentificationIcon = (props: IIconV2) => {
   return (
     <IconV2 viewBox="0 0 13 11" {...props}>
       <path
@@ -42,5 +42,3 @@ const IdentificationIcon = (props: IIconV2) => {
     </IconV2>
   );
 };
-
-export default IdentificationIcon;

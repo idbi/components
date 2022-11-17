@@ -1,9 +1,9 @@
 import React from "react";
-import TransparentBadge from "@/components/badges/TransparentBadge";
+import { TransparentBadge } from "@/components/badges/TransparentBadge";
 import { IProductDetailsCard } from "./types";
 import * as s from "./styles";
 
-const ProductDetailsCard = ({
+export const ProductDetailsCard = ({
   name,
   img,
   quantity,
@@ -38,5 +38,3 @@ const ProductDetailsCard = ({
     </s.Card>
   );
 };
-
-export default ProductDetailsCard;

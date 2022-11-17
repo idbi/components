@@ -15,6 +15,7 @@ export interface ICartProduct {
   comment: string;
   onChangeComment: (comment: string) => void;
   onChangeQuantity: IEditQuantityInput["onSetQuantity"];
+  onlyIntegers?: boolean;
   onDeleteProduct: () => void;
   onClick?: () => void;
   measureUnit?: string;

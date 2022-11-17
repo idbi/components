@@ -1,12 +1,10 @@
-import { EditQuantityInput } from "@/components/forms/EditQuantityInput";
-import { TextField } from "@/components/TextField";
-import { ArrowIcon } from "@/icons-v2/ArrowIcon";
-import DownArrowIcon from "@/icons/DownArrowIcon";
 import React, { useState } from "react";
-import * as s from "./styles";
+import { EditQuantityInput } from "@/components/forms/EditQuantityInput";
+import { ArrowIcon } from "@/icons-v2/ArrowIcon";
 import { ICartProduct } from "./types";
+import * as s from "./styles";
 
-const CartProduct = ({
+export const CartProduct = ({
   img,
   name,
   currencySymbol,
@@ -22,6 +20,7 @@ const CartProduct = ({
   measureUnit,
   productDetails,
   renderModal,
+  onlyIntegers,
 }: ICartProduct) => {
   const [showDetails, setShowDetails] = useState(true);
 
@@ -80,10 +79,9 @@ const CartProduct = ({
           measureUnit={unit}
           onDelete={onDeleteProduct}
           renderModal={renderModal}
+          onlyIntegers={onlyIntegers}
         />
       </s.Footer>
     </s.Card>
   );
 };
-
-export default CartProduct;

@@ -2,7 +2,7 @@ import React from "react";
 import { IButtonsSwitch } from "./types";
 import * as s from "./styles";
 
-export const ButtonSwitch = ({ options, selected, disabled, onSelect, fullWidth, model }: IButtonsSwitch) => {
+export const ButtonsSwitch = ({ options, selected, disabled, onSelect, fullWidth, model }: IButtonsSwitch) => {
   return (
     <s.Container
       disabled={disabled}

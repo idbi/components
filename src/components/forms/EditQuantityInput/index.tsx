@@ -37,7 +37,7 @@ export const EditQuantityInput = ({
     e.stopPropagation();
     if (isMinimumQuantity) {
       if (onDelete) onDelete();
-      else return;
+      return;
     }
 
     const newValue = valueNum % 1 > 0 ? Math.floor(valueNum) : valueNum - 1;
@@ -55,7 +55,10 @@ export const EditQuantityInput = ({
       <s.Container>
         <s.InputContainer
           isDisabled={disabled}
-          onClick={() => setShowModal(true)}
+          onClick={() => {
+            if (blockInputModal || disabled) return;
+            setShowModal(true);
+          }}
           minQuantity={isMinimumQuantity}
           canDelete={!!onDelete}
           variant={variant}
@@ -74,9 +77,7 @@ export const EditQuantityInput = ({
             </button>
           )}
 
-          <s.Span>{`${value === null ? "-" : value} ${
-            (value !== null && measureUnit) || ""
-          }`}</s.Span>
+          <s.Span>{`${value === null ? "-" : value} ${(value !== null && measureUnit) || ""}`}</s.Span>
 
           {!noIncrement && (
             <button onClick={handleIncrease} disabled={disabled}>

@@ -4,20 +4,6 @@ import { Button } from "./components/Button";
 import { Collapsible } from "./components/Collapsible";
 import { ConfirmationCardV3 } from "./components/confirmations/ConfirmationCardV3";
 import PlayGround from "./components/Playground";
-import CheckIcon from "./icons/CheckIcon";
-import GoogleIcon from "./icons/GoogleIcon";
-import { PictureIcon } from "./icons-v2/PictureIcon";
-import { SectionCard } from "./components/cards/SectionCard";
-import { theme } from "./theme";
-import { ClientCard } from "./components/cards/ClientCard";
-import { EditQuantityInput } from "./components/forms/EditQuantityInput";
-import UserProfileIcon from "./components/image-containers/UserProfileIcon";
-import { ModalContainer } from "./components/modals/ModalContainer";
-import { CardModal } from "./components/modals/CardModal";
-import { UploadMultipleImages } from "./components/files-upload/UploadMultipleImages";
-import CartProduct from "./components/product-cards/CartProduct";
-import ProductDetailsCard from "./components/product-cards/ProductDetailsCard";
-import { ButtonSwitch } from "./components/buttons/ButtonsSwitch";
 
 const ProfileOption = styled.div`
   display: flex;
@@ -33,141 +19,9 @@ const ProfileOption = styled.div`
 
 function App() {
   const [open, setOpen] = useState(false);
-  const [input, setInput] = useState<null | number>(null);
-  const [selected, setSelected] = useState("");
 
   return (
     <PlayGround>
-      {/* <UploadImage setImageFile={() => {}} placeholder="Sube una imágen aquí" /> */}
-      {/* <UploadImage
-        onChange={() => {}}
-        initialImgUrl="https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg"
-      /> */}
-
-      <div>
-        <ButtonSwitch
-          options={[
-            { label: "Agregar productos", value: "ADD" },
-            { label: "Detalles de la cotización", value: "DETAILS" },
-          ]}
-          selected={selected}
-          onSelect={(val) => setSelected(val)}
-          fullWidth
-        />
-      </div>
-      {/* <ProductDetailsCard
-        img={{
-          src: "https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg",
-        }}
-        name="Paquete de blueberries (0.9 kg)"
-        unitPrice={20}
-        total={20}
-        comment=""
-        quantity={2}
-        currencySymbol="S/"
-        discount={{ discountedAmount: 5, label: "-10% desc. de S/25.00" }}
-        // disabled
-      /> */}
-      {/* <CartProduct
-        img={{
-          src: "https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg",
-        }}
-        name="Paquete de blueberries (0.9 kg)"
-        unitPrice={20}
-        total={20}
-        comment=""
-        onChangeComment={() => {}}
-        onChangeQuantity={() => {}}
-        quantity={2}
-        currencySymbol="S/"
-        onDeleteProduct={() => {}}
-        discount={{ discountedAmount: 5, label: "-10% desc. de S/25.00" }}
-      /> */}
-
-      {/* <UploadMultipleImages onChange={(val) => console.log(val)} /> */}
-
-      {/* <UserProfileIcon
-        // img={{
-        //   src: "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?cs=srgb&dl=pexels-masha-raymers-2726111.jpg&fm=jpg",
-        // }}
-        initials="A"
-        // size={80}
-      /> */}
-
-      {/* <EditQuantityInput
-        onSetQuantity={(val) => {
-          console.log("running", val);
-          setInput(val > 0 ? val : null);
-        }}
-        value={input}
-        minimumQuantity={0}
-        hasError={input === null}
-        measureUnit="u."
-        onDelete={() => {
-          console.log("delete");
-        }}
-      /> */}
-      {/* <ClientCard
-        name="Andrea"
-        lastName="Perez Vasquez"
-        // img={{
-        //   src: "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?cs=srgb&dl=pexels-masha-raymers-2726111.jpg&fm=jpg",
-        // }}
-        idNumber="77867856"
-        otherSections={["Test: asd", "Other: aaa"]}
-      /> */}
-      {/* <SectionCard
-        title="Datos de la cotización"
-        icon={<PictureIcon />}
-        headerAside={
-          <span style={{ color: theme.color.SECONDARY[900] }}>Cambiar</span>
-        }
-      >
-        <input type="text" />
-      </SectionCard> */}
-      {/* <IconV2 size={50}><IconClose /></IconV2> */}
-      {/* <CardModal
-        background="transparent"
-        boxShadowInDesktop="none"
-        padding="0 10px"
-        contentLocation="bottom"
-        maxWidth="700px"
-      >
-        <ConfirmationCardV3
-          title="Crear cotización"
-          content="Elige como deseas crear la cotizacion"
-          options={[
-            {
-              content: (
-                <span>
-                  Crear <b>borrador</b>
-                </span>
-              ),
-              onClick: () => alert("Crear y finalizar"),
-            },
-            {
-              content: (
-                <span>
-                  Crear y <b>finalizar</b>
-                </span>
-              ),
-              onClick: () => alert("Crear y finalizar"),
-            },
-            {
-              content: "Crear",
-              type: "primary",
-              onClick: () => alert("Crear"),
-            },
-          ]}
-          cancelOptions={[
-            {
-              content: "Cancelar",
-              onClick: () => alert("Cancelar"),
-            },
-          ]}
-        />
-      </CardModal> */}
-
       {/* <Collapsible
         open={open}
         setOpen={setOpen}
