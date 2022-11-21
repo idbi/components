@@ -14,6 +14,7 @@ export const Container = styled.div`
 
 export const ImgWrapper = styled(BaseContainer)`
   border: 1px solid ${({ theme }) => theme.color.NEUTRAL[100]};
+  position: relative;
   overflow: hidden;
   cursor: pointer;
 
@@ -32,4 +33,17 @@ export const Placeholder = styled(BaseContainer)`
   justify-content: center;
   padding: 10px;
   cursor: pointer;
+`;
+
+export const Cover = styled.div`
+  background-color: ${({ theme }) => `${theme.color.PRIMARY[900]}90`};
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 `;
