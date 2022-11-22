@@ -47,13 +47,16 @@ export type TSizes =
 
 export type TLevelHeading = 1 | 2 | 3 | 4 | 5 | 6;
 
-export type TColorNames = DefaultTheme["color"];
+export type TColorNames = Pick<
+DefaultTheme["color"],
+"NEUTRAL" | "PRIMARY" | "SECONDARY" | "TERTIARY" | "QUATERNARY" | "STATE" | "ALERT" | "SUCCESS"
+>;
 
 export type TColorScales = {
   [intensity in keyof TColorNames[keyof TColorNames]]: string;
 };
 
-export type TColor = `${keyof TColorNames}/${keyof TColorScales}` | string;
+export type TColor = `${keyof TColorNames}/${keyof TColorScales}`;
 
 export declare const Heading = {
   H1: (props: ITextProps) => JSX.Element,

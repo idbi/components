@@ -51,10 +51,12 @@ export const Content = styled.div<{
   contentLocationInDesktop: "bottom" | "top" | "left" | "right" | "center";
   boxShadow?: string;
   boxShadowInDesktop?: string;
+  fullWidth?: boolean;
 }>`
   position: fixed;
   max-height: 100vh;
   max-width: 100vw;
+  width: ${({ fullWidth }) => (fullWidth ? "100%" : "unset")};
   overflow: auto;
   animation: fadeIn 0.3s ease-in-out;
   z-index: ${(props) => props.zIndex};

@@ -32,7 +32,8 @@ const Wrapper = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
     height: 86vh;
-    place-items: center;
+    align-items: center;
+    /* place-items: center; */
   }
 `;
 const PlayGround: React.FC<{ children: React.ReactNode }> = ({ children }) => {

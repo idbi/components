@@ -2,9 +2,8 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Button } from "./components/Button";
 import { Collapsible } from "./components/Collapsible";
+import { ConfirmationCardV3 } from "./components/confirmations/ConfirmationCardV3";
 import PlayGround from "./components/Playground";
-import CheckIcon from "./icons/CheckIcon";
-import GoogleIcon from "./icons/GoogleIcon";
 
 const ProfileOption = styled.div`
   display: flex;
@@ -20,9 +19,10 @@ const ProfileOption = styled.div`
 
 function App() {
   const [open, setOpen] = useState(false);
+
   return (
     <PlayGround>
-      <Collapsible
+      {/* <Collapsible
         open={open}
         setOpen={setOpen}
         label="Profile"
@@ -43,7 +43,7 @@ function App() {
             <Button>Change</Button>
           </ProfileOption>
         }
-      />
+      /> */}
       {/* <Card
         design="primary"
         options={[

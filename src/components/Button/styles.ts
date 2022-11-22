@@ -29,14 +29,14 @@ export const Button = styled(BaseButton)<IButton>`
 
   ${({ size }) => getSize({ size })};
   ${({ shape }) => getShape({ shape })};
-  ${({ design, color }) => getDesign({ design, color })};
+  ${({ design, color, fontColor }) => getDesign({ design, color, fontColor })};
   ${({ fullWidth }) => getFullWidth({ fullWidth })};
   ${({ isLoading }) => getIsLoading({ isLoading })};
   ${({ disabled }) => getDisabled({ disabled })};
   ${({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px }) =>
     getSpacing({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px })};
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: ${({ color, design }) => {
       if (design === "link") {
         return "transparent";
@@ -62,7 +62,7 @@ export const Button = styled(BaseButton)<IButton>`
     cursor: not-allowed;
   }
 
-  &:disabled:hover {
-    ${({ design, color }) => getDesign({ design, color })};
+  b {
+    font-weight: bold;
   }
 `;
