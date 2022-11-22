@@ -1,3 +1,17 @@
+# [0.21.0](https://github.com/idbi/components/compare/v0.20.0...v0.21.0) (2022-11-22)
+
+
+### Bug Fixes
+
+* fix component declaration import ([43fa6c4](https://github.com/idbi/components/commit/43fa6c47d233e4a22c0ab1c96ba90a12975c0552))
+
+
+### Features
+
+* reexport components declaration ([242b3a2](https://github.com/idbi/components/commit/242b3a2ebaa577c99e4a9c94d01e25b1508a02c8))
+
+
+
 # [0.20.0](https://github.com/idbi/components/compare/v0.19.0...v0.20.0) (2022-11-22)
 
 
@@ -80,20 +94,6 @@
 
 * add OrderStatusBadge ([ea0ae44](https://github.com/idbi/components/commit/ea0ae44fe942c081978f68a238c1df0bcccc4013))
 * update build ([b83c7eb](https://github.com/idbi/components/commit/b83c7ebf968711de83290dadd9a9dbeced8353de))
-
-
-
-# [0.16.0](https://github.com/idbi/components/compare/v0.15.0...v0.16.0) (2022-10-14)
-
-
-### Bug Fixes
-
-* General fixex ([9866c15](https://github.com/idbi/components/commit/9866c15b7ef28c1457578beb848cfd3431aa1ad0))
-
-
-### Features
-
-* update buld ([73b6e43](https://github.com/idbi/components/commit/73b6e43361018a569ff0565754b5c87b3ee342e7))
 
 
 
