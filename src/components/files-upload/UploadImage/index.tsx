@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useFirstRender from "@/hooks/useFirstRender";
-import UploadFileContainer from "../UploadFileContainer";
+import { UploadFileContainer } from "../UploadFileContainer";
 import { IconButton } from "@/components/buttons/IconButton/styles";
 
 import { getURLData } from "./utils";
@@ -10,12 +10,7 @@ import { PictureIcon } from "@/icons-v2/PictureIcon";
 import { theme } from "@/theme";
 import * as s from "./styles";
 
-export const UploadImage = ({
-  initialImgUrl,
-  placeholder,
-  onChange,
-  onError,
-}: IUploadImage) => {
+export const UploadImage = ({ initialImgUrl, placeholder, onChange, onError }: IUploadImage) => {
   const [selectedImg, setSelectedImg] = useState<File | null>(null);
   const [imgObjUrl, setImgObjUrl] = useState(initialImgUrl || null);
   const firstRender = useFirstRender();
@@ -67,8 +62,7 @@ export const UploadImage = ({
         <s.Placeholder>
           {placeholder || (
             <s.DefaultMessage>
-              <PictureIcon color={theme.color.SECONDARY[900]} size={18} /> Sube
-              un imagen <span>aquí</span>
+              <PictureIcon color={theme.color.SECONDARY[900]} size={18} /> Sube un imagen <span>aquí</span>
             </s.DefaultMessage>
           )}
         </s.Placeholder>

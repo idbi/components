@@ -7,4 +7,4 @@ export interface IUploadImage {
   onError?: (errorMessage?: string) => void;
 }
 
-export declare const SelectImg: (props: IUploadImage) => JSX.Element;
+export declare const UploadImage: (props: IUploadImage) => JSX.Element;

@@ -1,7 +1,8 @@
 import React from "react";
+import { IUserIcon } from "./types";
 import * as s from "./styles";
 
-const UserProfileIcon = ({ img, size = 36, initials }: IUserIcon) => {
+export const UserProfileIcon = ({ img, size = 36, initials }: IUserIcon) => {
   const formattedInitials = initials.slice(0, 2).toUpperCase();
 
   return (
@@ -17,5 +18,3 @@ const UserProfileIcon = ({ img, size = 36, initials }: IUserIcon) => {
     </s.ImgContainer>
   );
 };
-
-export default UserProfileIcon;
