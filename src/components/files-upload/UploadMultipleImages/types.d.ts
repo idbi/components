@@ -11,6 +11,4 @@ export interface IUploadMultipleImages {
   onError?: (errorMessage?: string) => void;
 }
 
-export declare const UploadMultipleImages: (
-  props: IUploadMultipleImages
-) => JSX.Element;
+export declare const UploadMultipleImages: (props: IUploadMultipleImages) => JSX.Element;

@@ -3,3 +3,5 @@ interface IUserIcon {
   initials: string;
   size?: number;
 }
+
+export declare const UserProfileIcon: (props: IUserIcon) => JSX.Element;

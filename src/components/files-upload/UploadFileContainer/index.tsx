@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { validateFileSize } from "@/utils/validators";
 import { IUploadFile } from "./types";
 
-const UploadFileContainer = ({
+export const UploadFileContainer = ({
   onSelectFile,
   maxKBSize,
   onError = () => {},
@@ -48,12 +48,7 @@ const UploadFileContainer = ({
   };
 
   return (
-    <div
-      onClick={handleClickFile}
-      onDragOver={(e) => e.preventDefault()}
-      onDrop={handleDropFile}
-      style={style}
-    >
+    <div onClick={handleClickFile} onDragOver={(e) => e.preventDefault()} onDrop={handleDropFile} style={style}>
       {children}
       <input
         ref={fileInput}
@@ -65,5 +60,3 @@ const UploadFileContainer = ({
     </div>
   );
 };
-
-export default UploadFileContainer;

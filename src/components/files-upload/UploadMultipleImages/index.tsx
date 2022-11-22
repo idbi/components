@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useFirstRender from "@/hooks/useFirstRender";
-import UploadFileContainer from "../UploadFileContainer";
+import { UploadFileContainer } from "../UploadFileContainer";
 
 import { IImgData, IUploadMultipleImages } from "./types";
 import { PictureIcon } from "@/icons-v2/PictureIcon";

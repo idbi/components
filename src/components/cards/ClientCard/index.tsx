@@ -1,5 +1,5 @@
 import React from "react";
-import UserProfileIcon from "@/components/image-containers/UserProfileIcon";
+import { UserProfileIcon } from "@/components/image-containers/UserProfileIcon";
 import { IdentificationIcon } from "@/icons-v2/IdentificationIcon";
 import { IClientCard } from "./types";
 import * as s from "./styles";
