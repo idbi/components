@@ -1,3 +1,12 @@
+# [0.22.0](https://github.com/idbi/components/compare/v0.21.0...v0.22.0) (2022-11-22)
+
+
+### Features
+
+* reexport components ([b85c57e](https://github.com/idbi/components/commit/b85c57e16356e7be20d34a4000564b3f2e9d9be8))
+
+
+
 # [0.21.0](https://github.com/idbi/components/compare/v0.20.0...v0.21.0) (2022-11-22)
 
 
@@ -78,22 +87,6 @@
 ### Features
 
 * update build ([9d6847e](https://github.com/idbi/components/commit/9d6847e658960cdf79e3deb5f07ece3c8fd0d7e8))
-
-
-
-# [0.17.0](https://github.com/idbi/components/compare/v0.16.0...v0.17.0) (2022-10-14)
-
-
-### Bug Fixes
-
-* fix types of CardModal ([08cec73](https://github.com/idbi/components/commit/08cec73b90d3af3fb10d316696c3db882f2690fc))
-* lint ([259d2ec](https://github.com/idbi/components/commit/259d2ec90653e430e1ebe4ac06f88dfbbe793b02))
-
-
-### Features
-
-* add OrderStatusBadge ([ea0ae44](https://github.com/idbi/components/commit/ea0ae44fe942c081978f68a238c1df0bcccc4013))
-* update build ([b83c7eb](https://github.com/idbi/components/commit/b83c7ebf968711de83290dadd9a9dbeced8353de))
 
 
 
