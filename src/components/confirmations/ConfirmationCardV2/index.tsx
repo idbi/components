@@ -38,7 +38,7 @@ export const ConfirmationCardV2: React.FC<IConfirmationCardV2> = ({
               design="flat"
               fullWidth
               onClick={() => btnLeft.onClick()}
-              color="PRIMARY/900 "
+              color="PRIMARY/900"
               style={{ borderRadius: "32px", padding: "20px 0" }}
             >
               {btnLeft.text}
