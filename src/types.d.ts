@@ -32,7 +32,7 @@ export { ProductDetailsCard } from "@/components/product-cards/ProductDetailsCar
 // CONFIRMATIONS
 export { ConfirmationCard } from "./components/confirmations/ConfirmationCard/types";
 export { ConfirmationCardV2 } from "./components/confirmations/ConfirmationCardV2/types";
-export { ConfirmationCardV3 } from "./components/confirmations/ConfirmationCardV3";
+export { ConfirmationCardV3 } from "./components/confirmations/ConfirmationCardV3/types";
 // FORMS
 export { Checkbox } from "@/components/forms/Checkbox/types";
 export { Radio } from "@/components/forms/Radio/types";
