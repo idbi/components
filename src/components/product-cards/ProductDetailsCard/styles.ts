@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Card = styled.div<{ disabled?: boolean; hasDetails?: boolean }>`
-  background-color: ${({ disabled, theme }) => (disabled ? theme.color.NEUTRAL[50] : "transparent")};
+  background-color: ${({ disabled, theme }) => (disabled ? theme.color.NEUTRAL[50] : "white")};
   border: 1px solid ${({ theme }) => theme.color.NEUTRAL[100]};
   border-radius: 8px;
   min-height: ${({ hasDetails }) => (hasDetails ? "140px" : "unset")};
