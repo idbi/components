@@ -2,6 +2,6 @@ import { IConfirmationCardV3 } from "@/components/confirmations/ConfirmationCard
 import { ReactNode } from "react";
 import { ICardModal } from "../CardModal/types";
 
-export type IConfirmationModalV3 = IConfirmationCardV3 & { cardProps?: ICardModal };
+export type IConfirmationModalV3 = IConfirmationCardV3 & { cardProps?: Partial<ICardModal> };
 
 export declare const ConfirmationModalV3: (props: IConfirmationModalV3) => JSX.Element;

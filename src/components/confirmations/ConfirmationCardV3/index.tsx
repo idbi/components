@@ -13,8 +13,9 @@ export const ConfirmationCardV3 = ({ title, content, options, cancelOptions }: I
         </s.Header>
         {options.length > 0 && (
           <s.Options>
-            {options.map((option) => (
+            {options.map((option, i) => (
               <Button
+                key={`confirmation-option-${i}`}
                 design="solid"
                 shape="circular"
                 size="xs"
@@ -33,8 +34,9 @@ export const ConfirmationCardV3 = ({ title, content, options, cancelOptions }: I
       </s.Card>
       {cancelOptions.length > 0 && (
         <s.Options bottom>
-          {cancelOptions.map((option) => (
+          {cancelOptions.map((option, i) => (
             <Button
+              key={`cancel-option-${i}`}
               design="flat"
               size="xs"
               fullWidth

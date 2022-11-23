@@ -1,17 +1,17 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { ConfirmationModalV3 } from "../index";
+import { Container } from "./Container";
 import { IConfirmationModalV3 } from "../types";
 import { mockConfirmationModalV3Props } from "./ConfirmationModalV3.mock";
 
 export default {
   title: "modals/ConfirmationModalV3",
-  component: ConfirmationModalV3,
+  component: Container,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof ConfirmationModalV3>;
+} as ComponentMeta<typeof Container>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof ConfirmationModalV3> = (args) => <ConfirmationModalV3 {...args} />;
+const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
 
 export const MultipleOptions = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
