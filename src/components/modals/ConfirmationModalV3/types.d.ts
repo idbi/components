@@ -1,4 +1,4 @@
-import { IConfirmationCardV3 } from "@/components/confirmations/ConfirmationCardV3/types";
+import { IConfirmationCardV3 } from "../../confirmations/ConfirmationCardV3/types";
 import { ReactNode } from "react";
 import { ICardModal } from "../CardModal/types";
 
