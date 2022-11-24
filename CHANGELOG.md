@@ -1,3 +1,19 @@
+# [0.23.0](https://github.com/idbi/components/compare/v0.22.0...v0.23.0) (2022-11-24)
+
+
+### Bug Fixes
+
+* add ConfirmationModalV3 documentation container ([7e79147](https://github.com/idbi/components/commit/7e7914719765cceb14fd970acc468874ba9f2702))
+
+
+### Features
+
+* add dropdown component header ([75a0e6c](https://github.com/idbi/components/commit/75a0e6ce920f1d2fe48183be8797237831b1f9b4))
+* reexport ButtonsSwitch component ([7dff6df](https://github.com/idbi/components/commit/7dff6df9fe3eaaf3759bd54467773b6e7e7c70c0))
+* set card components white background ([3840936](https://github.com/idbi/components/commit/3840936e0309921c9f421f95d2314cd4986ec421))
+
+
+
 # [0.22.0](https://github.com/idbi/components/compare/v0.21.0...v0.22.0) (2022-11-22)
 
 
@@ -72,21 +88,6 @@
 * create Radio ([725c0dc](https://github.com/idbi/components/commit/725c0dcbb261b0b87a82ff78fc56c54d4d595262))
 * create StatusBanner ([280784c](https://github.com/idbi/components/commit/280784c5762f3c5147a58e72962382505efc041b))
 * update build ([b9304e9](https://github.com/idbi/components/commit/b9304e9c6e3ab3746b4fe9a0ad5ed6a858a8fa2d))
-
-
-
-# [0.18.0](https://github.com/idbi/components/compare/v0.17.0...v0.18.0) (2022-10-17)
-
-
-### Bug Fixes
-
-* fix section name for modals ([6777bd3](https://github.com/idbi/components/commit/6777bd3a4e4db9676f4479830e85398dc125b0e0))
-* fix texts for OrderStatusBadge ([df91c36](https://github.com/idbi/components/commit/df91c360310d6a006102069cb9b40db53c3cc9b1))
-
-
-### Features
-
-* update build ([9d6847e](https://github.com/idbi/components/commit/9d6847e658960cdf79e3deb5f07ece3c8fd0d7e8))
 
 
 
