@@ -33,3 +33,9 @@ export const WithSubOptions = Template.bind({});
 WithSubOptions.args = {
   ...mockDropdownMenuProps.withSubOptions,
 } as IDropdownMenu;
+
+export const WithHeader = Template.bind({});
+
+WithHeader.args = {
+  ...mockDropdownMenuProps.withHeader,
+} as IDropdownMenu;

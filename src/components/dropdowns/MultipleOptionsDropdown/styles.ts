@@ -5,7 +5,7 @@ export const Menu = styled.ul`
   color: ${() => theme.color.OTHER.color1};
   background-color: white;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
-  border: 1px solid #59a5fc;
+  border: 1px solid ${({ theme }) => theme.color.QUATERNARY[300]};
   border-radius: 10px;
   width: 300px;
   margin: 5px 0;
@@ -20,6 +20,25 @@ export const Menu = styled.ul`
 
   & > li:first-child {
     border-radius: 10px 10px 0 0;
+  }
+`;
+
+export const Header = styled.div`
+  padding: 5px 10px 5px 15px;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  position: relative;
+
+  ::after {
+    content: "";
+    border-top: 1px solid ${({ theme }) => theme.color.QUATERNARY[300]};
+    width: calc(100% - 12px);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
   }
 `;
 
