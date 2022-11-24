@@ -1,3 +1,7 @@
+## [0.23.1](https://github.com/idbi/components/compare/v0.23.0...v0.23.1) (2022-11-24)
+
+
+
 # [0.23.0](https://github.com/idbi/components/compare/v0.22.0...v0.23.0) (2022-11-24)
 
 
@@ -61,33 +65,6 @@
 * create ConfirmationCardV3 ([93b81f0](https://github.com/idbi/components/commit/93b81f0f02eb31b1916623205b4c86fb2dc50c39))
 * create select file components ([947eb06](https://github.com/idbi/components/commit/947eb06b8673fe4bda98d64d8d82096d20206392))
 * mock new components ([a86f954](https://github.com/idbi/components/commit/a86f954fa557246107cf02cce435a5f0b00b3904))
-
-
-
-# [0.19.0](https://github.com/idbi/components/compare/v0.18.0...v0.19.0) (2022-10-24)
-
-
-### Bug Fixes
-
-* export new components and add types ([59d0fd3](https://github.com/idbi/components/commit/59d0fd353304235d336ac352edb4bdee67236527))
-* general ([4b84bf0](https://github.com/idbi/components/commit/4b84bf0a9374384739ed802cdc2ed094e622bdad))
-
-
-### Features
-
-*  create TotalsCard ([fcc10c0](https://github.com/idbi/components/commit/fcc10c0662e52a191b5d552853749e5a40a52a44))
-* add folder fot global types ([fdc93f4](https://github.com/idbi/components/commit/fdc93f4615a47ca1945cb631e0f138d191f88b74))
-* add new icons for my orders ([b982428](https://github.com/idbi/components/commit/b9824288916e982951e9cedc4868debc71301d8d))
-* add objects to style scroll ([c82b47d](https://github.com/idbi/components/commit/c82b47d37bf21e98a99b4e034265d639409d9480))
-* add property to modify box shadow of CardModal ([bde9a2f](https://github.com/idbi/components/commit/bde9a2f4da690bad7d8c27bbced286bd19b2a9e6))
-* add property to modify box shadow of CardModal ([8c4bb69](https://github.com/idbi/components/commit/8c4bb69354ff82f5143da57a95df544382e7d90a))
-* add property to remove background and edit text in Badge ([862db6d](https://github.com/idbi/components/commit/862db6d5b9930661738664f051304d02b562a4a3))
-* create Checkbox ([e4f2122](https://github.com/idbi/components/commit/e4f212206c445b8dc32fec45be065502297cfcfa))
-* create CurrentStatusCard ([caabe43](https://github.com/idbi/components/commit/caabe43697fca0e5aab384994770497020646a25))
-* create OrderTypeBanner ([2947d6e](https://github.com/idbi/components/commit/2947d6ebd5f9522df94fcacb3336b02bf58061c3))
-* create Radio ([725c0dc](https://github.com/idbi/components/commit/725c0dcbb261b0b87a82ff78fc56c54d4d595262))
-* create StatusBanner ([280784c](https://github.com/idbi/components/commit/280784c5762f3c5147a58e72962382505efc041b))
-* update build ([b9304e9](https://github.com/idbi/components/commit/b9304e9c6e3ab3746b4fe9a0ad5ed6a858a8fa2d))
 
 
 
