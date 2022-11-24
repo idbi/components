@@ -9,6 +9,7 @@ import { useOnClickOutside } from "../../../hooks/useOnClickOutside";
 import { IDropdownMenu } from "./types";
 
 const Activator = styled.div`
+  display: flex;
   cursor: pointer;
   text-align: right;
   * {
@@ -20,7 +21,7 @@ const Activator = styled.div`
 export const DropdownMenu: React.FC<IDropdownMenu> = ({
   options,
   activator,
-  header
+  header,
 }) => {
   const { x, y, reference, floating, strategy, update, refs } = useFloating({
     placement: "bottom-end",
@@ -50,6 +51,7 @@ export const DropdownMenu: React.FC<IDropdownMenu> = ({
             position: strategy,
             top: y ?? 0,
             left: x ?? 0,
+            zIndex: 100,
           }}
           onClick={() => setShowMenu(!showMenu)}
         >
