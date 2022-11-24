@@ -20,6 +20,8 @@ export const MultipleOptionsModal: React.FC<IMultipleOptionsModal> = ({
   defaultDescription = "",
   defaultTitle = "",
   optionsInCenter = false,
+  direction = "row",
+  iconOrientation = "horizontal",
 }) => {
   const [selectedIndex, setSelectedIndex] = useState<null | number>(null);
 
@@ -55,7 +57,7 @@ export const MultipleOptionsModal: React.FC<IMultipleOptionsModal> = ({
           )}
         </s.Header>
 
-        <s.OptionsContainer>
+        <s.OptionsContainer direction={direction}>
           {!selectedSubMenu &&
             options.map((option, i) =>
               "onClick" in option ? (
@@ -70,8 +72,10 @@ export const MultipleOptionsModal: React.FC<IMultipleOptionsModal> = ({
                     }
                   }}
                   optionsInCenter={optionsInCenter}
+                  iconOrientation={iconOrientation}
                 >
-                  {option.text} {option.loading ? Loader : option.icon}
+                  <span>{option.text}</span>
+                  {option.loading ? Loader : option.icon}
                 </s.Option>
               ) : (
                 <s.Option

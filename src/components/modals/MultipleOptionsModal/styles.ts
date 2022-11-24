@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { theme } from "@/theme";
 
 export const Container = styled.div`
@@ -25,18 +25,28 @@ export const Header = styled.div`
   }
 `;
 
-export const OptionsContainer = styled.ul`
+export const OptionsContainer = styled.ul<{
+  direction?: "row" | "column";
+}>`
   color: ${() => theme.color.NEUTRAL[700]};
   padding: 0;
   margin: 10px 0;
   list-style-type: none;
   font-size: 14px;
+  ${({ direction }) =>
+    direction === "column" &&
+    css`
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    `}
 `;
 
 export const Option = styled.li<{
   disabled?: boolean;
   alert?: boolean;
   optionsInCenter?: boolean;
+  iconOrientation?: "vertical" | "horizontal";
 }>`
   background-color: ${({ alert }) =>
     alert ? theme.color.ALERT[100] : "white"};
@@ -44,12 +54,14 @@ export const Option = styled.li<{
   min-height: 50px;
   padding: 0 20px;
   display: flex;
+  flex-direction: ${({ iconOrientation }) =>
+    iconOrientation === "vertical" ? "column-reverse" : "row"};
   justify-content: ${({ optionsInCenter }) =>
     optionsInCenter ? "center" : "space-between"};
   align-items: center;
   gap: ${({ optionsInCenter }) => (optionsInCenter ? "10px" : "5px")};
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};;
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 
   & > svg,
   & > img {

@@ -9,6 +9,10 @@ export interface IMultipleOptionsModal {
   defaultDescription?: string;
   defaultTitle?: string;
   optionsInCenter?: boolean;
+  direction?: "row" | "column";
+  iconOrientation?: "vertical" | "horizontal";
 }
 
-export declare const MultipleOptionsModal: (props: IMultipleOptionsModal) => JSX.Element;
+export declare const MultipleOptionsModal: (
+  props: IMultipleOptionsModal
+) => JSX.Element;
