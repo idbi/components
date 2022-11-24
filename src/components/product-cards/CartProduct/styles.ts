@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
+  background-color: white;
   border: 1px solid ${({ theme }) => theme.color.NEUTRAL[100]};
   color: 1px solid ${({ theme }) => theme.color.NEUTRAL[700]};
   border-radius: 8px;

@@ -20,6 +20,7 @@ const Activator = styled.div`
 export const DropdownMenu: React.FC<IDropdownMenu> = ({
   options,
   activator,
+  header
 }) => {
   const { x, y, reference, floating, strategy, update, refs } = useFloating({
     placement: "bottom-end",
@@ -52,7 +53,7 @@ export const DropdownMenu: React.FC<IDropdownMenu> = ({
           }}
           onClick={() => setShowMenu(!showMenu)}
         >
-          <MultipleOptionsDropdown options={options} />
+          <MultipleOptionsDropdown options={options} header={header} />
         </div>
       )}
     </div>

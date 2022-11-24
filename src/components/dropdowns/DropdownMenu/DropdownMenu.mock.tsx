@@ -96,8 +96,14 @@ const withSubOptions: IDropdownMenu = {
   activator: <GoogleIcon />,
 };
 
+const withHeader: IDropdownMenu = {
+  header: "Compartir archivo por:",
+  options: options_base,
+};
+
 export const mockDropdownMenuProps = {
   base,
   withIcons,
   withSubOptions,
+  withHeader,
 };

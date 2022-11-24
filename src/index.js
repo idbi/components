@@ -37,6 +37,7 @@ export { ConfirmationCardV3 } from "./components/confirmations/ConfirmationCardV
 export { Checkbox } from "@/components/forms/Checkbox";
 export { Radio } from "@/components/forms/Radio";
 export { EditQuantityInput } from "@/components/forms/EditQuantityInput";
+export { ButtonsSwitch } from "@/components/buttons/ButtonsSwitch";
 // MODALS
 export { CardModal } from "@/components/modals/CardModal";
 export { MultipleOptionsModal } from "@/components/modals/MultipleOptionsModal";

@@ -4,7 +4,7 @@ import { IButtonsSwitchContainer } from "./Container";
 import { mockConfirmationCardV2Props } from "./ButtonsSwitch.mock";
 
 export default {
-  title: "cards/ButtonsSwitch",
+  title: "forms/ButtonsSwitch",
   component: Container,
   argTypes: {},
 } as ComponentMeta<typeof Container>;

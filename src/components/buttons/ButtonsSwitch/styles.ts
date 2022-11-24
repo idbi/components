@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { Model } from "./types";
 
 export const Container = styled.div<{ disabled?: boolean; fullWidth?: boolean; model?: Model }>`
+  background-color: white;
   border: 1px solid ${({ theme }) => theme.color.PRIMARY[200]};
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
   border-radius: 10px;
