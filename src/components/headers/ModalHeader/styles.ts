@@ -4,13 +4,25 @@ import { getDisabled, getIsLoading } from "@/theme/utils";
 import { resetButtonStyles } from "@/theme/utils/resetButtonStyles";
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface IContainer {
+  marginBottom?: string;
+  isSticky?: boolean;
+  zIndex?: number;
+}
+
+export const Container = styled.div<IContainer>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3px 0;
   box-shadow: ${() => theme.effect.lightShadow[16]};
   color: ${() => theme.color.PRIMARY[900]};
+  background: ${() => theme.color.PRIMARY[0]};
+
+  position: ${({isSticky}) => isSticky ? "sticky" : "static"};
+  top: 0;
+  z-index: ${({zIndex}) => zIndex || "5"};
+  margin-bottom: ${({marginBottom}) => marginBottom || "0"};
 `;
 
 interface IOptions {

@@ -17,16 +17,57 @@ const options = [
 ];
 
 const base: IModalHeader = {
-  options: [options[0]],
+  options: {
+    options: [options[0]],
+    minWidth: "100px",
+    padding: "15px",
+  },
+  closeIcon: {
+    marginLeft: "15px",
+    hide: false,
+    onClick: () => {},
+  },
+  container: {
+    marginBottom: "0px",
+    zIndex: 5,
+    isSticky: true,
+  },
 };
 
 const variant: IModalHeader = {
-  options: [options[1]],
-  hideCloseIcon: true,
+  options: {
+    options: [options[1]],
+    minWidth: "100px",
+    padding: "15px",
+  },
+  closeIcon: {
+    marginLeft: "15px",
+    hide: false,
+    onClick: () => {},
+  },
+  container: {
+    marginBottom: "0px",
+    zIndex: 5,
+    isSticky: false,
+  },
 };
 
 const variant2: IModalHeader = {
-  options,
+  options: {
+    options,
+    minWidth: "100px",
+    padding: "15px",
+  },
+  closeIcon: {
+    marginLeft: "15px",
+    hide: false,
+    onClick: () => {},
+  },
+  container: {
+    marginBottom: "0px",
+    zIndex: 5,
+    isSticky: false,
+  },
 };
 
 export const mockModalHeaderProps = {

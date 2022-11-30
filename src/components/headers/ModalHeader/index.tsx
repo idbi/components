@@ -5,26 +5,28 @@ import type { IModalHeader } from "./types";
 import * as s from "./styles";
 
 export const ModalHeader: React.FC<IModalHeader> = ({
+  container,
   options,
-  minWidthForOptions,
-  paddingForOptions,
-  hideCloseIcon,
-  marginLeftForCloseIcon,
+  closeIcon,
 }) => {
   return (
-    <s.Container>
-      {!hideCloseIcon ? (
-        <IconButton style={{ marginLeft: marginLeftForCloseIcon || "20px" }}>
+    <s.Container
+      marginBottom={container?.marginBottom}
+      isSticky={container?.isSticky}
+      zIndex={container?.zIndex}
+    >
+      {!closeIcon?.hide ? (
+        <IconButton style={{ marginLeft: closeIcon?.marginLeft || "20px" }}>
           <IconClose />
         </IconButton>
       ) : (
         <div />
       )}
       <s.Options
-        minWidthForOptions={minWidthForOptions}
-        paddingForOptions={paddingForOptions}
+        minWidthForOptions={options.minWidth}
+        paddingForOptions={options.padding}
       >
-        {options?.map((option, index) => (
+        {options?.options?.map((option, index) => (
           <s.Option
             key={`${index}${option.id}`}
             onClick={option.onClick}
