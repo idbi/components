@@ -15,12 +15,13 @@ export const Container = styled.div<IContainer>`
   justify-content: space-between;
   align-items: center;
   padding: 3px 0;
-  box-shadow: ${() => theme.effect.lightShadow[16]};
-  color: ${() => theme.color.PRIMARY[900]};
-  background: ${() => theme.color.PRIMARY[0]};
+  box-shadow: ${theme.effect.lightShadow[16]};
+  color: ${theme.color.PRIMARY[900]};
+  background: ${theme.color.PRIMARY[0]};
 
   position: ${({isSticky}) => isSticky ? "sticky" : "static"};
   top: 0;
+  left: 0;
   z-index: ${({zIndex}) => zIndex || "5"};
   margin-bottom: ${({marginBottom}) => marginBottom || "0"};
 `;
@@ -47,7 +48,7 @@ interface IButton {
 export const Option = styled.button<IButton>`
   ${resetButtonStyles}
   color: ${({ mode }) => mode === "danger" ? theme.color.ALERT[700] : theme.color.PRIMARY[900]};
-  border-left: 1px solid ${() => theme.color.NEUTRAL[200]};
+  border-left: 1px solid ${theme.color.NEUTRAL[200]};
   ${({ isLoading }) => getIsLoading({ isLoading })};
   ${({ disabled }) => getDisabled({ disabled })};
 `
