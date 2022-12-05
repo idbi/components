@@ -1,13 +1,7 @@
 import * as React from "react";
 
-export const SuccessIcon = (props) => (
-  <svg
-    width={20}
-    height={20}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+export const SuccessIcon = () => (
+  <svg width={20} height={20} fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="m9.046 11.153 1.26-1.32c.743-.776 1.485-1.553 2.228-2.327.267-.28.614-.309.878-.081a.667.667 0 0 1 .112.87c-.041.06-.092.114-.142.167l-3.818 3.992c-.35.364-.688.365-1.035.002-.65-.68-1.302-1.36-1.95-2.042-.295-.31-.284-.738.017-.996a.585.585 0 0 1 .766-.01c.095.078.178.17.263.259l1.421 1.486Z"
       fill="#2DC96F"

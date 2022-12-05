@@ -1,13 +1,7 @@
 import * as React from "react";
 
-export const ErrorIcon = (props) => (
-  <svg
-    width={22}
-    height={22}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+export const ErrorIcon = () => (
+  <svg width={22} height={22} fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
