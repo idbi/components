@@ -10,7 +10,7 @@ const variant1: ISupplyInput = {
   suffix: "L",
   value: "10",
   defaultValue: "10",
-  description:"cantidad a producir",
+  description: "Cantidad a producir",
   readingMode: false,
 };
 
@@ -18,7 +18,7 @@ const variant2: ISupplyInput = {
   suffix: "L",
   value: "10",
   defaultValue: "10",
-  description: "cantidad a producir",
+  description: "Cantidad a producir",
   readingMode: true,
 };
 
@@ -26,7 +26,7 @@ const variant3: ISupplyInput = {
   suffix: "L",
   value: "10",
   defaultValue: "10",
-  description: "cantidad a producir",
+  description: "Cantidad a producir",
   readingMode: false,
   disabled: true,
 };

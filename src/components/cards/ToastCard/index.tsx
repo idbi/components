@@ -15,7 +15,6 @@ export const ToastCard: React.FC<IToastCard> = ({
 }) => {
   const showIcon = () => {
     if (icon) return icon;
-    if (type === "primary") return <WarningIcon color="#242954" />;
     if (type === "success") return <SuccessIcon />;
     if (type === "warning") return <Warningv2Icon />;
     if (type === "error") return <ErrorIcon />;
@@ -35,7 +34,7 @@ export const ToastCard: React.FC<IToastCard> = ({
               <s.Link
                 onClick={(e) => {
                   e.stopPropagation();
-                  link.onClick();
+                  if (link.onClick) link.onClick();
                 }}
               >
                 {link?.text || "Ver más"}

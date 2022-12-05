@@ -4,7 +4,6 @@ const base: INoData = {
   text: "Aún no cuentas con recetas agregadas a la orden",
   marginTop: "",
   marginBottom: "",
-  style: {},
 };
 const variant: INoData = {
   text: (
@@ -14,7 +13,6 @@ const variant: INoData = {
   ),
   marginTop: "10vh",
   marginBottom: "10vh",
-  style: {},
 };
 
 export const mockNoDataProps = {

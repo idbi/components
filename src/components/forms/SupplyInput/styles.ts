@@ -26,8 +26,8 @@ export const Container = styled.div<IContainer>`
     padding: ${({ withDescription }) => (withDescription ? "0px 0" : "12px 0")};
     background: transparent;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
     letter-spacing: -0.04em;
     color: ${theme.color.NEUTRAL[700]};
     ::placeholder {
@@ -54,23 +54,23 @@ export const SubContainer = styled.div<IReadingMode>`
 
 export const Description = styled.span`
   font-weight: 500;
-  font-size: 10px;
-  line-height: 18px;
+  font-size: 0.625rem;
+  line-height: 1.125rem;
   letter-spacing: -0.04em;
   color: ${theme.color.NEUTRAL[500]};
 `
 
 export const Suffix = styled.div`
   font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
   letter-spacing: -0.04em;
   color: ${theme.color.NEUTRAL[500]};
 `
 
 export const Value = styled.span`
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: ${theme.color.PRIMARY[900]};
 `

@@ -1,4 +1,5 @@
 import { IconClock } from "@/icons/IconClock";
+import { IconRightArrow } from "@/icons/IconRightArrow";
 import { IToastCard } from "../types";
 
 const primary: IToastCard = {
@@ -59,11 +60,13 @@ const customDescription: IToastCard = {
 
 const onlyTitle: IToastCard = {
   title: "Título principal de la notificación",
+  icon: <IconRightArrow />
 };
 
 const onlyDescription: IToastCard = {
   description: "Lorem ipsum dolor sit amet.",
   type: "success",
+  icon: " ",
 };
 
 export const mockToastCardProps = {

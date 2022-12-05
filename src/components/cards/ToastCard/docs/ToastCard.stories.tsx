@@ -4,7 +4,7 @@ import { IToastCard } from "../types";
 import { mockToastCardProps } from "./ToastCard.mock";
 
 export default {
-  title: "toasts/ToastCard",
+  title: "cards/ToastCard",
   component: ToastCard,
   argTypes: {},
 } as ComponentMeta<typeof ToastCard>;
