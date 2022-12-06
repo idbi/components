@@ -1,5 +1,6 @@
-import { OrderStatusBadge } from "@/components/badges/OrderStatusBadge";
-import { UserProfileIcon } from "@/components/image-containers/UserProfileIcon";
+// Refactor: investigate how to document an object with react components and style components
+// import { OrderStatusBadge } from "@/components/badges/OrderStatusBadge";
+// import { UserProfileIcon } from "@/components/image-containers/UserProfileIcon";
 import { GridTable } from "..";
 import { ITable } from "../types";
 
