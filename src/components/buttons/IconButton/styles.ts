@@ -10,6 +10,7 @@ export const IconButton = styled.button<IconButtonProps>`
   border-radius: 50%;
   display: flex;
   height: 34px;
+  min-width: 34px;
   width: 34px;
   justify-content: center;
   background: #fff;
