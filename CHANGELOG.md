@@ -1,3 +1,7 @@
+## [0.24.2](https://github.com/idbi/components/compare/v0.24.1...v0.24.2) (2022-12-15)
+
+
+
 ## [0.24.1](https://github.com/idbi/components/compare/v0.24.0...v0.24.1) (2022-12-15)
 
 
@@ -47,22 +51,6 @@
 
 
 ## [0.23.1](https://github.com/idbi/components/compare/v0.23.0...v0.23.1) (2022-11-24)
-
-
-
-# [0.23.0](https://github.com/idbi/components/compare/v0.22.0...v0.23.0) (2022-11-24)
-
-
-### Bug Fixes
-
-* add ConfirmationModalV3 documentation container ([7e79147](https://github.com/idbi/components/commit/7e7914719765cceb14fd970acc468874ba9f2702))
-
-
-### Features
-
-* add dropdown component header ([75a0e6c](https://github.com/idbi/components/commit/75a0e6ce920f1d2fe48183be8797237831b1f9b4))
-* reexport ButtonsSwitch component ([7dff6df](https://github.com/idbi/components/commit/7dff6df9fe3eaaf3759bd54467773b6e7e7c70c0))
-* set card components white background ([3840936](https://github.com/idbi/components/commit/3840936e0309921c9f421f95d2314cd4986ec421))
 
 
 
