@@ -3,14 +3,21 @@ import { Button } from "@/components/Button";
 import { IConfirmationCardV3 } from "./types";
 import * as s from "./styles";
 
-export const ConfirmationCardV3 = ({ title, content, options, cancelOptions }: IConfirmationCardV3) => {
+export const ConfirmationCardV3 = ({
+  title,
+  content,
+  options,
+  cancelOptions,
+}: IConfirmationCardV3) => {
   return (
     <s.Container>
       <s.Card>
-        <s.Header>
-          {title && <s.Title>{title}</s.Title>}
-          <s.Content>{content}</s.Content>
-        </s.Header>
+        {(title || content) && (
+          <s.Header>
+            {title && <s.Title>{title}</s.Title>}
+            {content && <s.Content>{content}</s.Content>}
+          </s.Header>
+        )}
         {options.length > 0 && (
           <s.Options>
             {options.map((option, i) => (
@@ -22,8 +29,12 @@ export const ConfirmationCardV3 = ({ title, content, options, cancelOptions }: I
                 fullWidth
                 onClick={option.onClick}
                 disabled={option.disabled}
-                color={option.type === "primary" ? "SECONDARY/900" : "QUATERNARY/200"}
-                fontColor={option.type === "primary" ? "SECONDARY/0" : "SECONDARY/900"}
+                color={
+                  option.type === "primary" ? "SECONDARY/900" : "QUATERNARY/200"
+                }
+                fontColor={
+                  option.type === "primary" ? "SECONDARY/0" : "SECONDARY/900"
+                }
                 style={{ gap: 0 }}
               >
                 {option.content}
