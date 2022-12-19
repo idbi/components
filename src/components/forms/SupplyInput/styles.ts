@@ -38,6 +38,7 @@ export const Container = styled.div<IContainer>`
   ${({readingMode}) => readingMode && css`
     border: none;
     padding: 0;
+    background: transparent;
     input {
       padding: 0;
     }

@@ -4417,6 +4417,7 @@ const oi = ({
   ${({ readingMode: e }) => e && s`
     border: none;
     padding: 0;
+    background: transparent;
     input {
       padding: 0;
     }
