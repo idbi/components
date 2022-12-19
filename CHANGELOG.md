@@ -1,3 +1,12 @@
+## [0.25.1](https://github.com/idbi/components/compare/v0.25.0...v0.25.1) (2022-12-19)
+
+
+### Bug Fixes
+
+* adjust background in SupplyInput ([7c7a0cb](https://github.com/idbi/components/commit/7c7a0cbdeda14aa4590fe5cb134c58a7a06bfc1d))
+
+
+
 # [0.25.0](https://github.com/idbi/components/compare/v0.24.2...v0.25.0) (2022-12-19)
 
 
@@ -61,15 +70,6 @@
 * export new components and general settings ([8c82d14](https://github.com/idbi/components/commit/8c82d144a0132a89eba9485f74e8632b469efa56))
 * update build ([e4e224f](https://github.com/idbi/components/commit/e4e224f445a59f8ae2a2cd5a1d071b20265bc471))
 * update build ([a3f6013](https://github.com/idbi/components/commit/a3f6013fefc7682d796072a398adaf8d07bad638))
-
-
-
-## [0.23.3](https://github.com/idbi/components/compare/v0.23.1...v0.23.3) (2022-11-24)
-
-
-### Bug Fixes
-
-* add props to MultipleOptionsModal ([3cc873e](https://github.com/idbi/components/commit/3cc873eb0645d85d3aa5923249c7ae6e6a455d5b))
 
 
 
