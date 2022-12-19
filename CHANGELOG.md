@@ -1,3 +1,26 @@
+# [0.25.0](https://github.com/idbi/components/compare/v0.24.2...v0.25.0) (2022-12-19)
+
+
+### Bug Fixes
+
+* add padding property in ModalHeader ([2ae43f1](https://github.com/idbi/components/commit/2ae43f1f56013533366163245b5db38796c80dd9))
+* adjust image location in IDCard ([2375e46](https://github.com/idbi/components/commit/2375e46af0f0389759bdb0d9f63a35bad22373d7))
+* adjust styles in SupplyInput ([6f33d7a](https://github.com/idbi/components/commit/6f33d7a39dd98348d85c16aa0bbe4d6f15473db8))
+* change blue and pink for quaternary and tertiary color in ToastCard ([2f3ebc7](https://github.com/idbi/components/commit/2f3ebc7de9c096dc7d0830b90104e0384f626c2f))
+* general adjustments ([b8b5b27](https://github.com/idbi/components/commit/b8b5b2768fea97a790a5c8d034be8f8e3f834a93))
+
+
+### Features
+
+* add finished status color in OrderStatusBadge ([e99124a](https://github.com/idbi/components/commit/e99124aadcc3626bf9ba9ac9392f084b9ed567f9))
+* add finished status color in theme ([ecd7716](https://github.com/idbi/components/commit/ecd771634e91e85c42cdfb10b95e554748d6da9f))
+* add new properties in Badge ([06bce42](https://github.com/idbi/components/commit/06bce42db422d8b8180ba39925381d45f414d677))
+* add show property in CarModal ([7237779](https://github.com/idbi/components/commit/72377799c39359a2df90ff2ffff46071857917ba))
+* update build ([496c4f5](https://github.com/idbi/components/commit/496c4f545efdaeb629eb9c5fceeea72cd1b57c20))
+* update build ([1650504](https://github.com/idbi/components/commit/165050442c956670f67199b92dbc0f8bcd45c776))
+
+
+
 ## [0.24.2](https://github.com/idbi/components/compare/v0.24.1...v0.24.2) (2022-12-15)
 
 
@@ -47,10 +70,6 @@
 ### Bug Fixes
 
 * add props to MultipleOptionsModal ([3cc873e](https://github.com/idbi/components/commit/3cc873eb0645d85d3aa5923249c7ae6e6a455d5b))
-
-
-
-## [0.23.1](https://github.com/idbi/components/compare/v0.23.0...v0.23.1) (2022-11-24)
 
 
 
