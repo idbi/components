@@ -3,10 +3,12 @@ export interface IConfirmationCardV2 {
   btnLeft?: {
     onClick: () => void;
     text: string;
+    disabled?: boolean;
   };
   btnRight?: {
     onClick: () => void;
     text: string;
+    disabled?: boolean;
   };
   children: React.ReactNode;
 }

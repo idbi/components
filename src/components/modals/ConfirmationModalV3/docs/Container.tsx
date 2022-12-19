@@ -8,7 +8,10 @@ export const Container = (props: IConfirmationModalV3) => {
   return (
     <>
       <button onClick={() => setShow(true)}>show modal</button>
-      {show && <ConfirmationModalV3 {...props} cardProps={{ onClose: () => setShow(false) }} />}
+      <ConfirmationModalV3
+        {...props}
+        cardProps={{ onClose: () => setShow(false), show }}
+      />
     </>
   );
 };
