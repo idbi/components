@@ -1,6 +1,6 @@
 {
   "name": "@idbi/components",
-  "version": "0.23.3",
+  "version": "0.24.2",
   "main": "dist/id-components.mjs",
   "files": [
     "dist/",
