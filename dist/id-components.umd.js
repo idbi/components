@@ -1988,6 +1988,7 @@ ${({withBorder:e,color:t})=>e&&s.css`
   ${({readingMode:e})=>e&&s.css`
     border: none;
     padding: 0;
+    background: transparent;
     input {
       padding: 0;
     }
