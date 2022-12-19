@@ -1,4 +1,4 @@
-import { IconClock } from "@/icons/IconClock";
+/* eslint-disable no-alert */
 import { IconRightArrow } from "@/icons/IconRightArrow";
 import { IToastCard } from "../types";
 
@@ -26,16 +26,16 @@ const error: IToastCard = {
   type: "error",
 };
 
-const pink: IToastCard = {
+const tertiary: IToastCard = {
   title: "Título principal de la notificación",
   description: "Lorem ipsum dolor sit amet.",
-  type: "pink",
+  type: "tertiary",
 };
 
-const blue: IToastCard = {
+const quaternary: IToastCard = {
   title: "Título principal de la notificación",
   description: "Lorem ipsum dolor sit amet.",
-  type: "blue",
+  type: "quaternary",
 };
 
 const withLink: IToastCard = {
@@ -74,8 +74,8 @@ export const mockToastCardProps = {
   success,
   warning,
   error,
-  pink,
-  blue,
+  tertiary,
+  quaternary,
   withLink,
   customDescription,
   onlyTitle,

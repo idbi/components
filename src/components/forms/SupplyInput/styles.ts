@@ -13,12 +13,13 @@ interface IContainer extends IReadingMode{
 }
 
 export const Container = styled.div<IContainer>`
-  padding: ${({ withDescription }) => (withDescription ? "5px 14px" : "0 14px")};
+  padding: ${({ withDescription }) => (withDescription ? "3px 14px 5px" : "0 14px")};
   display: ${({ withDescription }) => (withDescription ? "block" : "flex")};
   align-items: center;
   gap: 8px;
   border-radius: 8px;
   border: 1px solid ${theme.color.NEUTRAL[300]};
+  background: #fff;
   input {
     width: 100%;
     border: none;

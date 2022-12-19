@@ -61,5 +61,10 @@ export const Container = styled.span<IContainer>`
         background: ${removeBackground ? "transparent" : theme.color.STATUS.DELIVERED[0]};
         color: ${theme.color.STATUS.DELIVERED[1]};
       `;
+    if (statusName === "finished")
+      return css`
+        background: ${removeBackground ? "transparent" : theme.color.STATUS.FINISHED[0]};
+        color: ${theme.color.STATUS.FINISHED[1]};
+      `;
   }};
 `;

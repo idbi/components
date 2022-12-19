@@ -17,10 +17,12 @@ export const ConfirmationCardV2: React.FC<IConfirmationCardV2> = ({
   btnLeft = {
     onClick: () => {},
     text: "Cancelar",
+    disabled: false,
   },
   btnRight = {
     onClick: () => {},
     text: "Eliminar",
+    disabled: false,
   },
 }) => {
   const { status: minScreen1023 } = useMediaQueryScreen("(min-width: 1023px)");
@@ -40,6 +42,7 @@ export const ConfirmationCardV2: React.FC<IConfirmationCardV2> = ({
               onClick={() => btnLeft.onClick()}
               color="PRIMARY/900"
               style={{ borderRadius: "32px", padding: "20px 0" }}
+              disabled={btnLeft.disabled}
             >
               {btnLeft.text}
             </Button>
@@ -49,6 +52,7 @@ export const ConfirmationCardV2: React.FC<IConfirmationCardV2> = ({
             fullWidth
             onClick={() => btnRight.onClick()}
             style={{ borderRadius: "32px", padding: "20px 60px" }}
+            disabled={btnRight.disabled}
           >
             {btnRight.text}
           </Button>

@@ -18,8 +18,8 @@ export const ToastCard: React.FC<IToastCard> = ({
     if (type === "success") return <SuccessIcon />;
     if (type === "warning") return <Warningv2Icon />;
     if (type === "error") return <ErrorIcon />;
-    if (type === "blue") return <WarningIcon />;
-    if (type === "pink") return <Warningv2Icon color="#FF82AF" />;
+    if (type === "quaternary") return <WarningIcon />;
+    if (type === "tertiary") return <Warningv2Icon color="#FF82AF" />;
   };
 
   return (

@@ -2,6 +2,7 @@
 import { ICardModal } from "../types";
 
 const base: ICardModal = {
+  show: false,
   contentLocation: "bottom",
   contentLocationInDesktop: "right",
   borderRadiusInDesktop: "0",
@@ -24,6 +25,7 @@ const base: ICardModal = {
 };
 
 const fullPageInMobile: ICardModal = {
+  show: false,
   backdropOpacity: 0.3,
   overflow: "auto",
   padding: "20px",

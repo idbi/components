@@ -6,10 +6,12 @@ const base: IConfirmationCardV2 = {
   btnLeft: {
     onClick: () => alert("Cancelar"),
     text: "Cancelar",
+    disabled: false,
   },
   btnRight: {
     onClick: () => alert("Eliminar tarjeta"),
     text: "Eliminar tarjeta",
+    disabled: false,
   },
 };
 

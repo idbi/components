@@ -1,6 +1,6 @@
 import React from "react";
 
-export type IToastCardType = "success" | "warning" | "error" | "blue" | "pink" | "primary"
+export type IToastCardType = "success" | "warning" | "error" | "quaternary" | "tertiary" | "primary"
 
 export interface IToastCard {
   title?: string

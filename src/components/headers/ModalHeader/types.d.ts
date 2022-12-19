@@ -12,6 +12,7 @@ export interface IOption {
 export interface IModalHeader {
   container: {
     marginBottom?: string;
+    padding?: string;
     isSticky?: boolean;
     zIndex?: number;
   }

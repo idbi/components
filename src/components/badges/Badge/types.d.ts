@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 
 export interface IBadge {
   text?: string | React.ReactNode;
@@ -7,6 +7,9 @@ export interface IBadge {
   background?: string;
   applyFlex?: boolean;
   maxWidth?: string;
+  weight?: string;
+  borderRadius?: string;
+  withBorder?: boolean;
 }
 
 export declare const Badge: (props: IBadge) => JSX.Element;

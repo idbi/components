@@ -9,6 +9,9 @@ export const Badge: React.FC<IBadge> = ({
   background,
   applyFlex,
   maxWidth,
+  weight,
+  borderRadius,
+  withBorder,
 }) => {
   return (
     <Container
@@ -17,6 +20,9 @@ export const Badge: React.FC<IBadge> = ({
       background={background}
       applyFlex={applyFlex}
       maxWidth={maxWidth}
+      weigth={weight}
+      borderRadius={borderRadius}
+      withBorder={withBorder}
     >
       {text}
     </Container>

@@ -5,6 +5,7 @@ import { CloseIcon, StyledCardModal } from "./styles";
 import { ICardModal } from "./types";
 
 export const CardModal: React.FC<ICardModal> = ({
+  show = true,
   children,
   onClose,
   backdropOpacity,
@@ -25,6 +26,8 @@ export const CardModal: React.FC<ICardModal> = ({
   boxShadow,
   boxShadowInDesktop,
 }) => {
+  if (!show) return null;
+
   return (
     <ModalContainer
       onClose={onClose}

@@ -3,6 +3,7 @@ import { IModalContainer } from "../ModalContainer/types";
 import type { Spacing, TColor, TSizes } from "../Typography/TextBuilder/types";
 
 export interface ICardModal extends IModalContainer {
+  show?: boolean;
   padding?: string;
   borderRadius?: string;
   borderRadiusInDesktop?: string;

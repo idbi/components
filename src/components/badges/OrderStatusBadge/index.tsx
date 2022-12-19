@@ -12,6 +12,7 @@ const StatusDiccionary = {
   preparing: "Preparando",
   readyforpickup: "Listo para recojo",
   delivered: "Entregado",
+  finished: "Finalizado",
 };
 
 export const OrderStatusBadge: React.FC<IOrderStatusBadge> = ({

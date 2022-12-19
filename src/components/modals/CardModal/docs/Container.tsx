@@ -4,12 +4,17 @@ import { ICardModal } from "../types";
 
 export const CardModal: React.FC<ICardModal> = (props) => {
   const [show, setShow] = useState(false);
+
   return (
     <>
       <button onClick={() => setShow(true)} type="button">
         Mostrar modal
       </button>
-      {show && <CardModalComponent {...props} onClose={() => setShow(false)} />}
+      <CardModalComponent
+        {...props}
+        show={show}
+        onClose={() => setShow(false)}
+      />
     </>
   );
 };
