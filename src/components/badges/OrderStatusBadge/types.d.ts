@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type StatusType = "default" | "draft" | "pending" | "rejected" | "accepted" | "canceled" | "preparing" | "readyforpickup" | "delivered";
+export type StatusType = "default" | "draft" | "pending" | "rejected" | "accepted" | "canceled" | "preparing" | "readyforpickup" | "delivered" | "finished";
 
 export interface IOrderStatusBadge {
   statusName: StatusType;

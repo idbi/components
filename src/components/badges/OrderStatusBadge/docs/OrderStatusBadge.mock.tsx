@@ -13,6 +13,7 @@ const readyforpickupStatus: IOrderStatusBadge = {
   statusName: "readyforpickup",
 };
 const deliveredStatus: IOrderStatusBadge = { statusName: "delivered" };
+const finishedStatus: IOrderStatusBadge = { statusName: "finished" };
 
 export const mockOrderStatusBadgeProps = {
   defaultStatus,
@@ -24,4 +25,5 @@ export const mockOrderStatusBadgeProps = {
   preparingStatus,
   readyforpickupStatus,
   deliveredStatus,
+  finishedStatus
 };

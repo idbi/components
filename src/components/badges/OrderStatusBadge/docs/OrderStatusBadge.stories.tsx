@@ -61,3 +61,9 @@ export const Delivered = Template.bind({});
 Delivered.args = {
   ...mockOrderStatusBadgeProps.deliveredStatus,
 } as IOrderStatusBadge;
+
+export const Finished = Template.bind({});
+Finished.args = {
+  ...mockOrderStatusBadgeProps.finishedStatus,
+} as IOrderStatusBadge;
+
