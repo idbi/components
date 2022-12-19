@@ -33,14 +33,14 @@ Error.args = {
   ...mockToastCardProps.error,
 } as IToastCard;
 
-export const Pink = Template.bind({});
-Pink.args = {
-  ...mockToastCardProps.pink,
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  ...mockToastCardProps.tertiary,
 } as IToastCard;
 
-export const Blue = Template.bind({});
-Blue.args = {
-  ...mockToastCardProps.blue,
+export const Quaternary = Template.bind({});
+Quaternary.args = {
+  ...mockToastCardProps.quaternary,
 } as IToastCard;
 
 export const WithLink = Template.bind({});

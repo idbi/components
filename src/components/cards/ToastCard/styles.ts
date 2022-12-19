@@ -18,12 +18,12 @@ const getColor = (type: IToastCardType) => {
       color: ${theme.color.ALERT[700]};
       background: ${theme.color.ALERT[100]};
     `;
-  if (type === "blue")
+  if (type === "quaternary")
     return css`
       color: ${theme.color.QUATERNARY[900]};
       background: ${theme.color.QUATERNARY[100]};
     `;
-  if (type === "pink")
+  if (type === "tertiary")
     return css`
       color: ${theme.color.TERTIARY[900]};
       background: ${theme.color.TERTIARY[100]};
