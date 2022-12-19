@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 interface IContainer {
   marginBottom?: string;
+  padding?: string;
   isSticky?: boolean;
   zIndex?: number;
 }
@@ -14,7 +15,7 @@ export const Container = styled.div<IContainer>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3px 0;
+  padding: ${({padding}) => padding || "3px 0 "};;
   box-shadow: ${theme.effect.lightShadow[16]};
   color: ${theme.color.PRIMARY[900]};
   background: ${theme.color.PRIMARY[0]};

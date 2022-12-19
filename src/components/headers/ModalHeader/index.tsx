@@ -12,11 +12,15 @@ export const ModalHeader: React.FC<IModalHeader> = ({
   return (
     <s.Container
       marginBottom={container?.marginBottom}
+      padding={container?.padding}
       isSticky={container?.isSticky}
       zIndex={container?.zIndex}
     >
       {!closeIcon?.hide ? (
-        <IconButton style={{ marginLeft: closeIcon?.marginLeft || "20px" }}>
+        <IconButton
+          onClick={closeIcon.onClick}
+          style={{ marginLeft: closeIcon?.marginLeft || "20px" }}
+        >
           <IconClose />
         </IconButton>
       ) : (

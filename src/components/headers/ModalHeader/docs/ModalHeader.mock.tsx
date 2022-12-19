@@ -70,8 +70,28 @@ const variant2: IModalHeader = {
   },
 };
 
+const variant3: IModalHeader = {
+  options: {
+    options: [],
+    minWidth: "100px",
+    padding: "15px",
+  },
+  closeIcon: {
+    marginLeft: "15px",
+    hide: false,
+    onClick: () => {},
+  },
+  container: {
+    marginBottom: "0px",
+    padding: "5px 0",
+    zIndex: 5,
+    isSticky: false,
+  },
+};
+
 export const mockModalHeaderProps = {
   base,
   variant,
   variant2,
+  variant3,
 };

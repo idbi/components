@@ -28,3 +28,8 @@ export const Variant2 = Template.bind({});
 Variant2.args = {
   ...mockModalHeaderProps.variant2,
 } as IModalHeader;
+
+export const Variant3 = Template.bind({});
+Variant3.args = {
+  ...mockModalHeaderProps.variant3,
+} as IModalHeader;
