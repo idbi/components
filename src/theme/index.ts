@@ -154,6 +154,10 @@ export const theme = {
         0: "#E4F9ED",
         1: "#2DC96F",
       },
+      FINISHED: {
+        0: "#DDDFF0",
+        1: "#414A98 ",
+      },
     },
   },
   effect: {
