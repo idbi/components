@@ -8,14 +8,17 @@ interface IContainer {
   background?: string;
   applyFlex?: boolean;
   maxWidth?: string;
+  weigth?: string;
+  borderRadius?: string;
+  withBorder?: boolean;
 }
 
 export const Container = styled.span<IContainer>`
   padding: ${({ padding }) => padding || "4px 10px "};
-  border-radius: 8px;
+  border-radius: ${({ borderRadius }) => borderRadius || "8px"};
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
+  font-weight: ${({ weigth }) => weigth || "600"};
   font-size: 0.75rem;
   line-height: 1.125rem;
   letter-spacing: -0.04em;
@@ -29,6 +32,12 @@ export const Container = styled.span<IContainer>`
       justify-content: center;
       flex-wrap: wrap;
       gap: 5px;
+    `
+  )}
+
+${({ withBorder, color }) => withBorder && (
+    css`
+      border: 1px solid ${color || theme.color.STATUS.DEFAULT[1]};
     `
   )}
 `;

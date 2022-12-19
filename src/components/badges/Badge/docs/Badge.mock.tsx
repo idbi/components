@@ -7,6 +7,7 @@ const base: IBadge = {
   color: "",
   background: "",
   maxWidth: "",
+  withBorder: true,
 };
 const withIcons: IBadge = {
   text: (
@@ -18,7 +19,10 @@ const withIcons: IBadge = {
   color: "",
   background: "",
   applyFlex: true,
-  maxWidth: "80px",
+  maxWidth: "83px",
+  weight: "500",
+  withBorder: false,
+  borderRadius: "10px",
 };
 
 export const mockBadgeProps = {
