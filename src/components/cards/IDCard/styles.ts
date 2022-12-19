@@ -35,12 +35,13 @@ export const Name = styled.p`
 
 export const ItemPhoto = styled.img`
   border: 1px solid #bfbfbf;
-  margin: 8px 10px 0;
+  margin: 8px 10px 0 0;
   border-radius: 8px;
   width: 30px;
   height: 30px;
+  overflow: hidden;
   @media screen and ${MQ.md} {
-    margin: 4px 10px 0;
+    margin: 4px 10px 0 0;
     width: 34px;
     height: 34px;
   }
