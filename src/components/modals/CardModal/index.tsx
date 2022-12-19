@@ -5,7 +5,7 @@ import { CloseIcon, StyledCardModal } from "./styles";
 import { ICardModal } from "./types";
 
 export const CardModal: React.FC<ICardModal> = ({
-  show,
+  show = true,
   children,
   onClose,
   backdropOpacity,

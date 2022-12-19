@@ -8,7 +8,7 @@ export interface IBadge {
   applyFlex?: boolean;
   maxWidth?: string;
   weight?: string;
-  borderRadius: string;
+  borderRadius?: string;
   withBorder?: boolean;
 }
 
