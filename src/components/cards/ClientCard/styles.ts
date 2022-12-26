@@ -40,3 +40,20 @@ export const Name = styled.span`
   font-weight: 500;
   line-height: 1em;
 `;
+
+export const CloseIconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 0 3px;
+
+  svg {
+    font-size: 14px;
+    color: ${({ theme }) => theme.color.SECONDARY[900]};
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+`;
