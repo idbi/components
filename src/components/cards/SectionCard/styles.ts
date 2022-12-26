@@ -9,6 +9,22 @@ export const Card = styled.div`
   font-size: 14px;
 `;
 
+export const Section = styled.div`
+  padding: 20px 0 0;
+  margin-top: 20px;
+  position: relative;
+
+  ::before {
+    content: "";
+    border-top: 1px solid ${({ theme }) => theme.color.NEUTRAL[100]};
+    width: calc(100% + 20px);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+`;
+
 export const Header = styled.div<{ hasContent?: boolean }>`
   display: flex;
   justify-content: space-between;

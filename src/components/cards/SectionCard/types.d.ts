@@ -6,6 +6,7 @@ export interface ISectionCard {
   icon?: ReactNode;
   headerAside?: ReactNode;
   children?: ReactNode;
+  sections?: ReactNode[];
 }
 
 export declare const SectionCard: (props: ISectionCard) => JSX.Element;
