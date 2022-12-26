@@ -5,9 +5,11 @@ export const Footer = styled.div<{ disabled?: boolean; bottom?: boolean }>`
   margin: ${({ bottom }) => (bottom ? "0 10px 8px" : 0)};
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-weight: 500;
 
   & > span {
+    flex-shrink: 0;
     > span {
       font-weight: 700;
     }
@@ -16,8 +18,10 @@ export const Footer = styled.div<{ disabled?: boolean; bottom?: boolean }>`
 
 export const TotalPrices = styled.div<{ disabled?: boolean }>`
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  gap: 5px;
+  flex-wrap: wrap;
+  gap: 2px 5px;
 
   & > span {
     :first-child {
