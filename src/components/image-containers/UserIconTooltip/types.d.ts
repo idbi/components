@@ -6,5 +6,5 @@ export interface IUserIconTooltip {
   lastname?: string;
   img?: IImgData;
   size?: number;
-  tooltipProps?: Pick<ITextTooltipContainer, "offset" | "middlewares" | "placement" | "tooltipStyles">;
+  tooltipProps?: Pick<ITextTooltipContainer, "offset" | "middlewares" | "placement" | "tooltipStyles" | "strategy">;
 }

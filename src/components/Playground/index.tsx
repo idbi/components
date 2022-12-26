@@ -33,7 +33,7 @@ const Wrapper = styled.div`
     grid-gap: 20px;
     height: 86vh;
     align-items: center;
-    /* place-items: center; */
+    place-items: center;
   }
 `;
 const PlayGround: React.FC<{ children: React.ReactNode }> = ({ children }) => {

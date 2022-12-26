@@ -10,12 +10,14 @@ export const TextTooltipContainer = ({
   tooltipStyles = {},
   placement: propPlacement,
   offset: propOffset,
+  strategy: propStrategy,
   middlewares = [],
 }: ITextTooltipContainer) => {
   const [showTooltip, setShowTooltip] = useState(false);
   const arrowRef = useRef<null | HTMLDivElement>(null);
   const { x, y, reference, floating, strategy, update, refs, middlewareData, placement } = useFloating({
     placement: propPlacement || "top",
+    strategy: propStrategy,
     middleware: [offset(propOffset ?? 10), ...middlewares, arrow({ element: arrowRef })],
   });
   const { x: arrowX, y: arrowY } = middlewareData.arrow || {};
