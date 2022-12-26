@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 export interface ICartProduct {
   img?: {
-    src?: string;
+    src: string;
     srcSet?: string;
     alt?: string;
   };
