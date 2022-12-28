@@ -9,7 +9,7 @@ export const OptionsModal = ({
   selected,
   onSelect,
   onClose,
-  modalProps,
+  modalProps = {},
   optionMinHeight = 50,
 }: IOptionsModal) => {
   return (
