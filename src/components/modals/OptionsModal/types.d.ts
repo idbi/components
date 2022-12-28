@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { ICardModal } from "../CardModal/types";
 
-interface IOption {
+export interface IModalOption {
   value: string;
   content: ReactNode;
   icon?: JSX.Element;
@@ -10,9 +10,9 @@ interface IOption {
 
 export interface IOptionsModal {
   title: ReactNode;
-  options: IOption[];
+  options: IModalOption[];
   selected: string;
-  onSelect: (value: string, selected?: IOption) => void;
+  onSelect: (value: string, selected?: IModalOption) => void;
   onClose: () => void;
   modalProps?: Omit<ICardModal, "children">;
   optionMinHeight?: number;

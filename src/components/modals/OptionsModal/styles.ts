@@ -20,8 +20,8 @@ export const Option = styled.li<{ selected?: boolean; disabled?: boolean; minHei
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 4px;
   font-size: 14px;
-  font-weight: 500;
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 
   ${({ selected, theme }) =>
