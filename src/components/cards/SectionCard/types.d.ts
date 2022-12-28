@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { OrderStatusType } from "../../../types/OrderStatusType";
 
 export interface ISectionCard {
-  title: string;
+  title: string | JSX.Element;
   icon?: ReactNode;
   headerAside?: ReactNode;
   children?: ReactNode;
