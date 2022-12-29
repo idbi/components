@@ -7,3 +7,5 @@ export interface IBulletPoint {
   bulletSize?: number;
   spacing?: number;
 }
+
+export declare const BulletPoint: (props: IBulletPoint) => JSX.Element;

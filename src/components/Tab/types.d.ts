@@ -7,3 +7,5 @@ export type ITab = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   rounded?: boolean;
   activeColor?: string;
 };
+
+export declare const Tab: (props: ITab) => JSX.Element;

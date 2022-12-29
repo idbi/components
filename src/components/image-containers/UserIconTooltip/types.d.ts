@@ -8,3 +8,5 @@ export interface IUserIconTooltip {
   size?: number;
   tooltipProps?: Pick<ITextTooltipContainer, "offset" | "middlewares" | "placement" | "tooltipStyles" | "strategy">;
 }
+
+export declare const UserIconTooltip: (props: IUserIconTooltip) => JSX.Element;

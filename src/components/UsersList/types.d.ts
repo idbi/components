@@ -11,3 +11,5 @@ export interface IUsersList {
   iconSize?: number;
   onAdd?: null | (() => void);
 }
+
+export declare const UsersList: (props: IUsersList) => JSX.Element;

@@ -16,3 +16,5 @@ export type IActionOptionsModal = {
   onClose: () => void;
   modalProps?: Omit<ICardModal, "children">;
 };
+
+export declare const ActionOptionsModal: (props: IActionOptionsModal) => JSX.Element;

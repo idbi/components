@@ -1,9 +1,9 @@
 import React from "react";
-import { IISectionHeader } from "./types";
+import { ISectionHeader } from "./types";
 import { ArrowIcon } from "@/icons-v2/ArrowIcon";
 import * as s from "./styles";
 
-export const SectionHeader = ({ title, subtitle, children }: IISectionHeader) => {
+export const SectionHeader = ({ title, subtitle, children }: ISectionHeader) => {
   return (
     <s.Container>
       <s.TitleWrapper>

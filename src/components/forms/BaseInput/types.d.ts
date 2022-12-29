@@ -6,3 +6,5 @@ export type IBaseInput = React.InputHTMLAttributes<HTMLInputElement> & {
   endEl?: JSX.Element | null;
   inputRef?: React.MutableRefObject<HTMLInputElement | null> | ((node: HTMLInputElement | null) => void);
 };
+
+export declare const BaseInput: (props: IBaseInput) => JSX.Element;

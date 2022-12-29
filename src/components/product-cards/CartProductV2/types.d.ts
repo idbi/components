@@ -22,3 +22,5 @@ export interface ICartProductV2 {
   renderModal?: (modal: JSX.Element) => JSX.Element;
   measureUnit?: string;
 }
+
+export declare const CartProductV2: (props: ICartProductV2) => JSX.Element;

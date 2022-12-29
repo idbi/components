@@ -5,3 +5,5 @@ export interface IHorizontalDivision {
   thickness?: number;
   hrMinWidth?: number;
 }
+
+export declare const HorizontalDivision: (props: IHorizontalDivision) => JSX.Element;

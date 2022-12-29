@@ -17,3 +17,5 @@ export interface IOptionsModal {
   modalProps?: Omit<ICardModal, "children">;
   optionMinHeight?: number;
 }
+
+export declare const OptionsModal: (props: IOptionsModal) => JSX.Element;
