@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const Card = styled.div`
+  box-shadow: 0px 1px 10px rgba(98, 98, 98, 0.2);
   display: inline-block;
   background-color: white;
   border-radius: 8px;
