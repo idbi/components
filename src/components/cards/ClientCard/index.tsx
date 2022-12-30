@@ -5,7 +5,7 @@ import { IClientCard } from "./types";
 import { CloseIcon } from "@/icons-v2/CloseIcon";
 import * as s from "./styles";
 
-export const ClientCard = ({ name, lastName, idNumber, img, otherSections = [], onRemove }: IClientCard) => {
+export const ClientCard = ({ name, lastName, idNumber, img, otherSections = [], onDelete }: IClientCard) => {
   return (
     <s.Card>
       <s.ImgWrapper>
@@ -29,9 +29,9 @@ export const ClientCard = ({ name, lastName, idNumber, img, otherSections = [], 
         </s.Name>
       </div>
 
-      {onRemove && (
+      {!!onDelete && (
         <s.CloseIconWrapper>
-          <CloseIcon onClick={onRemove} />
+          <CloseIcon onClick={onDelete} />
         </s.CloseIconWrapper>
       )}
     </s.Card>

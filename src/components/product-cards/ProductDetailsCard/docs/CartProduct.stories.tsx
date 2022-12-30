@@ -26,6 +26,11 @@ WithDiscount.args = {
   ...mockConfirmationCardV2Props.withDiscount,
 } as IProductDetailsCard;
 
+export const withImageStatusLabel = Template.bind({});
+withImageStatusLabel.args = {
+  ...mockConfirmationCardV2Props.withImageStatusLabel,
+} as IProductDetailsCard;
+
 export const Disabled = Template.bind({});
 Disabled.args = {
   ...mockConfirmationCardV2Props.disabled,

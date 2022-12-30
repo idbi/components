@@ -21,8 +21,9 @@ export const ActionOptionsModal = ({
     >
       <s.Header>{title}</s.Header>
       <s.OptionsContainer>
-        {options.map((option) => (
+        {options.map((option, i) => (
           <s.Option
+            key={`modal-option-${i}`}
             disabled={option.disabled}
             onClick={() => {
               if (option.disabled) return;

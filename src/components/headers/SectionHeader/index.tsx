@@ -3,7 +3,7 @@ import { ISectionHeader } from "./types";
 import { ArrowIcon } from "@/icons-v2/ArrowIcon";
 import * as s from "./styles";
 
-export const SectionHeader = ({ title, subtitle, children }: ISectionHeader) => {
+export const SectionHeader = ({ title, subtitle, aside }: ISectionHeader) => {
   return (
     <s.Container>
       <s.TitleWrapper>
@@ -14,7 +14,7 @@ export const SectionHeader = ({ title, subtitle, children }: ISectionHeader) => 
           </span>
         )}
       </s.TitleWrapper>
-      {children}
+      {aside}
     </s.Container>
   );
 };

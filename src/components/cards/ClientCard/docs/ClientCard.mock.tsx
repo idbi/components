@@ -39,9 +39,17 @@ const noIdentification: IClientCard = {
   otherSections: ["Test: asd", "Other: aaa"],
 };
 
+const withDeleteAction: IClientCard = {
+  name: "Andrea",
+  lastName: "Perez Vasquez",
+  otherSections: ["Test: asd", "Other: aaa"],
+  onDelete: () => alert("remove client"),
+};
+
 export const mockConfirmationCardV2Props = {
   base,
   withOtherSections,
   noProfileImg,
   noIdentification,
+  withDeleteAction,
 };

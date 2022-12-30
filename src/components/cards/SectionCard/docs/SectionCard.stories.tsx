@@ -30,3 +30,13 @@ export const NoIcon = Template.bind({});
 NoIcon.args = {
   ...mockConfirmationCardV2Props.noIcon,
 } as ISectionCard;
+
+export const withInnerSections = Template.bind({});
+withInnerSections.args = {
+  ...mockConfirmationCardV2Props.withInnerSections,
+} as ISectionCard;
+
+export const innerSectionsNoChildren = Template.bind({});
+innerSectionsNoChildren.args = {
+  ...mockConfirmationCardV2Props.innerSectionsNoChildren,
+} as ISectionCard;
