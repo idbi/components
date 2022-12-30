@@ -3111,7 +3111,7 @@ ${({ withBorder: e, color: o }) => e && A`
   idNumber: r,
   img: i,
   otherSections: n = [],
-  onRemove: a
+  onDelete: a
 }) => /* @__PURE__ */ d(Vo, {
   children: [/* @__PURE__ */ t(Jo, {
     children: /* @__PURE__ */ t(Se, {
@@ -3128,7 +3128,7 @@ ${({ withBorder: e, color: o }) => e && A`
     }), /* @__PURE__ */ d(Ko, {
       children: [e, " ", o]
     })]
-  }), a && /* @__PURE__ */ t(qo, {
+  }), !!a && /* @__PURE__ */ t(qo, {
     children: /* @__PURE__ */ t(Fe, {
       onClick: a
     })
@@ -4240,12 +4240,13 @@ const ur = l.div`
 `, Jr = l.span`
   background-color: ${({ theme: e }) => e.color.SECONDARY[900]};
   color: white;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  padding: 3px 5px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 3px 4px;
   position: absolute;
   top: 3px;
   left: 0;
+  white-space: nowrap;
   font-size: 10px;
   font-weight: 700;
 `, Xr = l.div`
@@ -6020,7 +6021,7 @@ const n0 = ({
 `, g0 = ({
   title: e,
   subtitle: o,
-  children: r
+  aside: r
 }) => /* @__PURE__ */ d(bi, {
   children: [/* @__PURE__ */ d(wi, {
     children: [e, o && /* @__PURE__ */ d("span", {
