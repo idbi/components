@@ -11,10 +11,17 @@ export { Collapsible } from "./components/Collapsible/types";
 export { StickyHeader } from "./components/StickyHeader/types";
 export { DropdownMenu } from "./components/dropdowns/DropdownMenu/types";
 export { NoData } from "@/components/NoData/types";
+
+// UI
+export { BulletPoint } from "@/components/BulletPoint/types";
+export { HorizontalDivision } from "@/components/divisons/HorizontalDivision/types";
+export { Tab } from "@/components/Tab/types";
 // ICON WRAPPER
 export { IconV2 } from "./icons-v2/IconV2/types";
 // IMAGES CONTAINERS
 export { UserProfileIcon } from "./components/image-containers/UserProfileIcon/types";
+export { UserIconTooltip } from "@/components/image-containers/UserIconTooltip/types";
+export { UsersList } from "@/components/UsersList/types";
 // BADGES
 export { OrderStatusBadge } from "./components/badges/OrderStatusBadge/types";
 export { TransparentBadge } from "./components/badges/TransparentBadge/types";
@@ -32,6 +39,7 @@ export { ToastCard } from "@/components/cards/ToastCard/types";
 export { IDCard } from "@/components/cards/IDCard/types";
 // PRODUCT CARDS
 export { CartProduct } from "./components/product-cards/CartProduct/types";
+export { CartProductV2 } from "@/components/product-cards/CartProductV2/types";
 export { ProductDetailsCard } from "./components/product-cards/ProductDetailsCard/types";
 // CONFIRMATIONS
 export { ConfirmationCard } from "./components/confirmations/ConfirmationCard/types";
@@ -43,12 +51,16 @@ export { Radio } from "./components/forms/Radio/types";
 export { EditQuantityInput } from "./components/forms/EditQuantityInput/types";
 export { ButtonsSwitch } from "./components/buttons/ButtonsSwitch/types";
 export { SupplyInput } from "./components/forms/SupplyInput/types";
+export { BaseInput } from "./components/forms/BaseInput/types";
 // MODALS
 export { Backdrop } from "./components/modals/ModalContainer/Backdrop/types";
 export { ModalContainer } from "./components/modals/ModalContainer/types";
 export { CardModal } from "./components/modals/CardModal/types";
 export { MultipleOptionsModal } from "./components/modals/MultipleOptionsModal/types";
 export { ConfirmationModalV3 } from "./components/modals/ConfirmationModalV3/types";
+export { OptionsModal } from "./components/modals/OptionsModal/types";
+export { BulletOptionsModal } from "./components/modals/BulletOptionsModal/types";
+export { ActionOptionsModal } from "./components/modals/ActionOptionsModal/types";
 // UPLOAD
 export { UploadFileContainer } from "./components/files-upload/UploadFileContainer/types";
 export { UploadImage } from "./components/files-upload/UploadImage/types";
@@ -57,5 +69,8 @@ export { UploadMultipleImages } from "./components/files-upload/UploadMultipleIm
 export { GridTable } from "@/components/tables/GridTable/types";
 // HEADERS
 export { ModalHeader } from "@/components/headers/ModalHeader/types";
+export { SectionHeader } from "@/components/headers/SectionHeader/types";
 // FOOTERS
 export { SimpleFooter } from "@/components/footers/SimpleFooter/types";
+// SELECTS
+export { ButtonsSelect } from "@/components/ButtonsSelect/types";

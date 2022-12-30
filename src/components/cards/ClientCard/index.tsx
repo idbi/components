@@ -2,9 +2,10 @@ import React from "react";
 import { UserProfileIcon } from "@/components/image-containers/UserProfileIcon";
 import { IdentificationIcon } from "@/icons-v2/IdentificationIcon";
 import { IClientCard } from "./types";
+import { CloseIcon } from "@/icons-v2/CloseIcon";
 import * as s from "./styles";
 
-export const ClientCard = ({ name, lastName, idNumber, img, otherSections = [] }: IClientCard) => {
+export const ClientCard = ({ name, lastName, idNumber, img, otherSections = [], onRemove }: IClientCard) => {
   return (
     <s.Card>
       <s.ImgWrapper>
@@ -27,6 +28,12 @@ export const ClientCard = ({ name, lastName, idNumber, img, otherSections = [] }
           {name} {lastName}
         </s.Name>
       </div>
+
+      {onRemove && (
+        <s.CloseIconWrapper>
+          <CloseIcon onClick={onRemove} />
+        </s.CloseIconWrapper>
+      )}
     </s.Card>
   );
 };

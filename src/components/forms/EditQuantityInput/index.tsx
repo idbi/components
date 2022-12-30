@@ -55,7 +55,8 @@ export const EditQuantityInput = ({
       <s.Container>
         <s.InputContainer
           isDisabled={disabled}
-          onClick={() => {
+          onClick={(e) => {
+            e.stopPropagation();
             if (blockInputModal || disabled) return;
             setShowModal(true);
           }}

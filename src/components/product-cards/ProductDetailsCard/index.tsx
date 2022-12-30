@@ -2,6 +2,7 @@ import React from "react";
 import { ProductCardFooter } from "./ProductCardFooter";
 import { TransparentBadge } from "@/components/badges/TransparentBadge";
 import { IProductDetailsCard } from "./types";
+import { getStatusText } from "./utils";
 import * as s from "./styles";
 
 export const ProductDetailsCard = ({
@@ -15,21 +16,33 @@ export const ProductDetailsCard = ({
   discount,
   measureUnit,
   disabled,
+  status,
+  imgLabel,
+  discountBottom = true,
 }: IProductDetailsCard) => {
   const unit = measureUnit || "u.";
+  const hasDetails = discountBottom ? !!(productDetails || discount) : !!productDetails;
 
   return (
     <s.Card disabled={disabled} hasDetails={!!productDetails}>
       <s.MainContainer>
-        {img?.src && <img {...img} />}
-        <s.ProductData hasDetails={!!productDetails}>
+        {img?.src && (
+          <s.ImgContainer>
+            <div>
+              <img {...img} />
+            </div>
+            {imgLabel}
+            {status && !imgLabel && <s.ImgLabel status={status}>{getStatusText(status)}</s.ImgLabel>}
+          </s.ImgContainer>
+        )}
+        <s.ProductData hasDetails={!!hasDetails}>
           <s.Main disabled={disabled}>
             <TransparentBadge opacity={0.4}>{quantity}</TransparentBadge>
             {name}
           </s.Main>
 
           {productDetails && <s.DetailsWrapper>{productDetails}</s.DetailsWrapper>}
-          {!productDetails && (
+          {!hasDetails && (
             <ProductCardFooter
               currencySymbol={currencySymbol}
               unitPrice={unitPrice}
@@ -41,7 +54,7 @@ export const ProductDetailsCard = ({
         </s.ProductData>
       </s.MainContainer>
 
-      {productDetails && (
+      {hasDetails && (
         <ProductCardFooter
           currencySymbol={currencySymbol}
           unitPrice={unitPrice}

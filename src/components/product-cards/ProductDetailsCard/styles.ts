@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { ProductStatus } from "./types";
 
 export const Card = styled.div<{ disabled?: boolean; hasDetails?: boolean }>`
   background-color: ${({ disabled, theme }) => (disabled ? theme.color.NEUTRAL[50] : "white")};
@@ -17,12 +18,57 @@ export const Card = styled.div<{ disabled?: boolean; hasDetails?: boolean }>`
 export const MainContainer = styled.div`
   display: flex;
   align-items: stretch;
+`;
 
-  & > img {
-    width: 75px;
-    height: 88px;
-    object-fit: cover;
+export const ImgContainer = styled.div`
+  width: 75px;
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  & > div:first-child {
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+    position: relative;
+    display: flex;
+    & > img {
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
+`;
+
+export const ImgLabel = styled.div<{ status?: ProductStatus }>`
+  min-height: 24px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.color.QUATERNARY[100]};
+  color: ${({ theme }) => theme.color.QUATERNARY[900]};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  flex-shrink: 0;
+
+  ${({ status }) => {
+    switch (status) {
+      case "prepared":
+        return css`
+          background-color: ${({ theme }) => theme.color.SUCCESS[100]};
+          color: ${({ theme }) => theme.color.SUCCESS[900]};
+        `;
+      case "preparing":
+        return css`
+          background-color: ${({ theme }) => theme.color.STATE[100]};
+          color: ${({ theme }) => theme.color.STATE[900]};
+        `;
+    }
+  }}
 `;
 
 export const ProductData = styled.div<{ hasDetails?: boolean }>`
