@@ -57,12 +57,13 @@ export const Img = styled.img`
 export const DiscountLabel = styled.span`
   background-color: ${({ theme }) => theme.color.SECONDARY[900]};
   color: white;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  padding: 3px 5px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 3px 4px;
   position: absolute;
   top: 3px;
   left: 0;
+  white-space: nowrap;
   font-size: 10px;
   font-weight: 700;
 `;
