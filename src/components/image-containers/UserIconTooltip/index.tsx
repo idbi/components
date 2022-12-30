@@ -9,9 +9,7 @@ export const UserIconTooltip = ({ name, lastname, img, size, tooltipProps = {} }
     <TextTooltipContainer
       tooltipContent={`${name} ${lastname || ""}`}
       render={(props) => (
-        <div {...props} style={{ borderRadius: "50%" }}>
-          <UserProfileIcon initials={getInitials(name, lastname)} img={img} size={size} />
-        </div>
+        <UserProfileIcon initials={getInitials(name, lastname)} img={img} size={size} containerProps={{ ...props }} />
       )}
       {...tooltipProps}
     />

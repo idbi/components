@@ -13,7 +13,7 @@ export const UsersList = ({ users, onAdd, iconSize = 34 }: IUsersList) => {
         </s.AddUserBtn>
       )}
       {[...users].reverse().map((user) => (
-        <div>
+        <div style={{ height: iconSize }}>
           <UserIconTooltip {...user} size={iconSize} tooltipProps={{ strategy: "fixed" }} />
         </div>
       ))}

@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const ImgContainer = styled.div<{ hasImg?: boolean }>`
   background-color: ${({ hasImg, theme }) => (hasImg ? theme.color.QUATERNARY[300] : "transparent")};
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 50%;
   color: ${({ theme }) => theme.color.QUATERNARY[900]};
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
