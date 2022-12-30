@@ -1,3 +1,17 @@
+# [0.27.0](https://github.com/idbi/components/compare/v0.26.0...v0.27.0) (2022-12-30)
+
+
+### Bug Fixes
+
+* add mapping keys ([4e83aa3](https://github.com/idbi/components/commit/4e83aa3103a53fdfe2b18c63fac3b236904bdae8))
+
+
+### Features
+
+* [POS-12973-2] components storybook docs ([85761dc](https://github.com/idbi/components/commit/85761dcd3ec7e8e063e8b4f16eac357fc1438512))
+
+
+
 # [0.26.0](https://github.com/idbi/components/compare/v0.25.1...v0.26.0) (2022-12-30)
 
 
@@ -58,15 +72,6 @@
 
 
 ## [0.24.2](https://github.com/idbi/components/compare/v0.24.1...v0.24.2) (2022-12-15)
-
-
-
-## [0.24.1](https://github.com/idbi/components/compare/v0.24.0...v0.24.1) (2022-12-15)
-
-
-### Bug Fixes
-
-* remove container if there is no title or content in ConfirmationModalV3 ([0b178cc](https://github.com/idbi/components/commit/0b178cc4b6e35a23f3cccffe23c9ac0cd35e0462))
 
 
 
