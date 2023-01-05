@@ -65,7 +65,7 @@ const storiesPath_content = `
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { ${componentName} } from "../index";
 import { I${componentName} } from "../types";
-import { mock${componentName}Props } from "./Badge.mock";
+import { mock${componentName}Props } from "./${componentName}.mock";
 
 export default {
   title: "${storiesTitle}",
