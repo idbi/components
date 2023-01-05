@@ -20,8 +20,7 @@ const typesPath = `${baseFolderPath}/types.d.ts`
 const mockPath = `${docsFolderPath}/${componentName}.mock.tsx`
 const storiesPath = `${docsFolderPath}/${componentName}.stories.tsx`
 
-const indexPath_content = `
-import React from "react";
+const indexPath_content = `import React from "react";
 import type { I${componentName} } from "./types";
 import * as s from "./styles"
 
@@ -34,14 +33,12 @@ export const ${componentName}: React.FC<I${componentName}> = ({}) => {
 };
 `
 
-const stylesPath_content = `
-import styled from "styled-components";
+const stylesPath_content = `import styled from "styled-components";
 
 export const Container = styled.div\`\`
 `
 
-const typesPath_content = `
-import React from "react";
+const typesPath_content = `import React from "react";
 
 export interface I${componentName} {
 }
@@ -49,8 +46,7 @@ export interface I${componentName} {
 export declare const ${componentName}: (props: I${componentName}) => JSX.Element;
 `
 
-const mockPath_content = `
-import { I${componentName} } from "../types";
+const mockPath_content = `import { I${componentName} } from "../types";
 
 const base: I${componentName} = {
 
@@ -61,8 +57,7 @@ export const mock${componentName}Props = {
 };
 `
 
-const storiesPath_content = `
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+const storiesPath_content = `import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { ${componentName} } from "../index";
 import { I${componentName} } from "../types";
 import { mock${componentName}Props } from "./${componentName}.mock";
