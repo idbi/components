@@ -52,6 +52,7 @@ export { EditQuantityInput } from "./components/forms/EditQuantityInput/types";
 export { ButtonsSwitch } from "./components/buttons/ButtonsSwitch/types";
 export { SupplyInput } from "./components/forms/SupplyInput/types";
 export { BaseInput } from "./components/forms/BaseInput/types";
+export { ToggleSwitch } from "./components/forms/ToggleSwitch/types";
 // MODALS
 export { Backdrop } from "./components/modals/ModalContainer/Backdrop/types";
 export { ModalContainer } from "./components/modals/ModalContainer/types";
