@@ -17,7 +17,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext .tsx,.ts,.js,.jsx --ignore-path .eslintignore .",
-    "lint:fix": "eslint --ext .tsx,.ts,.js,.jsx --ignore-path .eslintignore . --fix"
+    "lint:fix": "eslint --ext .tsx,.ts,.js,.jsx --ignore-path .eslintignore . --fix",
+    "create-docs": "node scripts/create-docs.js"
   },
   "dependencies": {
     "@floating-ui/react-dom": "1.0.0",
