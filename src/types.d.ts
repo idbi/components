@@ -76,3 +76,5 @@ export { SectionHeader } from "@/components/headers/SectionHeader/types";
 export { SimpleFooter } from "@/components/footers/SimpleFooter/types";
 // SELECTS
 export { ButtonsSelect } from "@/components/ButtonsSelect/types";
+// REPORTS
+export { KpiCard } from "@/components/reports/KpiCard/types";
