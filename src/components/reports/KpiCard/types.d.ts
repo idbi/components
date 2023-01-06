@@ -10,6 +10,7 @@ export interface IKpiCard {
   autoWidth?: boolean;
   loading?: boolean;
   noDecimals?: boolean;
+  containerStyle?: CSSProperties;
 }
 
 export declare const KpiCard: (props: IKpiCard) => JSX.Element;

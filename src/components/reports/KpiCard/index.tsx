@@ -16,13 +16,14 @@ export const KpiCard: React.FC<IKpiCard> = ({
   loading,
   autoWidth,
   noDecimals = false,
+  containerStyle,
 }) => {
   const formatNumber = (num: number) => {
     return formatter(num, noDecimals ? 0 : 2);
   };
 
   return (
-    <s.Container main={main} autoWidth={autoWidth}>
+    <s.Container main={main} autoWidth={autoWidth} style={containerStyle}>
       {loading ? (
         <>
           <s.Title>
@@ -62,7 +63,7 @@ export const KpiCard: React.FC<IKpiCard> = ({
             ) : null}
           </s.Body>
           <s.Footer>
-            {((tip_PEN && tip_PEN > 0) || (tip_USD && tip_USD > 0)) && (
+            {(tip_PEN && tip_PEN > 0) || (tip_USD && tip_USD > 0) ? (
               <>
                 <span>Propina: </span>
                 {tip_PEN && tip_PEN > 0 ? (
@@ -72,7 +73,7 @@ export const KpiCard: React.FC<IKpiCard> = ({
                   <span> {` $/${formatNumber(tip_USD)}`}</span>
                 ) : null}
               </>
-            )}
+            ) : null}
           </s.Footer>
         </>
       )}
