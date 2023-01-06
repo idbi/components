@@ -14,15 +14,22 @@ const path = (() => {
 
 const baseFolderPath = `${path}/${componentName}`
 const docsFolderPath = `${baseFolderPath}/docs`
+const typeExportPath = "./src/types.d.ts"
+const componentExportPath = "./src/index.js"
 const indexPath = `${baseFolderPath}/index.tsx`
 const stylesPath = `${baseFolderPath}/styles.ts`
 const typesPath = `${baseFolderPath}/types.d.ts`
 const mockPath = `${docsFolderPath}/${componentName}.mock.tsx`
 const storiesPath = `${docsFolderPath}/${componentName}.stories.tsx`
 
+const componentExportPath_content = `
+export { ${componentName} } from "@/components/${storiesTitle}";`;
+const typeExportPath_content = `
+export { ${componentName} } from "@/components/${storiesTitle}/types";`;
+
 const indexPath_content = `import React from "react";
 import type { I${componentName} } from "./types";
-import * as s from "./styles"
+import * as s from "./styles";
 
 export const ${componentName}: React.FC<I${componentName}> = ({}) => {
   return (
@@ -81,6 +88,10 @@ const data = {
     componentName,
     storiesTitle,
     path,
+    typeExportPath,
+    componentExportPath,
+    componentExportPath_content,
+    typeExportPath_content,
   },
   component: {
     baseFolderPath,
@@ -101,6 +112,8 @@ const data = {
 }
 const {general, component, docs} = data
 
+if(!fs.existsSync(general.componentExportPath)) return console.log(`the path ${general.componentExportPath} does not exist!`)
+if(!fs.existsSync(general.typeExportPath)) return console.log(`the path ${general.componentExportPath} does not exist!`)
 if(!fs.existsSync(general.path)) fs.mkdirSync(general.path)
 if(fs.existsSync(component.baseFolderPath)) return console.log(`the ${general.componentName} component already exists!`)
 fs.mkdirSync(component.baseFolderPath)
@@ -110,6 +123,9 @@ fs.writeFileSync(component.typesPath, component.typesPath_content)
 fs.mkdirSync(docs.docsFolderPath)
 fs.writeFileSync(docs.mockPath, docs.mockPath_content)
 fs.writeFileSync(docs.storiesPath, docs.storiesPath_content)
+
+fs.appendFileSync(general.componentExportPath, componentExportPath_content);
+fs.appendFileSync(general.typeExportPath, typeExportPath_content);
 
 console.log(`
   The ${general.componentName} component storybook structure was created correctly!
