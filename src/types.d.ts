@@ -11,6 +11,7 @@ export { Collapsible } from "./components/Collapsible/types";
 export { StickyHeader } from "./components/StickyHeader/types";
 export { DropdownMenu } from "./components/dropdowns/DropdownMenu/types";
 export { NoData } from "@/components/NoData/types";
+export { Search } from "@/components/Search/types";
 
 // UI
 export { BulletPoint } from "@/components/BulletPoint/types";
