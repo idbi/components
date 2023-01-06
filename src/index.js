@@ -76,3 +76,4 @@ export { SimpleFooter } from "@/components/footers/SimpleFooter";
 export { ButtonsSelect } from "@/components/ButtonsSelect";
 // REPORTS
 export { KpiCard } from "@/components/reports/KpiCard";
+export { KpiCardV2 } from "@/components/reports/KpiCardV2";
