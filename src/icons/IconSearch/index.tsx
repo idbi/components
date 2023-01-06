@@ -1,9 +1,5 @@
 import React from "react";
-
-export interface IIcon {
-  size?: number;
-  color?: string;
-}
+import { IIcon } from "../types";
 
 export const IconSearch: React.FC<IIcon> = ({
   size = 15,
