@@ -67,6 +67,8 @@ export { UploadImage } from "@/components/files-upload/UploadImage";
 export { UploadMultipleImages } from "@/components/files-upload/UploadMultipleImages";
 // TABLES
 export { GridTable } from "@/components/tables/GridTable";
+export { Pagination } from "@/components/tables/Pagination";
+export { Table } from "@/components/tables/Table";
 // HEADERS
 export { ModalHeader } from "@/components/headers/ModalHeader";
 export { SectionHeader } from "@/components/headers/SectionHeader";
