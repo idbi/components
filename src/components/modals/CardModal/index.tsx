@@ -25,6 +25,7 @@ export const CardModal: React.FC<ICardModal> = ({
   background = "#fff",
   boxShadow,
   boxShadowInDesktop,
+  styleContainer,
 }) => {
   if (!show) return null;
 
@@ -37,6 +38,7 @@ export const CardModal: React.FC<ICardModal> = ({
       contentLocationInDesktop={contentLocationInDesktop}
       boxShadow={boxShadow}
       boxShadowInDesktop={boxShadowInDesktop}
+      styleContainer={styleContainer}
     >
       <StyledCardModal
         padding={padding}
