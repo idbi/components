@@ -68,7 +68,9 @@ export const Search = styled.input<ISearch>`
   color: #4a4a4a;
   border-radius: 10px;
   border: ${({ alert }) =>
-    alert ? `1px solid ${theme.color.ALERT[900]}` : "1px solid #d7d7d7"};
+    alert
+      ? `1px solid ${theme.color.ALERT[900]}`
+      : `1px solid ${theme.color.NEUTRAL[300]}`};
   outline: none;
   transition: box-shadow 0.3s ease-out;
 
