@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { ProductStatus } from "./types";
+import { StatusType } from "../../../types/globalTypes";
 
 export const Card = styled.div<{ disabled?: boolean; hasDetails?: boolean }>`
   background-color: ${({ disabled, theme }) => (disabled ? theme.color.NEUTRAL[50] : "white")};
@@ -44,7 +44,7 @@ export const ImgContainer = styled.div`
   }
 `;
 
-export const ImgLabel = styled.div<{ status?: ProductStatus }>`
+export const ImgLabel = styled.div<{ status?: StatusType }>`
   min-height: 24px;
   width: 100%;
   background-color: ${({ theme }) => theme.color.QUATERNARY[100]};
@@ -55,17 +55,42 @@ export const ImgLabel = styled.div<{ status?: ProductStatus }>`
   font-size: 12px;
   flex-shrink: 0;
 
-  ${({ status }) => {
+  ${({ status, theme }) => {
     switch (status) {
-      case "prepared":
+      case "draft":
         return css`
-          background-color: ${({ theme }) => theme.color.SUCCESS[100]};
-          color: ${({ theme }) => theme.color.SUCCESS[900]};
+          background-color: ${theme.color.NEUTRAL[100]};
+          color: ${theme.color.NEUTRAL[500]};
+        `;
+      case "pending":
+        return css`
+          background-color: ${theme.color.SECONDARY[100]};
+          color: ${theme.color.SECONDARY[700]};
         `;
       case "preparing":
         return css`
-          background-color: ${({ theme }) => theme.color.STATE[100]};
-          color: ${({ theme }) => theme.color.STATE[900]};
+          background-color: ${theme.color.STATE[100]};
+          color: ${theme.color.STATE[900]};
+        `;
+      case "prepared":
+        return css`
+          background-color: ${theme.color.SUCCESS[100]};
+          color: ${theme.color.SUCCESS[900]};
+        `;
+      case "collected":
+        return css`
+          background-color: #efdaff;
+          color: #9600f2;
+        `;
+      case "delivered":
+        return css`
+          background-color: ${theme.color.PRIMARY[100]};
+          color: ${theme.color.PRIMARY[700]};
+        `;
+      case "canceled":
+        return css`
+          background-color: ${theme.color.ALERT[100]};
+          color: ${theme.color.ALERT[900]};
         `;
     }
   }}

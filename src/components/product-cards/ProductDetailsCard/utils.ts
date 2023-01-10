@@ -1,12 +1,24 @@
-import { ProductStatus } from "./types";
+import { StatusType } from "../../../types/globalTypes";
 
-export const getStatusText = (status: ProductStatus) => {
+export const getStatusText = (status: StatusType) => {
   switch (status) {
-    case "prepared":
-      return "Listo";
+    case "draft":
+      return "Borrador";
+    case "pending":
+      return "Pendiente";
+    case "accepted":
+      return "Aceptado";
     case "preparing":
       return "Preparando";
+    case "prepared":
+      return "Listo";
+    case "collected":
+      return "Enviado";
+    case "delivered":
+      return "Entregado";
+    case "canceled":
+      return "Anulado";
     default:
-      return "Aceptado";
+      return "";
   }
 };
