@@ -1,7 +1,5 @@
 export { Button } from "@/components/Button";
 export { CodeInput } from "@/components/CodeInput";
-export { SelectField } from "@/components/SelectField";
-export { TextField } from "@/components/TextField";
 export { Heading } from "@/components/Typography/Heading";
 export { Text } from "@/components/Typography/Text";
 export { CustomSelect } from "@/components/CustomSelect";
@@ -54,6 +52,8 @@ export { ButtonsSwitch } from "@/components/buttons/ButtonsSwitch";
 export { SupplyInput } from "./components/forms/SupplyInput";
 export { BaseInput } from "./components/forms/BaseInput";
 export { ToggleSwitch } from "./components/forms/ToggleSwitch";
+export { SelectField } from "@/components/SelectField";
+export { TextField } from "@/components/TextField";
 // MODALS
 export { CardModal } from "@/components/modals/CardModal";
 export { MultipleOptionsModal } from "@/components/modals/MultipleOptionsModal";

@@ -1,4 +1,4 @@
-import { TextFieldProps } from "./types";
+import { TextFieldProps } from "../types";
 
 const base: TextFieldProps = {
   label: "Texto de prueba",

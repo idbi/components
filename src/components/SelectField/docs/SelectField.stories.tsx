@@ -4,7 +4,7 @@ import { SelectFieldProps } from "../types";
 import { mockSelectFieldProps } from "./SelectField.mock";
 
 export default {
-  title: "components/SelectField",
+  title: "Forms/SelectField",
   component: SelectField,
   argTypes: {},
 } as ComponentMeta<typeof SelectField>;

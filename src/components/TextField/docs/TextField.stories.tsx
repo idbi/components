@@ -1,10 +1,10 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { TextField } from ".";
-import { TextFieldProps } from "./types";
+import { TextField } from "..";
+import { TextFieldProps } from "../types";
 import { mockTextFieldProps } from "./TextField.mock";
 
 export default {
-  title: "components/TextField",
+  title: "Forms/TextField",
   component: TextField,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
