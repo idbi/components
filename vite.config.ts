@@ -33,6 +33,8 @@ export default defineConfig({
         "@radix-ui/react-collapsible",
         "@floating-ui/react-dom",
         "react-icons",
+        "date-fns",
+        "react-date-range",
       ],
       output: {
         globals: {
@@ -44,7 +46,9 @@ export default defineConfig({
           "react/jsx-runtime": "react/jsx-runtime.js",
           "@radix-ui/react-collapsible": "@radix-ui/react-collapsible",
           "@floating-ui/react-dom": "@floating-ui/react-dom",
-          "react-icons": "react-icons"
+          "react-icons": "react-icons",
+          "date-fns": "date-fns",
+          "react-date-range": "react-date-range",
         },
       },
     },
