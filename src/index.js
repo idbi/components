@@ -54,6 +54,7 @@ export { BaseInput } from "./components/forms/BaseInput";
 export { ToggleSwitch } from "./components/forms/ToggleSwitch";
 export { SelectField } from "@/components/SelectField";
 export { TextField } from "@/components/TextField";
+export { DateRangePicker } from "@/components/forms/DateRangePicker";
 // MODALS
 export { CardModal } from "@/components/modals/CardModal";
 export { MultipleOptionsModal } from "@/components/modals/MultipleOptionsModal";
