@@ -8,7 +8,7 @@ const defaultDateRangePicker: IDateRangePicker = {
   showTimeInputs: true,
   initWithToday: false,
   direction: "horizontal",
-  dateDisplayFormat: "detailed",
+  // dateDisplayFormat: "detailed",
 };
 
 export const mockDateRangePickerProps = {

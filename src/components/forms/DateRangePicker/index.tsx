@@ -121,7 +121,7 @@ export const DateRangePicker: React.FC<IDateRangePicker> = ({
         {formattedToShowInFilter("from") ? (
           <p>{`${formattedToShowInFilter("from")} - ${formattedToShowInFilter("to")}`}</p>
         ) : (
-          <p style={{ fontSize: "0.875rem" }}>Seleccione una fecha / Bug when selecting</p>
+          <p style={{ fontSize: "0.875rem" }}>Seleccione una fecha</p>
         )}
       </s.ContainerDate>
       {active && (
