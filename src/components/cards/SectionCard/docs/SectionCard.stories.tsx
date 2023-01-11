@@ -21,6 +21,11 @@ WithContent.args = {
   ...mockConfirmationCardV2Props.withContent,
 } as ISectionCard;
 
+export const noTitle = Template.bind({});
+noTitle.args = {
+  ...mockConfirmationCardV2Props.noTitle,
+} as ISectionCard;
+
 export const WithHeaderAside = Template.bind({});
 WithHeaderAside.args = {
   ...mockConfirmationCardV2Props.withHeaderAside,

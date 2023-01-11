@@ -4,11 +4,12 @@ import { ICartProduct } from "../CartProduct/types";
 
 export type IProductDetailsCard = Pick<
   ICartProduct,
-  "name" | "img" | "currencySymbol" | "unitPrice" | "total" | "quantity" | "measureUnit" | "productDetails"
+  "name" | "img" | "currencySymbol" | "total" | "quantity" | "measureUnit" | "productDetails"
 > & {
+  unitPrice?: number | null;
   comment?: string;
   disabled?: boolean;
-  discount?: { label: string; prevTotal: number };
+  discount?: { label: string; prevTotal?: number | null };
   status?: StatusType;
   imgLabel?: JSX.Element;
   discountBottom?: boolean;

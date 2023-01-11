@@ -16,6 +16,11 @@ Base.args = {
   ...mockConfirmationCardV2Props.base,
 } as IProductDetailsCard;
 
+export const noUnitPrice = Template.bind({});
+noUnitPrice.args = {
+  ...mockConfirmationCardV2Props.noUnitPrice,
+} as IProductDetailsCard;
+
 export const WithDetails = Template.bind({});
 WithDetails.args = {
   ...mockConfirmationCardV2Props.withDetails,

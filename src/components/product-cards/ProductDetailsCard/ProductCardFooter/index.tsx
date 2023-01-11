@@ -9,7 +9,7 @@ type IProps = Pick<
 
 export const ProductCardFooter = ({
   currencySymbol,
-  unitPrice,
+  unitPrice = null,
   total,
   measureUnit,
   discount,
@@ -21,15 +21,23 @@ export const ProductCardFooter = ({
   return (
     <s.Footer disabled={disabled} bottom={bottom}>
       <span>
-        {currencySymbol}
-        {unitPrice.toFixed(2)} x {unit}
+        {unitPrice !== null && (
+          <>
+            {currencySymbol}
+            {unitPrice.toFixed(2)} x {unit}
+          </>
+        )}
       </span>
       <s.TotalPrices disabled={disabled}>
         {discount && (
           <>
             <span>
-              {currencySymbol}
-              {discount.prevTotal.toFixed(2)}
+              {(!!discount.prevTotal || discount.prevTotal === 0) && (
+                <>
+                  {currencySymbol}
+                  {discount.prevTotal.toFixed(2)}
+                </>
+              )}
             </span>
             <s.Patch>{discount.label}</s.Patch>
           </>
