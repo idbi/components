@@ -1,4 +1,4 @@
-import { MouseEvent, ReactNode } from "react";
+import { CSSProperties, MouseEvent, ReactNode } from "react";
 import { IBackdrop } from "./Backdrop/types";
 
 export interface IModalContainer extends IBackdrop {
@@ -8,6 +8,7 @@ export interface IModalContainer extends IBackdrop {
   boxShadow?: string;
   boxShadowInDesktop?: string;
   fullWidth?: boolean;
+  styleContainer?: CSSProperties;
 }
 
 export declare const ModalContainer: (props: IModalContainer) => JSX.Element;

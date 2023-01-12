@@ -1,7 +1,5 @@
 export { Button } from "@/components/Button";
 export { CodeInput } from "@/components/CodeInput";
-export { SelectField } from "@/components/SelectField";
-export { TextField } from "@/components/TextField";
 export { Heading } from "@/components/Typography/Heading";
 export { Text } from "@/components/Typography/Text";
 export { CustomSelect } from "@/components/CustomSelect";
@@ -11,6 +9,7 @@ export { Collapsible } from "@/components/Collapsible";
 export { StickyHeader } from "@/components/StickyHeader";
 export { DropdownMenu } from "@/components/dropdowns/DropdownMenu";
 export { NoData } from "@/components/NoData";
+export { Search } from "@/components/Search";
 
 // UI
 export { BulletPoint } from "@/components/BulletPoint";
@@ -52,6 +51,10 @@ export { EditQuantityInput } from "@/components/forms/EditQuantityInput";
 export { ButtonsSwitch } from "@/components/buttons/ButtonsSwitch";
 export { SupplyInput } from "./components/forms/SupplyInput";
 export { BaseInput } from "./components/forms/BaseInput";
+export { ToggleSwitch } from "./components/forms/ToggleSwitch";
+export { SelectField } from "@/components/SelectField";
+export { TextField } from "@/components/TextField";
+export { DateRangePicker } from "@/components/forms/DateRangePicker";
 // MODALS
 export { CardModal } from "@/components/modals/CardModal";
 export { MultipleOptionsModal } from "@/components/modals/MultipleOptionsModal";
@@ -65,6 +68,8 @@ export { UploadImage } from "@/components/files-upload/UploadImage";
 export { UploadMultipleImages } from "@/components/files-upload/UploadMultipleImages";
 // TABLES
 export { GridTable } from "@/components/tables/GridTable";
+export { Pagination } from "@/components/tables/Pagination";
+export { Table } from "@/components/tables/Table";
 // HEADERS
 export { ModalHeader } from "@/components/headers/ModalHeader";
 export { SectionHeader } from "@/components/headers/SectionHeader";
@@ -72,3 +77,6 @@ export { SectionHeader } from "@/components/headers/SectionHeader";
 export { SimpleFooter } from "@/components/footers/SimpleFooter";
 // SELECTS
 export { ButtonsSelect } from "@/components/ButtonsSelect";
+// REPORTS
+export { KpiCard } from "@/components/reports/KpiCard";
+export { KpiCardV2 } from "@/components/reports/KpiCardV2";

@@ -1,11 +1,7 @@
 import { theme } from "@/theme";
 import styled from "styled-components";
 
-interface ContainerProps {
-  hasError?: boolean;
-}
-
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div`
   position: relative;
   width: 100%;
 

@@ -14,14 +14,18 @@ const base: ICardModal = {
   closeIconInDesktop: false,
   children: (
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum
-      recusandae debitis rerum explicabo quaerat, nemo magni at praesentium
-      labore deleniti iure minima voluptas natus cupiditate. Odio, deleniti?
-      Doloremque.
+      <b>styleContainer=none</b> can be used to prevent a select from generating an internal scroll. <br />
+      <b>styleContainer=none</b> can be used to prevent a select from generating an internal scroll. <br />
+      <b>styleContainer=none</b> can be used to prevent a select from generating an internal scroll. <br />
+      <b>styleContainer=none</b> can be used to prevent a select from generating an internal scroll. <br />
+      <b>styleContainer=none</b> can be used to prevent a select from generating an internal scroll. <br />
     </p>
   ),
   background: "#fff",
   boxShadowInDesktop: "0px 0px 24px 4px rgba(0, 12, 51, 0.08)",
+  styleContainer: {
+    overflow: "auto",
+  },
 };
 
 const fullPageInMobile: ICardModal = {

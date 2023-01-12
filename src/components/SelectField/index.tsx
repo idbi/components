@@ -22,14 +22,16 @@ const customStyles = {
   singleValue: () => {
     return {
       color: theme.color.PRIMARY[900],
-      fontWeight: 500,
-      fontSize: "14px",
+      fontWeight: 400,
+      fontSize: "0.875rem",
+      fontFamily: "Poppins",
+      fontStyle: "normal",
     };
   },
   placeholder: (defaultStyles: any) => {
     return {
       ...defaultStyles,
-      color: theme.color.NEUTRAL[700],
+      color: theme.color.NEUTRAL[500],
     };
   },
   indicatorSeparator: (provided: any) => {
@@ -45,7 +47,7 @@ const customStyles = {
       ...provided,
       "> div": {
         padding: "0",
-        paddingRight: "3px",
+        paddingRight: "10px",
       },
     };
   },
@@ -53,7 +55,7 @@ const customStyles = {
     return {
       ...provided,
       padding: 0,
-      paddingLeft: "6px",
+      paddingLeft: "15px",
     };
   },
 };
@@ -63,8 +65,10 @@ export const SelectField: React.FC<SelectFieldProps> = ({
   options,
   loading = false,
   style,
-  error,
-  firstOption,
+  firstOption = {
+    label: "Seleccione una opción",
+    value: "",
+  },
   initialValue,
   value,
   onChange,
@@ -72,14 +76,11 @@ export const SelectField: React.FC<SelectFieldProps> = ({
   placeholder,
   label,
 }) => {
-  const firstSelectOption: OptionType = firstOption || {
-    label: "Seleccione una opción",
-    value: "",
-  };
+  const firstSelectOption: OptionType | null = firstOption;
   const selectOptions: OptionType[] = [...options];
 
   return (
-    <Container style={style} hasError={!!error}>
+    <Container style={style}>
       {label && (
         <Text as="label" align="left" size="sm" color="NEUTRAL/700">
           {label}
@@ -87,9 +88,8 @@ export const SelectField: React.FC<SelectFieldProps> = ({
       )}
       {loading ? (
         <Skeleton
-          style={{ borderRadius: 10 }}
-          className="loading-skeleton"
-          height={46}
+          style={{ borderRadius: 10, display: "block" }}
+          height="45px"
           width="100%"
         />
       ) : (

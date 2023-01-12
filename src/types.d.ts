@@ -1,7 +1,5 @@
 export { Button } from "./components/Button/types";
 export { CodeInput } from "./components/CodeInput/types";
-export { SelectField } from "./components/SelectField/types";
-export { TextField } from "./components/TextField/types";
 export { Heading, Text } from "./components/Typography/TextBuilder/types";
 export { CustomSelect } from "./components/CustomSelect/types";
 export { ProfileImage } from "./components/ProfileImage/types";
@@ -11,6 +9,7 @@ export { Collapsible } from "./components/Collapsible/types";
 export { StickyHeader } from "./components/StickyHeader/types";
 export { DropdownMenu } from "./components/dropdowns/DropdownMenu/types";
 export { NoData } from "@/components/NoData/types";
+export { Search } from "@/components/Search/types";
 
 // UI
 export { BulletPoint } from "@/components/BulletPoint/types";
@@ -52,6 +51,10 @@ export { EditQuantityInput } from "./components/forms/EditQuantityInput/types";
 export { ButtonsSwitch } from "./components/buttons/ButtonsSwitch/types";
 export { SupplyInput } from "./components/forms/SupplyInput/types";
 export { BaseInput } from "./components/forms/BaseInput/types";
+export { ToggleSwitch } from "./components/forms/ToggleSwitch/types";
+export { SelectField } from "./components/SelectField/types";
+export { TextField } from "./components/TextField/types";
+export { DateRangePicker } from "@/components/forms/DateRangePicker/types";
 // MODALS
 export { Backdrop } from "./components/modals/ModalContainer/Backdrop/types";
 export { ModalContainer } from "./components/modals/ModalContainer/types";
@@ -67,6 +70,8 @@ export { UploadImage } from "./components/files-upload/UploadImage/types";
 export { UploadMultipleImages } from "./components/files-upload/UploadMultipleImages/types";
 // TABLES
 export { GridTable } from "@/components/tables/GridTable/types";
+export { Pagination } from "@/components/tables/Pagination/types";
+export { Table } from "@/components/tables/Table/types";
 // HEADERS
 export { ModalHeader } from "@/components/headers/ModalHeader/types";
 export { SectionHeader } from "@/components/headers/SectionHeader/types";
@@ -74,3 +79,6 @@ export { SectionHeader } from "@/components/headers/SectionHeader/types";
 export { SimpleFooter } from "@/components/footers/SimpleFooter/types";
 // SELECTS
 export { ButtonsSelect } from "@/components/ButtonsSelect/types";
+// REPORTS
+export { KpiCard } from "@/components/reports/KpiCard/types";
+export { KpiCardV2 } from "@/components/reports/KpiCardV2/types";
