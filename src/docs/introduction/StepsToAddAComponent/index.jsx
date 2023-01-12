@@ -16,6 +16,8 @@ export const StepsToAddAComponent = (args) => (
       <li>Exportar tipos dentro de <b>types.d</b></li>
       <li>Si ha instalado una dependencia debe agregarlo dentro de <b>vite.config.ts</b></li>
     </ol>
+
+    <span style={{background: "#eee"}}><b>Nota:</b> Usa el script create-docs /src/components/subpackage/NewComponent para facilitar la plantilla inicial.</span><br />
     <span style={{background: "#eee"}}><b>Nota:</b> Actualmente para subir los cambios deberá ejecutar npm run build y crear una PR hacia la rama main.</span>
   </>
 )

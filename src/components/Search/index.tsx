@@ -19,6 +19,7 @@ export const SearchResult: React.FC<ISearchResult> = ({
   data,
   onSelectItem = {
     hideOnSelect: true,
+    onSelect: () => {},
   },
   getLabel,
   containerStyle,
@@ -49,7 +50,7 @@ export const SearchResult: React.FC<ISearchResult> = ({
 
   useEffect(() => {
     setHideResults(false);
-  }, [searchRef?.current?.value])
+  }, [searchRef?.current?.value]);
 
   useEffect(() => {
     if (data?.length === 1 && enableScannerBehavior) {

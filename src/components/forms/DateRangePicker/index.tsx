@@ -129,8 +129,8 @@ export const DateRangePicker: React.FC<IDateRangePicker> = ({
           <DateRange
             onChange={(item) => {
               const newSelection = Object.values(item);
-              if (!Array.isArray(newSelection) && newSelection?.length < 1) return
-              // Refactor: bug after setState in Storybook
+              if (!Array.isArray(newSelection) || newSelection?.length < 1)
+                return;
               setState([
                 {
                   ...state[0],
