@@ -1,15 +1,15 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Container } from "./Container";
+import { OptionsModal } from "./Container";
 import { IOptionsModal } from "../types";
 import { mock } from "./OptionsModal.mock";
 
 export default {
   title: "modals/OptionsModal",
-  component: Container,
+  component: OptionsModal,
   argTypes: {},
-} as ComponentMeta<typeof Container>;
+} as ComponentMeta<typeof OptionsModal>;
 
-const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
+const Template: ComponentStory<typeof OptionsModal> = (args) => <OptionsModal {...args} />;
 
 export const base = Template.bind({});
 base.args = {

@@ -1,15 +1,15 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Container } from "./Container";
+import { UsersList } from "./Container";
 import { IUsersList } from "../types";
 import { mock } from "./UsersList.mock";
 
 export default {
   title: "imagesContainers/UsersList",
-  component: Container,
+  component: UsersList,
   argTypes: {},
-} as ComponentMeta<typeof Container>;
+} as ComponentMeta<typeof UsersList>;
 
-const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
+const Template: ComponentStory<typeof UsersList> = (args) => <UsersList {...args} />;
 
 export const base = Template.bind({});
 base.args = {

@@ -10,6 +10,7 @@ export const UserProfileIcon = ({ img, size = 36, initials, containerProps: { st
       hasImg={!img?.src}
       style={{
         width: `${size}px`,
+        minWidth: `${size}px`,
         height: `${size}px`,
         fontSize: `${size / (initials.length === 1 ? 2 : 2.25)}px`,
         ...(style || {}),

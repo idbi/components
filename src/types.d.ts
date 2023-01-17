@@ -10,6 +10,7 @@ export { StickyHeader } from "./components/StickyHeader/types";
 export { DropdownMenu } from "./components/dropdowns/DropdownMenu/types";
 export { NoData } from "@/components/NoData/types";
 export { Search } from "@/components/Search/types";
+export { Navbar } from "@/components/Navbar/types";
 
 // UI
 export { BulletPoint } from "@/components/BulletPoint/types";

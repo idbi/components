@@ -1,15 +1,15 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Container } from "./Container";
+import { UserIconTooltip } from "./Container";
 import { IUserIconTooltip } from "../types";
 import { mock } from "./UserIconTooltip.mock";
 
 export default {
   title: "imagesContainers/UserIconTooltip",
-  component: Container,
+  component: UserIconTooltip,
   argTypes: {},
-} as ComponentMeta<typeof Container>;
+} as ComponentMeta<typeof UserIconTooltip>;
 
-const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
+const Template: ComponentStory<typeof UserIconTooltip> = (args) => <UserIconTooltip {...args} />;
 
 export const noImage = Template.bind({});
 noImage.args = {

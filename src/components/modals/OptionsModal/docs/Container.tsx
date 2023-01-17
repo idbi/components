@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import { OptionsModal } from "..";
+import { OptionsModal as OptionsModalComponent } from "..";
 import { IOptionsModal } from "../types";
 
-export const Container = (props: IOptionsModal) => {
+export const OptionsModal = (props: IOptionsModal) => {
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(props.selected);
 
   return (
     <>
-      <button onClick={() => setShow(true)}>show modal</button>
+      <button type="button" onClick={() => setShow(true)}>
+        show modal
+      </button>
       {show && (
-        <OptionsModal
+        <OptionsModalComponent
           {...props}
           onClose={() => setShow(false)}
           onSelect={(value) => setSelected(value)}
