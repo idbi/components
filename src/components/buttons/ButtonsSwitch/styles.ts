@@ -1,7 +1,11 @@
 import styled, { css } from "styled-components";
 import { Model } from "./types";
 
-export const Container = styled.div<{ disabled?: boolean; fullWidth?: boolean; model?: Model }>`
+export const Container = styled.div<{
+  disabled?: boolean;
+  fullWidth?: boolean;
+  model?: Model;
+}>`
   background-color: white;
   border: 1px solid ${({ theme }) => theme.color.PRIMARY[200]};
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
@@ -27,7 +31,8 @@ export const Container = styled.div<{ disabled?: boolean; fullWidth?: boolean; m
 
 export const Btn = styled.button<{ active?: boolean; model?: Model }>`
   background-color: white;
-  color: ${({ theme, model }) => (model === "secondary" ? "#828282" : theme.color.SECONDARY[500])};
+  color: ${({ theme, model }) =>
+    model === "secondary" ? "#828282" : theme.color.SECONDARY[500]};
   border: none;
   border-radius: ${({ model }) => (model === "secondary" ? "4px" : "10px")};
   min-width: 35px;

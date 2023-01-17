@@ -1,15 +1,15 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Container } from "./Container";
+import { BulletOptionsModal } from "./Container";
 import { IBulletOptionsModal } from "../types";
 import { mock } from "./BulletOptionsModal.mock";
 
 export default {
   title: "modals/BulletOptionsModal",
-  component: Container,
+  component: BulletOptionsModal,
   argTypes: {},
-} as ComponentMeta<typeof Container>;
+} as ComponentMeta<typeof BulletOptionsModal>;
 
-const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
+const Template: ComponentStory<typeof BulletOptionsModal> = (args) => <BulletOptionsModal {...args} />;
 
 export const base = Template.bind({});
 base.args = {
