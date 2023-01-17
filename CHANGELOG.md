@@ -1,3 +1,22 @@
+# [0.29.0](https://github.com/idbi/components/compare/v0.28.0...v0.29.0) (2023-01-17)
+
+
+### Bug Fixes
+
+* add min width in UserProfileIcon ([6a79eba](https://github.com/idbi/components/commit/6a79ebaf4a47bdc5396ca56f216d9585acde1d21))
+* fix container for component documents ([bf4858c](https://github.com/idbi/components/commit/bf4858c31922b5ad911a2a8b806b610db87fc91a))
+
+
+### Features
+
+* create docs for Navbar ([23b0580](https://github.com/idbi/components/commit/23b0580b90f825054895aec9638f50b5d5e06f0a))
+* create icon gallery ([bad95e7](https://github.com/idbi/components/commit/bad95e722813ebcf84012fd60a51e8d270087c2f))
+* create IdiLogo and IdiBell ([cd01ac7](https://github.com/idbi/components/commit/cd01ac72ca3c715bf3cedd796b23864094bee693))
+* create Navbar ([f4fb91a](https://github.com/idbi/components/commit/f4fb91aac3353ceda0ba5011a3046e3e77b40725))
+* update build ([81dc0b0](https://github.com/idbi/components/commit/81dc0b07498b73ddb16f8c3908baed0c0af3fc55))
+
+
+
 # [0.28.0](https://github.com/idbi/components/compare/v0.27.0...v0.28.0) (2023-01-12)
 
 
@@ -92,29 +111,6 @@
 ### Bug Fixes
 
 * adjust background in SupplyInput ([7c7a0cb](https://github.com/idbi/components/commit/7c7a0cbdeda14aa4590fe5cb134c58a7a06bfc1d))
-
-
-
-# [0.25.0](https://github.com/idbi/components/compare/v0.24.2...v0.25.0) (2022-12-19)
-
-
-### Bug Fixes
-
-* add padding property in ModalHeader ([2ae43f1](https://github.com/idbi/components/commit/2ae43f1f56013533366163245b5db38796c80dd9))
-* adjust image location in IDCard ([2375e46](https://github.com/idbi/components/commit/2375e46af0f0389759bdb0d9f63a35bad22373d7))
-* adjust styles in SupplyInput ([6f33d7a](https://github.com/idbi/components/commit/6f33d7a39dd98348d85c16aa0bbe4d6f15473db8))
-* change blue and pink for quaternary and tertiary color in ToastCard ([2f3ebc7](https://github.com/idbi/components/commit/2f3ebc7de9c096dc7d0830b90104e0384f626c2f))
-* general adjustments ([b8b5b27](https://github.com/idbi/components/commit/b8b5b2768fea97a790a5c8d034be8f8e3f834a93))
-
-
-### Features
-
-* add finished status color in OrderStatusBadge ([e99124a](https://github.com/idbi/components/commit/e99124aadcc3626bf9ba9ac9392f084b9ed567f9))
-* add finished status color in theme ([ecd7716](https://github.com/idbi/components/commit/ecd771634e91e85c42cdfb10b95e554748d6da9f))
-* add new properties in Badge ([06bce42](https://github.com/idbi/components/commit/06bce42db422d8b8180ba39925381d45f414d677))
-* add show property in CarModal ([7237779](https://github.com/idbi/components/commit/72377799c39359a2df90ff2ffff46071857917ba))
-* update build ([496c4f5](https://github.com/idbi/components/commit/496c4f545efdaeb629eb9c5fceeea72cd1b57c20))
-* update build ([1650504](https://github.com/idbi/components/commit/165050442c956670f67199b92dbc0f8bcd45c776))
 
 
 
