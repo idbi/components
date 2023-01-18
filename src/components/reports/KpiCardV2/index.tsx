@@ -1,8 +1,8 @@
 import React from "react";
-import { FiActivity } from "react-icons/fi";
-import { MdKeyboardBackspace } from "react-icons/md";
 import Skeleton from "react-loading-skeleton";
 import { formatNumber as formatter } from "@/utils/formatNumber";
+import { IdiActivity } from "@/icons/IdiActivity";
+import { IdiKeyboardBackSpace } from "@/icons/IdiKeyboardBackSpace";
 import type { IKpiCardV2 } from "./types";
 import * as s from "./styles";
 
@@ -59,7 +59,7 @@ export const KpiCardV2: React.FC<IKpiCardV2> = ({
     <s.Container autoWidth={Boolean(autoWidth)} style={containerStyle}>
       {name && (
         <s.TitleContainer>
-          <FiActivity color="#151e5a" />
+          <IdiActivity size={14} />
           {name}
         </s.TitleContainer>
       )}
@@ -68,7 +68,15 @@ export const KpiCardV2: React.FC<IKpiCardV2> = ({
         {descriptionCompare && descriptionCompare.value && (
           <s.Compare isUp={descriptionCompare.isUp}>
             <strong>
-              <MdKeyboardBackspace />
+              <IdiKeyboardBackSpace
+                size={14}
+                color={descriptionCompare.isUp ? "#27ae60" : "#ea345f"}
+                styleContainer={{
+                  transform: descriptionCompare.isUp
+                    ? "rotate(90deg)"
+                    : "rotate(-90deg)",
+                }}
+              />
               {descriptionCompare.value}
             </strong>
           </s.Compare>

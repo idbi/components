@@ -2,11 +2,11 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useRef, useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import { IdiLogo } from "@/icons/IdiLogo";
 import { IdiBell } from "@/icons/IdiBell";
 import { ArrowIcon } from "@/icons-v2/ArrowIcon";
-import { useOnClickOutside } from "@/hooks/useOnClickOutside";
+import { IdiMenu } from "@/icons/IdiMenu";
 import type { INavbar, INavbarPrivateOption } from "./types";
 import { UserProfileIcon } from "../image-containers/UserProfileIcon";
 import { Search } from "../Search";
@@ -93,14 +93,14 @@ export const Navbar: React.FC<INavbar> = ({
       <s.Header>
         <s.FlexContainer>
           {options.length > 0 && (
-            <AiOutlineMenu
+            <IdiMenu
               size={20}
               color="#151E5A"
               onClick={() => {
                 setShowNotifications(false);
                 setShow(!show);
               }}
-              style={{ cursor: "pointer" }}
+              styleContainer={{ cursor: "pointer" }}
             />
           )}
           {logoIcon?.onClick ? (

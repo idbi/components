@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { theme } from "@/theme";
-import { FiXCircle } from "react-icons/fi";
 
 export const Container = styled.div`
   background: none;
@@ -115,21 +114,6 @@ export const FooterDatePicker = styled.footer`
   align-items: center;
   justify-content: flex-end;
   margin-top: -10px;
-`;
-
-export const FiXCircleIcon = styled(FiXCircle)`
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  margin-left: auto;
-  font-size: 23px;
-  opacity: 0.7;
-  cursor: pointer;
-  transition: all 0.2s;
-
-  &:hover {
-    opacity: 1;
-  }
 `;
 
 export const ContainerDatePicker = styled.div<{
