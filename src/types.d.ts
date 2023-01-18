@@ -55,7 +55,7 @@ export { BaseInput } from "./components/forms/BaseInput/types";
 export { ToggleSwitch } from "./components/forms/ToggleSwitch/types";
 export { SelectField } from "./components/SelectField/types";
 export { TextField } from "./components/TextField/types";
-export { DateRangePicker } from "@/components/forms/DateRangePicker/types";
+// export { DateRangePicker } from "@/components/forms/DateRangePicker/types";
 // MODALS
 export { Backdrop } from "./components/modals/ModalContainer/Backdrop/types";
 export { ModalContainer } from "./components/modals/ModalContainer/types";
