@@ -1,3 +1,12 @@
+## [0.29.1](https://github.com/idbi/components/compare/v0.29.0...v0.29.1) (2023-01-18)
+
+
+### Bug Fixes
+
+* fix error with react-icons and remove dateRangePicker ([3f5df93](https://github.com/idbi/components/commit/3f5df93265b3863fce1e4d262518764b655073d3))
+
+
+
 # [0.29.0](https://github.com/idbi/components/compare/v0.28.0...v0.29.0) (2023-01-17)
 
 
@@ -102,15 +111,6 @@
 * [POS-12869] add CartProductV2 component ([c425514](https://github.com/idbi/components/commit/c42551405724ba87fd61a8b3acb78c6d7ab8acfc))
 * [POS-12973] add components storybook docs ([aa17162](https://github.com/idbi/components/commit/aa171627150a859d44ae1e2558f4517b499b5298))
 * reexport components and their declarations ([8ba64cd](https://github.com/idbi/components/commit/8ba64cd7740b21c4969e9279ad48e93b5abb0f57))
-
-
-
-## [0.25.1](https://github.com/idbi/components/compare/v0.25.0...v0.25.1) (2022-12-19)
-
-
-### Bug Fixes
-
-* adjust background in SupplyInput ([7c7a0cb](https://github.com/idbi/components/commit/7c7a0cbdeda14aa4590fe5cb134c58a7a06bfc1d))
 
 
 
