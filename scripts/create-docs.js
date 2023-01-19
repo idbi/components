@@ -25,7 +25,7 @@ const storiesPath = `${docsFolderPath}/${componentName}.stories.tsx`
 const componentExportPath_content = `
 export { ${componentName} } from "@/components/${storiesTitle}";`;
 const typeExportPath_content = `
-export { ${componentName} } from "@/components/${storiesTitle}/types";`;
+export { ${componentName} } from "./components/${storiesTitle}/types";`;
 
 const indexPath_content = `import React from "react";
 import type { I${componentName} } from "./types";
