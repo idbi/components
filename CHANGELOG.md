@@ -1,3 +1,12 @@
+## [0.30.1](https://github.com/idbi/components/compare/v0.30.0...v0.30.1) (2023-01-19)
+
+
+### Bug Fixes
+
+* fixs react-icons and DateRangePicker ([b6baaa4](https://github.com/idbi/components/commit/b6baaa4d7b26e5fdc46fcacaac94f180247605fb))
+
+
+
 # [0.30.0](https://github.com/idbi/components/compare/v0.29.1...v0.30.0) (2023-01-19)
 
 
@@ -81,20 +90,6 @@
 * export Search ([0592ddf](https://github.com/idbi/components/commit/0592ddff46ce81be68a39a32454a67e19b6c9a08))
 * export types and components Table with Pagination ([e0684ad](https://github.com/idbi/components/commit/e0684adfdaaa6ebb2e0904d78071c3787b6aedc4))
 * update build ([6939372](https://github.com/idbi/components/commit/6939372ee6ecae4d705194b5b402a34321bd1f35))
-
-
-
-# [0.27.0](https://github.com/idbi/components/compare/v0.26.0...v0.27.0) (2022-12-30)
-
-
-### Bug Fixes
-
-* add mapping keys ([4e83aa3](https://github.com/idbi/components/commit/4e83aa3103a53fdfe2b18c63fac3b236904bdae8))
-
-
-### Features
-
-* [POS-12973-2] components storybook docs ([85761dc](https://github.com/idbi/components/commit/85761dcd3ec7e8e063e8b4f16eac357fc1438512))
 
 
 
