@@ -44,27 +44,8 @@ export const Compare = styled.section<CompareProps>`
     font: 600 12px Poppins !important;
     display: flex;
     align-items: center;
-    color: #ea345f;
+    color: ${({ isUp }) => (isUp ? "#27ae60" : "#ea345f")};
     transition: all 0.2s;
-
-    ${({ isUp }) =>
-      isUp &&
-      css`
-        color: #27ae60;
-      `}
-
-    > svg {
-      transform: rotate(-90deg);
-      font-size: 14px;
-      margin-right: 2px;
-      transition: all 0.2s;
-
-      ${({ isUp }) =>
-        isUp &&
-        css`
-          transform: rotate(90deg);
-        `}
-    }
   }
   p {
     font: normal 12px Poppins !important;

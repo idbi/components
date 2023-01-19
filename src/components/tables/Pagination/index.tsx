@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {
-  FiChevronLeft,
-  FiChevronRight,
-  FiChevronsLeft,
-  FiChevronsRight,
-} from "react-icons/fi";
+import { IdiArrowLeft } from "@/icons/IdiArrowLeft";
+import { IdiArrowRight } from "@/icons/IdiArrowRight";
 import type { IPagination } from "./types";
 import * as s from "./styles";
 
@@ -61,7 +57,12 @@ export const Pagination: React.FC<IPagination> = ({
           border: showBorderColor(),
         }}
       >
-        <FiChevronsLeft size={20} color={showIconColor()} />
+        <IdiArrowLeft size={12} color={showIconColor()} />
+        <IdiArrowLeft
+          size={12}
+          color={showIconColor()}
+          styleContainer={{ marginLeft: "-5px" }}
+        />
       </button>
       <button
         type="button"
@@ -73,7 +74,7 @@ export const Pagination: React.FC<IPagination> = ({
           border: showBorderColor(),
         }}
       >
-        <FiChevronLeft size={20} color={showIconColor()} />
+        <IdiArrowLeft size={12} color={showIconColor()} />
       </button>
       <input
         type="number"
@@ -81,7 +82,7 @@ export const Pagination: React.FC<IPagination> = ({
         max={lastPage}
         onChange={(e) => handleOnChange(e.target.value || "")}
       />
-      <p>de {lastPage}</p>
+      <p style={{ whiteSpace: "nowrap" }}>de {lastPage}</p>
       <button
         type="button"
         disabled={Number(pageInput) === lastPage}
@@ -96,7 +97,7 @@ export const Pagination: React.FC<IPagination> = ({
           }`,
         }}
       >
-        <FiChevronRight size={20} color={showLastIconColor()} />
+        <IdiArrowRight size={12} color={showLastIconColor()} />
       </button>
       <button
         type="button"
@@ -112,7 +113,12 @@ export const Pagination: React.FC<IPagination> = ({
           }`,
         }}
       >
-        <FiChevronsRight size={20} color={showLastIconColor()} />
+        <IdiArrowRight size={12} color={showLastIconColor()} />
+        <IdiArrowRight
+          size={12}
+          color={showLastIconColor()}
+          styleContainer={{ marginLeft: "-5px" }}
+        />
       </button>
     </s.Container>
   );

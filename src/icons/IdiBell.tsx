@@ -1,17 +1,19 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React from "react"
-import { IIcon } from "./types"
+import React from "react";
+import { IIcon } from "./types";
 
 export const IdiBell: React.FC<IIcon> = ({
   size = 20,
   color = "#242954",
   onClick,
+  styleContainer,
 }) => {
   return (
     <div
       onClick={() => onClick && onClick()}
       style={{
+        ...styleContainer,
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
@@ -19,7 +21,7 @@ export const IdiBell: React.FC<IIcon> = ({
         height: `${size}px`,
         minWidth: `${size}px`,
         minHeight: `${size}px`,
-        cursor: onClick ? "pointer" : "default"
+        cursor: onClick ? "pointer" : "default",
       }}
     >
       <div
