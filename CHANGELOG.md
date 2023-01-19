@@ -1,3 +1,14 @@
+# [0.30.0](https://github.com/idbi/components/compare/v0.29.1...v0.30.0) (2023-01-19)
+
+
+### Features
+
+* create new Icons ([39fb0a4](https://github.com/idbi/components/commit/39fb0a41cda82c705580f222aa09a196c5a92203))
+* remove DateRangePicker and react-icons of components ([0341632](https://github.com/idbi/components/commit/0341632dca712da7508feb5d52090d076d0c487c))
+* update build ([2cdb857](https://github.com/idbi/components/commit/2cdb8576130925a6bf27bc8cd809019d3ef60926))
+
+
+
 ## [0.29.1](https://github.com/idbi/components/compare/v0.29.0...v0.29.1) (2023-01-18)
 
 
@@ -84,33 +95,6 @@
 ### Features
 
 * [POS-12973-2] components storybook docs ([85761dc](https://github.com/idbi/components/commit/85761dcd3ec7e8e063e8b4f16eac357fc1438512))
-
-
-
-# [0.26.0](https://github.com/idbi/components/compare/v0.25.1...v0.26.0) (2022-12-30)
-
-
-### Features
-
-* [POS-12850] product detalails card img label ([82462fc](https://github.com/idbi/components/commit/82462fc482282289db60422423636eb42b7ad925))
-* [POS-12851] client card remove icon ([6fd3c96](https://github.com/idbi/components/commit/6fd3c964a597d93f575775635b9cd2bfb473fdd7))
-* [POS-12852] add UserProfileIcon border ([05c7f25](https://github.com/idbi/components/commit/05c7f256c647284fa506c360c6d7c8ab098ad2da))
-* [POS-12856] add section card subsections ([407033f](https://github.com/idbi/components/commit/407033ff83fc4c7e6aa2403ad94c7b4d2fc96451))
-* [POS-12857] add multiple users component ([324d1aa](https://github.com/idbi/components/commit/324d1aa37f927ef846352baa8be15fc7f6222969))
-* [POS-12858] add tooltip containers ([df5e0c5](https://github.com/idbi/components/commit/df5e0c569350acc9bdef86b5d490777a26fcaae2))
-* [POS-12859] add QuantityInputV2 component ([2e6efbf](https://github.com/idbi/components/commit/2e6efbfade5516c228eb3773f3df615395c01396))
-* [POS-12860] add bulletPoint component ([d61b5a0](https://github.com/idbi/components/commit/d61b5a05fcd7ad0e4c434de3683ab32f086c00f8))
-* [POS-12861] add optionsModal component ([f13ba5b](https://github.com/idbi/components/commit/f13ba5b360b757a26fe6fdb9578a55868d21b7d7))
-* [POS-12862] add BulletOptionsModal component ([dd0b0ad](https://github.com/idbi/components/commit/dd0b0ad22d3d7d63e97d87938dc59a88efe13014))
-* [POS-12863] add HorizontalDivision component ([2ab329b](https://github.com/idbi/components/commit/2ab329b24cd3e8bf648c0f8ace4828a7d39a7d99))
-* [POS-12864] add ButtonsSelect component ([b4cdefb](https://github.com/idbi/components/commit/b4cdefb27503ed1d1a4fbad6d2d9040fcfdd63e2))
-* [POS-12865] add SectionHeader component ([184785d](https://github.com/idbi/components/commit/184785d9c76783919b154f0ece3bbc0fb4d5464c))
-* [POS-12866] add Tab component ([fba5248](https://github.com/idbi/components/commit/fba5248cc25fb14d5f9db5756907a2db5ca9058f))
-* [POS-12867] add ActionOptionsModal component ([e60f55f](https://github.com/idbi/components/commit/e60f55fc31d713649144d9313d9769ad0301a6cb))
-* [POS-12868] add BaseInputComponent ([609ccab](https://github.com/idbi/components/commit/609ccabd9a34b397bf6544a80b0b3c4df21ef96a))
-* [POS-12869] add CartProductV2 component ([c425514](https://github.com/idbi/components/commit/c42551405724ba87fd61a8b3acb78c6d7ab8acfc))
-* [POS-12973] add components storybook docs ([aa17162](https://github.com/idbi/components/commit/aa171627150a859d44ae1e2558f4517b499b5298))
-* reexport components and their declarations ([8ba64cd](https://github.com/idbi/components/commit/8ba64cd7740b21c4969e9279ad48e93b5abb0f57))
 
 
 
