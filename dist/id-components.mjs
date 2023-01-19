@@ -2049,10 +2049,10 @@ const Cu = ({
     fill: "currentColor"
   })
 }), qf = x.div`
-  background-color: ${({ hasImg: t, theme: e }) => t ? e.color.QUATERNARY[300] : "transparent"};
+  background-color: ${({ hasImg: t }) => t ? P.color.QUATERNARY[300] : "transparent"};
   border: 1px solid white;
   border-radius: 50%;
-  color: ${({ theme: t }) => t.color.QUATERNARY[900]};
+  color: ${P.color.QUATERNARY[900]};
   display: inline-flex;
   justify-content: center;
   align-items: center;
