@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{ fullWidth?: boolean }>`
   min-width: 134px;
-  display: flex;
+  width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
+  display: inline-flex;
   align-items: center;
   gap: 4px;
 `;
