@@ -40,3 +40,13 @@ export const SecondaryMultipleOptions = Template.bind({});
 SecondaryMultipleOptions.args = {
   ...mockConfirmationCardV2Props.secondaryMultipleOptions,
 } as IButtonsSwitchContainer;
+
+export const tertiary = Template.bind({});
+tertiary.args = {
+  ...mockConfirmationCardV2Props.tertiary,
+} as IButtonsSwitchContainer;
+
+export const tertiaryMultipleOptions = Template.bind({});
+tertiaryMultipleOptions.args = {
+  ...mockConfirmationCardV2Props.tertiaryMultipleOptions,
+} as IButtonsSwitchContainer;

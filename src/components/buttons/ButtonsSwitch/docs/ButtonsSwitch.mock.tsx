@@ -56,6 +56,25 @@ const secondaryMultipleOptions: IButtonsSwitchContainer = {
   model: "secondary",
 };
 
+const tertiary: IButtonsSwitchContainer = {
+  model: "tertiary",
+  options: [
+    { label: "Agregar productos", value: "ADD" },
+    { label: "Detalles de la cotización", value: "DETAILS" },
+  ],
+};
+
+const tertiaryMultipleOptions: IButtonsSwitchContainer = {
+  model: "tertiary",
+  options: [
+    { label: "Agregar productos", value: "ADD" },
+    { label: "Detalles de la cotización", value: "DETAILS" },
+    { label: "Otra opción", value: "OTHER" },
+    { label: "Test", value: "TEST" },
+  ],
+  fullWidth: true,
+};
+
 export const mockConfirmationCardV2Props = {
   primary,
   primaryFullWidth,
@@ -63,4 +82,6 @@ export const mockConfirmationCardV2Props = {
   primaryDisabled,
   secondary,
   secondaryMultipleOptions,
+  tertiary,
+  tertiaryMultipleOptions,
 };
