@@ -39,11 +39,15 @@ const noIdentification: IClientCard = {
   otherSections: ["Test: asd", "Other: aaa"],
 };
 
-const withDeleteAction: IClientCard = {
+const withCustomAction: IClientCard = {
   name: "Andrea",
   lastName: "Perez Vasquez",
   otherSections: ["Test: asd", "Other: aaa"],
-  onDelete: () => alert("remove client"),
+  aside: (
+    <span style={{ cursor: "pointer" }} onClick={() => alert("some action")}>
+      action
+    </span>
+  ),
 };
 
 export const mockConfirmationCardV2Props = {
@@ -51,5 +55,5 @@ export const mockConfirmationCardV2Props = {
   withOtherSections,
   noProfileImg,
   noIdentification,
-  withDeleteAction,
+  withCustomAction,
 };

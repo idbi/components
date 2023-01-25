@@ -31,7 +31,7 @@ NoIdentification.args = {
   ...mockConfirmationCardV2Props.noIdentification,
 } as IClientCard;
 
-export const withDeleteAction = Template.bind({});
-withDeleteAction.args = {
-  ...mockConfirmationCardV2Props.withDeleteAction,
+export const withCustomAction = Template.bind({});
+withCustomAction.args = {
+  ...mockConfirmationCardV2Props.withCustomAction,
 } as IClientCard;
