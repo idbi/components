@@ -30,3 +30,13 @@ export const customTabWidth = Template.bind({});
 customTabWidth.args = {
   ...mock.customTabWidth,
 } as ITab;
+
+export const customTabHeight = Template.bind({});
+customTabHeight.args = {
+  ...mock.customTabHeight,
+} as ITab;
+
+export const fullWidthTab = Template.bind({});
+fullWidthTab.args = {
+  ...mock.fullWidthTab,
+} as ITab;
