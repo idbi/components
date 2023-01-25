@@ -35,6 +35,11 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
   transition: background 0.3s ease-out;
   transition: border 0.3s ease-out;
 
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+
   > input {
     border-radius: 8px;
     width: 100%;
@@ -42,11 +47,10 @@ export const InputContainer = styled.div<InputProps & { isFocused?: boolean }>`
     flex-grow: 1;
     border: none;
     outline: none;
-    padding: 10px 0px;
     background-color: #fff;
     letter-spacing: -0.04em;
     color: ${() => theme.color.NEUTRAL[700]};
-    padding-left: ${({ leftAddon }) => (!leftAddon ? "12px" : "0px")};
+    padding-left: ${({ leftAddon }) => (!leftAddon ? "15px" : "0px")};
     padding-right: ${({ rightAddon }) => (!rightAddon ? "12px" : "0px")};
     padding-right: ${({ success, error }) => (success || error) && "2.5rem"};
 

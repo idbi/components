@@ -1,15 +1,15 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Container } from "./Container";
+import { EditQuantityInput } from "./Container";
 import { IEditQuantityInputContainer } from "./Container";
 import { mockConfirmationCardV2Props } from "./EditQuantityInput.mock";
 
 export default {
   title: "forms/EditQuantityInput",
-  component: Container,
+  component: EditQuantityInput,
   argTypes: {},
-} as ComponentMeta<typeof Container>;
+} as ComponentMeta<typeof EditQuantityInput>;
 
-const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
+const Template: ComponentStory<typeof EditQuantityInput> = (args) => <EditQuantityInput {...args} />;
 
 export const Base = Template.bind({});
 Base.args = {

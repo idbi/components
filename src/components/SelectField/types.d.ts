@@ -10,8 +10,7 @@ export interface SelectFieldProps {
   placeholder?: string;
   style?: CSSProperties;
   loading?: boolean;
-  error?: string;
-  firstOption?: OptionType;
+  firstOption?: OptionType | null;
   initialValue?: OptionType | OptionType[];
   value?: OptionType | OptionType[];
   isMulti?: boolean;

@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import { BulletOptionsModal } from "..";
+import { BulletOptionsModal as BulletOptionsModalComponent } from "..";
 import { IBulletOptionsModal } from "../types";
 
-export const Container = (props: IBulletOptionsModal) => {
+export const BulletOptionsModal = (props: IBulletOptionsModal) => {
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(props.selected);
 
   return (
     <>
-      <button onClick={() => setShow(true)}>show modal</button>
+      <button type="button" onClick={() => setShow(true)}>
+        show modal
+      </button>
       {show && (
-        <BulletOptionsModal
+        <BulletOptionsModalComponent
           {...props}
           onClose={() => setShow(false)}
           onSelect={(value) => setSelected(value)}

@@ -11,23 +11,24 @@ export const Checkbox: React.FC<ICheckbox> = ({
   disabled = false,
   ...rest
 }) => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(rest?.checked || false);
 
   useEffect(() => {
-    if (rest.checked) setIsChecked(rest.checked);
-  }, []);
+    setIsChecked(Boolean(rest?.checked));
+  }, [rest?.checked]);
 
   return (
     <Label disabled={disabled}>
       <input
+        {...rest}
         type="checkbox"
         value={value}
         disabled={disabled}
         onChange={(event) => {
-          callbackOnChange(event.target.value, isChecked && !disabled);
           setIsChecked(!isChecked);
+          callbackOnChange(event.target.value, !isChecked);
         }}
-        {...rest}
+        checked={isChecked}
       />
       <span>
         {isChecked ? (

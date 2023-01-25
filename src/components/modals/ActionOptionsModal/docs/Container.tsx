@@ -1,14 +1,21 @@
 import React, { useState } from "react";
-import { ActionOptionsModal } from "..";
+import { ActionOptionsModal as ActionOptionsModalComponent } from "..";
 import { IActionOptionsModal } from "../types";
 
-export const Container = (props: IActionOptionsModal) => {
+export const ActionOptionsModal = (props: IActionOptionsModal) => {
   const [show, setShow] = useState(false);
 
   return (
     <>
-      <button onClick={() => setShow(true)}>show modal</button>
-      {show && <ActionOptionsModal {...props} onClose={() => setShow(false)} />}
+      <button type="button" onClick={() => setShow(true)}>
+        show modal
+      </button>
+      {show && (
+        <ActionOptionsModalComponent
+          {...props}
+          onClose={() => setShow(false)}
+        />
+      )}
     </>
   );
 };

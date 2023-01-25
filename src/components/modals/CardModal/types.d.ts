@@ -1,6 +1,7 @@
 import { DropdownOptions } from "@/components/dropdowns/MultipleOptionsDropdown";
 import { IModalContainer } from "../ModalContainer/types";
 import type { Spacing, TColor, TSizes } from "../Typography/TextBuilder/types";
+import { CSSProperties } from "react";
 
 export interface ICardModal extends IModalContainer {
   show?: boolean;
@@ -17,6 +18,7 @@ export interface ICardModal extends IModalContainer {
   closeIconInDesktop?: boolean;
   boxShadow?: string;
   boxShadowInDesktop?: string;
+  styleContainer?: CSSProperties;
 }
 
 export declare const CardModal: (props: ICardModal) => JSX.Element;

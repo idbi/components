@@ -1,7 +1,12 @@
 import { HTMLAttributes } from "react";
 
-interface IUserIcon {
-  img?: null | { src: string; srcSet?: string; alt?: string };
+export interface IUserImg {
+  src: string;
+  srcSet?: string;
+  alt?: string
+}
+export interface IUserIcon {
+  img?: null | IUserImg;
   initials: string;
   size?: number;
   containerProps?: HTMLAttributes<HTMLDivElement>;

@@ -13,6 +13,7 @@ export const ModalContainer: React.FC<IModalContainer> = ({
   boxShadow,
   boxShadowInDesktop,
   fullWidth,
+  styleContainer,
 }) => {
   return (
     <>
@@ -29,6 +30,7 @@ export const ModalContainer: React.FC<IModalContainer> = ({
         boxShadow={boxShadow}
         boxShadowInDesktop={boxShadowInDesktop}
         fullWidth={fullWidth}
+        style={styleContainer}
       >
         {children}
       </Content>

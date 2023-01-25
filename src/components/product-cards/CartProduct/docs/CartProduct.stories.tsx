@@ -1,15 +1,15 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Container } from "./Container";
+import { CartProduct } from "./Container";
 import { ICartProductContainer } from "./Container";
 import { mockConfirmationCardV2Props } from "./CartProduct.mock";
 
 export default {
   title: "productCards/CartProduct",
-  component: Container,
+  component: CartProduct,
   argTypes: {},
-} as ComponentMeta<typeof Container>;
+} as ComponentMeta<typeof CartProduct>;
 
-const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
+const Template: ComponentStory<typeof CartProduct> = (args) => <CartProduct {...args} />;
 
 export const Base = Template.bind({});
 Base.args = {
