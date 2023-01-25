@@ -49,6 +49,7 @@ export { ConfirmationCardV3 } from "./components/confirmations/ConfirmationCardV
 export { Checkbox } from "./components/forms/Checkbox/types";
 export { Radio } from "./components/forms/Radio/types";
 export { EditQuantityInput } from "./components/forms/EditQuantityInput/types";
+export { QuantityInputV2 } from "./components/forms/QuantityInputV2/types";
 export { ButtonsSwitch } from "./components/buttons/ButtonsSwitch/types";
 export { SupplyInput } from "./components/forms/SupplyInput/types";
 export { BaseInput } from "./components/forms/BaseInput/types";

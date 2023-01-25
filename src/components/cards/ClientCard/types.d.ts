@@ -5,9 +5,9 @@ export interface IClientCard {
   name: string;
   lastName?: string;
   img?: null | { src: string; srcSet?: string; alt?: string };
-  idNumber?: string;
+  idNumber?: ReactNode;
   otherSections?: ReactNode[];
-  onDelete?: () => void;
+  aside?: ReactNode;
 }
 
 export declare const ClientCard: (props: IClientCard) => JSX.Element;

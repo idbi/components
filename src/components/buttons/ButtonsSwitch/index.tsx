@@ -9,6 +9,7 @@ export const ButtonsSwitch = ({
   onSelect,
   fullWidth,
   model,
+  equalBtns,
 }: IButtonsSwitch) => {
   return (
     <s.Container
@@ -26,6 +27,7 @@ export const ButtonsSwitch = ({
           active={option.value === selected}
           disabled={disabled}
           model={model}
+          equal={equalBtns}
         >
           {option.label}
         </s.Btn>

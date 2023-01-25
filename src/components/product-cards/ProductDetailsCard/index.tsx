@@ -32,7 +32,9 @@ export const ProductDetailsCard = ({
               <img {...img} />
             </div>
             {imgLabel}
-            {status && !imgLabel && <s.ImgLabel status={status}>{getStatusText(status)}</s.ImgLabel>}
+            {status && !imgLabel && !!getStatusText(status) && (
+              <s.ImgLabel status={status}>{getStatusText(status)}</s.ImgLabel>
+            )}
           </s.ImgContainer>
         )}
         <s.ProductData hasDetails={!!hasDetails}>

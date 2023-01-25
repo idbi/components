@@ -16,6 +16,10 @@ export const ImgWrapper = styled.div`
   flex-shrink: 0;
 `;
 
+export const Main = styled.div`
+  flex-grow: 1;
+`;
+
 export const DataFields = styled.div`
   color: ${({ theme }) => theme.color.NEUTRAL[700]};
   margin-bottom: 3px;

@@ -1,8 +1,8 @@
 import React from "react";
 import Skeleton from "react-loading-skeleton";
 import { formatNumber as formatter } from "@/utils/formatNumber";
-import { IconPER } from "@/icons/flags/IconPER";
-import { IconUSA } from "@/icons/flags/IconUSA";
+import { IconPER } from "@/icons/Flags/IconPER";
+import { IconUSA } from "@/icons/Flags/IconUSA";
 import type { IKpiCard } from "./types";
 import * as s from "./styles";
 

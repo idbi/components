@@ -19,6 +19,15 @@ const withContent: ISectionCard = {
   ),
 };
 
+const noTitle: ISectionCard = {
+  children: (
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea laborum suscipit optio accusantium hic voluptates,
+      maxime a neque! Vitae iusto temporibus aperiam rerum possimus asperiores unde sunt fugit aliquam hic.
+    </div>
+  ),
+};
+
 const withHeaderAside: ISectionCard = {
   title: "Datos de la cotización",
   icon: <PictureIcon />,
@@ -118,4 +127,5 @@ export const mockConfirmationCardV2Props = {
   noIcon,
   withInnerSections,
   innerSectionsNoChildren,
+  noTitle,
 };

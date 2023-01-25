@@ -14,6 +14,17 @@ const base: IProductDetailsCard = {
   },
 };
 
+const noUnitPrice: IProductDetailsCard = {
+  name: "Jugo de papaya con leche deslactosada",
+  quantity: 2,
+  currencySymbol: "S/",
+  total: 18,
+  comment: "",
+  img: {
+    src: "https://cdn.idbi.pe/0e797c6e-4f23-4995-ac18-3d38fa287387/helado-de-chocolate-6-1.jpg1645809470044.jpeg",
+  },
+};
+
 const withDetails: IProductDetailsCard = {
   name: "Jugo de papaya con leche deslactosada",
   quantity: 2,
@@ -93,6 +104,7 @@ const disabled: IProductDetailsCard = {
 
 export const mockConfirmationCardV2Props = {
   base,
+  noUnitPrice,
   withDetails,
   withDiscount,
   withImageStatusLabel,

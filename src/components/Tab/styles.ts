@@ -1,6 +1,14 @@
 import styled, { css } from "styled-components";
 
-export const Tab = styled.button<{ isActive?: boolean; noWrap?: boolean; rounded?: boolean; activeColor: string, tabWidth: number }>`
+export const Tab = styled.button<{
+  isActive?: boolean;
+  noWrap?: boolean;
+  rounded?: boolean;
+  activeColor: string;
+  tabWidth: number;
+  tabHeight: number;
+  tabFullWidth?: boolean;
+}>`
   color: currentColor;
   background-color: transparent;
   border: none;
@@ -21,7 +29,7 @@ export const Tab = styled.button<{ isActive?: boolean; noWrap?: boolean; rounded
       max-width: 100%;
     `}
 
-  ${({ isActive, rounded, activeColor, tabWidth }) =>
+  ${({ isActive, rounded, activeColor, tabWidth, tabFullWidth, tabHeight }) =>
     isActive &&
     css`
       color: ${activeColor};
@@ -29,10 +37,11 @@ export const Tab = styled.button<{ isActive?: boolean; noWrap?: boolean; rounded
         content: "";
         background-color: ${activeColor};
         border-radius: ${rounded ? "8px" : 0};
-        width: ${tabWidth}px;
-        height: 4px;
+        width: ${tabFullWidth ? "100%" : `${tabWidth}px`};
+        height: ${tabHeight}px;
         position: absolute;
         bottom: 0px;
+        left: ${tabFullWidth ? "0" : "unset"};
 
         animation: fadeIn 1.2s;
         -webkit-animation: fadeIn 1.2s;
