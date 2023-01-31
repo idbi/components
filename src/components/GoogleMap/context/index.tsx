@@ -1,4 +1,4 @@
-import React, { useState, useRef, createContext, ReactNode } from "react";
+import React, { useState, useRef, createContext, ReactNode, useContext } from "react";
 import { IGoogleMapCtx, IMapState } from "./types";
 
 export const GoogleMapCtx = createContext({} as IGoogleMapCtx);
@@ -10,3 +10,4 @@ const GoogleMapCtxProvider = ({ children }: { children: ReactNode }) => {
 };
 
 export default GoogleMapCtxProvider;
+export const useGoogleMapCtx = () => useContext(GoogleMapCtx);

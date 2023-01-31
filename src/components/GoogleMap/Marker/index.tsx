@@ -8,7 +8,7 @@ interface IProps {
 }
 
 const MarkerWrapper = ({ children }: IProps) => {
-  return children;
+  return <>{children}</>;
 };
 
 export default MarkerWrapper;
