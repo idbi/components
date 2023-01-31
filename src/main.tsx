@@ -6,10 +6,8 @@ import GlobalStyle from "./theme/provider";
 import { theme } from "./theme";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-      <GlobalStyle />
-    </ThemeProvider>
-  </React.StrictMode>
+  <ThemeProvider theme={theme}>
+    <App />
+    <GlobalStyle />
+  </ThemeProvider>
 );
