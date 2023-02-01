@@ -1,21 +1,17 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useGoogleMapCtx } from "../context";
 import GoogleMapReact from "google-map-react";
 import { MarkerWrapper } from "../Marker";
 import { DefaultMarker } from "../Marker/styles";
 import { IMap } from "./types";
 
-const defaultUbi = { lat: -12.1245726, lng: -77.0266616 };
-
-export const Map = ({ children, defaultCenter, defaultMarker = true, onSelectCoordinates = () => {} }: IMap) => {
-  const { map, setMap, onSelectAddress, API_KEY } = useGoogleMapCtx();
-  const [markerPosition, setMarkerPosition] = useState(defaultUbi);
+export const Map = ({ children, defaultMarker = true }: IMap) => {
+  const { map, setMap, onSelectAddress, API_KEY, setMapCenter, coordinates, setCoordinates } = useGoogleMapCtx();
   const geocoderRef = useRef<any>(null);
 
   const handleMapClick = (lat: number, lng: number) => {
     const latlng = { lat, lng };
-    setMarkerPosition(latlng);
-    onSelectCoordinates(lat, lng);
+    setCoordinates(latlng);
 
     if (!geocoderRef.current) geocoderRef.current = new map.api.Geocoder();
     geocoderRef.current.geocode({ location: latlng }, (results: any[], status: string) => {
@@ -27,21 +23,14 @@ export const Map = ({ children, defaultCenter, defaultMarker = true, onSelectCoo
       const address = geolocation.formatted_address;
 
       onSelectAddress({ ...latlng, address, locality: localityName });
-
-      if (!geolocation.geometry) return;
-      if (geolocation.geometry.viewport) {
-        map.instance.fitBounds(geolocation.geometry.viewport);
-      } else {
-        map.instance.setCenter(geolocation.geometry.location);
-        map.instance.setZoom(17);
-      }
+      if (geolocation.geometry) setMapCenter(geolocation.geometry);
     });
   };
 
   return (
     <GoogleMapReact
       defaultZoom={15}
-      defaultCenter={defaultCenter || defaultUbi}
+      defaultCenter={coordinates}
       bootstrapURLKeys={{
         key: API_KEY,
         libraries: ["places", "geometry"],
@@ -55,7 +44,7 @@ export const Map = ({ children, defaultCenter, defaultMarker = true, onSelectCoo
       }}
     >
       {defaultMarker && (
-        <MarkerWrapper text="Location" lat={markerPosition.lat} lng={markerPosition.lng}>
+        <MarkerWrapper text="Location" {...coordinates}>
           <DefaultMarker />
         </MarkerWrapper>
       )}
