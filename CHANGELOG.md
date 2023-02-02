@@ -1,3 +1,7 @@
+## [0.31.6](https://github.com/idbi/components/compare/v0.31.5...v0.31.6) (2023-02-02)
+
+
+
 ## [0.31.5](https://github.com/idbi/components/compare/v0.31.4...v0.31.5) (2023-02-02)
 
 
@@ -21,15 +25,6 @@
 
 
 ## [0.31.2](https://github.com/idbi/components/compare/v0.31.1...v0.31.2) (2023-02-02)
-
-
-
-## [0.31.1](https://github.com/idbi/components/compare/v0.31.0...v0.31.1) (2023-02-02)
-
-
-### Bug Fixes
-
-* theme in EditQuantityInput ([4923b67](https://github.com/idbi/components/commit/4923b67b29fa0e0b056016977d66b7ff855022f8))
 
 
 
