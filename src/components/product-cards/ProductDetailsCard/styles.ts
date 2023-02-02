@@ -1,9 +1,11 @@
 import styled, { css } from "styled-components";
 import { StatusType } from "../../../types/globalTypes";
+import { theme } from "@/theme";
 
 export const Card = styled.div<{ disabled?: boolean; hasDetails?: boolean }>`
-  background-color: ${({ disabled, theme }) => (disabled ? theme.color.NEUTRAL[50] : "white")};
-  border: 1px solid ${({ theme }) => theme.color.NEUTRAL[100]};
+  background-color: ${({ disabled }) =>
+    disabled ? theme.color.NEUTRAL[50] : "white"};
+  border: 1px solid ${theme.color.NEUTRAL[100]};
   border-radius: 8px;
   min-height: ${({ hasDetails }) => (hasDetails ? "140px" : "unset")};
   display: flex;
@@ -47,15 +49,15 @@ export const ImgContainer = styled.div`
 export const ImgLabel = styled.div<{ status?: StatusType }>`
   min-height: 24px;
   width: 100%;
-  background-color: ${({ theme }) => theme.color.QUATERNARY[100]};
-  color: ${({ theme }) => theme.color.QUATERNARY[900]};
+  background-color: ${theme.color.QUATERNARY[100]};
+  color: ${theme.color.QUATERNARY[900]};
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 12px;
   flex-shrink: 0;
 
-  ${({ status, theme }) => {
+  ${({ status }) => {
     switch (status) {
       case "draft":
         return css`
@@ -101,12 +103,14 @@ export const ProductData = styled.div<{ hasDetails?: boolean }>`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: ${({ hasDetails }) => (hasDetails ? "flex-start" : "space-between")};
+  justify-content: ${({ hasDetails }) =>
+    hasDetails ? "flex-start" : "space-between"};
   gap: 5px;
 `;
 
 export const Main = styled.div<{ disabled?: boolean }>`
-  color: ${({ disabled, theme }) => (disabled ? theme.color.NEUTRAL[500] : theme.color.NEUTRAL[800])};
+  color: ${({ disabled }) =>
+    disabled ? theme.color.NEUTRAL[500] : theme.color.NEUTRAL[800]};
   display: flex;
   align-items: flex-start;
   gap: 5px;
@@ -114,7 +118,7 @@ export const Main = styled.div<{ disabled?: boolean }>`
 `;
 
 export const DetailsWrapper = styled.div`
-  color: ${({ theme }) => theme.color.NEUTRAL[500]};
+  color: ${theme.color.NEUTRAL[500]};
   margin-top: 8px;
   font-size: 12px;
 `;
