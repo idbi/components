@@ -1,3 +1,12 @@
+## [0.31.4](https://github.com/idbi/components/compare/v0.31.3...v0.31.4) (2023-02-02)
+
+
+### Bug Fixes
+
+* theme in CartProductV2 ([96d8f22](https://github.com/idbi/components/commit/96d8f22043aae49ce4207bc8b85bbddba10dadf5))
+
+
+
 ## [0.31.3](https://github.com/idbi/components/compare/v0.31.2...v0.31.3) (2023-02-02)
 
 
@@ -31,15 +40,6 @@
 * [POS-13301] document-export QuantityInputV2 ([afcd880](https://github.com/idbi/components/commit/afcd880f81eb35833449786904bf680c969c4dda))
 * [POS-13302] change client card aside prop ([43b5713](https://github.com/idbi/components/commit/43b57130dd57034c25088cbcf8867b02caebaeaf))
 * [POS-13466] add customizible tab props ([041788f](https://github.com/idbi/components/commit/041788fd2fae97fcc89483bc882e9e0a0fbd2c11))
-
-
-
-## [0.30.3](https://github.com/idbi/components/compare/v0.30.2...v0.30.3) (2023-01-19)
-
-
-### Bug Fixes
-
-* fix theme import in UserProfileIcon ([4cc93dd](https://github.com/idbi/components/commit/4cc93dda010fa498475d007afff1c1081aaf3529))
 
 
 
