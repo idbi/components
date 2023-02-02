@@ -4740,12 +4740,12 @@ const il = ({
 
   & > span {
     :first-child {
-      color: ${({ theme: e }) => e.color.NEUTRAL[500]};
+      color: ${d.color.NEUTRAL[500]};
       font-weight: 500;
       text-decoration: line-through;
     }
     :last-child {
-      color: ${({ disabled: e, theme: r }) => e ? r.color.NEUTRAL[500] : r.color.PRIMARY[900]};
+      color: ${({ disabled: e }) => e ? d.color.NEUTRAL[500] : d.color.PRIMARY[900]};
       text-decoration: none;
       margin-left: 5px;
       > span {
@@ -4754,7 +4754,7 @@ const il = ({
     }
   }
 `, $o = l.span`
-  background-color: ${({ theme: e }) => e.color.SECONDARY[900]};
+  background-color: ${d.color.SECONDARY[900]};
   border-radius: 50px;
   padding: 5px 6px;
   color: white;

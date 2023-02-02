@@ -2113,12 +2113,12 @@ ${({withBorder:e,color:o})=>e&&f.css`
 
   & > span {
     :first-child {
-      color: ${({theme:e})=>e.color.NEUTRAL[500]};
+      color: ${d.color.NEUTRAL[500]};
       font-weight: 500;
       text-decoration: line-through;
     }
     :last-child {
-      color: ${({disabled:e,theme:o})=>e?o.color.NEUTRAL[500]:o.color.PRIMARY[900]};
+      color: ${({disabled:e})=>e?d.color.NEUTRAL[500]:d.color.PRIMARY[900]};
       text-decoration: none;
       margin-left: 5px;
       > span {
@@ -2127,7 +2127,7 @@ ${({withBorder:e,color:o})=>e&&f.css`
     }
   }
 `,v0=l.default.span`
-  background-color: ${({theme:e})=>e.color.SECONDARY[900]};
+  background-color: ${d.color.SECONDARY[900]};
   border-radius: 50px;
   padding: 5px 6px;
   color: white;

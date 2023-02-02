@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "@/theme";
 
 export const Footer = styled.div<{ disabled?: boolean; bottom?: boolean }>`
   padding-right: 5px;
@@ -25,12 +26,13 @@ export const TotalPrices = styled.div<{ disabled?: boolean }>`
 
   & > span {
     :first-child {
-      color: ${({ theme }) => theme.color.NEUTRAL[500]};
+      color: ${theme.color.NEUTRAL[500]};
       font-weight: 500;
       text-decoration: line-through;
     }
     :last-child {
-      color: ${({ disabled, theme }) => (disabled ? theme.color.NEUTRAL[500] : theme.color.PRIMARY[900])};
+      color: ${({ disabled }) =>
+        disabled ? theme.color.NEUTRAL[500] : theme.color.PRIMARY[900]};
       text-decoration: none;
       margin-left: 5px;
       > span {
@@ -41,7 +43,7 @@ export const TotalPrices = styled.div<{ disabled?: boolean }>`
 `;
 
 export const Patch = styled.span`
-  background-color: ${({ theme }) => theme.color.SECONDARY[900]};
+  background-color: ${theme.color.SECONDARY[900]};
   border-radius: 50px;
   padding: 5px 6px;
   color: white;
