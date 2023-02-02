@@ -2,9 +2,9 @@ import l, { css as A, keyframes as H } from "styled-components";
 import { jsxs as d, jsx as t, Fragment as z } from "react/jsx-runtime";
 import Z, { useEffect as T, forwardRef as ie, useState as k, useRef as D, useCallback as $, useMemo as Nt, useLayoutEffect as It } from "react";
 import * as ae from "@radix-ui/react-collapsible";
-import { useFloating as it, autoUpdate as at, offset as zt, arrow as St } from "@floating-ui/react-dom";
+import { useFloating as it, autoUpdate as at, offset as zt, arrow as jt } from "@floating-ui/react-dom";
 import B from "react-loading-skeleton";
-import jt from "react-select";
+import St from "react-select";
 import { format as Ft } from "date-fns";
 import { DateRange as Bt } from "react-date-range";
 const Ht = {
@@ -30,7 +30,7 @@ const Ht = {
   h5: "xs",
   h6: "xs",
   text: "sm"
-}, p = {
+}, c = {
   color: {
     NEUTRAL: {
       0: "#FFFFFF",
@@ -294,7 +294,7 @@ const Ht = {
         a -= 100;
         break;
     }
-  return i === "PRIMARY" || i === "NEUTRAL" || i === "SECONDARY" || i === "TERTIARY" || i === "QUATERNARY" || i === "STATE" || i === "ALERT" || i === "SUCCESS" ? a === 0 || a === 50 || a === 100 || a === 200 || a === 300 || a === 400 || a === 500 || a === 600 || a === 700 || a === 800 || a === 900 ? p.color[i][a] : p.color[i][900] : p.color.PRIMARY[900];
+  return i === "PRIMARY" || i === "NEUTRAL" || i === "SECONDARY" || i === "TERTIARY" || i === "QUATERNARY" || i === "STATE" || i === "ALERT" || i === "SUCCESS" ? a === 0 || a === 50 || a === 100 || a === 200 || a === 300 || a === 400 || a === 500 || a === 600 || a === 700 || a === 800 || a === 900 ? c.color[i][a] : c.color[i][900] : c.color.PRIMARY[900];
 }, dt = ({ fullWidth: e }) => e ? A`
       width: 100%;
     ` : A`
@@ -380,7 +380,7 @@ const Ht = {
   ${({ fullWidth: e }) => dt({ fullWidth: e })};
   ${({ isLoading: e }) => ct({ isLoading: e })};
   ${({ disabled: e }) => le({ disabled: e })};
-  ${({ m: e, mb: n, mt: r, mr: o, ml: i, my: a, mx: c, p: s, pb: u, pt: h, pr: f, pl: x, py: m, px: g }) => st({ m: e, mb: n, mt: r, mr: o, ml: i, my: a, mx: c, p: s, pb: u, pt: h, pr: f, pl: x, py: m, px: g })};
+  ${({ m: e, mb: n, mt: r, mr: o, ml: i, my: a, mx: s, p, pb: u, pt: h, pr: f, pl: x, py: m, px: g }) => st({ m: e, mb: n, mt: r, mr: o, ml: i, my: a, mx: s, p, pb: u, pt: h, pr: f, pl: x, py: m, px: g })};
 
   &:hover:not(:disabled) {
     background-color: ${({ color: e, design: n }) => n === "link" ? "transparent" : F({ color: e, design: n, hover: !0 })};
@@ -401,7 +401,7 @@ const Ht = {
   b {
     font-weight: bold;
   }
-`, S = ({
+`, j = ({
   children: e,
   ...n
 }) => /* @__PURE__ */ d(Wt, {
@@ -412,29 +412,29 @@ function Qt(e, n, r) {
   const o = () => {
     const i = document.querySelectorAll("input");
     return Array.from(i).filter(
-      (c) => c.className === n
+      (s) => s.className === n
     );
   };
   T(() => {
     const i = (a) => {
       a.key === "Backspace" && setTimeout(() => {
-        const c = o(), s = document.activeElement;
-        s.value = "";
-        const u = c.indexOf(s);
-        u > 0 && c[u - 1].focus();
+        const s = o(), p = document.activeElement;
+        p.value = "";
+        const u = s.indexOf(p);
+        u > 0 && s[u - 1].focus();
       }, 0);
     };
     return document.addEventListener("keydown", i), () => document.removeEventListener("keydown", i);
   }, []), T(() => {
     const i = (a) => {
       if (a.key !== "Backspace") {
-        const c = a.key.toLowerCase();
+        const s = a.key.toLowerCase();
         setTimeout(() => {
-          if (c.length === 1) {
-            const s = o(), u = document.activeElement;
-            u.value = c;
-            const h = s.indexOf(u);
-            h < s.length - 1 && s[h + 1].focus();
+          if (s.length === 1) {
+            const p = o(), u = document.activeElement;
+            u.value = s;
+            const h = p.indexOf(u);
+            h < p.length - 1 && p[h + 1].focus();
           }
         }, 0);
       }
@@ -443,8 +443,8 @@ function Qt(e, n, r) {
   }, []), T(() => {
     if (e) {
       const i = (a) => {
-        const c = a.key.toLowerCase();
-        (c.length === 1 || c === "backspace") && setTimeout(() => {
+        const s = a.key.toLowerCase();
+        (s.length === 1 || s === "backspace") && setTimeout(() => {
           const u = o().map((h) => h.value).join("");
           e(u);
         }, 0);
@@ -453,9 +453,9 @@ function Qt(e, n, r) {
     }
   }, []), T(() => {
     if (r) {
-      const i = o(), a = i.map((u) => u.value), c = r.split(""), s = c.length === a.length ? c : a;
+      const i = o(), a = i.map((u) => u.value), s = r.split(""), p = s.length === a.length ? s : a;
       i.forEach((u, h) => {
-        const f = s[h];
+        const f = p[h];
         f && (u.value = f);
       });
     }
@@ -500,15 +500,15 @@ const Ot = H`
   line-height: 24px;
   letter-spacing: -0.04rem;
   ${({ align: e }) => Yt({ align: e })}
-  ${({ m: e, mb: n, mt: r, mr: o, ml: i, my: a, mx: c, p: s, pb: u, pt: h, pr: f, pl: x, py: m, px: g }) => st({ m: e, mb: n, mt: r, mr: o, ml: i, my: a, mx: c, p: s, pb: u, pt: h, pr: f, pl: x, py: m, px: g })};
+  ${({ m: e, mb: n, mt: r, mr: o, ml: i, my: a, mx: s, p, pb: u, pt: h, pr: f, pl: x, py: m, px: g }) => st({ m: e, mb: n, mt: r, mr: o, ml: i, my: a, mx: s, p, pb: u, pt: h, pr: f, pl: x, py: m, px: g })};
 `, Xt = (e) => {
   const n = e === "h1" || e === "h2" || e === "h3" || e === "h4" || e === "h5" || e === "h6", r = n ? "bold" : "medium", o = n ? me[e] : me.text, i = "PRIMARY/900";
   return A`
     font-weight: ${({ weight: a = r }) => Ht[a] || "500"};
     font-size: ${({ size: a = o }) => lt[a] || a};
     color: ${({ color: a = i }) => {
-    const c = a == null ? void 0 : a.split("/")[0], s = Number(a == null ? void 0 : a.split("/")[1]);
-    return p.color[c][s];
+    const s = a == null ? void 0 : a.split("/")[0], p = Number(a == null ? void 0 : a.split("/")[1]);
+    return c.color[s][p];
   }};
   `;
 }, Jt = l.div`
@@ -578,24 +578,24 @@ const Ot = H`
     width: 45px;
     height: 45px;
     border: 1px solid
-      ${({ errorMessage: e, success: n }) => e ? p.color.ALERT[900] : n ? p.color.SUCCESS[900] : p.color.NEUTRAL[300]};
+      ${({ errorMessage: e, success: n }) => e ? c.color.ALERT[900] : n ? c.color.SUCCESS[900] : c.color.NEUTRAL[300]};
     border-radius: 8px;
     background: #fff;
     font: normal 16px "Poppins";
     letter-spacing: -0.04em;
-    color: ${() => p.color.NEUTRAL[700]};
+    color: ${() => c.color.NEUTRAL[700]};
 
     transition: background 0.3s ease-out;
     transition: border 0.3s ease-out;
 
     &:disabled {
       cursor: not-allowed;
-      background-color: ${() => p.color.NEUTRAL[100]};
-      color: ${() => p.color.NEUTRAL[500]};
+      background-color: ${() => c.color.NEUTRAL[100]};
+      color: ${() => c.color.NEUTRAL[500]};
     }
 
     &:focus {
-      border-color: ${() => p.color.QUATERNARY[900]};
+      border-color: ${() => c.color.QUATERNARY[900]};
     }
   }
 `, $t = l.div`
@@ -611,7 +611,7 @@ const Ot = H`
   success: i,
   onChange: a = () => {
   },
-  ...c
+  ...s
 }) => (Qt(a, e, n), /* @__PURE__ */ d($t, {
   children: [/* @__PURE__ */ t(qt, {
     length: r,
@@ -619,11 +619,11 @@ const Ot = H`
     errorMessage: o,
     children: Array.from({
       length: r
-    }).map((s, u) => /* @__PURE__ */ t("input", {
+    }).map((p, u) => /* @__PURE__ */ t("input", {
       id: u.toString(),
       className: e,
       maxLength: 1,
-      ...c
+      ...s
     }, u))
   }), o && /* @__PURE__ */ t(de, {
     shouldAppear: Boolean(o),
@@ -710,14 +710,14 @@ const Ot = H`
   gap: 0.5rem;
   border-radius: 8px;
   border: 1px solid
-    ${({ error: e, success: n, isFocused: r }) => e ? p.color.ALERT[900] : n && r ? p.color.SUCCESS[900] : r ? p.color.QUATERNARY[900] : p.color.NEUTRAL[300]};
+    ${({ error: e, success: n, isFocused: r }) => e ? c.color.ALERT[900] : n && r ? c.color.SUCCESS[900] : r ? c.color.QUATERNARY[900] : c.color.NEUTRAL[300]};
   background: #fff;
   min-height: 45px;
   ::placeholder {
-    color: ${() => p.color.NEUTRAL[500]};
+    color: ${() => c.color.NEUTRAL[500]};
   }
 
-  background-color: ${({ disabled: e }) => e ? p.color.NEUTRAL[100] : "#fff"};
+  background-color: ${({ disabled: e }) => e ? c.color.NEUTRAL[100] : "#fff"};
   cursor: ${({ disabled: e }) => e ? "not-allowed" : "auto"};
   transition: background 0.3s ease-out;
   transition: border 0.3s ease-out;
@@ -736,15 +736,15 @@ const Ot = H`
     outline: none;
     background-color: #fff;
     letter-spacing: -0.04em;
-    color: ${() => p.color.NEUTRAL[700]};
+    color: ${() => c.color.NEUTRAL[700]};
     padding-left: ${({ leftAddon: e }) => e ? "0px" : "15px"};
     padding-right: ${({ rightAddon: e }) => e ? "0px" : "12px"};
     padding-right: ${({ success: e, error: n }) => (e || n) && "2.5rem"};
 
     &:disabled {
       cursor: not-allowed;
-      background-color: ${() => p.color.NEUTRAL[100]};
-      color: ${() => p.color.NEUTRAL[500]};
+      background-color: ${() => c.color.NEUTRAL[100]};
+      color: ${() => c.color.NEUTRAL[500]};
     }
   }
 
@@ -757,7 +757,7 @@ const Ot = H`
   }
 
   span {
-    color: ${() => p.color.NEUTRAL[500]};
+    color: ${() => c.color.NEUTRAL[500]};
     ${({ size: e }) => re({ size: e })};
     display: flex;
     align-items: center;
@@ -777,8 +777,8 @@ const Ot = H`
   placeholder: o,
   error: i,
   success: a,
-  size: c,
-  fullWidth: s,
+  size: s,
+  fullWidth: p,
   name: u,
   infoMessage: h,
   onFocus: f,
@@ -789,9 +789,9 @@ const Ot = H`
   const [M, C] = k(!1), v = !i && !a && h && M;
   return /* @__PURE__ */ d(z, {
     children: [/* @__PURE__ */ d(nn, {
-      fullWidth: s,
+      fullWidth: p,
       success: a,
-      size: c,
+      size: s,
       error: i,
       disabled: g.disabled,
       leftAddon: n,
@@ -820,13 +820,13 @@ const Ot = H`
         className: "state",
         children: /* @__PURE__ */ t(en, {
           size: 24,
-          color: p.color.ALERT[900]
+          color: c.color.ALERT[900]
         })
       }), a && /* @__PURE__ */ t("span", {
         className: "state",
         children: /* @__PURE__ */ t(tn, {
           size: 20,
-          color: p.color.SUCCESS[900]
+          color: c.color.SUCCESS[900]
         })
       })]
     }), v && /* @__PURE__ */ t(de, {
@@ -859,7 +859,7 @@ const rn = l.div`
     padding: 10px 12px;
     min-height: 45px;
     background: #fff;
-    border: 1px solid ${() => p.color.NEUTRAL[300]};
+    border: 1px solid ${() => c.color.NEUTRAL[300]};
     border-radius: 0.5rem;
     justify-content: space-between;
   }
@@ -877,12 +877,12 @@ const rn = l.div`
 
   li.selected {
     border-radius: 0.5rem;
-    background-color: ${() => p.color.QUATERNARY[200]};
+    background-color: ${() => c.color.QUATERNARY[200]};
   }
 
   .options li:hover {
     border-radius: 0.5rem;
-    background-color: ${() => p.color.QUATERNARY[100]};
+    background-color: ${() => c.color.QUATERNARY[100]};
   }
 `, on = l.ul`
   width: ${({ fullWidthOptions: e }) => e ? "100%" : "15rem"};
@@ -906,7 +906,7 @@ const rn = l.div`
       margin: 0.5rem 0.313rem;
       &:focus {
         border-radius: 0.5rem;
-        outline: 2px solid ${() => p.color.SECONDARY[900]};
+        outline: 2px solid ${() => c.color.SECONDARY[900]};
       }
     }
   }
@@ -917,8 +917,8 @@ const rn = l.div`
   value: o,
   options: i,
   placeholder: a = "Seleccione una opci\xF3n",
-  fullWidth: c,
-  fullWidthOptions: s,
+  fullWidth: s,
+  fullWidthOptions: p,
   onChange: u,
   formatOptionLabel: h,
   formatSelectedOption: f
@@ -934,7 +934,7 @@ const rn = l.div`
     u(i.find((E) => E.label === y)), v(!1), M(""), g(i);
   }, [w]), R = $((y) => {
     M(y.target.value);
-    const E = i.filter((j) => j.label.toLowerCase().includes(y.target.value.toLowerCase()));
+    const E = i.filter((S) => S.label.toLowerCase().includes(y.target.value.toLowerCase()));
     g(E);
   }, []), I = () => {
     const y = x.current;
@@ -944,7 +944,7 @@ const rn = l.div`
     }
   };
   return /* @__PURE__ */ d(rn, {
-    fullWidth: c,
+    fullWidth: s,
     ref: x,
     children: [e && /* @__PURE__ */ t(N, {
       as: "label",
@@ -971,7 +971,7 @@ const rn = l.div`
       })]
     }), C && /* @__PURE__ */ d(on, {
       maxOptionsHeight: r ? I() : 285,
-      fullWidthOptions: s,
+      fullWidthOptions: p,
       children: [n && /* @__PURE__ */ t("div", {
         className: "search-box",
         children: /* @__PURE__ */ t(ce, {
@@ -1051,12 +1051,12 @@ const ln = l.div`
         type: "file",
         accept: "image/png, image/jpeg",
         onChange: (a) => {
-          var s;
-          const c = (s = a.target.files) == null ? void 0 : s[0];
-          if (c) {
-            const u = URL.createObjectURL(c);
+          var p;
+          const s = (p = a.target.files) == null ? void 0 : p[0];
+          if (s) {
+            const u = URL.createObjectURL(s);
             r({
-              file: c,
+              file: s,
               url: u
             });
           }
@@ -1068,7 +1068,7 @@ const ln = l.div`
         src: e || "/default-profile.svg",
         alt: "profile",
         referrerPolicy: "no-referrer"
-      }), /* @__PURE__ */ t(S, {
+      }), /* @__PURE__ */ t(j, {
         type: "button",
         size: "lg",
         design: "flat",
@@ -1150,7 +1150,7 @@ const ln = l.div`
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: ${() => p.color.PRIMARY[900]};
+    background-color: ${() => c.color.PRIMARY[900]};
     animation: ${cn} 1s linear infinite;
   }
   .idbi-loading > div > div:last-child {
@@ -1158,7 +1158,7 @@ const ln = l.div`
   }
   .idbi-loading > div > div:last-child > div > div {
     animation-delay: -0.5s;
-    background-color: ${() => p.color.TERTIARY[900]};
+    background-color: ${() => c.color.TERTIARY[900]};
   }
 `, Wa = () => /* @__PURE__ */ t(sn, {
   children: /* @__PURE__ */ t("div", {
@@ -1202,7 +1202,7 @@ const ln = l.div`
 }), hn = l(ae.Root)`
   width: 100%;
   background-color: #fff;
-  box-shadow: ${() => p.effect.darkShadow[4]};
+  box-shadow: ${() => c.effect.darkShadow[4]};
   border-radius: 0.5rem;
 `, An = l(ae.Trigger)`
   display: flex;
@@ -1274,7 +1274,7 @@ const ln = l.div`
   z-index: 1;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  box-shadow: ${() => p.effect.darkShadow[6]};
+  box-shadow: ${() => c.effect.darkShadow[6]};
 
   button {
     display: flex;
@@ -1332,7 +1332,7 @@ const ln = l.div`
   borderWidth: e.borderWidth,
   margin: e.margin
 }), ht = l.ul`
-  color: ${() => p.color.OTHER.color1};
+  color: ${() => c.color.OTHER.color1};
   background-color: white;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   border: 1px solid ${({ theme: e }) => e.color.QUATERNARY[300]};
@@ -1402,10 +1402,10 @@ const ln = l.div`
   ${({ alert: e }) => {
   if (e)
     return A`
-        background-color: ${p.color.ALERT[100]};
-        color: ${p.color.ALERT[900]};
+        background-color: ${c.color.ALERT[100]};
+        color: ${c.color.ALERT[900]};
         &:hover {
-          background-color: ${p.color.ALERT[200]};
+          background-color: ${c.color.ALERT[200]};
         }
       `;
 }}
@@ -1417,20 +1417,20 @@ const ln = l.div`
   text: e,
   options: n
 }) => {
-  const [r, o] = k(!1), i = D(null), a = (c) => {
-    if (i.current && clearTimeout(i.current), c) {
+  const [r, o] = k(!1), i = D(null), a = (s) => {
+    if (i.current && clearTimeout(i.current), s) {
       o(!0);
       return;
     }
     i.current = setTimeout(() => {
-      r !== c && o(c);
+      r !== s && o(s);
     }, 50);
   };
   return /* @__PURE__ */ d(oe, {
     onMouseEnter: () => a(!0),
     onMouseLeave: () => a(!1),
     active: r,
-    onClick: (c) => c.stopPropagation(),
+    onClick: (s) => s.stopPropagation(),
     children: [e, " ", /* @__PURE__ */ t("div", {
       style: {
         transform: "rotateY(180deg)"
@@ -1438,12 +1438,12 @@ const ln = l.div`
       children: /* @__PURE__ */ t(K, {})
     }), r && /* @__PURE__ */ t(wn, {
       children: /* @__PURE__ */ t(ht, {
-        children: n.map((c, s) => /* @__PURE__ */ d(oe, {
-          alert: c.alert,
-          onClick: (u) => c.disabled || c.loading ? u.stopPropagation() : c.onClick(),
-          disabled: c.disabled || c.loading,
-          loading: c.loading,
-          children: [c.text, " ", c.loading ? /* @__PURE__ */ t("div", {
+        children: n.map((s, p) => /* @__PURE__ */ d(oe, {
+          alert: s.alert,
+          onClick: (u) => s.disabled || s.loading ? u.stopPropagation() : s.onClick(),
+          disabled: s.disabled || s.loading,
+          loading: s.loading,
+          children: [s.text, " ", s.loading ? /* @__PURE__ */ t("div", {
             style: {
               width: "24px"
             },
@@ -1451,8 +1451,8 @@ const ln = l.div`
               width: "20px",
               height: "20px"
             })
-          }) : c.icon]
-        }, `suboption-${s}`))
+          }) : s.icon]
+        }, `suboption-${p}`))
       })
     })]
   });
@@ -1496,8 +1496,8 @@ const ln = l.div`
     x: o,
     y: i,
     reference: a,
-    floating: c,
-    strategy: s,
+    floating: s,
+    strategy: p,
     update: u,
     refs: h
   } = it({
@@ -1516,9 +1516,9 @@ const ln = l.div`
         size: 25
       })
     }), f && /* @__PURE__ */ t("div", {
-      ref: c,
+      ref: s,
       style: {
-        position: s,
+        position: p,
         top: i != null ? i : 0,
         left: o != null ? o : 0,
         zIndex: 100
@@ -1675,7 +1675,7 @@ const ln = l.div`
   padding-right: ${({ addCleanOption: e }) => e ? "46px" : "15px"};
   color: #4a4a4a;
   border-radius: 10px;
-  border: ${({ alert: e }) => e ? `1px solid ${p.color.ALERT[900]}` : `1px solid ${p.color.NEUTRAL[300]}`};
+  border: ${({ alert: e }) => e ? `1px solid ${c.color.ALERT[900]}` : `1px solid ${c.color.NEUTRAL[300]}`};
   outline: none;
   transition: box-shadow 0.3s ease-out;
 
@@ -1685,15 +1685,15 @@ const ln = l.div`
   font-size: 0.875rem;
   line-height: 21px;
   letter-spacing: -0.04em;
-  color: ${p.color.PRIMARY[900]};
-  background: ${({ disabled: e }) => e ? p.color.NEUTRAL[100] : "#fff"};
+  color: ${c.color.PRIMARY[900]};
+  background: ${({ disabled: e }) => e ? c.color.NEUTRAL[100] : "#fff"};
   cursor: ${({ disabled: e }) => e ? "not-allowed" : "default"};
 
   ::placeholder {
-    color: ${p.color.NEUTRAL[500]};
+    color: ${c.color.NEUTRAL[500]};
   }
   :focus {
-    border: 1px solid ${p.color.QUATERNARY[900]};
+    border: 1px solid ${c.color.QUATERNARY[900]};
   }
 `, zn = l.div`
   width: 100%;
@@ -1714,7 +1714,7 @@ const ln = l.div`
       border: 0;
       height: 0;
     `};
-`, Sn = l.div`
+`, jn = l.div`
   width: 100%;
   height: 2px;
   padding: 0 6px;
@@ -1723,8 +1723,8 @@ const ln = l.div`
   top: 95%;
   border-radius: 50%;
   overflow: hidden;
-`, jn = l.div`
-  background-color: ${p.color.QUATERNARY[900]};
+`, Sn = l.div`
+  background-color: ${c.color.QUATERNARY[900]};
   height: 1.5px;
   transition: all 0.3s ease;
   ${(e) => e.active ? A`
@@ -1765,8 +1765,8 @@ const ln = l.div`
   getLabel: o,
   containerStyle: i,
   hideOnBlur: a = !0,
-  enableScannerBehavior: c = !1,
-  addCreateOption: s = {
+  enableScannerBehavior: s = !1,
+  addCreateOption: p = {
     show: !1,
     location: "top"
   },
@@ -1789,19 +1789,19 @@ const ln = l.div`
   T(() => {
     b(!1);
   }, [(v = h == null ? void 0 : h.current) == null ? void 0 : v.value]), T(() => {
-    (n == null ? void 0 : n.length) === 1 && c && (M(), r != null && r.onSelect && r.onSelect(n[0]));
+    (n == null ? void 0 : n.length) === 1 && s && (M(), r != null && r.onSelect && r.onSelect(n[0]));
   }, [n]);
   const C = () => /* @__PURE__ */ t(Fn, {
     onClick: () => {
-      s != null && s.onCreate && (s == null || s.onCreate(x), M());
+      p != null && p.onCreate && (p == null || p.onCreate(x), M());
     },
-    children: (s == null ? void 0 : s.text) || "Crear"
+    children: (p == null ? void 0 : p.text) || "Crear"
   });
   return /* @__PURE__ */ d(zn, {
     style: i,
     ref: m,
     active: Boolean(!g && n && x.length >= 1),
-    children: [s.show && s.location === "top" && C(), !u && n && n.length > 0 ? n.map((w, L) => {
+    children: [p.show && p.location === "top" && C(), !u && n && n.length > 0 ? n.map((w, L) => {
       var R;
       return /* @__PURE__ */ t(be, {
         onClick: () => {
@@ -1814,7 +1814,7 @@ const ln = l.div`
         color: "#cbbcbb"
       },
       children: u ? "Buscando" : "Sin resultados"
-    }), s.show && s.location === "bottom" && C()]
+    }), p.show && p.location === "bottom" && C()]
   });
 }, Hn = ({
   onSearch: e,
@@ -1823,8 +1823,8 @@ const ln = l.div`
   loading: o = !1,
   disabled: i = !1,
   addSearchIcon: a = !1,
-  addCleanOption: c = !1,
-  size: s = "small",
+  addCleanOption: s = !1,
+  size: p = "small",
   delay: u = 400,
   alert: h = !1,
   foundItems: f
@@ -1849,17 +1849,17 @@ const ln = l.div`
         },
         placeholder: r,
         addSearchIcon: a,
-        addCleanOption: c,
-        containerSize: s,
+        addCleanOption: s,
+        containerSize: p,
         disabled: i,
         alert: h
-      }), c && /* @__PURE__ */ t(he, {
+      }), s && /* @__PURE__ */ t(he, {
         onClick: () => M(),
         className: "clean",
         children: /* @__PURE__ */ t(pe, {})
       })]
-    }), /* @__PURE__ */ t(Sn, {
-      children: /* @__PURE__ */ t(jn, {
+    }), /* @__PURE__ */ t(jn, {
+      children: /* @__PURE__ */ t(Sn, {
         active: o
       })
     }), /* @__PURE__ */ t(Bn, {
@@ -1911,18 +1911,18 @@ function Un(e) {
 }
 function Yn(e) {
   var n = function(r) {
-    var o = e.attr, i = e.size, a = e.title, c = Pn(e, ["attr", "size", "title"]), s = i || r.size || "1em", u;
+    var o = e.attr, i = e.size, a = e.title, s = Pn(e, ["attr", "size", "title"]), p = i || r.size || "1em", u;
     return r.className && (u = r.className), e.className && (u = (u ? u + " " : "") + e.className), Z.createElement("svg", Y({
       stroke: "currentColor",
       fill: "currentColor",
       strokeWidth: "0"
-    }, r.attr, o, c, {
+    }, r.attr, o, s, {
       className: u,
       style: Y(Y({
         color: e.color || r.color
       }, r.style), e.style),
-      height: s,
-      width: s,
+      height: p,
+      width: p,
       xmlns: "http://www.w3.org/2000/svg"
     }), a && Z.createElement("title", null, a), e.children);
   };
@@ -2049,10 +2049,10 @@ const we = ({
     fill: "currentColor"
   })
 }), On = l.div`
-  background-color: ${({ hasImg: e }) => e ? p.color.QUATERNARY[300] : "transparent"};
+  background-color: ${({ hasImg: e }) => e ? c.color.QUATERNARY[300] : "transparent"};
   border: 1px solid white;
   border-radius: 50%;
-  color: ${p.color.QUATERNARY[900]};
+  color: ${c.color.QUATERNARY[900]};
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -2151,7 +2151,7 @@ const Vn = l.div`
   padding: 0;
   display: flex;
   flex-direction: row;
-  color: ${p.color.PRIMARY[900]};
+  color: ${c.color.PRIMARY[900]};
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   white-space: nowrap;
@@ -2199,21 +2199,21 @@ const Vn = l.div`
   }
 
   li {
-    color: ${p.color.PRIMARY[900]};
+    color: ${c.color.PRIMARY[900]};
     font-weight: 500;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
     div {
       padding: 10px 0;
     }
-    border-bottom: 1px solid ${p.color.PRIMARY[50]};
+    border-bottom: 1px solid ${c.color.PRIMARY[50]};
 
     ul {
       padding-bottom: 15px;
       li {
         padding: 5px 0;
         padding-left: 10px;
-        color: ${p.color.NEUTRAL[400]};
+        color: ${c.color.NEUTRAL[400]};
         border-bottom: none;
       }
       li:hover {
@@ -2272,12 +2272,12 @@ const Vn = l.div`
         }
       })]
     }), o && r.length > 0 && /* @__PURE__ */ t("ul", {
-      children: r.map((a, c) => /* @__PURE__ */ t("li", {
+      children: r.map((a, s) => /* @__PURE__ */ t("li", {
         onClick: () => {
           a.onClick(), n();
         },
         children: a.text
-      }, `${c}sub${e.key}`))
+      }, `${s}sub${e.key}`))
     })]
   });
 }, Xa = ({
@@ -2287,15 +2287,15 @@ const Vn = l.div`
   searchOption: o,
   logoIcon: i,
   bellIcon: a,
-  zIndex: c,
-  isSticky: s
+  zIndex: s,
+  isSticky: p
 }) => {
   const [u, h] = k(!1), [f, x] = k(!1), m = D(null);
   return V(m, () => {
     h(!1), x(!1);
   }), /* @__PURE__ */ d(Vn, {
-    zIndex: c,
-    isSticky: s,
+    zIndex: s,
+    isSticky: p,
     ref: m,
     children: [/* @__PURE__ */ d(Gn, {
       children: [/* @__PURE__ */ d(Ce, {
@@ -2503,7 +2503,7 @@ const Vn = l.div`
   active: n,
   tabWidth: r = 24,
   tabHeight: o = 4,
-  activeColor: i = p.color.SECONDARY[900],
+  activeColor: i = c.color.SECONDARY[900],
   ...a
 }) => /* @__PURE__ */ t(or, {
   isActive: n,
@@ -2546,9 +2546,9 @@ const ir = l.div`
   placement: o,
   offset: i,
   strategy: a,
-  middlewares: c = []
+  middlewares: s = []
 }) => {
-  const [s, u] = k(!1), h = D(null), {
+  const [p, u] = k(!1), h = D(null), {
     x: f,
     y: x,
     reference: m,
@@ -2561,7 +2561,7 @@ const ir = l.div`
   } = it({
     placement: o || "top",
     strategy: a,
-    middleware: [zt(i != null ? i : 10), ...c, St({
+    middleware: [zt(i != null ? i : 10), ...s, jt({
       element: h
     })]
   }), {
@@ -2569,13 +2569,13 @@ const ir = l.div`
     y: R
   } = v.arrow || {}, {
     status: I
-  } = ut("(hover: hover)"), y = (j = !0) => {
-    I && u(j);
+  } = ut("(hover: hover)"), y = (S = !0) => {
+    I && u(S);
   };
   T(() => {
     if (!(!C.reference.current || !C.floating.current))
       return at(C.reference.current, C.floating.current, M);
-  }, [s, M]);
+  }, [p, M]);
   const E = {
     top: "bottom",
     right: "left",
@@ -2587,7 +2587,7 @@ const ir = l.div`
       ref: m,
       onMouseEnter: () => y(),
       onMouseLeave: () => y(!1)
-    }), s && /* @__PURE__ */ d(ir, {
+    }), p && /* @__PURE__ */ d(ir, {
       ref: g,
       style: {
         position: b,
@@ -2693,54 +2693,54 @@ const ir = l.div`
   font-size: 0.75rem;
   line-height: 1.125rem;
   letter-spacing: -0.04em;
-  background: ${({ removeBackground: e }) => e ? "transparent" : p.color.STATUS.DEFAULT[0]};
-  color: ${p.color.STATUS.DEFAULT[1]};
+  background: ${({ removeBackground: e }) => e ? "transparent" : c.color.STATUS.DEFAULT[0]};
+  color: ${c.color.STATUS.DEFAULT[1]};
 
   ${({ statusName: e, removeBackground: n }) => {
   if (e === "draft")
     return A`
-        background: ${n ? "transparent" : p.color.STATUS.DRAFT[0]};
-        color: ${p.color.STATUS.DRAFT[1]};
+        background: ${n ? "transparent" : c.color.STATUS.DRAFT[0]};
+        color: ${c.color.STATUS.DRAFT[1]};
       `;
   if (e === "pending")
     return A`
-        background: ${n ? "transparent" : p.color.STATUS.PENDING[0]};
-        color: ${p.color.STATUS.PENDING[1]};
+        background: ${n ? "transparent" : c.color.STATUS.PENDING[0]};
+        color: ${c.color.STATUS.PENDING[1]};
       `;
   if (e === "rejected")
     return A`
-        background: ${n ? "transparent" : p.color.STATUS.REJECTED[0]};
-        color: ${p.color.STATUS.REJECTED[1]};
+        background: ${n ? "transparent" : c.color.STATUS.REJECTED[0]};
+        color: ${c.color.STATUS.REJECTED[1]};
       `;
   if (e === "accepted")
     return A`
-        background: ${n ? "transparent" : p.color.STATUS.ACCEPTED[0]};
-        color: ${p.color.STATUS.ACCEPTED[1]};
+        background: ${n ? "transparent" : c.color.STATUS.ACCEPTED[0]};
+        color: ${c.color.STATUS.ACCEPTED[1]};
       `;
   if (e === "canceled")
     return A`
-        background: ${n ? "transparent" : p.color.STATUS.CANCELED[0]};
-        color: ${p.color.STATUS.CANCELED[1]};
+        background: ${n ? "transparent" : c.color.STATUS.CANCELED[0]};
+        color: ${c.color.STATUS.CANCELED[1]};
       `;
   if (e === "preparing")
     return A`
-        background: ${n ? "transparent" : p.color.STATUS.PREPARING[0]};
-        color: ${p.color.STATUS.PREPARING[1]};
+        background: ${n ? "transparent" : c.color.STATUS.PREPARING[0]};
+        color: ${c.color.STATUS.PREPARING[1]};
       `;
   if (e === "readyforpickup")
     return A`
-        background: ${n ? "transparent" : p.color.STATUS.READYFORPICKUP[0]};
-        color: ${p.color.STATUS.READYFORPICKUP[1]};
+        background: ${n ? "transparent" : c.color.STATUS.READYFORPICKUP[0]};
+        color: ${c.color.STATUS.READYFORPICKUP[1]};
       `;
   if (e === "delivered")
     return A`
-        background: ${n ? "transparent" : p.color.STATUS.DELIVERED[0]};
-        color: ${p.color.STATUS.DELIVERED[1]};
+        background: ${n ? "transparent" : c.color.STATUS.DELIVERED[0]};
+        color: ${c.color.STATUS.DELIVERED[1]};
       `;
   if (e === "finished")
     return A`
-        background: ${n ? "transparent" : p.color.STATUS.FINISHED[0]};
-        color: ${p.color.STATUS.FINISHED[1]};
+        background: ${n ? "transparent" : c.color.STATUS.FINISHED[0]};
+        color: ${c.color.STATUS.FINISHED[1]};
       `;
 }};
 `, Me = {
@@ -2776,10 +2776,10 @@ const ir = l.div`
   style: o = {},
   ...i
 }) => {
-  const a = Le(e, 0, 1), c = Le(n, 0, 1), s = 256 * a;
+  const a = Le(e, 0, 1), s = Le(n, 0, 1), p = 256 * a;
   return /* @__PURE__ */ t(fr, {
     style: {
-      backgroundColor: `rgba(${s}, ${s}, ${s}, ${c})`,
+      backgroundColor: `rgba(${p}, ${p}, ${p}, ${s})`,
       ...o
     },
     ...i,
@@ -2794,8 +2794,8 @@ const ir = l.div`
   font-size: 0.75rem;
   line-height: 1.125rem;
   letter-spacing: -0.04em;
-  background: ${({ background: e }) => e || p.color.STATUS.DEFAULT[0]};
-  color: ${({ color: e }) => e || p.color.STATUS.DEFAULT[1]};
+  background: ${({ background: e }) => e || c.color.STATUS.DEFAULT[0]};
+  color: ${({ color: e }) => e || c.color.STATUS.DEFAULT[1]};
   max-width: ${({ maxWidth: e }) => e || "auto"};
   ${({ applyFlex: e }) => e && A`
       display: flex;
@@ -2806,7 +2806,7 @@ const ir = l.div`
     `}
 
 ${({ withBorder: e, color: n }) => e && A`
-      border: 1px solid ${n || p.color.STATUS.DEFAULT[1]};
+      border: 1px solid ${n || c.color.STATUS.DEFAULT[1]};
     `}
 `, $a = ({
   text: e,
@@ -2815,8 +2815,8 @@ ${({ withBorder: e, color: n }) => e && A`
   background: o,
   applyFlex: i,
   maxWidth: a,
-  weight: c,
-  borderRadius: s,
+  weight: s,
+  borderRadius: p,
   withBorder: u
 }) => /* @__PURE__ */ t(gr, {
   padding: n,
@@ -2824,8 +2824,8 @@ ${({ withBorder: e, color: n }) => e && A`
   background: o,
   applyFlex: i,
   maxWidth: a,
-  weigth: c,
-  borderRadius: s,
+  weigth: s,
+  borderRadius: p,
   withBorder: u,
   children: e
 }), xr = l.div`
@@ -2882,43 +2882,43 @@ ${({ withBorder: e, color: n }) => e && A`
   ${({ statusName: e }) => {
   if (e === "draft")
     return A`
-        background: ${p.color.STATUS.DRAFT[0]};
-        color: ${p.color.STATUS.DRAFT[1]};
+        background: ${c.color.STATUS.DRAFT[0]};
+        color: ${c.color.STATUS.DRAFT[1]};
       `;
   if (e === "pending")
     return A`
-        background: ${p.color.STATUS.PENDING[0]};
-        color: ${p.color.STATUS.PENDING[1]};
+        background: ${c.color.STATUS.PENDING[0]};
+        color: ${c.color.STATUS.PENDING[1]};
       `;
   if (e === "rejected")
     return A`
-        background: ${p.color.STATUS.REJECTED[0]};
-        color: ${p.color.STATUS.REJECTED[1]};
+        background: ${c.color.STATUS.REJECTED[0]};
+        color: ${c.color.STATUS.REJECTED[1]};
       `;
   if (e === "accepted")
     return A`
-        background: ${p.color.STATUS.ACCEPTED[0]};
-        color: ${p.color.STATUS.ACCEPTED[1]};
+        background: ${c.color.STATUS.ACCEPTED[0]};
+        color: ${c.color.STATUS.ACCEPTED[1]};
       `;
   if (e === "canceled")
     return A`
-        background: ${p.color.STATUS.CANCELED[0]};
-        color: ${p.color.STATUS.CANCELED[1]};
+        background: ${c.color.STATUS.CANCELED[0]};
+        color: ${c.color.STATUS.CANCELED[1]};
       `;
   if (e === "preparing")
     return A`
-        background: ${p.color.STATUS.PREPARING[0]};
-        color: ${p.color.STATUS.PREPARING[1]};
+        background: ${c.color.STATUS.PREPARING[0]};
+        color: ${c.color.STATUS.PREPARING[1]};
       `;
   if (e === "readyforpickup")
     return A`
-        background: ${p.color.STATUS.READYFORPICKUP[0]};
-        color: ${p.color.STATUS.READYFORPICKUP[1]};
+        background: ${c.color.STATUS.READYFORPICKUP[0]};
+        color: ${c.color.STATUS.READYFORPICKUP[1]};
       `;
   if (e === "delivered")
     return A`
-        background: ${p.color.STATUS.DELIVERED[0]};
-        color: ${p.color.STATUS.DELIVERED[1]};
+        background: ${c.color.STATUS.DELIVERED[0]};
+        color: ${c.color.STATUS.DELIVERED[1]};
       `;
 }};
 `, ke = l.p`
@@ -3170,14 +3170,14 @@ ${({ withBorder: e, color: n }) => e && A`
         `;
     case "secondary":
       return A`
-          background-color: ${p.color.QUATERNARY[300]};
+          background-color: ${c.color.QUATERNARY[300]};
         `;
     case "flat":
       return A`
           background-color: transparent;
         `;
     default:
-      return p.color.NEUTRAL[100];
+      return c.color.NEUTRAL[100];
   }
 }};
 `, tl = ({
@@ -3193,9 +3193,9 @@ ${({ withBorder: e, color: n }) => e && A`
   children: [n && /* @__PURE__ */ t("header", {
     children: n
   }), r && o && /* @__PURE__ */ t("ul", {
-    children: r.map((c) => /* @__PURE__ */ t("li", {
-      children: o(c)
-    }, c.value))
+    children: r.map((s) => /* @__PURE__ */ t("li", {
+      children: o(s)
+    }, s.value))
   }), i && i]
 }), Rr = l.div`
   padding: 20px;
@@ -3289,7 +3289,7 @@ ${({ withBorder: e, color: n }) => e && A`
   display: flex;
   flex-direction: column;
   gap: 10px;
-`, Sr = l.li`
+`, jr = l.li`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -3299,7 +3299,7 @@ ${({ withBorder: e, color: n }) => e && A`
   display: flex;
   gap: 15px;
   align-items: flex-start;
-`, jr = l.span`
+`, Sr = l.span`
   line-height: 1.25rem;
   padding: 1px 9px;
   background: #DFDFDF;
@@ -3334,11 +3334,11 @@ ${({ withBorder: e, color: n }) => e && A`
   actionName: o = "",
   hideQuantity: i = !1,
   children: a,
-  gap: c = 10,
-  background: s,
+  gap: s = 10,
+  background: p,
   padding: u
 }) => /* @__PURE__ */ d(Tr, {
-  background: s,
+  background: p,
   padding: u,
   children: [(n || o) && /* @__PURE__ */ d(Dr, {
     children: [/* @__PURE__ */ t(Nr, {
@@ -3349,9 +3349,9 @@ ${({ withBorder: e, color: n }) => e && A`
     })]
   }), /* @__PURE__ */ t(zr, {
     style: {
-      gap: c
+      gap: s
     },
-    children: e.map((h) => /* @__PURE__ */ d(Sr, {
+    children: e.map((h) => /* @__PURE__ */ d(jr, {
       remark: Boolean(h.remark),
       children: [i ? /* @__PURE__ */ d(Ne, {
         children: [/* @__PURE__ */ d("div", {
@@ -3367,7 +3367,7 @@ ${({ withBorder: e, color: n }) => e && A`
         children: [h.img && /* @__PURE__ */ t(Br, {
           src: h.img,
           alt: h.description
-        }), /* @__PURE__ */ t(jr, {
+        }), /* @__PURE__ */ t(Sr, {
           children: h.quantity
         }), /* @__PURE__ */ d("div", {
           children: [/* @__PURE__ */ t("span", {
@@ -3530,8 +3530,8 @@ const il = ({
     children: [/* @__PURE__ */ d(Vr, {
       children: [r && /* @__PURE__ */ d("span", {
         children: [/* @__PURE__ */ t(Zr, {}), r]
-      }), i.map((c) => /* @__PURE__ */ t("span", {
-        children: c
+      }), i.map((s) => /* @__PURE__ */ t("span", {
+        children: s
       }))]
     }), /* @__PURE__ */ d(Gr, {
       children: [e, " ", n]
@@ -3594,23 +3594,23 @@ const il = ({
     fill: e
   })
 }), qr = (e) => e === "success" ? A`
-      color: ${p.color.SUCCESS[900]};
-      background: ${p.color.SUCCESS[100]};
+      color: ${c.color.SUCCESS[900]};
+      background: ${c.color.SUCCESS[100]};
     ` : e === "warning" ? A`
-      color: ${p.color.STATE[900]};
-      background: ${p.color.STATE[100]};
+      color: ${c.color.STATE[900]};
+      background: ${c.color.STATE[100]};
     ` : e === "error" ? A`
-      color: ${p.color.ALERT[700]};
-      background: ${p.color.ALERT[100]};
+      color: ${c.color.ALERT[700]};
+      background: ${c.color.ALERT[100]};
     ` : e === "quaternary" ? A`
-      color: ${p.color.QUATERNARY[900]};
-      background: ${p.color.QUATERNARY[100]};
+      color: ${c.color.QUATERNARY[900]};
+      background: ${c.color.QUATERNARY[100]};
     ` : e === "tertiary" ? A`
-      color: ${p.color.TERTIARY[900]};
-      background: ${p.color.TERTIARY[100]};
+      color: ${c.color.TERTIARY[900]};
+      background: ${c.color.TERTIARY[100]};
     ` : A`
-    color: ${p.color.PRIMARY[900]};
-    background: ${p.color.PRIMARY[100]};
+    color: ${c.color.PRIMARY[900]};
+    background: ${c.color.PRIMARY[100]};
   `, $r = l.div`
   padding: 10px 15px;
   display: flex;
@@ -3628,7 +3628,7 @@ const il = ({
   font-size: 0.625rem;
   line-height: 0.9375rem;
 `, to = l.span`
-  color: ${p.color.SECONDARY[900]};
+  color: ${c.color.SECONDARY[900]};
   text-decoration: underline;
   cursor: pointer;
 `, al = ({
@@ -3659,8 +3659,8 @@ const il = ({
       children: e
     }), n && /* @__PURE__ */ d(eo, {
       children: [n, " ", o && o.onClick && /* @__PURE__ */ t(to, {
-        onClick: (c) => {
-          c.stopPropagation(), o.onClick && o.onClick();
+        onClick: (s) => {
+          s.stopPropagation(), o.onClick && o.onClick();
         },
         children: (o == null ? void 0 : o.text) || "Ver m\xE1s"
       })]
@@ -3686,13 +3686,13 @@ const il = ({
   font-size: 0.625rem;
   line-height: 0.9375rem;
   letter-spacing: -0.04em;
-  color:${p.color.NEUTRAL[500]};
+  color:${c.color.NEUTRAL[500]};
 `, io = l.p`
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 0.9375rem;
   letter-spacing: -0.04em;
-  color:${p.color.PRIMARY[900]};
+  color:${c.color.PRIMARY[900]};
 `, ao = l.img`
   border: 1px solid #bfbfbf;
   margin: 8px 10px 0 0;
@@ -3705,7 +3705,7 @@ const il = ({
     width: 34px;
     height: 34px;
   }
-`, lo = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0id2hpdGUiLz4NCjxyZWN0IHg9IjQyIiB5PSI0MiIgd2lkdGg9IjMxNiIgaGVpZ2h0PSIzMTYiIHJ4PSIyNCIgZmlsbD0iI0M0RDZGOCIvPg0KPHBhdGggZD0iTTM1NC45NTcgMzA5LjQ3N0wyOTIuMDA1IDI0NS4xMzFDMjkwLjIwOCAyNDMuMzA0IDI4Ny44MDkgMjQyLjE5OSAyODUuMjU5IDI0Mi4wMjRDMjgyLjcwOSAyNDEuODUgMjgwLjE4MyAyNDIuNjE3IDI3OC4xNTYgMjQ0LjE4MkwyMDguMDY5IDI5OC4yOTVDMjA1Ljk0NSAyOTkuOTQ5IDIwNC41MzMgMzAyLjM1OCAyMDQuMTIzIDMwNS4wMjdDMjAzLjcxMyAzMDcuNjk2IDIwNC4zMzcgMzEwLjQyMSAyMDUuODY2IDMxMi42NDFMMjMzLjk4NSAzNTMuNDY0QzIzNC45NDkgMzU0Ljg2MSAyMzYuMjM1IDM1Ni4wMDQgMjM3LjczMyAzNTYuNzkzQzIzOS4yMzEgMzU3LjU4MyAyNDAuODk2IDM1Ny45OTcgMjQyLjU4OCAzNThIMzI2LjUyNEMzMzQuODcyIDM1OCAzNDIuODc4IDM1NC42NjYgMzQ4Ljc4MSAzNDguNzMxQzM1NC42ODQgMzQyLjc5NyAzNTggMzM0Ljc0NyAzNTggMzI2LjM1NFYzMTYuODYxQzM1Ny45ODggMzE0LjA5NCAzNTYuODk2IDMxMS40NDIgMzU0Ljk1NyAzMDkuNDc3WiIgZmlsbD0iIzYxOTJFQiIvPg0KPHBhdGggZD0iTTI1MC4xMjcgMzQxLjQ2N0wxNTUuNjE5IDIwNC41NjhDMTU0LjcxOSAyMDMuMjUzIDE1My41MzEgMjAyLjE2IDE1Mi4xNDggMjAxLjM3MkMxNTAuNzY0IDIwMC41ODUgMTQ5LjIyIDIwMC4xMjMgMTQ3LjYzMiAyMDAuMDIxQzE0Ni4wNDQgMTk5LjkyIDE0NC40NTQgMjAwLjE4MiAxNDIuOTgxIDIwMC43ODdDMTQxLjUwOSAyMDEuMzkyIDE0MC4xOTMgMjAyLjMyNSAxMzkuMTMzIDIwMy41MTVMNDQuNjI1NiAzMDguODIyQzQyLjkxMzIgMzEwLjc2OSA0MS45NzgzIDMxMy4yODEgNDIuMDAwNCAzMTUuODc3VjMyNi40MDhDNDIuMDAwNCAzMzQuNzg3IDQ1LjMxOTQgMzQyLjgyMiA1MS4yMjczIDM0OC43NDdDNTcuMTM1MSAzNTQuNjcyIDY1LjE0NzkgMzU4IDczLjUwMjkgMzU4SDI0MS41MTZDMjQzLjQzMiAzNTcuOTk3IDI0NS4zMSAzNTcuNDY4IDI0Ni45NDggMzU2LjQ3MUMyNDguNTg2IDM1NS40NzUgMjQ5LjkyIDM1NC4wNDcgMjUwLjgwNyAzNTIuMzQ1QzI1MS42OTQgMzUwLjY0MiAyNTIuMDk5IDM0OC43MjggMjUxLjk3OSAzNDYuODExQzI1MS44NiAzNDQuODkzIDI1MS4yMTkgMzQzLjA0NSAyNTAuMTI3IDM0MS40NjdaIiBmaWxsPSIjNjE5MkVCIi8+DQo8cGF0aCBkPSJNMjQzIDIyMEMyNTQuNTk4IDIyMCAyNjQgMjEwLjU5OCAyNjQgMTk5QzI2NCAxODcuNDAyIDI1NC41OTggMTc4IDI0MyAxNzhDMjMxLjQwMiAxNzggMjIyIDE4Ny40MDIgMjIyIDE5OUMyMjIgMjEwLjU5OCAyMzEuNDAyIDIyMCAyNDMgMjIwWiIgZmlsbD0iI0ZBQzI3MCIvPg0KPC9zdmc+DQo=", ll = ({
+`, lo = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSI0MiIgeT0iNDIiIHdpZHRoPSIzMTYiIGhlaWdodD0iMzE2IiByeD0iMjQiIGZpbGw9IiNDNEQ2RjgiLz4KPHBhdGggZD0iTTM1NC45NTcgMzA5LjQ3N0wyOTIuMDA1IDI0NS4xMzFDMjkwLjIwOCAyNDMuMzA0IDI4Ny44MDkgMjQyLjE5OSAyODUuMjU5IDI0Mi4wMjRDMjgyLjcwOSAyNDEuODUgMjgwLjE4MyAyNDIuNjE3IDI3OC4xNTYgMjQ0LjE4MkwyMDguMDY5IDI5OC4yOTVDMjA1Ljk0NSAyOTkuOTQ5IDIwNC41MzMgMzAyLjM1OCAyMDQuMTIzIDMwNS4wMjdDMjAzLjcxMyAzMDcuNjk2IDIwNC4zMzcgMzEwLjQyMSAyMDUuODY2IDMxMi42NDFMMjMzLjk4NSAzNTMuNDY0QzIzNC45NDkgMzU0Ljg2MSAyMzYuMjM1IDM1Ni4wMDQgMjM3LjczMyAzNTYuNzkzQzIzOS4yMzEgMzU3LjU4MyAyNDAuODk2IDM1Ny45OTcgMjQyLjU4OCAzNThIMzI2LjUyNEMzMzQuODcyIDM1OCAzNDIuODc4IDM1NC42NjYgMzQ4Ljc4MSAzNDguNzMxQzM1NC42ODQgMzQyLjc5NyAzNTggMzM0Ljc0NyAzNTggMzI2LjM1NFYzMTYuODYxQzM1Ny45ODggMzE0LjA5NCAzNTYuODk2IDMxMS40NDIgMzU0Ljk1NyAzMDkuNDc3WiIgZmlsbD0iIzYxOTJFQiIvPgo8cGF0aCBkPSJNMjUwLjEyNyAzNDEuNDY3TDE1NS42MTkgMjA0LjU2OEMxNTQuNzE5IDIwMy4yNTMgMTUzLjUzMSAyMDIuMTYgMTUyLjE0OCAyMDEuMzcyQzE1MC43NjQgMjAwLjU4NSAxNDkuMjIgMjAwLjEyMyAxNDcuNjMyIDIwMC4wMjFDMTQ2LjA0NCAxOTkuOTIgMTQ0LjQ1NCAyMDAuMTgyIDE0Mi45ODEgMjAwLjc4N0MxNDEuNTA5IDIwMS4zOTIgMTQwLjE5MyAyMDIuMzI1IDEzOS4xMzMgMjAzLjUxNUw0NC42MjU2IDMwOC44MjJDNDIuOTEzMiAzMTAuNzY5IDQxLjk3ODMgMzEzLjI4MSA0Mi4wMDA0IDMxNS44NzdWMzI2LjQwOEM0Mi4wMDA0IDMzNC43ODcgNDUuMzE5NCAzNDIuODIyIDUxLjIyNzMgMzQ4Ljc0N0M1Ny4xMzUxIDM1NC42NzIgNjUuMTQ3OSAzNTggNzMuNTAyOSAzNThIMjQxLjUxNkMyNDMuNDMyIDM1Ny45OTcgMjQ1LjMxIDM1Ny40NjggMjQ2Ljk0OCAzNTYuNDcxQzI0OC41ODYgMzU1LjQ3NSAyNDkuOTIgMzU0LjA0NyAyNTAuODA3IDM1Mi4zNDVDMjUxLjY5NCAzNTAuNjQyIDI1Mi4wOTkgMzQ4LjcyOCAyNTEuOTc5IDM0Ni44MTFDMjUxLjg2IDM0NC44OTMgMjUxLjIxOSAzNDMuMDQ1IDI1MC4xMjcgMzQxLjQ2N1oiIGZpbGw9IiM2MTkyRUIiLz4KPHBhdGggZD0iTTI0MyAyMjBDMjU0LjU5OCAyMjAgMjY0IDIxMC41OTggMjY0IDE5OUMyNjQgMTg3LjQwMiAyNTQuNTk4IDE3OCAyNDMgMTc4QzIzMS40MDIgMTc4IDIyMiAxODcuNDAyIDIyMiAxOTlDMjIyIDIxMC41OTggMjMxLjQwMiAyMjAgMjQzIDIyMFoiIGZpbGw9IiNGQUMyNzAiLz4KPC9zdmc+Cg==", ll = ({
   type: e = "SKU",
   id: n,
   name: r,
@@ -3761,7 +3761,7 @@ const il = ({
   },
   opacity: n,
   zIndex: r
-})), Se = H`
+})), je = H`
   from {
     transform: translateY(100px);
     opacity: 0;
@@ -3770,7 +3770,7 @@ const il = ({
     transform: translateY(0);
     opacity: 1;
   }
-`, je = H`
+`, Se = H`
   from {
     transform: translateY(-100px);
     opacity: 0;
@@ -3827,7 +3827,7 @@ const il = ({
         top: unset;
         left: 0;
         bottom: 0;
-        animation: ${Se} 0.3s ease-out;
+        animation: ${je} 0.3s ease-out;
       `;
   if (e.contentLocation === "top")
     return A`
@@ -3836,7 +3836,7 @@ const il = ({
         bottom: unset;
         left: 0;
         top: 0;
-        animation: ${je} 0.3s ease-out;
+        animation: ${Se} 0.3s ease-out;
       `;
   if (e.contentLocation === "left")
     return A`
@@ -3878,7 +3878,7 @@ const il = ({
           right: unset;
           left: 0;
           bottom: 0;
-          animation: ${Se} 0.3s ease-out;
+          animation: ${je} 0.3s ease-out;
         }
       `;
   if (e.contentLocationInDesktop === "top")
@@ -3889,7 +3889,7 @@ const il = ({
           right: unset;
           left: 0;
           top: 0;
-          animation: ${je} 0.3s ease-out;
+          animation: ${Se} 0.3s ease-out;
         }
       `;
   if (e.contentLocationInDesktop === "left")
@@ -3925,8 +3925,8 @@ const il = ({
   zIndex: o,
   contentLocation: i = "center",
   contentLocationInDesktop: a = "center",
-  boxShadow: c,
-  boxShadowInDesktop: s,
+  boxShadow: s,
+  boxShadowInDesktop: p,
   fullWidth: u,
   styleContainer: h
 }) => /* @__PURE__ */ d(z, {
@@ -3939,8 +3939,8 @@ const il = ({
     contentLocation: i,
     contentLocationInDesktop: a,
     onClick: (f) => f.stopPropagation(),
-    boxShadow: c,
-    boxShadowInDesktop: s,
+    boxShadow: s,
+    boxShadowInDesktop: p,
     fullWidth: u,
     style: h,
     children: e
@@ -4070,8 +4070,8 @@ const il = ({
   backdropOpacity: o,
   padding: i,
   borderRadius: a,
-  borderRadiusInDesktop: c,
-  maxHeight: s,
+  borderRadiusInDesktop: s,
+  maxHeight: p,
   height: u,
   maxWidth: h,
   width: f,
@@ -4097,8 +4097,8 @@ const il = ({
   children: /* @__PURE__ */ d(Ao, {
     padding: i,
     borderRadius: a,
-    borderRadiusInDesktop: c,
-    maxHeight: s,
+    borderRadiusInDesktop: s,
+    maxHeight: p,
     height: u,
     maxWidth: h,
     width: f,
@@ -4136,15 +4136,15 @@ const il = ({
   onlyIntegers: o,
   initialValue: i
 }) => {
-  const a = D(null), [c, s] = k(i || ""), u = (f) => {
+  const a = D(null), [s, p] = k(i || ""), u = (f) => {
     const x = f.target.value;
     let m = /^[0-9]\d*(\.(\d*))?$/;
-    o && (m = /^[0-9]*$/), !(x !== "" && !m.test(x)) && s(x);
+    o && (m = /^[0-9]*$/), !(x !== "" && !m.test(x)) && p(x);
   };
   T(() => {
     a.current.focus();
   }, []);
-  const h = Number(c);
+  const h = Number(s);
   return /* @__PURE__ */ d(X, {
     onClose: n,
     maxWidth: "350px",
@@ -4155,10 +4155,10 @@ const il = ({
       children: [/* @__PURE__ */ t("input", {
         type: "text",
         inputMode: o ? "numeric" : "decimal",
-        value: c,
+        value: s,
         onChange: u,
         ref: a
-      }), /* @__PURE__ */ t(S, {
+      }), /* @__PURE__ */ t(j, {
         design: "solid",
         size: "xs",
         onClick: () => e(h),
@@ -4181,7 +4181,7 @@ const il = ({
   display: flex;
   justify-content: center;
 `, mo = l.span`
-  color: ${({ isZero: e, error: n = !1, theme: r }) => e ? n ? r.color.ALERT[900] : r.color.NEUTRAL[500] : r.color.PRIMARY[900]};
+  color: ${({ isZero: e, error: n = !1 }) => e ? n ? c.color.ALERT[900] : c.color.NEUTRAL[500] : c.color.PRIMARY[900]};
   text-align: center;
   padding: 0 8px;
   min-width: 6ch;
@@ -4190,7 +4190,7 @@ const il = ({
   justify-content: center;
   align-items: center;
 `, vo = l.div`
-  background-color: ${({ theme: e }) => e.color.NEUTRAL[50]};
+  background-color: ${c.color.NEUTRAL[50]};
   border-radius: 100px;
   padding: 3px;
   display: flex;
@@ -4201,7 +4201,7 @@ const il = ({
   transition: 0.3s ease-out;
   width: fit-content;
   align-self: flex-end;
-  border: ${({ error: e = !1, theme: n }) => e ? `1px solid ${n.color.ALERT[900]}` : "1px solid transparent"};
+  border: ${({ error: e = !1 }) => e ? `1px solid ${c.color.ALERT[900]}` : "1px solid transparent"};
 
   @media (hover: hover) {
     :hover {
@@ -4209,12 +4209,12 @@ const il = ({
       background-color: white;
       box-shadow: 0px 1px 6px rgba(60, 60, 60, 0.2);
       cursor: ${(e) => e.isDisabled ? "auto" : "pointer"};
-      color: ${(e) => e.theme.color.SECONDARY[900]};
+      color: ${(e) => c.color.SECONDARY[900]};
     }
   }
 
   button {
-    background-color: ${(e) => e.theme.color.SECONDARY[900]};
+    background-color: ${c.color.SECONDARY[900]};
     border: none;
     color: white;
     border-radius: 50%;
@@ -4229,18 +4229,18 @@ const il = ({
     @media (hover: hover) {
       :hover {
         cursor: ${(e) => e.isDisabled ? "auto" : "pointer"};
-        background-color: ${(e) => e.theme.color.SECONDARY[700]};
+        background-color: ${c.color.SECONDARY[700]};
         transition: 0.3s ease-in;
       }
     }
 
     :first-child {
-      background-color: ${(e) => e.minQuantity ? "white" : e.theme.color.SECONDARY[900]};
-      border: ${(e) => `1px solid ${e.minQuantity ? e.canDelete ? e.theme.color.ALERT[900] : e.theme.color.NEUTRAL[400] : "none"}`};
-      color: ${(e) => e.minQuantity ? e.canDelete ? e.theme.color.ALERT[900] : e.theme.color.NEUTRAL[400] : "white"};
+      background-color: ${(e) => e.minQuantity ? "white" : c.color.SECONDARY[900]};
+      border: ${(e) => `1px solid ${e.minQuantity ? e.canDelete ? c.color.ALERT[900] : c.color.NEUTRAL[400] : "none"}`};
+      color: ${(e) => e.minQuantity ? e.canDelete ? c.color.ALERT[900] : c.color.NEUTRAL[400] : "white"};
 
       :hover {
-        background-color: ${(e) => e.minQuantity ? "initial" : e.theme.color.SECONDARY[700]};
+        background-color: ${(e) => e.minQuantity ? "initial" : c.color.SECONDARY[700]};
       }
     }
   }
@@ -4256,8 +4256,8 @@ const il = ({
   minimumQuantity: o = 1,
   measureUnit: i,
   onlyIntegers: a,
-  blockInputModal: c,
-  disabled: s,
+  blockInputModal: s,
+  disabled: p,
   hasError: u,
   variant: h,
   renderModal: f,
@@ -4284,9 +4284,9 @@ const il = ({
   return /* @__PURE__ */ d(z, {
     children: [/* @__PURE__ */ t(xo, {
       children: /* @__PURE__ */ d(vo, {
-        isDisabled: s,
+        isDisabled: p,
         onClick: (y) => {
-          y.stopPropagation(), !(c || s) && C(!0);
+          y.stopPropagation(), !(s || p) && C(!0);
         },
         minQuantity: w,
         canDelete: !!r,
@@ -4294,22 +4294,22 @@ const il = ({
         error: u,
         style: m,
         children: [!g && /* @__PURE__ */ t("button", {
-          disabled: s,
+          disabled: p,
           onClick: R,
           children: w && r ? /* @__PURE__ */ t(bo, {
             children: /* @__PURE__ */ t(mt, {
-              color: p.color.ALERT[900]
+              color: c.color.ALERT[900]
             })
           }) : "-"
         }), /* @__PURE__ */ t(mo, {
           children: `${e === null ? "-" : e} ${e !== null && i || ""}`
         }), !b && /* @__PURE__ */ t("button", {
           onClick: L,
-          disabled: s,
+          disabled: p,
           children: "+"
         })]
       })
-    }), M && !c && (f ? f(/* @__PURE__ */ t(He, {
+    }), M && !s && (f ? f(/* @__PURE__ */ t(He, {
       onClose: () => C(!1),
       onConfirm: I,
       initialValue: e ? e.toString() : "",
@@ -4404,8 +4404,8 @@ const il = ({
   total: o,
   unitPrice: i,
   quantity: a,
-  comment: c,
-  onClick: s,
+  comment: s,
+  onClick: p,
   onChangeQuantity: u,
   onDeleteProduct: h,
   onChangeComment: f,
@@ -4418,9 +4418,9 @@ const il = ({
   const [C, v] = k(!0), w = m || "u.";
   return /* @__PURE__ */ d(wo, {
     children: [/* @__PURE__ */ d(Co, {
-      onClick: s || (() => {
+      onClick: p || (() => {
       }),
-      canClick: !!s,
+      canClick: !!p,
       children: [(e == null ? void 0 : e.src) && /* @__PURE__ */ t(yo, {
         ...e
       }), /* @__PURE__ */ d(Mo, {
@@ -4446,7 +4446,7 @@ const il = ({
       })]
     }), C && /* @__PURE__ */ d("div", {
       children: [/* @__PURE__ */ t(To, {
-        value: c,
+        value: s,
         onChange: (L) => f(L.target.value),
         placeholder: "Agregar alg\xFAn comentario"
       }), g && /* @__PURE__ */ t(Do, {
@@ -4478,14 +4478,14 @@ const il = ({
   margin: 3px 8px;
   font-size: 12px;
   font-weight: 500;
-`, So = l.div`
+`, jo = l.div`
   box-shadow: 0px 1px 10px rgba(98, 98, 98, 0.2);
   min-height: 46px;
   display: flex;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   overflow: hidden;
-`, jo = l.button`
+`, So = l.button`
   background-color: white;
   color: ${({ theme: e }) => e.color.NEUTRAL[400]};
   border: none;
@@ -4522,8 +4522,8 @@ const il = ({
 }) => /* @__PURE__ */ d(Io, {
   children: [e && /* @__PURE__ */ t(zo, {
     children: e
-  }), /* @__PURE__ */ t(So, {
-    children: n.map((i) => /* @__PURE__ */ t(jo, {
+  }), /* @__PURE__ */ t(jo, {
+    children: n.map((i) => /* @__PURE__ */ t(So, {
       selected: i.value === r,
       onClick: () => o(i.value, i),
       disabled: !!i.disabled,
@@ -4653,8 +4653,8 @@ const il = ({
   total: o,
   quantity: i,
   onClick: a,
-  onChangeQuantity: c,
-  onDeleteProduct: s,
+  onChangeQuantity: s,
+  onDeleteProduct: p,
   discount: u,
   productDetails: h,
   renderModal: f,
@@ -4707,8 +4707,8 @@ const il = ({
             })]
           }), /* @__PURE__ */ t(bt, {
             value: i,
-            onSetQuantity: c,
-            onDelete: s,
+            onSetQuantity: s,
+            onDelete: p,
             renderModal: f,
             onlyIntegers: x,
             measureUnit: b != null ? b : "u."
@@ -4767,15 +4767,15 @@ const il = ({
   measureUnit: o,
   discount: i,
   disabled: a,
-  bottom: c
+  bottom: s
 }) => {
-  const s = o || "u.";
+  const p = o || "u.";
   return /* @__PURE__ */ d(Ko, {
     disabled: a,
-    bottom: c,
+    bottom: s,
     children: [/* @__PURE__ */ t("span", {
       children: n !== null && /* @__PURE__ */ d(z, {
-        children: [e, n.toFixed(2), " x ", s]
+        children: [e, n.toFixed(2), " x ", p]
       })
     }), /* @__PURE__ */ d(qo, {
       disabled: a,
@@ -4926,18 +4926,18 @@ const il = ({
   currencySymbol: o,
   unitPrice: i,
   total: a,
-  productDetails: c,
-  discount: s,
+  productDetails: s,
+  discount: p,
   measureUnit: u,
   disabled: h,
   status: f,
   imgLabel: x,
   discountBottom: m = !0
 }) => {
-  const g = m ? !!(c || s) : !!c;
+  const g = m ? !!(s || p) : !!s;
   return /* @__PURE__ */ d(_o, {
     disabled: h,
-    hasDetails: !!c,
+    hasDetails: !!s,
     children: [/* @__PURE__ */ d(ei, {
       children: [(n == null ? void 0 : n.src) && /* @__PURE__ */ d(ti, {
         children: [/* @__PURE__ */ t("div", {
@@ -4956,13 +4956,13 @@ const il = ({
             opacity: 0.4,
             children: r
           }), e]
-        }), c && /* @__PURE__ */ t(ii, {
-          children: c
+        }), s && /* @__PURE__ */ t(ii, {
+          children: s
         }), !g && /* @__PURE__ */ t(Ye, {
           currencySymbol: o,
           unitPrice: i,
           total: a,
-          discount: s,
+          discount: p,
           disabled: h
         })]
       })]
@@ -4970,7 +4970,7 @@ const il = ({
       currencySymbol: o,
       unitPrice: i,
       total: a,
-      discount: s,
+      discount: p,
       disabled: h,
       bottom: !0
     })]
@@ -5031,12 +5031,12 @@ const il = ({
   }), /* @__PURE__ */ t(li, {
     children: r
   }), /* @__PURE__ */ d(di, {
-    children: [/* @__PURE__ */ t(S, {
+    children: [/* @__PURE__ */ t(j, {
       design: "flat",
       fullWidth: !0,
       onClick: () => o.onClick(),
       children: o.text
-    }), /* @__PURE__ */ t(ci, {}), /* @__PURE__ */ t(S, {
+    }), /* @__PURE__ */ t(ci, {}), /* @__PURE__ */ t(j, {
       design: "flat",
       fullWidth: !0,
       onClick: () => i.onClick(),
@@ -5126,7 +5126,7 @@ const il = ({
           children: n
         })]
       }), /* @__PURE__ */ d(gi, {
-        children: [i && /* @__PURE__ */ t(S, {
+        children: [i && /* @__PURE__ */ t(j, {
           design: "flat",
           fullWidth: !0,
           onClick: () => r.onClick(),
@@ -5137,7 +5137,7 @@ const il = ({
           },
           disabled: r.disabled,
           children: r.text
-        }), /* @__PURE__ */ t(S, {
+        }), /* @__PURE__ */ t(j, {
           design: "solid",
           fullWidth: !0,
           onClick: () => o.onClick(),
@@ -5149,7 +5149,7 @@ const il = ({
           children: o.text
         })]
       })]
-    }), !i && /* @__PURE__ */ t(S, {
+    }), !i && /* @__PURE__ */ t(j, {
       design: "flat",
       fullWidth: !0,
       onClick: () => r.onClick(),
@@ -5229,7 +5229,7 @@ const il = ({
         children: n
       })]
     }), r.length > 0 && /* @__PURE__ */ t(We, {
-      children: r.map((i, a) => /* @__PURE__ */ t(S, {
+      children: r.map((i, a) => /* @__PURE__ */ t(j, {
         design: "solid",
         shape: "circular",
         size: "xs",
@@ -5246,7 +5246,7 @@ const il = ({
     })]
   }), o.length > 0 && /* @__PURE__ */ t(We, {
     bottom: !0,
-    children: o.map((i, a) => /* @__PURE__ */ t(S, {
+    children: o.map((i, a) => /* @__PURE__ */ t(j, {
       design: "flat",
       size: "xs",
       fullWidth: !0,
@@ -5309,9 +5309,9 @@ const il = ({
   disabled: o = !1,
   ...i
 }) => {
-  const [a, c] = k((i == null ? void 0 : i.checked) || !1);
+  const [a, s] = k((i == null ? void 0 : i.checked) || !1);
   return T(() => {
-    c(Boolean(i == null ? void 0 : i.checked));
+    s(Boolean(i == null ? void 0 : i.checked));
   }, [i == null ? void 0 : i.checked]), /* @__PURE__ */ d(Ri, {
     disabled: o,
     children: [/* @__PURE__ */ t("input", {
@@ -5319,8 +5319,8 @@ const il = ({
       type: "checkbox",
       value: n,
       disabled: o,
-      onChange: (s) => {
-        c(!a), r(s.target.value, !a);
+      onChange: (p) => {
+        s(!a), r(p.target.value, !a);
       },
       checked: a
     }), /* @__PURE__ */ t("span", {
@@ -5444,10 +5444,10 @@ const il = ({
   decrease: i,
   fullWidth: a
 }) => {
-  var c, s;
+  var s, p;
   return /* @__PURE__ */ d(Di, {
     fullWidth: a,
-    children: [((c = i == null ? void 0 : i.available) != null ? c : !0) && /* @__PURE__ */ t(Qe, {
+    children: [((s = i == null ? void 0 : i.available) != null ? s : !0) && /* @__PURE__ */ t(Qe, {
       onClick: () => n(e - 1),
       disabled: e <= 1 || !!(i != null && i.disabled),
       children: /* @__PURE__ */ t(Ti, {
@@ -5455,7 +5455,7 @@ const il = ({
       })
     }), /* @__PURE__ */ d(Ni, {
       children: [e, " ", r]
-    }), ((s = o == null ? void 0 : o.available) != null ? s : !0) && /* @__PURE__ */ t(Qe, {
+    }), ((p = o == null ? void 0 : o.available) != null ? p : !0) && /* @__PURE__ */ t(Qe, {
       onClick: () => n(e + 1),
       disabled: !!(o != null && o.disabled),
       children: /* @__PURE__ */ t(gt, {
@@ -5552,29 +5552,29 @@ const gl = ({
   onSelect: o,
   fullWidth: i,
   model: a,
-  equalBtns: c
+  equalBtns: s
 }) => /* @__PURE__ */ t(Ii, {
   disabled: r,
-  onClick: (s) => {
-    r && s.stopPropagation();
+  onClick: (p) => {
+    r && p.stopPropagation();
   },
   model: a,
   fullWidth: i,
-  children: e.map((s) => /* @__PURE__ */ t(zi, {
-    onClick: () => o(s.value),
-    active: s.value === n,
+  children: e.map((p) => /* @__PURE__ */ t(zi, {
+    onClick: () => o(p.value),
+    active: p.value === n,
     disabled: r,
     model: a,
-    equal: c,
-    children: s.label
-  }, s.value))
-}), Si = l.div`
+    equal: s,
+    children: p.label
+  }, p.value))
+}), ji = l.div`
   padding: ${({ withDescription: e }) => e ? "3px 14px 5px" : "0 14px"};
   display: ${({ withDescription: e }) => e ? "block" : "flex"};
   align-items: center;
   gap: 8px;
   border-radius: 8px;
-  border: 1px solid ${p.color.NEUTRAL[300]};
+  border: 1px solid ${c.color.NEUTRAL[300]};
   background: #fff;
   input {
     width: 100%;
@@ -5586,9 +5586,9 @@ const gl = ({
     font-size: 0.875rem;
     line-height: 1.3125rem;
     letter-spacing: -0.04em;
-    color: ${p.color.NEUTRAL[700]};
+    color: ${c.color.NEUTRAL[700]};
     ::placeholder {
-      color: ${p.color.NEUTRAL[500]};
+      color: ${c.color.NEUTRAL[500]};
     }
   }
   ${({ readingMode: e }) => e && A`
@@ -5606,23 +5606,23 @@ const gl = ({
   align-items: center;
   justify-content: ${({ readingMode: e }) => e ? "flex-start" : "space-between"};
   gap: 3px;
-`, ji = l.span`
+`, Si = l.span`
   font-weight: 500;
   font-size: 0.625rem;
   line-height: 1.125rem;
   letter-spacing: -0.04em;
-  color: ${p.color.NEUTRAL[500]};
+  color: ${c.color.NEUTRAL[500]};
 `, Ve = l.div`
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.125rem;
   letter-spacing: -0.04em;
-  color: ${p.color.NEUTRAL[500]};
+  color: ${c.color.NEUTRAL[500]};
 `, Fi = l.span`
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: ${p.color.PRIMARY[900]};
+  color: ${c.color.PRIMARY[900]};
 `, xl = ({
   description: e,
   defaultValue: n,
@@ -5631,29 +5631,29 @@ const gl = ({
   },
   placeholder: i,
   suffix: a,
-  disabled: c,
-  readingMode: s
-}) => /* @__PURE__ */ d(Si, {
-  disabled: c,
+  disabled: s,
+  readingMode: p
+}) => /* @__PURE__ */ d(ji, {
+  disabled: s,
   withDescription: Boolean(e),
-  readingMode: s,
-  children: [e && /* @__PURE__ */ t(ji, {
+  readingMode: p,
+  children: [e && /* @__PURE__ */ t(Si, {
     children: e
-  }), s ? /* @__PURE__ */ d(Oe, {
-    readingMode: s,
+  }), p ? /* @__PURE__ */ d(Oe, {
+    readingMode: p,
     children: [/* @__PURE__ */ t(Fi, {
       children: n
-    }), a && !c && /* @__PURE__ */ t(Ve, {
+    }), a && !s && /* @__PURE__ */ t(Ve, {
       children: a
     })]
   }) : /* @__PURE__ */ d(Oe, {
     children: [/* @__PURE__ */ t("input", {
       type: "text",
       placeholder: i,
-      disabled: c,
+      disabled: s,
       onChange: (u) => o(u.target.value),
       value: r
-    }), a && !c && /* @__PURE__ */ t(Ve, {
+    }), a && !s && /* @__PURE__ */ t(Ve, {
       children: a
     })]
   })]
@@ -5692,7 +5692,7 @@ const gl = ({
   startEl: o,
   endEl: i,
   inputRef: a,
-  ...c
+  ...s
 }) => /* @__PURE__ */ d(Bi, {
   alert: e,
   fullWidth: n,
@@ -5700,7 +5700,7 @@ const gl = ({
   className: "base-input-container",
   children: [o, /* @__PURE__ */ t("input", {
     ref: a,
-    ...c
+    ...s
   }), i]
 }), Hi = l.div`
   display: flex;
@@ -5734,7 +5734,7 @@ const gl = ({
 `, Ui = l.div`
   z-index: 2;
   border-radius: 50%;
-  background-color: ${p.color.SECONDARY[900]};
+  background-color: ${c.color.SECONDARY[900]};
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s cubic-bezier(1, 0.19, 0.15, 0.7);
   transition-delay: 0.1s;
@@ -5779,11 +5779,11 @@ const bl = ({
   width: o,
   padding: i,
   styleOn: a,
-  styleOff: c
+  styleOff: s
 }) => {
-  const [s, u] = k(e), h = () => {
+  const [p, u] = k(e), h = () => {
     if (!r) {
-      const f = !s;
+      const f = !p;
       u(f), n(f);
     }
   };
@@ -5793,17 +5793,17 @@ const bl = ({
       onClick: (f) => {
         f.stopPropagation(), h();
       },
-      toggled: s,
+      toggled: p,
       width: o,
       padding: i,
       styleOn: a,
-      styleOff: c,
+      styleOff: s,
       children: [/* @__PURE__ */ t(Ui, {
-        toggled: s,
+        toggled: p,
         width: o,
         padding: i
       }), /* @__PURE__ */ t(Yi, {
-        visible: s,
+        visible: p,
         styleOn: a
       })]
     })
@@ -5841,7 +5841,7 @@ const bl = ({
   > small {
     display: block;
     font: normal 11px Poppins;
-    color: ${() => p.color.ALERT[900]};
+    color: ${() => c.color.ALERT[900]};
     margin-left: 2px;
     margin-top: 3px;
   }
@@ -5855,12 +5855,12 @@ const bl = ({
     minHeight: "45px",
     borderRadius: 10,
     backgroundColor: "#ffffff",
-    border: `1px solid ${n.isFocused ? p.color.QUATERNARY[900] : p.color.NEUTRAL[300]}`,
+    border: `1px solid ${n.isFocused ? c.color.QUATERNARY[900] : c.color.NEUTRAL[300]}`,
     boxShadow: "none",
     cursor: "pointer"
   }),
   singleValue: () => ({
-    color: p.color.PRIMARY[900],
+    color: c.color.PRIMARY[900],
     fontWeight: 400,
     fontSize: "0.875rem",
     fontFamily: "Poppins",
@@ -5868,7 +5868,7 @@ const bl = ({
   }),
   placeholder: (e) => ({
     ...e,
-    color: p.color.NEUTRAL[500]
+    color: c.color.NEUTRAL[500]
   }),
   indicatorSeparator: (e) => ({
     ...e,
@@ -5897,8 +5897,8 @@ const bl = ({
     value: ""
   },
   initialValue: a,
-  value: c,
-  onChange: s,
+  value: s,
+  onChange: p,
   isMulti: u,
   placeholder: h,
   label: f
@@ -5919,12 +5919,12 @@ const bl = ({
       },
       height: "45px",
       width: "100%"
-    }) : /* @__PURE__ */ t(jt, {
+    }) : /* @__PURE__ */ t(St, {
       placeholder: h,
-      value: c || void 0,
+      value: s || void 0,
       defaultValue: a || x,
       options: m,
-      onChange: s,
+      onChange: p,
       styles: Wi,
       isMulti: u,
       formatOptionLabel: e
@@ -5949,7 +5949,7 @@ const bl = ({
   &:hover ::before {
     width: ${(e) => e.size * 2}px;
     height: ${(e) => e.size * 2}px;
-    background: ${() => p.color.NEUTRAL[50]};
+    background: ${() => c.color.NEUTRAL[50]};
   }
   &::after {
     content: "";
@@ -5978,7 +5978,7 @@ const bl = ({
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: ${(r) => r.color || p.color.PRIMARY[900]};
+            background: ${(r) => r.color || c.color.PRIMARY[900]};
             width: ${(r) => r.size * 2}px;
             height: ${(r) => r.size * 2}px;
             border-radius: ${(r) => r.borderRadius || "50%"};
@@ -5987,7 +5987,7 @@ const bl = ({
           &:hover ::before {
             width: ${(r) => r.size * 2}px;
             height: ${(r) => r.size * 2}px;
-            background: ${(r) => r.color || p.color.PRIMARY[900]};
+            background: ${(r) => r.color || c.color.PRIMARY[900]};
           }
         `}
     `}
@@ -6008,7 +6008,7 @@ const bl = ({
           &:hover ::before {
             width: ${(r) => r.size * 2}px;
             height: ${(r) => r.size * 2}px;
-            background: ${() => p.color.NEUTRAL[50]};
+            background: ${() => c.color.NEUTRAL[50]};
           }
         `}
     `}
@@ -6019,16 +6019,16 @@ const bl = ({
   transform: translate(-50%, -50%);
   width: ${(e) => e.size}px;
   height: ${(e) => e.size}px;
-  fill: ${(e) => e.color || p.color.PRIMARY[900]};
+  fill: ${(e) => e.color || c.color.PRIMARY[900]};
   ${(e) => e.variant === "V1" && A`
       ${(n) => n.active && A`
           fill: #fff;
         `}
     `}
   ${(e) => e.variant === "V2" && A`
-      fill: ${() => p.color.NEUTRAL[400]};
+      fill: ${() => c.color.NEUTRAL[400]};
       ${(n) => n.active && A`
-          fill: ${(r) => r.color || p.color.PRIMARY[900]};
+          fill: ${(r) => r.color || c.color.PRIMARY[900]};
         `}
     `}
 `, vt = (e) => {
@@ -6038,21 +6038,21 @@ const bl = ({
     size: o,
     viewBox: i,
     active: a,
-    borderRadius: c,
-    variant: s
+    borderRadius: s,
+    variant: p
   } = e;
   return /* @__PURE__ */ t(Qi, {
     active: a,
     size: o || 24,
-    borderRadius: c || "50%",
-    variant: s || "V1",
+    borderRadius: s || "50%",
+    variant: p || "V1",
     color: r,
     children: /* @__PURE__ */ t(Oi, {
       active: a,
       color: r,
       size: o || 24,
       viewBox: i || "0 0 32 32",
-      variant: s || "V1",
+      variant: p || "V1",
       children: n
     })
   });
@@ -6112,15 +6112,15 @@ const bl = ({
   isDirty: o,
   success: i,
   infoMessage: a,
-  fullWidth: c,
-  ...s
+  fullWidth: s,
+  ...p
 }, u) => {
   const h = {
-    ...s,
+    ...p,
     ref: u
   }, [f, x] = k(!1);
   return /* @__PURE__ */ d(Xi, {
-    fullWidth: c,
+    fullWidth: s,
     children: [e && /* @__PURE__ */ d("div", {
       className: "label-container",
       children: [/* @__PURE__ */ t(N, {
@@ -6141,7 +6141,7 @@ const bl = ({
       error: Boolean(r),
       success: i || !r && o,
       infoMessage: a,
-      fullWidth: c,
+      fullWidth: s,
       type: f ? "text" : n,
       ...h
     }), r && /* @__PURE__ */ t(de, {
@@ -6165,11 +6165,11 @@ function Q(e) {
   return function(n, r) {
     var o = r != null && r.context ? String(r.context) : "standalone", i;
     if (o === "formatting" && e.formattingValues) {
-      var a = e.defaultFormattingWidth || e.defaultWidth, c = r != null && r.width ? String(r.width) : a;
-      i = e.formattingValues[c] || e.formattingValues[a];
+      var a = e.defaultFormattingWidth || e.defaultWidth, s = r != null && r.width ? String(r.width) : a;
+      i = e.formattingValues[s] || e.formattingValues[a];
     } else {
-      var s = e.defaultWidth, u = r != null && r.width ? String(r.width) : e.defaultWidth;
-      i = e.values[u] || e.values[s];
+      var p = e.defaultWidth, u = r != null && r.width ? String(r.width) : e.defaultWidth;
+      i = e.values[u] || e.values[p];
     }
     var h = e.argumentCallback ? e.argumentCallback(n) : n;
     return i[h];
@@ -6180,13 +6180,13 @@ function O(e) {
     var r = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, o = r.width, i = o && e.matchPatterns[o] || e.matchPatterns[e.defaultMatchWidth], a = n.match(i);
     if (!a)
       return null;
-    var c = a[0], s = o && e.parsePatterns[o] || e.parsePatterns[e.defaultParseWidth], u = Array.isArray(s) ? qi(s, function(x) {
-      return x.test(c);
-    }) : Ki(s, function(x) {
-      return x.test(c);
+    var s = a[0], p = o && e.parsePatterns[o] || e.parsePatterns[e.defaultParseWidth], u = Array.isArray(p) ? qi(p, function(x) {
+      return x.test(s);
+    }) : Ki(p, function(x) {
+      return x.test(s);
     }), h;
     h = e.valueCallback ? e.valueCallback(u) : u, h = r.valueCallback ? r.valueCallback(h) : h;
-    var f = n.slice(c.length);
+    var f = n.slice(s.length);
     return {
       value: h,
       rest: f
@@ -6211,12 +6211,12 @@ function $i(e) {
     var i = o[0], a = n.match(e.parsePattern);
     if (!a)
       return null;
-    var c = e.valueCallback ? e.valueCallback(a[0]) : a[0];
-    c = r.valueCallback ? r.valueCallback(c) : c;
-    var s = n.slice(i.length);
+    var s = e.valueCallback ? e.valueCallback(a[0]) : a[0];
+    s = r.valueCallback ? r.valueCallback(s) : s;
+    var p = n.slice(i.length);
     return {
-      value: c,
-      rest: s
+      value: s,
+      rest: p
     };
   };
 }
@@ -6531,7 +6531,7 @@ var v0 = /^(\d+)(º)?/i, w0 = /\d+/i, C0 = {
   })
 };
 const z0 = I0;
-var S0 = {
+var j0 = {
   code: "es",
   formatDistance: t0,
   formatLong: a0,
@@ -6543,8 +6543,8 @@ var S0 = {
     firstWeekContainsDate: 1
   }
 };
-const Ge = S0;
-const j0 = ({
+const Ge = j0;
+const S0 = ({
   size: e = 18,
   color: n = "#242954"
 }) => /* @__PURE__ */ t("div", {
@@ -6722,9 +6722,9 @@ const j0 = ({
   gap: 10px;
   border-radius: 10px;
   background: #fff;
-  border: 1px solid ${p.color.NEUTRAL[300]};
+  border: 1px solid ${c.color.NEUTRAL[300]};
   outline: none;
-  color: ${p.color.PRIMARY[900]};
+  color: ${c.color.PRIMARY[900]};
   cursor: pointer;
   font-family: "Poppins";
   font-style: normal;
@@ -6740,7 +6740,7 @@ const j0 = ({
   display: flex;
   gap: 10px;
   flex-grow: 1;
-  color: ${p.color.NEUTRAL[900]};
+  color: ${c.color.NEUTRAL[900]};
 
   input {
     font-size: 14px;
@@ -6758,15 +6758,15 @@ const j0 = ({
   showTimeInputs: o = !1,
   direction: i = "horizontal",
   dateFormatDisplayed: a = "detailed",
-  initWithToday: c = !1,
-  ...s
+  initWithToday: s = !1,
+  ...p
 }) => {
   const u = D(null), [h, f] = k({
     from: "00:00",
     to: "23:59"
   }), [x, m] = k(!1), [g, b] = k(n ? [n] : [{
-    startDate: c ? new Date(Date.now()) : void 0,
-    endDate: c ? new Date(Date.now()) : void 0,
+    startDate: s ? new Date(Date.now()) : void 0,
+    endDate: s ? new Date(Date.now()) : void 0,
     key: "selection"
   }]), M = (w) => {
     var L, R;
@@ -6775,8 +6775,8 @@ const j0 = ({
         startDate: I,
         endDate: y
       } = g[0], E = w === "from" ? I : y;
-      let j = "";
-      return o ? j = a === "simple" ? "dd/MM/yyyy HH:mm" : "dd 'de' MMMM 'del' YYY hh:mm aaaaa'm'" : j = a === "simple" ? "dd/MM/yyyy" : "dd 'de' MMMM 'del' YYY", Ft(E, j, {
+      let S = "";
+      return o ? S = a === "simple" ? "dd/MM/yyyy HH:mm" : "dd 'de' MMMM 'del' YYY hh:mm aaaaa'm'" : S = a === "simple" ? "dd/MM/yyyy" : "dd 'de' MMMM 'del' YYY", Ft(E, S, {
         locale: Ge
       });
     }
@@ -6794,9 +6794,9 @@ const j0 = ({
         key: "selection"
       }]);
     else {
-      const [E, j] = (L = h == null ? void 0 : h.from) == null ? void 0 : L.split(":"), [ge, Dt] = (R = h == null ? void 0 : h.to) == null ? void 0 : R.split(":");
+      const [E, S] = (L = h == null ? void 0 : h.from) == null ? void 0 : L.split(":"), [ge, Dt] = (R = h == null ? void 0 : h.to) == null ? void 0 : R.split(":");
       let W, q;
-      if ((I = g[0]) != null && I.startDate && (W = new Date(g[0].startDate), W.setHours(Number(E || 0), Number(j || 0), 0)), (y = g[0]) != null && y.endDate && (q = new Date(g[0].endDate), q.setHours(Number(ge || 23), Number(Dt || 59), 59)), W && W) {
+      if ((I = g[0]) != null && I.startDate && (W = new Date(g[0].startDate), W.setHours(Number(E || 0), Number(S || 0), 0)), (y = g[0]) != null && y.endDate && (q = new Date(g[0].endDate), q.setHours(Number(ge || 23), Number(Dt || 59), 59)), W && W) {
         const xe = {
           ...g[0],
           startDate: W,
@@ -6819,7 +6819,7 @@ const j0 = ({
     ref: u,
     children: [/* @__PURE__ */ d(P0, {
       onClick: () => m(!0),
-      children: [r && /* @__PURE__ */ t(j0, {}), M("from") ? /* @__PURE__ */ t("p", {
+      children: [r && /* @__PURE__ */ t(S0, {}), M("from") ? /* @__PURE__ */ t("p", {
         children: `${M("from")} - ${M("to")}`
       }) : /* @__PURE__ */ t("p", {
         style: {
@@ -6844,7 +6844,7 @@ const j0 = ({
         ranges: g,
         direction: i,
         locale: Ge,
-        ...s
+        ...p
       }), /* @__PURE__ */ d(B0, {
         children: [o && /* @__PURE__ */ d(U0, {
           children: [/* @__PURE__ */ d("div", {
@@ -6870,7 +6870,7 @@ const j0 = ({
               onChange: (w) => C(w.target.value, "to")
             })]
           })]
-        }), /* @__PURE__ */ t(S, {
+        }), /* @__PURE__ */ t(j, {
           size: "xs",
           py: "5px",
           onClick: () => v(!1),
@@ -6898,7 +6898,7 @@ const j0 = ({
     cursor: pointer;
   }
 `, Q0 = l.ul`
-  color: ${() => p.color.NEUTRAL[700]};
+  color: ${() => c.color.NEUTRAL[700]};
   padding: 0;
   margin: 10px 0;
   list-style-type: none;
@@ -6909,8 +6909,8 @@ const j0 = ({
       gap: 10px;
     `}
 `, ee = l.li`
-  background-color: ${({ alert: e }) => e ? p.color.ALERT[100] : "white"};
-  color: ${({ alert: e }) => e ? p.color.ALERT[900] : "inherit"};
+  background-color: ${({ alert: e }) => e ? c.color.ALERT[100] : "white"};
+  color: ${({ alert: e }) => e ? c.color.ALERT[900] : "inherit"};
   min-height: 50px;
   padding: 0 20px;
   display: flex;
@@ -6948,8 +6948,8 @@ const j0 = ({
   contentLocationInDesktop: o,
   defaultDescription: i = "",
   defaultTitle: a = "",
-  optionsInCenter: c = !1,
-  direction: s = "row",
+  optionsInCenter: s = !1,
+  direction: p = "row",
   iconOrientation: u = "horizontal"
 }) => {
   const [h, f] = k(null), x = Nt(() => {
@@ -6983,14 +6983,14 @@ const j0 = ({
           children: (x == null ? void 0 : x.description) || i
         })]
       }), /* @__PURE__ */ d(Q0, {
-        direction: s,
+        direction: p,
         children: [!x && e.map((m, g) => "onClick" in m ? /* @__PURE__ */ d(ee, {
           alert: m.alert,
           disabled: m.disabled || m.loading,
           onClick: () => {
             !m.loading && !m.disabled && (m.onClick(), n());
           },
-          optionsInCenter: c,
+          optionsInCenter: s,
           iconOrientation: u,
           children: [/* @__PURE__ */ t("span", {
             children: m.text
@@ -6999,7 +6999,7 @@ const j0 = ({
           onClick: () => {
             f(g);
           },
-          optionsInCenter: c,
+          optionsInCenter: s,
           children: [m.text, " ", /* @__PURE__ */ t("div", {
             style: {
               transform: "rotateY(180deg)"
@@ -7012,7 +7012,7 @@ const j0 = ({
           onClick: () => {
             !m.loading && !m.disabled && m.onClick();
           },
-          optionsInCenter: c,
+          optionsInCenter: s,
           children: [m.text, " ", m.loading ? Xe : m.icon]
         }, `suboption-${g}`))]
       })]
@@ -7065,7 +7065,7 @@ const j0 = ({
   onSelect: o,
   onClose: i,
   modalProps: a = {},
-  optionMinHeight: c = 50
+  optionMinHeight: s = 50
 }) => /* @__PURE__ */ d(X, {
   onClose: i,
   closeIcon: !0,
@@ -7076,15 +7076,15 @@ const j0 = ({
   children: [/* @__PURE__ */ t(O0, {
     children: e
   }), /* @__PURE__ */ t(V0, {
-    children: n.map((s) => /* @__PURE__ */ d(G0, {
-      minHeight: c,
-      selected: s.value === r,
-      disabled: s.disabled,
+    children: n.map((p) => /* @__PURE__ */ d(G0, {
+      minHeight: s,
+      selected: p.value === r,
+      disabled: p.disabled,
       onClick: () => {
-        s.disabled || o(s.value, s);
+        p.disabled || o(p.value, p);
       },
-      children: [s.content, " ", s.icon]
-    }, s.value))
+      children: [p.content, " ", p.icon]
+    }, p.value))
   })]
 }), J0 = (e) => /* @__PURE__ */ t(P, {
   viewBox: "0 0 10 8",
@@ -7111,7 +7111,7 @@ const j0 = ({
 }) => /* @__PURE__ */ t(X0, {
   options: e.map(({
     content: o,
-    color: i = p.color.NEUTRAL[800],
+    color: i = c.color.NEUTRAL[800],
     ...a
   }) => ({
     content: /* @__PURE__ */ t(K0, {
@@ -7165,13 +7165,13 @@ const j0 = ({
   children: [/* @__PURE__ */ t(q0, {
     children: e
   }), /* @__PURE__ */ t($0, {
-    children: n.map((a, c) => /* @__PURE__ */ d(_0, {
+    children: n.map((a, s) => /* @__PURE__ */ d(_0, {
       disabled: a.disabled,
       onClick: () => {
         a.disabled || (a.onClick(), o && r());
       },
       children: [a.icon, " ", a.content]
-    }, `modal-option-${c}`))
+    }, `modal-option-${s}`))
   })]
 }), ea = (e, n = 1024 * 8) => {
   let r = !0, o = null;
@@ -7190,10 +7190,10 @@ const j0 = ({
   acceptedFiles: o,
   validFileExtensions: i,
   children: a,
-  style: c
+  style: s
 }) => {
-  const s = D(null), u = () => s.current.click(), h = () => {
-    const g = s.current.files[0];
+  const p = D(null), u = () => p.current.click(), h = () => {
+    const g = p.current.files[0];
     m(g);
   }, f = (g) => {
     g.stopPropagation(), g.preventDefault();
@@ -7218,9 +7218,9 @@ const j0 = ({
     onClick: u,
     onDragOver: (g) => g.preventDefault(),
     onDrop: f,
-    style: c,
+    style: s,
     children: [a, /* @__PURE__ */ t("input", {
-      ref: s,
+      ref: p,
       style: {
         display: "none"
       },
@@ -7328,34 +7328,34 @@ const j0 = ({
   onChange: r,
   onError: o
 }) => {
-  const [i, a] = k(null), [c, s] = k(e || null), u = Ct();
+  const [i, a] = k(null), [s, p] = k(e || null), u = Ct();
   return T(() => {
     let h = "";
-    return i && (h = window.URL.createObjectURL(i), s(h)), () => {
+    return i && (h = window.URL.createObjectURL(i), p(h)), () => {
       h && window.URL.revokeObjectURL(h);
     };
   }, [i]), T(() => {
-    u || r(i, c || null);
-  }, [c]), /* @__PURE__ */ t(wt, {
+    u || r(i, s || null);
+  }, [s]), /* @__PURE__ */ t(wt, {
     onError: o || alert,
     onSelectFile: (h) => a(h),
     acceptedFiles: "image/x-png,image/jpeg",
     validFileExtensions: ["jpg", "jpeg", "png"],
-    children: c ? /* @__PURE__ */ d(oa, {
+    children: s ? /* @__PURE__ */ d(oa, {
       children: [/* @__PURE__ */ d(ia, {
         children: [/* @__PURE__ */ t("img", {
-          src: c
+          src: s
         }), /* @__PURE__ */ d(aa, {
           children: [/* @__PURE__ */ t("span", {
-            children: (i == null ? void 0 : i.name) || Je(c)[0]
+            children: (i == null ? void 0 : i.name) || Je(s)[0]
           }), /* @__PURE__ */ t("span", {
-            children: (i == null ? void 0 : i.type) || Je(c)[1]
+            children: (i == null ? void 0 : i.type) || Je(s)[1]
           })]
         })]
       }), /* @__PURE__ */ t(he, {
         variant: "secondary",
         onClick: (h) => {
-          h.stopPropagation(), a(null), s(null);
+          h.stopPropagation(), a(null), p(null);
         },
         children: /* @__PURE__ */ t(ta, {
           size: 12
@@ -7364,7 +7364,7 @@ const j0 = ({
     }) : /* @__PURE__ */ t(na, {
       children: n || /* @__PURE__ */ d(ra, {
         children: [/* @__PURE__ */ t(yt, {
-          color: p.color.SECONDARY[900],
+          color: c.color.SECONDARY[900],
           size: 18
         }), " Sube un imagen ", /* @__PURE__ */ t("span", {
           children: "aqu\xED"
@@ -7415,7 +7415,7 @@ const j0 = ({
   initialImages: n,
   limit: r
 }) => {
-  const [o, i] = k(n || []), [a, c] = k(null), s = Ct(), u = (f) => {
+  const [o, i] = k(n || []), [a, s] = k(null), p = Ct(), u = (f) => {
     const x = window.URL.createObjectURL(f);
     i((m) => [...m, {
       file: f,
@@ -7426,12 +7426,12 @@ const j0 = ({
     typeof x != "string" && window.URL.revokeObjectURL(x.url), i((m) => m.filter((g, b) => b !== f));
   };
   return T(() => {
-    s || e(o);
+    p || e(o);
   }, [o]), /* @__PURE__ */ d(la, {
     children: [o.map((f, x) => /* @__PURE__ */ d(da, {
-      onMouseEnter: () => c(x),
-      onMouseLeave: () => c(null),
-      onTouchCancel: () => c(null),
+      onMouseEnter: () => s(x),
+      onMouseLeave: () => s(null),
+      onTouchCancel: () => s(null),
       children: [/* @__PURE__ */ t("img", {
         src: typeof f == "string" ? f : f.url
       }), a === x && /* @__PURE__ */ t(sa, {
@@ -7465,13 +7465,13 @@ const j0 = ({
   }
   .th {
     font-weight: 500;
-    color: ${p.color.NEUTRAL[500]};
+    color: ${c.color.NEUTRAL[500]};
     padding-bottom: 8px;
     padding: 15px 10px 8px;
   }
   .td {
     font-weight: 400;
-    color: ${p.color.NEUTRAL[600]};
+    color: ${c.color.NEUTRAL[600]};
     padding: 10px;
   }
   .tr {
@@ -7482,12 +7482,12 @@ const j0 = ({
   return e ? ((n = e == null ? void 0 : e.split(" ")) == null ? void 0 : n.length) + 1 : "auto";
 }};
     border-radius: 8px;
-    background: ${p.color.QUATERNARY[50]};
-    border: 1px solid ${p.color.QUATERNARY[300]};
+    background: ${c.color.QUATERNARY[50]};
+    border: 1px solid ${c.color.QUATERNARY[300]};
     padding: 10px 0;
     margin-top: 7px;
     &:hover {
-      background: ${p.color.QUATERNARY[100]};
+      background: ${c.color.QUATERNARY[100]};
     }
   }
   .item-center {
@@ -7508,7 +7508,7 @@ const j0 = ({
   }
   .separator {
     width: 100%;
-    border-right: 1.5px solid ${p.color.QUATERNARY[300]};
+    border-right: 1.5px solid ${c.color.QUATERNARY[300]};
   }
 `, ha = l.div`
   overflow-x: auto;
@@ -7535,7 +7535,7 @@ const j0 = ({
   if (e)
     return A`
     width: 100%;
-    border-right: 1.5px solid ${p.color.QUATERNARY[300]};
+    border-right: 1.5px solid ${c.color.QUATERNARY[300]};
   `;
 }, Et = (e) => {
   if (e)
@@ -7552,7 +7552,7 @@ const j0 = ({
 }, Aa = l.div`
   ${Lt}
   font-weight: 500;
-  color: ${p.color.NEUTRAL[500]};
+  color: ${c.color.NEUTRAL[500]};
   padding-bottom: 8px;
   padding: 15px 10px 8px;
   ${({ location: e }) => kt(e || "left")}
@@ -7562,7 +7562,7 @@ const j0 = ({
 `, fa = l.div`
   ${Lt}
   font-weight: 400;
-  color: ${p.color.NEUTRAL[600]};
+  color: ${c.color.NEUTRAL[600]};
   padding: 10px;
   ${({ location: e }) => kt(e || "left")}
   ${({ separator: e }) => Rt(Boolean(e))}
@@ -7576,12 +7576,12 @@ const j0 = ({
   return e ? ((n = e == null ? void 0 : e.split(" ")) == null ? void 0 : n.length) + 1 : "auto";
 }};
   border-radius: 8px;
-  background: ${p.color.QUATERNARY[50]};
-  border: 1px solid ${p.color.QUATERNARY[300]};
+  background: ${c.color.QUATERNARY[50]};
+  border: 1px solid ${c.color.QUATERNARY[300]};
   padding: 10px 0;
   margin-top: 7px;
   &:hover {
-    background: ${p.color.QUATERNARY[100]};
+    background: ${c.color.QUATERNARY[100]};
   }
   ${({ gridColumn: e }) => ue(e)}
 `, ga = ({
@@ -7591,8 +7591,8 @@ const j0 = ({
   gap: o,
   padding: i,
   margin: a,
-  header: c,
-  body: s
+  header: s,
+  body: p
 }) => /* @__PURE__ */ t(ha, {
   children: /* @__PURE__ */ d(pa, {
     gridTemplateColumns: e,
@@ -7601,7 +7601,7 @@ const j0 = ({
     gap: o,
     padding: i,
     margin: a,
-    children: [c && c, s && s]
+    children: [s && s, p && p]
   })
 }), El = {
   Table: ga,
@@ -7719,18 +7719,18 @@ const j0 = ({
     transition: all 0.2s;
 
     &:hover {
-      background: ${p.color.NEUTRAL[50]} !important;
+      background: ${c.color.NEUTRAL[50]} !important;
     }
   }
 
   input {
     border: 1px solid
-      ${({ disabled: e }) => e ? p.color.NEUTRAL[300] : p.color.SECONDARY[900]};
+      ${({ disabled: e }) => e ? c.color.NEUTRAL[300] : c.color.SECONDARY[900]};
     border-radius: 5px;
     font: 400 14px Poppins;
     height: 100%;
     width: 50px;
-    color: ${p.color.NEUTRAL[500]};
+    color: ${c.color.NEUTRAL[500]};
     outline: none;
     padding: 0 5px;
     text-align: center;
@@ -7775,7 +7775,7 @@ const j0 = ({
         return i("");
       i(f), r(Number(f) || 1);
     }
-  }, c = () => Number(o) <= 1 ? "1px solid #BFBFBF" : "1px solid #4318FF", s = () => Number(o) <= 1 ? "#BFBFBF" : "#4318FF", u = () => Number(o) === n ? "#BFBFBF" : "#4318FF";
+  }, s = () => Number(o) <= 1 ? "1px solid #BFBFBF" : "1px solid #4318FF", p = () => Number(o) <= 1 ? "#BFBFBF" : "#4318FF", u = () => Number(o) === n ? "#BFBFBF" : "#4318FF";
   return /* @__PURE__ */ d(xa, {
     disabled: (() => Number(o) === Number(n) || Number(o) === 1)(),
     children: [/* @__PURE__ */ d("button", {
@@ -7785,14 +7785,14 @@ const j0 = ({
       style: {
         padding: "0px",
         backgroundColor: "#fff",
-        border: c()
+        border: s()
       },
       children: [/* @__PURE__ */ t(te, {
         size: 12,
-        color: s()
+        color: p()
       }), /* @__PURE__ */ t(te, {
         size: 12,
-        color: s(),
+        color: p(),
         styleContainer: {
           marginLeft: "-5px"
         }
@@ -7804,11 +7804,11 @@ const j0 = ({
       style: {
         padding: "0px",
         backgroundColor: "#fff",
-        border: c()
+        border: s()
       },
       children: /* @__PURE__ */ t(te, {
         size: 12,
-        color: s()
+        color: p()
       })
     }), /* @__PURE__ */ t("input", {
       type: "number",
@@ -7859,17 +7859,17 @@ const j0 = ({
   T(() => {
     if (!e.current || o.current)
       return;
-    const i = e.current, a = (s) => {
-      s.preventDefault();
-      const h = s.pageX - i.offsetLeft - n.current;
+    const i = e.current, a = (p) => {
+      p.preventDefault();
+      const h = p.pageX - i.offsetLeft - n.current;
       i.scrollLeft = r.current - h;
-    }, c = () => {
-      window.removeEventListener("mousemove", a), window.removeEventListener("mouseup", c);
+    }, s = () => {
+      window.removeEventListener("mousemove", a), window.removeEventListener("mouseup", s);
     };
-    return i.addEventListener("mousedown", (s) => {
-      n.current = s.pageX - i.offsetLeft, r.current = i.scrollLeft, window.addEventListener("mousemove", a), window.addEventListener("mouseup", c);
+    return i.addEventListener("mousedown", (p) => {
+      n.current = p.pageX - i.offsetLeft, r.current = i.scrollLeft, window.addEventListener("mousemove", a), window.addEventListener("mouseup", s);
     }), o.current = !0, () => {
-      window.removeEventListener("mousemove", a), window.removeEventListener("mouseup", c);
+      window.removeEventListener("mousemove", a), window.removeEventListener("mouseup", s);
     };
   }, [e]);
 }, va = l.div`
@@ -7944,8 +7944,8 @@ const j0 = ({
   noHover: o = !1,
   styleWrapper: i,
   styleTable: a,
-  styleTHead: c,
-  styleTBody: s,
+  styleTHead: s,
+  styleTBody: p,
   onScroll: u,
   showPagination: h = !0,
   pagination: f = {
@@ -7972,12 +7972,12 @@ const j0 = ({
         noHover: o,
         style: a,
         children: [/* @__PURE__ */ t("thead", {
-          style: c,
+          style: s,
           children: /* @__PURE__ */ t("tr", {
             children: n
           })
         }), /* @__PURE__ */ t("tbody", {
-          style: s,
+          style: p,
           children: e ? Array.from(Array(2).keys()).map((C) => /* @__PURE__ */ t("tr", {
             children: x.map((v) => /* @__PURE__ */ t("td", {
               children: /* @__PURE__ */ t(B, {
@@ -8013,9 +8013,9 @@ const j0 = ({
   justify-content: space-between;
   align-items: center;
   padding: ${({ padding: e }) => e || "3px 0 "};;
-  box-shadow: ${p.effect.lightShadow[16]};
-  color: ${p.color.PRIMARY[900]};
-  background: ${p.color.PRIMARY[0]};
+  box-shadow: ${c.effect.lightShadow[16]};
+  color: ${c.color.PRIMARY[900]};
+  background: ${c.color.PRIMARY[0]};
 
   position: ${({ isSticky: e }) => e ? "sticky" : "static"};
   top: 0;
@@ -8030,8 +8030,8 @@ const j0 = ({
   }
 `, La = l.button`
   ${Ca}
-  color: ${({ mode: e }) => e === "danger" ? p.color.ALERT[700] : p.color.PRIMARY[900]};
-  border-left: 1px solid ${p.color.NEUTRAL[200]};
+  color: ${({ mode: e }) => e === "danger" ? c.color.ALERT[700] : c.color.PRIMARY[900]};
+  border-left: 1px solid ${c.color.NEUTRAL[200]};
   ${({ isLoading: e }) => ct({ isLoading: e })};
   ${({ disabled: e }) => le({ disabled: e })};
 `, Dl = ({
@@ -8109,9 +8109,9 @@ const j0 = ({
   font-family: 'DM Sans';
   font-style: normal;
   letter-spacing: -0.04em;
-  color: ${p.color.PRIMARY[900]};
-  background: ${p.color.PRIMARY[0]};
-  box-shadow: ${({ boxShadow: e }) => e || p.effect.darkShadow[6]};
+  color: ${c.color.PRIMARY[900]};
+  background: ${c.color.PRIMARY[0]};
+  box-shadow: ${({ boxShadow: e }) => e || c.effect.darkShadow[6]};
   position: ${({ isFixed: e }) => e ? "fixed" : "static"};
   bottom: 0;
   left: 0;
@@ -8129,7 +8129,7 @@ const j0 = ({
   boxShadow: r == null ? void 0 : r.boxShadow,
   children: [e && /* @__PURE__ */ t("div", {
     children: e
-  }), n == null ? void 0 : n.map((o) => /* @__PURE__ */ t(S, {
+  }), n == null ? void 0 : n.map((o) => /* @__PURE__ */ t(j, {
     ...o
   }, crypto.randomUUID()))]
 }), Tt = (e, n = 2) => new Intl.NumberFormat("en-US", {
@@ -8272,17 +8272,17 @@ const j0 = ({
   tip_PEN: o,
   tip_USD: i,
   main: a,
-  loading: c,
-  autoWidth: s,
+  loading: s,
+  autoWidth: p,
   noDecimals: u = !1,
   containerStyle: h
 }) => {
   const f = (x) => Tt(x, u ? 0 : 2);
   return /* @__PURE__ */ t(Ta, {
     main: a,
-    autoWidth: s,
+    autoWidth: p,
     style: h,
-    children: c ? /* @__PURE__ */ d(z, {
+    children: s ? /* @__PURE__ */ d(z, {
       children: [/* @__PURE__ */ t($e, {
         children: /* @__PURE__ */ t(B, {
           width: "150px",
@@ -8473,18 +8473,18 @@ const j0 = ({
     font: normal 12px Poppins !important;
     color: #6b6b6b !important;
   }
-`, Sl = ({
+`, jl = ({
   name: e,
   symbol: n,
   currentAmount: r,
   oldAmount: o,
   loading: i,
   autoWidth: a = !1,
-  noDecimals: c,
-  containerStyle: s
+  noDecimals: s,
+  containerStyle: p
 }) => {
   var m;
-  const u = (g) => Tt(g, c ? 0 : 2), h = () => {
+  const u = (g) => Tt(g, s ? 0 : 2), h = () => {
     if (!r || !o)
       return 0;
     const g = Math.round(r * 100 / o);
@@ -8495,7 +8495,7 @@ const j0 = ({
   }, x = `${n != null ? n : ""} ${u(r || 0)}`;
   return i ? /* @__PURE__ */ d(tt, {
     autoWidth: Boolean(a),
-    style: s,
+    style: p,
     children: [e && /* @__PURE__ */ t(nt, {
       children: /* @__PURE__ */ t(B, {
         width: "70px",
@@ -8515,7 +8515,7 @@ const j0 = ({
     })]
   }) : /* @__PURE__ */ d(tt, {
     autoWidth: Boolean(a),
-    style: s,
+    style: p,
     children: [e && /* @__PURE__ */ d(nt, {
       children: [/* @__PURE__ */ t(Da, {
         size: 14
@@ -8544,7 +8544,7 @@ export {
   ml as BaseInput,
   Ml as BulletOptionsModal,
   nr as BulletPoint,
-  S as Button,
+  j as Button,
   Fo as ButtonsSelect,
   gl as ButtonsSwitch,
   tl as Card,
@@ -8570,7 +8570,7 @@ export {
   ll as IDCard,
   P as IconV2,
   zl as KpiCard,
-  Sl as KpiCardV2,
+  jl as KpiCardV2,
   Wa as Loader,
   Dl as ModalHeader,
   Cl as MultipleOptionsModal,
