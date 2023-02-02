@@ -1,3 +1,12 @@
+## [0.31.1](https://github.com/idbi/components/compare/v0.31.0...v0.31.1) (2023-02-02)
+
+
+### Bug Fixes
+
+* theme in EditQuantityInput ([4923b67](https://github.com/idbi/components/commit/4923b67b29fa0e0b056016977d66b7ff855022f8))
+
+
+
 # [0.31.0](https://github.com/idbi/components/compare/v0.30.3...v0.31.0) (2023-01-25)
 
 
@@ -36,17 +45,6 @@
 ### Bug Fixes
 
 * fixs react-icons and DateRangePicker ([b6baaa4](https://github.com/idbi/components/commit/b6baaa4d7b26e5fdc46fcacaac94f180247605fb))
-
-
-
-# [0.30.0](https://github.com/idbi/components/compare/v0.29.1...v0.30.0) (2023-01-19)
-
-
-### Features
-
-* create new Icons ([39fb0a4](https://github.com/idbi/components/commit/39fb0a41cda82c705580f222aa09a196c5a92203))
-* remove DateRangePicker and react-icons of components ([0341632](https://github.com/idbi/components/commit/0341632dca712da7508feb5d52090d076d0c487c))
-* update build ([2cdb857](https://github.com/idbi/components/commit/2cdb8576130925a6bf27bc8cd809019d3ef60926))
 
 
 
