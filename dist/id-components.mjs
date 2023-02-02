@@ -4552,7 +4552,7 @@ const il = ({
     })
   });
 }, Uo = l.div`
-  color: 1px solid ${({ theme: e }) => e.color.NEUTRAL[700]};
+  color: 1px solid ${c.color.NEUTRAL[700]};
   display: flex;
   gap: 10px;
   font-size: 12px;
@@ -4585,7 +4585,7 @@ const il = ({
   gap: 8px;
   flex-grow: 1;
 `, Wo = l.div`
-  border: 1px solid ${({ theme: e }) => e.color.NEUTRAL[100]};
+  border: 1px solid ${c.color.NEUTRAL[100]};
   border-radius: 4px;
   width: 50px;
   height: 50px;
@@ -4596,7 +4596,7 @@ const il = ({
   height: 100%;
   object-fit: cover;
 `, Oo = l.span`
-  background-color: ${({ theme: e }) => e.color.SECONDARY[900]};
+  background-color: ${c.color.SECONDARY[900]};
   color: white;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
@@ -4618,7 +4618,7 @@ const il = ({
     font-weight: 500;
   }
   & > div {
-    color: ${({ theme: e }) => e.color.NEUTRAL[500]};
+    color: ${c.color.NEUTRAL[500]};
   }
 `, Go = l.div`
   display: flex;
@@ -4637,14 +4637,14 @@ const il = ({
     }
   }
 `, Xo = l.span`
-  color: ${({ theme: e }) => e.color.PRIMARY[900]};
+  color: ${c.color.PRIMARY[900]};
   margin-right: 8px;
   span {
     font-weight: 700;
   }
 `, Jo = l.span`
   display: inline-block;
-  color: ${({ theme: e }) => e.color.NEUTRAL[400]};
+  color: ${c.color.NEUTRAL[400]};
   text-decoration: line-through;
 `, cl = ({
   img: e,
