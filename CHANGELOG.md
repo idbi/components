@@ -1,3 +1,7 @@
+## [0.31.2](https://github.com/idbi/components/compare/v0.31.1...v0.31.2) (2023-02-02)
+
+
+
 ## [0.31.1](https://github.com/idbi/components/compare/v0.31.0...v0.31.1) (2023-02-02)
 
 
@@ -36,15 +40,6 @@
 ### Bug Fixes
 
 * types export ([14bf10a](https://github.com/idbi/components/commit/14bf10ac6decf5e25d0acfecda69aae7fdf46ecc))
-
-
-
-## [0.30.1](https://github.com/idbi/components/compare/v0.30.0...v0.30.1) (2023-01-19)
-
-
-### Bug Fixes
-
-* fixs react-icons and DateRangePicker ([b6baaa4](https://github.com/idbi/components/commit/b6baaa4d7b26e5fdc46fcacaac94f180247605fb))
 
 
 
