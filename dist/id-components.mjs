@@ -4114,7 +4114,7 @@ const il = ({
     }), n]
   })
 }) : null, uo = l.h2`
-  color: ${(e) => e.theme.color.PRIMARY[900]};
+  color: ${c.color.PRIMARY[900]};
   margin-bottom: 20px;
   font-size: 20px;
 `, go = l.div`
@@ -4122,7 +4122,7 @@ const il = ({
 
   input {
     border-radius: 8px;
-    border: 1px solid ${(e) => e.theme.color.NEUTRAL[300]};
+    border: 1px solid ${c.color.NEUTRAL[300]};
     display: block;
     flex-grow: 1;
     width: 0;

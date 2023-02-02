@@ -1783,7 +1783,7 @@ ${({withBorder:e,color:r})=>e&&f.css`
     display: ${({closeIconInDesktop:e})=>e?"flex":"none"};
   }
 `,Y=({show:e=!0,children:r,onClose:o,backdropOpacity:n,padding:i,borderRadius:a,borderRadiusInDesktop:c,maxHeight:s,height:A,maxWidth:p,width:h,zIndex:u,overflow:b,contentLocation:g="center",contentLocationInDesktop:w="center",closeIcon:k,closeIconInDesktop:M,background:C="#fff",boxShadow:m,boxShadowInDesktop:y,styleContainer:E})=>e?t.jsx(Sn,{onClose:o,backdropOpacity:n,zIndex:u,contentLocation:g,contentLocationInDesktop:w,boxShadow:m,boxShadowInDesktop:y,styleContainer:E,children:t.jsxs(zn,{padding:i,borderRadius:a,borderRadiusInDesktop:c,maxHeight:s,height:A,maxWidth:p,width:h,background:C,overflow:b,contentLocation:g,contentLocationInDesktop:w,children:[(k||M)&&t.jsx(Fn,{onClick:o,closeIconInDesktop:M,closeIcon:k,children:t.jsx(oe,{})}),r]})}):null,jn=l.default.h2`
-  color: ${e=>e.theme.color.PRIMARY[900]};
+  color: ${d.color.PRIMARY[900]};
   margin-bottom: 20px;
   font-size: 20px;
 `,Bn=l.default.div`
@@ -1791,7 +1791,7 @@ ${({withBorder:e,color:r})=>e&&f.css`
 
   input {
     border-radius: 8px;
-    border: 1px solid ${e=>e.theme.color.NEUTRAL[300]};
+    border: 1px solid ${d.color.NEUTRAL[300]};
     display: block;
     flex-grow: 1;
     width: 0;
