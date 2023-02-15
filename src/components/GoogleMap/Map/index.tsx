@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
 import { useGoogleMapCtx } from "../context";
+
 import GoogleMapReact from "google-map-react";
 import { MarkerWrapper } from "../Marker";
-import { DefaultMarker } from "../Marker/styles";
 import { IMap } from "./types";
+import { MarkerIcon } from "@/icons-v2/MarkerIcon";
 
-export const defaultUbi = { lat: -12.1245726, lng: -77.0266616 };
+const defaultUbi = { lat: -12.1245726, lng: -77.0266616 };
 
 export const Map = ({ children, defaultMarker = true, defaultCenter }: IMap) => {
   const { map, setMap, API_KEY, setMapCenter, coordinates, setCoordinates, setAddressState, editedAddressRef } =
@@ -52,8 +53,8 @@ export const Map = ({ children, defaultMarker = true, defaultCenter }: IMap) => 
       }}
     >
       {defaultMarker && validCoordinates && (
-        <MarkerWrapper text="Location" {...coordinates}>
-          <DefaultMarker />
+        <MarkerWrapper text="Location" placement="center-bottom" {...coordinates}>
+          <MarkerIcon size={28} />
         </MarkerWrapper>
       )}
       {children}
