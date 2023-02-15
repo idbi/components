@@ -1,3 +1,4 @@
+import { TSetState } from "@/types/utilityTypes";
 import React, { ReactNode } from "react";
 
 export interface IMapState {
@@ -6,27 +7,33 @@ export interface IMapState {
   instance: any;
 }
 
-interface ICoordinates {
+export interface ICoordinates {
   lat: number;
   lng: number;
 }
-type TOnSelectAddress = (data: ICoordinates & { address: string; locality: string }) => void;
+export interface IAddressData extends ICoordinates {
+  address: string;
+  locality: string;
+}
+type TOnSelectAddress = (data: IAddressData) => void;
 
 export interface IGoogleMapCtx {
+  API_KEY: string;
   map: IMapState;
   setMap: (state: IMapState) => void;
-  addressInputRef: React.MutableRefObject<null | HTMLInputElement>;
+  editedAddressRef: React.MutableRefObject<boolean>;
   onSelectAddress: TOnSelectAddress;
-  API_KEY: string;
   setMapCenter: (geometry: any) => void;
   coordinates: ICoordinates;
   setCoordinates: (coordinates: ICoordinates) => void;
+  addressState: IAddressData;
+  setAddressState: TSetState<IAddressData>;
 }
 
 export interface IGoogleMapProviderProps {
   API_KEY: string;
   children: ReactNode;
   onSelectAddress: TOnSelectAddress;
-  defaultCenter?: { lat: number; lng: number };
+  initialData?: Partial<IAddressData>;
   onSelectCoordinates?: (coordinates: ICoordinates) => void;
 }

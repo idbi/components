@@ -1,19 +1,23 @@
-import React, { useState, useRef, createContext, useContext } from "react";
-import { IGoogleMapCtx, IGoogleMapProviderProps, IMapState } from "./types";
+import React, { useState, useRef, createContext, useContext, useEffect } from "react";
+import useFirstRender from "@/hooks/useFirstRender";
+import { IAddressData, IGoogleMapCtx, IGoogleMapProviderProps, IMapState } from "./types";
 
 export const GoogleMapCtx = createContext({} as IGoogleMapCtx);
-const defaultUbi = { lat: -12.1245726, lng: -77.0266616 };
+const initialAddress = { lat: 0, lng: 0, locality: "", address: "" };
 
 const GoogleMapCtxProvider = ({
   children,
   onSelectAddress,
   API_KEY,
-  defaultCenter,
+  initialData = {},
   onSelectCoordinates,
 }: IGoogleMapProviderProps) => {
   const [map, setMap] = useState<IMapState>({ loaded: false, api: null, instance: null });
-  const [coordinates, setCoordinates] = useState(defaultCenter || defaultUbi);
-  const addressInputRef = useRef<null | HTMLInputElement>(null);
+  const [addressState, setAddressState] = useState<IAddressData>({ ...initialAddress, ...initialData });
+  const [coordinates, setCoordinates] = useState({ lat: addressState.lat, lng: addressState.lng });
+
+  const editedAddressRef = useRef(false);
+  const firstRender = useFirstRender();
 
   const setMapCenter = (geometry: any) => {
     if (geometry.viewport) {
@@ -29,17 +33,23 @@ const GoogleMapCtxProvider = ({
     if (onSelectCoordinates) onSelectCoordinates(value);
   };
 
+  useEffect(() => {
+    if (!firstRender) onSelectAddress(addressState);
+  }, [addressState]);
+
   return (
     <GoogleMapCtx.Provider
       value={{
+        API_KEY,
         map,
         setMap,
-        addressInputRef,
+        editedAddressRef,
         onSelectAddress,
-        API_KEY,
         setMapCenter,
         coordinates,
         setCoordinates: handleUpdateCoordinates,
+        setAddressState,
+        addressState,
       }}
     >
       {children}

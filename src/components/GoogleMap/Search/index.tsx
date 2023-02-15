@@ -5,7 +5,7 @@ import { ISearch } from "./types";
 import * as s from "./styles";
 
 export const Search = ({ onError, inputProps = {} }: ISearch) => {
-  const { map, onSelectAddress, setMapCenter, setCoordinates, addressInputRef } = useGoogleMapCtx();
+  const { map, editedAddressRef, setMapCenter, setCoordinates, setAddressState } = useGoogleMapCtx();
   const inputRef = useRef<null | HTMLInputElement>(null);
 
   useEffect(() => {
@@ -23,19 +23,19 @@ export const Search = ({ onError, inputProps = {} }: ISearch) => {
       }
 
       const latlng = { lat: place.geometry.location.lat(), lng: place.geometry.location.lng() };
-      onSelectAddress({ ...latlng, address: place.formatted_address, locality: locality?.long_name });
+      setAddressState({ ...latlng, address: place.formatted_address, locality: locality?.long_name });
       setMapCenter(place.geometry);
       setCoordinates(latlng);
 
       inputRef.current!.value = "";
-      if (addressInputRef?.current) addressInputRef.current.value = place.formatted_address;
+      editedAddressRef.current = true;
     });
     searchBox.bindTo("bounds", map.instance);
 
     return () => {
       map.api.event.clearInstanceListeners(searchBox);
     };
-  }, [map.loaded]);
+  }, [map]);
 
   return (
     <s.InputWrapper>

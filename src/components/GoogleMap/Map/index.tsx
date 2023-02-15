@@ -5,8 +5,11 @@ import { MarkerWrapper } from "../Marker";
 import { DefaultMarker } from "../Marker/styles";
 import { IMap } from "./types";
 
-export const Map = ({ children, defaultMarker = true }: IMap) => {
-  const { map, setMap, onSelectAddress, API_KEY, setMapCenter, coordinates, setCoordinates } = useGoogleMapCtx();
+export const defaultUbi = { lat: -12.1245726, lng: -77.0266616 };
+
+export const Map = ({ children, defaultMarker = true, defaultCenter }: IMap) => {
+  const { map, setMap, API_KEY, setMapCenter, coordinates, setCoordinates, setAddressState, editedAddressRef } =
+    useGoogleMapCtx();
   const geocoderRef = useRef<any>(null);
 
   const handleMapClick = (lat: number, lng: number) => {
@@ -22,15 +25,20 @@ export const Map = ({ children, defaultMarker = true }: IMap) => {
       const localityName = locality?.long_name || "";
       const address = geolocation.formatted_address;
 
-      onSelectAddress({ ...latlng, address, locality: localityName });
       if (geolocation.geometry) setMapCenter(geolocation.geometry);
+      setAddressState((s) => {
+        const updatedAddress = editedAddressRef?.current ? s.address : address;
+        return { ...latlng, locality: localityName, address: updatedAddress };
+      });
     });
   };
+
+  const validCoordinates = !!(coordinates.lat && coordinates.lng);
 
   return (
     <GoogleMapReact
       defaultZoom={15}
-      defaultCenter={coordinates}
+      defaultCenter={defaultCenter || (validCoordinates ? coordinates : defaultUbi)}
       bootstrapURLKeys={{
         key: API_KEY,
         libraries: ["places", "geometry"],
@@ -43,7 +51,7 @@ export const Map = ({ children, defaultMarker = true }: IMap) => {
         handleMapClick(mapProps?.lat || 0, mapProps?.lng || 0);
       }}
     >
-      {defaultMarker && (
+      {defaultMarker && validCoordinates && (
         <MarkerWrapper text="Location" {...coordinates}>
           <DefaultMarker />
         </MarkerWrapper>
