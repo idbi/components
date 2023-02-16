@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-export const InputWrapper = styled.div`
-  & > div {
-    padding: 0;
-    overflow: hidden;
-
-    input {
-      padding: 0 12px;
-    }
-  }
+export const CloseWrapper = styled.div`
+  background-color: ${({ theme }) => theme.color.NEUTRAL[100]};
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  cursor: pointer;
 `;

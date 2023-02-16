@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { useGoogleMapCtx } from "../context";
 import { BaseInput } from "@/components/forms/BaseInput";
 import { ISearch } from "./types";
+import { SearchIcon } from "@/icons-v2/SearchIcon";
+import { CloseIcon } from "@/icons-v2/CloseIcon";
 import * as s from "./styles";
 
 export const Search = ({ onError, inputProps = {} }: ISearch) => {
@@ -33,13 +35,25 @@ export const Search = ({ onError, inputProps = {} }: ISearch) => {
     searchBox.bindTo("bounds", map.instance);
 
     return () => {
-      map.api.event.clearInstanceListeners(searchBox);
+      if (inputRef.current) map.api.event.clearInstanceListeners(inputRef.current);
     };
   }, [map]);
 
   return (
-    <s.InputWrapper>
-      <BaseInput inputRef={inputRef} {...inputProps} />
-    </s.InputWrapper>
+    <BaseInput
+      startEl={<SearchIcon size={13} />}
+      endEl={
+        <s.CloseWrapper
+          onClick={() => {
+            inputRef.current!.value = "";
+          }}
+        >
+          <CloseIcon />
+        </s.CloseWrapper>
+      }
+      inputRef={inputRef}
+      placeholder="Ingresa una dirección"
+      {...inputProps}
+    />
   );
 };
