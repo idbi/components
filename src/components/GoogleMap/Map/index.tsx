@@ -8,7 +8,7 @@ import { MarkerIcon } from "@/icons-v2/MarkerIcon";
 
 const defaultUbi = { lat: -12.1245726, lng: -77.0266616 };
 
-export const Map = ({ children, defaultMarker = true, defaultCenter }: IMap) => {
+export const Map = ({ children, defaultMarker = true, defaultCenter, onMapLoad }: IMap) => {
   const { map, setMap, API_KEY, setMapCenter, coordinates, setCoordinates, setAddressState, editedAddressRef } =
     useGoogleMapCtx();
   const geocoderRef = useRef<any>(null);
@@ -47,6 +47,7 @@ export const Map = ({ children, defaultMarker = true, defaultCenter }: IMap) => 
       yesIWantToUseGoogleMapApiInternals
       onGoogleApiLoaded={(props) => {
         setMap({ loaded: true, api: props.maps, instance: props.map });
+        if (onMapLoad) onMapLoad(props.maps, props.map);
       }}
       onClick={(mapProps: any) => {
         handleMapClick(mapProps?.lat || 0, mapProps?.lng || 0);

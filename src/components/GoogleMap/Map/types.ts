@@ -5,4 +5,5 @@ export interface IMap {
   children?: ReactNode;
   defaultMarker?: boolean;
   defaultCenter?: ICoordinates;
+  onMapLoad?: (api: any, mapInstance: any) => void;
 }
