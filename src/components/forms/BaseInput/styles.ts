@@ -19,9 +19,13 @@ export const Container = styled.div<{ minHeight: number; alert?: boolean; disabl
     min-width: 30px;
     flex-grow: 1;
     font-size: 14px;
+    padding: 0;
 
     :focus {
       outline: none;
+    }
+    ::placeholder {
+      color: ${({ theme }) => theme.color.NEUTRAL[400]};
     }
   }
 
