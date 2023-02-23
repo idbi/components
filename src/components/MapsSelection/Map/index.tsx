@@ -2,11 +2,13 @@ import React, { useRef } from "react";
 import { useGoogleMapCtx } from "../context";
 
 import GoogleMapReact from "google-map-react";
+import { MarkerWrapper } from "../MarkerWrapper";
 import { IMap } from "./types";
+import { MarkerIcon } from "@/icons-v2/MarkerIcon";
 
 const defaultUbi = { lat: -12.1245726, lng: -77.0266616 };
 
-export const Map = ({ children, defaultCenter, onMapLoad }: IMap) => {
+export const Map = ({ children, defaultMarker = true, defaultCenter, onMapLoad }: IMap) => {
   const { map, setMap, API_KEY, setMapCenter, coordinates, setCoordinates, setAddressState, editedAddressRef } =
     useGoogleMapCtx();
   const geocoderRef = useRef<any>(null);
@@ -51,6 +53,11 @@ export const Map = ({ children, defaultCenter, onMapLoad }: IMap) => {
         handleMapClick(mapProps?.lat || 0, mapProps?.lng || 0);
       }}
     >
+      {defaultMarker && validCoordinates && (
+        <MarkerWrapper text="Location" placement="center-bottom" {...coordinates}>
+          <MarkerIcon size={28} />
+        </MarkerWrapper>
+      )}
       {children}
     </GoogleMapReact>
   );
