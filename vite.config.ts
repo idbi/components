@@ -35,6 +35,7 @@ export default defineConfig({
         "react-icons",
         "date-fns",
         "react-date-range",
+        "google-map-react",
       ],
       output: {
         globals: {
@@ -49,6 +50,7 @@ export default defineConfig({
           "react-icons": "react-icons",
           "date-fns": "date-fns",
           "react-date-range": "react-date-range",
+          "google-map-react": "google-map-react",
         },
       },
     },
