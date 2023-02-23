@@ -82,3 +82,5 @@ export { ButtonsSelect } from "@/components/ButtonsSelect";
 // REPORTS
 export { KpiCard } from "@/components/reports/KpiCard";
 export { KpiCardV2 } from "@/components/reports/KpiCardV2";
+// MAPS
+export { Map } from "@/components/MapsSelection";
