@@ -1,3 +1,7 @@
+## [0.32.1](https://github.com/idbi/components/compare/v0.32.0...v0.32.1) (2023-02-24)
+
+
+
 # [0.32.0](https://github.com/idbi/components/compare/v0.31.6...v0.32.0) (2023-02-23)
 
 
@@ -27,15 +31,6 @@
 ### Bug Fixes
 
 * theme in CartProductV2 ([96d8f22](https://github.com/idbi/components/commit/96d8f22043aae49ce4207bc8b85bbddba10dadf5))
-
-
-
-## [0.31.3](https://github.com/idbi/components/compare/v0.31.2...v0.31.3) (2023-02-02)
-
-
-### Bug Fixes
-
-* theme in EditQuantityModal ([6b5ae94](https://github.com/idbi/components/commit/6b5ae940e0d50e4fc362602053713b146afe3960))
 
 
 
