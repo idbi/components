@@ -1,3 +1,13 @@
+# [0.33.0](https://github.com/idbi/components/compare/v0.32.1...v0.33.0) (2023-03-10)
+
+
+### Features
+
+* [POS-14295] create resizable textarea ([d756b75](https://github.com/idbi/components/commit/d756b756847d618dc38c44af5f6e77ca49755b87))
+* [POS-14296] conditional textarea on cart product ([44c2b51](https://github.com/idbi/components/commit/44c2b51d89723c2fae1108c210b27d0c1f03c95d))
+
+
+
 ## [0.32.1](https://github.com/idbi/components/compare/v0.32.0...v0.32.1) (2023-02-24)
 
 
@@ -22,15 +32,6 @@
 
 
 ## [0.31.5](https://github.com/idbi/components/compare/v0.31.4...v0.31.5) (2023-02-02)
-
-
-
-## [0.31.4](https://github.com/idbi/components/compare/v0.31.3...v0.31.4) (2023-02-02)
-
-
-### Bug Fixes
-
-* theme in CartProductV2 ([96d8f22](https://github.com/idbi/components/commit/96d8f22043aae49ce4207bc8b85bbddba10dadf5))
 
 
 
