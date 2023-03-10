@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { theme } from "@/theme";
 
 export const Card = styled.div`
   background-color: white;
-  color: ${({ theme }) => theme.color.PRIMARY[900]};
-  border: 1px solid ${({ theme }) => theme.color.NEUTRAL[200]};
+  color: ${theme.color.PRIMARY[900]};
+  border: 1px solid ${theme.color.NEUTRAL[200]};
   border-radius: 10px;
   padding: 11px 12px;
   display: flex;
@@ -21,7 +22,7 @@ export const Main = styled.div`
 `;
 
 export const DataFields = styled.div`
-  color: ${({ theme }) => theme.color.NEUTRAL[700]};
+  color: ${theme.color.NEUTRAL[700]};
   margin-bottom: 3px;
   display: flex;
   flex-wrap: wrap;
@@ -34,7 +35,7 @@ export const DataFields = styled.div`
     line-height: 1em;
     :not(:last-child) {
       padding-right: 5px;
-      border-right: 1px solid ${({ theme }) => theme.color.NEUTRAL[700]};
+      border-right: 1px solid ${theme.color.NEUTRAL[700]};
     }
   }
 `;
@@ -55,7 +56,7 @@ export const CloseIconWrapper = styled.div`
 
   svg {
     font-size: 14px;
-    color: ${({ theme }) => theme.color.SECONDARY[900]};
+    color: ${theme.color.SECONDARY[900]};
     @media (hover: hover) {
       cursor: pointer;
     }
