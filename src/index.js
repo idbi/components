@@ -53,6 +53,7 @@ export { QuantityInputV2 } from "./components/forms/QuantityInputV2";
 export { ButtonsSwitch } from "@/components/buttons/ButtonsSwitch";
 export { SupplyInput } from "./components/forms/SupplyInput";
 export { BaseInput } from "./components/forms/BaseInput";
+export { Textarea } from "./components/forms/Textarea";
 export { ToggleSwitch } from "./components/forms/ToggleSwitch";
 export { SelectField } from "@/components/SelectField";
 export { TextField } from "@/components/TextField";

@@ -1,4 +1,4 @@
-import { IEditQuantityInput } from "@/components/forms/EditQuantityInput/types";
+import { IEditQuantityInput } from "../../forms/EditQuantityInput/types";
 import { ReactNode } from "react";
 
 export interface ICartProduct {
@@ -24,6 +24,7 @@ export interface ICartProduct {
     label: string;
     discountedAmount: number;
   };
+  textarea?: boolean;
   renderModal?: (modal: JSX.Element) => JSX.Element;
 }
 
