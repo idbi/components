@@ -1,3 +1,18 @@
+# [0.34.0](https://github.com/idbi/components/compare/v0.33.0...v0.34.0) (2023-03-10)
+
+
+### Bug Fixes
+
+* change import of theme ([5126a46](https://github.com/idbi/components/commit/5126a46290ea0dabe3cf73cbe4a25be1a4097152))
+* update icon imports ([190ace7](https://github.com/idbi/components/commit/190ace7ace8d3124b800465d9c8eff8371467878))
+
+
+### Features
+
+* update dist ([4011d7b](https://github.com/idbi/components/commit/4011d7b0dcd68086770905bdba0648e4944e62bf))
+
+
+
 # [0.33.0](https://github.com/idbi/components/compare/v0.32.1...v0.33.0) (2023-03-10)
 
 
@@ -28,10 +43,6 @@
 
 
 ## [0.31.6](https://github.com/idbi/components/compare/v0.31.5...v0.31.6) (2023-02-02)
-
-
-
-## [0.31.5](https://github.com/idbi/components/compare/v0.31.4...v0.31.5) (2023-02-02)
 
 
 
