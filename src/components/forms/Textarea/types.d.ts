@@ -7,3 +7,5 @@ export type ITextarea = Omit<ComponentPropsWithoutRef<"textarea">, "onChange"> &
   endEl?: ReactNode;
   maxHeight?: string;
 };
+
+export declare const Textarea: (props: ITextarea) => JSX.Element;
