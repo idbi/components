@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { EditQuantityInput } from "@/components/forms/EditQuantityInput";
 import { ArrowIcon } from "@/icons-v2/ArrowIcon";
+import { Textarea } from "@/components/forms/Textarea";
 import { ICartProduct } from "./types";
 import * as s from "./styles";
 
@@ -21,6 +22,7 @@ export const CartProduct = ({
   productDetails,
   renderModal,
   onlyIntegers,
+  textarea,
 }: ICartProduct) => {
   const [showDetails, setShowDetails] = useState(true);
 
@@ -59,11 +61,19 @@ export const CartProduct = ({
 
       {showDetails && (
         <div>
-          <s.Input
-            value={comment}
-            onChange={(e) => onChangeComment(e.target.value)}
-            placeholder="Agregar algún comentario"
-          />
+          {textarea ? (
+            <Textarea
+              value={comment}
+              onChange={(value) => onChangeComment(value)}
+              placeholder="Agregar algún comentario"
+            />
+          ) : (
+            <s.Input
+              value={comment}
+              onChange={(e) => onChangeComment(e.target.value)}
+              placeholder="Agregar algún comentario"
+            />
+          )}
           {productDetails && <s.DetailsWrapper>{productDetails}</s.DetailsWrapper>}
         </div>
       )}
