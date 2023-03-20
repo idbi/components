@@ -1,3 +1,7 @@
+// BASE
+export { IdThemeProvider } from "./theme/IdThemeProvider/types";
+
+// COMPONENTS
 export { Button } from "./components/Button/types";
 export { CodeInput } from "./components/CodeInput/types";
 export { Heading, Text } from "./components/Typography/TextBuilder/types";
