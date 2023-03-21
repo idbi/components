@@ -13,7 +13,6 @@ export interface IButton
   fullWidth?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
-  isLoading?: boolean;
 }
 
 export declare const Button: (props: IButton) => JSX.Element;
