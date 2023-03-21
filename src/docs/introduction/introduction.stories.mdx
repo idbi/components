@@ -1,7 +1,7 @@
 import { ArgsTable, Meta, Story, Canvas} from '@storybook/addon-docs'
 import {StepsToAddAComponent} from './StepsToAddAComponent'
 import {InstallDependency} from './InstallDependency'
-
+import {ModifyTheme} from './ModifyTheme'
 
 <Meta title="DOCS/introduction" />
 
@@ -10,6 +10,13 @@ import {InstallDependency} from './InstallDependency'
   args={{}}>
   {InstallDependency.bind({})}
 </Story>
+
+<Story
+  name="Modify theme"
+  args={{}}>
+  {ModifyTheme.bind({})}
+</Story>
+
 
 <Story
   name="Add new component"
