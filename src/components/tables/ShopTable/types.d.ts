@@ -4,7 +4,7 @@ export type TableStatusType = "occupied" | "available" | "selected"
 
 export interface IShopTable {
   onClick?: () => void;
-  label?: string;
+  label: string;
   status?: TableStatusType;
   counter?: number;
   noHover?: boolean;

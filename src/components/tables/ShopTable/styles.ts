@@ -67,13 +67,15 @@ export const Label = styled.p<ILabel>`
   font-weight: bold;
   font-size: ${({ length }) =>
     length > 10
-      ? "0.5rem"
+      ? "0.4rem"
       : length > 9
-      ? "0.6rem"
+      ? "0.5rem"
       : length > 8
-      ? "0.7rem"
+      ? "0.6rem"
       : length > 6
       ? "0.8rem"
+      : length > 4
+      ? "0.9rem"
       : "1.1rem"};
 `;
 
@@ -87,5 +89,5 @@ export const Counter = styled.div<ICounter>`
   background: ${({ occupied }) =>
     occupied ? "rgba(39, 174, 96, 0.3)" : "#E8E8E9"};
   color: ${({ occupied }) => (occupied ? "#219653" : "#979797")};
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 `;
