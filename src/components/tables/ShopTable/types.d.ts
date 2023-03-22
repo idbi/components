@@ -8,6 +8,7 @@ export interface IShopTable {
   status?: TableStatusType;
   counter?: number;
   noHover?: boolean;
+  noCounter?: boolean;
 }
 
 export declare const ShopTable: (props: IShopTable) => JSX.Element;

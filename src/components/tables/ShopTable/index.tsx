@@ -9,14 +9,17 @@ export const ShopTable: React.FC<IShopTable> = ({
   label,
   status = "available",
   counter = 0,
+  noCounter = false,
   noHover = false,
 }) => {
   return (
     <s.Container>
-      <s.Counter status={status} occupied={counter > 0}>
-        {counter}
-        {counter > 0 ? <BsCheckCircle size={14} /> : null}
-      </s.Counter>
+      {!noCounter ? (
+        <s.Counter status={status} occupied={counter > 0}>
+          {counter}
+          {counter > 0 ? <BsCheckCircle size={14} /> : null}
+        </s.Counter>
+      ) : null}
       <s.Table
         onClick={() => onClick && onClick()}
         status={status}

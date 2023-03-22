@@ -9,9 +9,16 @@ export default {
   argTypes: {},
 } as ComponentMeta<typeof ShopTableList>;
 
-const Template: ComponentStory<typeof ShopTableList> = (args) => <ShopTableList {...args} />;
+const Template: ComponentStory<typeof ShopTableList> = (args) => (
+  <ShopTableList {...args} />
+);
 
 export const Base = Template.bind({});
 Base.args = {
   ...mockShopTableListProps.base,
+} as IShopTableList;
+
+export const variant = Template.bind({});
+variant.args = {
+  ...mockShopTableListProps.variant,
 } as IShopTableList;

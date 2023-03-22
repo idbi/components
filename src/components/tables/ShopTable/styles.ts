@@ -63,6 +63,7 @@ export const Label = styled.p<ILabel>`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: default;
   color: ${({ status }) => tableNameColor[status]};
   font-weight: bold;
   font-size: ${({ length }) =>

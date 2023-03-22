@@ -78,6 +78,7 @@ export { GridTable } from "@/components/tables/GridTable";
 export { Pagination } from "@/components/tables/Pagination";
 export { Table } from "@/components/tables/Table";
 export { ShopTable } from "@/components/tables/ShopTable";
+export { ShopTableList } from "@/components/tables/ShopTableList";
 // HEADERS
 export { ModalHeader } from "@/components/headers/ModalHeader";
 export { SectionHeader } from "@/components/headers/SectionHeader";
