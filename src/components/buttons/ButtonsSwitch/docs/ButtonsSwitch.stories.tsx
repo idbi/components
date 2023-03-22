@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { ButtonsSwitch } from "./Container";
-import { IButtonsSwitchContainer } from "./Container";
+import { ButtonsSwitch, IButtonsSwitchContainer } from "./Container";
 import { mockConfirmationCardV2Props } from "./ButtonsSwitch.mock";
 
 export default {
@@ -9,7 +8,9 @@ export default {
   argTypes: {},
 } as ComponentMeta<typeof ButtonsSwitch>;
 
-const Template: ComponentStory<typeof ButtonsSwitch> = (args) => <ButtonsSwitch {...args} />;
+const Template: ComponentStory<typeof ButtonsSwitch> = (args) => (
+  <ButtonsSwitch {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {

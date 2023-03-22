@@ -1,78 +1,77 @@
-/* eslint-disable no-alert */
 import { IButtonsSwitchContainer } from "./Container";
 
+const options = [
+  { label: "Agregar productos", value: "ADD" },
+  { label: "Detalles de la cotización", value: "DETAILS" },
+  { label: "Otra opción", value: "OTHER" },
+  { label: "Test", value: "TEST" },
+];
+
 const primary: IButtonsSwitchContainer = {
-  options: [
-    { label: "Agregar productos", value: "ADD" },
-    { label: "Detalles de la cotización", value: "DETAILS" },
-  ],
+  model: "primary",
+  disabled: false,
+  fullWidth: false,
+  equalBtns: false,
+  options: options.slice(0, 2),
 };
 
 const primaryFullWidth: IButtonsSwitchContainer = {
+  model: "primary",
+  disabled: false,
   fullWidth: true,
-  options: [
-    { label: "Agregar productos", value: "ADD" },
-    { label: "Detalles de la cotización", value: "DETAILS" },
-  ],
+  equalBtns: false,
+  options: options.slice(0, 2),
 };
 
 const primaryMultipleOptions: IButtonsSwitchContainer = {
+  model: "primary",
+  disabled: false,
   fullWidth: true,
-  options: [
-    { label: "Agregar productos", value: "ADD" },
-    { label: "Detalles de la cotización", value: "DETAILS" },
-    { label: "Otra opción", value: "OTHER" },
-    { label: "Test", value: "TEST" },
-  ],
+  equalBtns: false,
+  options,
 };
 
 const primaryDisabled: IButtonsSwitchContainer = {
+  model: "primary",
   fullWidth: true,
   disabled: true,
-  options: [
-    { label: "Agregar productos", value: "ADD" },
-    { label: "Detalles de la cotización", value: "DETAILS" },
-    { label: "Otra opción", value: "OTHER" },
-    { label: "Test", value: "TEST" },
-  ],
+  equalBtns: false,
+  options,
 };
 
 const secondary: IButtonsSwitchContainer = {
+  model: "secondary",
+  fullWidth: false,
+  disabled: false,
+  equalBtns: false,
   options: [
     { label: "S/", value: "PEN" },
     { label: "$", value: "USD" },
   ],
-  model: "secondary",
 };
 
 const secondaryMultipleOptions: IButtonsSwitchContainer = {
-  fullWidth: true,
-  options: [
-    { label: "Agregar productos", value: "ADD" },
-    { label: "Detalles de la cotización", value: "DETAILS" },
-    { label: "Otra opción", value: "OTHER" },
-    { label: "Test", value: "TEST" },
-  ],
   model: "secondary",
+  fullWidth: true,
+  disabled: false,
+  equalBtns: false,
+  options,
 };
 
 const tertiary: IButtonsSwitchContainer = {
   model: "tertiary",
-  options: [
-    { label: "Agregar productos", value: "ADD" },
-    { label: "Detalles de la cotización", value: "DETAILS" },
-  ],
+  fullWidth: false,
+  disabled: false,
+  equalBtns: false,
+  options: options.slice(0, 2),
 };
 
 const tertiaryMultipleOptions: IButtonsSwitchContainer = {
   model: "tertiary",
-  options: [
-    { label: "Agregar productos", value: "ADD" },
-    { label: "Detalles de la cotización", value: "DETAILS" },
-    { label: "Otra opción", value: "OTHER" },
-    { label: "Test", value: "TEST" },
-  ],
   fullWidth: true,
+  disabled: false,
+  equalBtns: false,
+  options,
 };
 
 export const mockConfirmationCardV2Props = {
