@@ -2,6 +2,7 @@
 import { IShopTable } from "../types";
 
 const available: IShopTable = {
+  uuid: "1",
   counter: 0,
   label: "B1-10",
   noHover: false,
@@ -11,6 +12,7 @@ const available: IShopTable = {
 };
 
 const occupied: IShopTable = {
+  uuid: "2",
   counter: 3,
   label: "B1-10",
   noHover: false,
@@ -20,6 +22,7 @@ const occupied: IShopTable = {
 };
 
 const selected: IShopTable = {
+  uuid: "3",
   counter: 1,
   label: "B1-10",
   noHover: false,

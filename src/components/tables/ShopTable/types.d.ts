@@ -3,7 +3,8 @@ import React from "react";
 export type TableStatusType = "occupied" | "available" | "selected"
 
 export interface IShopTable {
-  onClick?: () => void;
+  uuid: string;
+  onClick?: (tableUuid: string) => void;
   label: string;
   status?: TableStatusType;
   counter?: number;

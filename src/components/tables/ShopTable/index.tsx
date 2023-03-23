@@ -6,6 +6,7 @@ import * as s from "./styles";
 
 export const ShopTable: React.FC<IShopTable> = ({
   onClick,
+  uuid,
   label,
   status = "available",
   counter = 0,
@@ -21,7 +22,7 @@ export const ShopTable: React.FC<IShopTable> = ({
         </s.Counter>
       ) : null}
       <s.Table
-        onClick={() => onClick && onClick()}
+        onClick={() => onClick && onClick(uuid)}
         status={status}
         noHover={noHover}
       >
