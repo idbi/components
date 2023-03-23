@@ -92,3 +92,5 @@ export { KpiCard } from "@/components/reports/KpiCard";
 export { KpiCardV2 } from "@/components/reports/KpiCardV2";
 // MAPS
 export { Map } from "@/components/MapsSelection";
+// MENUS
+export { CarouselMenu } from "@/components/menus/CarouselMenu";

@@ -94,3 +94,5 @@ export { KpiCard } from "./components/reports/KpiCard/types";
 export { KpiCardV2 } from "./components/reports/KpiCardV2/types";
 // MAPS
 export { Map } from "./components/MapsSelection/types";
+// MENUS
+export { CarouselMenu } from "./components/menus/CarouselMenu/types";
