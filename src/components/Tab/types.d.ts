@@ -8,6 +8,7 @@ export type ITab = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   tabFullWidth?:boolean;
   rounded?: boolean;
   activeColor?: string;
+  bold?: boolean;
 };
 
 export declare const Tab: (props: ITab) => JSX.Element;

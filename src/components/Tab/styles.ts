@@ -8,6 +8,7 @@ export const Tab = styled.button<{
   tabWidth: number;
   tabHeight: number;
   tabFullWidth?: boolean;
+  bold: boolean;
 }>`
   color: currentColor;
   background-color: transparent;
@@ -15,6 +16,7 @@ export const Tab = styled.button<{
   font-size: 14px;
   position: relative;
   padding: 4px 5px;
+  font-weight: ${({ bold }) => (bold ? "bold" : "regular")};
 
   @media (hover: hover) {
     cursor: pointer;

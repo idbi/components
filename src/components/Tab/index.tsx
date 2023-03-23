@@ -1,6 +1,6 @@
+import { theme } from "@/theme";
 import React from "react";
 import { ITab } from "./types";
-import { theme } from "@/theme";
 import * as s from "./styles";
 
 export const Tab = ({
@@ -8,11 +8,20 @@ export const Tab = ({
   active,
   tabWidth = 24,
   tabHeight = 4,
+  bold = false,
   activeColor = theme.color.SECONDARY[900],
   ...rest
 }: ITab) => {
   return (
-    <s.Tab isActive={active} noWrap activeColor={activeColor} tabWidth={tabWidth} tabHeight={tabHeight} {...rest}>
+    <s.Tab
+      isActive={active}
+      noWrap
+      activeColor={activeColor}
+      tabWidth={tabWidth}
+      tabHeight={tabHeight}
+      bold={bold}
+      {...rest}
+    >
       {children}
     </s.Tab>
   );
