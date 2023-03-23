@@ -84,6 +84,7 @@ export { ShopTableList } from "./components/tables/ShopTableList/types";
 // HEADERS
 export { ModalHeader } from "./components/headers/ModalHeader/types";
 export { SectionHeader } from "./components/headers/SectionHeader/types";
+export { OrderTypeHeader } from "./components/headers/OrderTypeHeader/types";
 // FOOTERS
 export { SimpleFooter } from "./components/footers/SimpleFooter/types";
 // SELECTS

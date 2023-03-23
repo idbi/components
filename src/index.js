@@ -82,6 +82,7 @@ export { ShopTableList } from "@/components/tables/ShopTableList";
 // HEADERS
 export { ModalHeader } from "@/components/headers/ModalHeader";
 export { SectionHeader } from "@/components/headers/SectionHeader";
+export { OrderTypeHeader } from "@/components/headers/OrderTypeHeader";
 // FOOTERS
 export { SimpleFooter } from "@/components/footers/SimpleFooter";
 // SELECTS
