@@ -2,9 +2,18 @@ import React from "react";
 import { ISectionCard } from "./types";
 import * as s from "./styles";
 
-export const SectionCard = ({ title, icon, headerAside, children, sections = [] }: ISectionCard) => {
+export const SectionCard = ({
+  key,
+  title,
+  icon,
+  headerAside,
+  children,
+  sections = [],
+  showBody = true,
+  containerStyle,
+}: ISectionCard) => {
   return (
-    <s.Card>
+    <s.Card style={containerStyle}>
       {(title || headerAside) && (
         <s.Header hasContent={!!children}>
           <s.Title>
@@ -13,8 +22,17 @@ export const SectionCard = ({ title, icon, headerAside, children, sections = [] 
           {headerAside}
         </s.Header>
       )}
-      {children}
-      {sections.map((section) => section && <s.Section>{section}</s.Section>)}
+      {showBody ? (
+        <>
+          {children}
+          {sections.map(
+            (section, i) =>
+              section && (
+                <s.Section key={`${i}${key}sectioncard`}>{section}</s.Section>
+              )
+          )}
+        </>
+      ) : null}
     </s.Card>
   );
 };
