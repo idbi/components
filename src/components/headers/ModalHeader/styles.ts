@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { theme } from "@/theme";
-import { getDisabled, getIsLoading } from "@/theme/utils";
+import { getDisabled } from "@/theme/utils";
 import { resetButtonStyles } from "@/theme/utils/resetButtonStyles";
 import styled from "styled-components";
 
