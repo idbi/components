@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { BaseInput } from "../index";
 import { BaseInput as BaseInputContainer } from "./Container";
 import { BaseInput as BaseInputContainer2 } from "./Container2";
+import { BaseInput as BaseInputContainer3 } from "./Container3";
 import { IBaseInput } from "../types";
 import { mock } from "./BaseInput.mock";
 
@@ -22,6 +23,10 @@ const Template2: ComponentStory<typeof BaseInput> = (args) => (
 
 const Template3: ComponentStory<typeof BaseInput> = (args) => (
   <BaseInputContainer2 {...args} />
+);
+
+const Template4: ComponentStory<typeof BaseInput> = (args) => (
+  <BaseInputContainer3 {...args} />
 );
 
 export const base = Template.bind({});
@@ -152,6 +157,53 @@ withSwitch2.parameters = {
                   style={{ border: "none" }}
                 />
               }
+            />
+          </IdThemeProvider>
+        )
+      }
+      
+      export default App
+      `,
+      language: "tsx",
+      type: "auto",
+    },
+  },
+};
+
+export const withSelect = Template4.bind({});
+withSelect.parameters = {
+  docs: {
+    source: {
+      code: dedent`
+      import { BaseInput, IdThemeProvider, SelectField } from '@idbi/components'
+      import { useState } from 'react';
+      
+      const btnOptions = [
+        { label: "s/", value: "fixed" },
+        { label: "%", value: "percentage" },
+      ];
+      
+      function App() {
+        const [option, setOption] = useState(btnOptions[0]);
+        const [amount, setAmount] = useState("");
+      
+        return (
+          <IdThemeProvider>
+            <BaseInput
+              value={amount}
+              onChange={(e) => setAmount(e?.target?.value)}
+              startEl={
+                <SelectField
+                  value={option}
+                  options={btnOptions}
+                  onChange={(type) => setOption(type)}
+                  style={{ width: "100px", transform: "scale(0.8)" }}
+                />
+              }
+              minHeight={0}
+              containerProps={{
+                style: { paddingLeft: "0" },
+              }}
             />
           </IdThemeProvider>
         )
