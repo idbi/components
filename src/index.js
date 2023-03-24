@@ -62,6 +62,7 @@ export { ToggleSwitch } from "./components/forms/ToggleSwitch";
 export { SelectField } from "@/components/SelectField";
 export { TextField } from "@/components/TextField";
 export { DateRangePicker } from "@/components/forms/DateRangePicker";
+export { RadioButton } from "@/components/forms/RadioButton";
 // MODALS
 export { CardModal } from "@/components/modals/CardModal";
 export { MultipleOptionsModal } from "@/components/modals/MultipleOptionsModal";
