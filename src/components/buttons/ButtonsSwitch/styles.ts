@@ -17,6 +17,11 @@ export const Container = styled.div<{
   display: inline-flex;
   align-items: stretch;
   gap: 4px;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   ${({ model, theme }) => {
     if (model === "secondary")

@@ -8,6 +8,7 @@ export interface IButtonsSwitch {
   fullWidth?: boolean;
   model?: Model;
   equalBtns?: boolean;
+  style?: CSSProperties;
 }
 
 export declare const ButtonsSwitch: (props: IButtonsSwitch) => JSX.Element;
