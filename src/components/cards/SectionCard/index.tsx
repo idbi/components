@@ -15,7 +15,7 @@ export const SectionCard = ({
   return (
     <s.Card style={containerStyle}>
       {(title || headerAside) && (
-        <s.Header hasContent={!!children}>
+        <s.Header hasContent={!!children && showBody}>
           <s.Title>
             {icon} {title}
           </s.Title>

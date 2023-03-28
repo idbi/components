@@ -7,7 +7,7 @@ import { ISimpleProductCard } from "../types";
 import { mockSimpleProductCardProps } from "./SimpleProductCard.mock";
 
 export default {
-  title: "product-cards/SimpleProductCard",
+  title: "productCards/SimpleProductCard",
   component: SimpleProductCard,
   argTypes: {},
 } as ComponentMeta<typeof SimpleProductCard>;
