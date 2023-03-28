@@ -1,6 +1,7 @@
+import { OrderStatusType } from "@/types/OrderStatusType";
 import React from "react";
 import { Container } from "./styles";
-import type { IOrderStatusBadge, StatusType } from "./types";
+import type { IOrderStatusBadge } from "./types";
 
 const StatusDiccionary = {
   default: "...",
@@ -20,7 +21,7 @@ export const OrderStatusBadge: React.FC<IOrderStatusBadge> = ({
   text,
   removeBackground,
 }) => {
-  const getStatus = (status: StatusType) =>
+  const getStatus = (status: OrderStatusType) =>
     StatusDiccionary[status] || StatusDiccionary.default;
 
   return (

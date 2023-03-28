@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
+import { OrderStatusType } from "@/types/OrderStatusType";
 import { theme } from "@/theme";
 import styled, { css } from "styled-components";
-import { StatusType } from "./types";
 
 interface IContainer {
-  statusName: StatusType;
+  statusName: OrderStatusType;
   removeBackground?: boolean;
 }
 

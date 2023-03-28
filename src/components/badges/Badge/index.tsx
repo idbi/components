@@ -12,6 +12,7 @@ export const Badge: React.FC<IBadge> = ({
   weight,
   borderRadius,
   withBorder,
+  style,
 }) => {
   return (
     <Container
@@ -23,6 +24,7 @@ export const Badge: React.FC<IBadge> = ({
       weigth={weight}
       borderRadius={borderRadius}
       withBorder={withBorder}
+      style={style}
     >
       {text}
     </Container>

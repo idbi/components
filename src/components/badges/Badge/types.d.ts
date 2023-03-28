@@ -10,6 +10,7 @@ export interface IBadge {
   weight?: string;
   borderRadius?: string;
   withBorder?: boolean;
+  style?: CSSProperties;
 }
 
 export declare const Badge: (props: IBadge) => JSX.Element;
