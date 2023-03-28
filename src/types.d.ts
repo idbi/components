@@ -41,6 +41,7 @@ export { SectionCard } from "./components/cards/SectionCard/types";
 export { ClientCard } from "./components/cards/ClientCard/types";
 export { ToastCard } from "./components/cards/ToastCard/types";
 export { IDCard } from "./components/cards/IDCard/types";
+export { OrderCard } from "./components/cards/OrderCard/types";
 // PRODUCT CARDS
 export { CartProduct } from "./components/product-cards/CartProduct/types";
 export { CartProductV2 } from "./components/product-cards/CartProductV2/types";
