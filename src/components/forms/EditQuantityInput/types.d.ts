@@ -15,6 +15,7 @@ export interface IEditQuantityInput {
   variant?: "base" | "card";
   renderModal?: (modal: JSX.Element) => JSX.Element;
   style?: CSSProperties;
+  styleContainer?: CSSProperties;
   zIndex?: number;
   noDecrement?: boolean;
   noIncrement?: boolean;

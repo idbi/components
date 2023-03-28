@@ -19,6 +19,7 @@ export const EditQuantityInput = ({
   renderModal,
   zIndex,
   style,
+  styleContainer,
   noDecrement,
   noIncrement,
 }: IEditQuantityInput) => {
@@ -52,7 +53,7 @@ export const EditQuantityInput = ({
 
   return (
     <>
-      <s.Container>
+      <s.Container style={styleContainer}>
         <s.InputContainer
           isDisabled={disabled}
           onClick={(e) => {

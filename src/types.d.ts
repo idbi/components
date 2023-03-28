@@ -45,6 +45,7 @@ export { IDCard } from "./components/cards/IDCard/types";
 export { CartProduct } from "./components/product-cards/CartProduct/types";
 export { CartProductV2 } from "./components/product-cards/CartProductV2/types";
 export { ProductDetailsCard } from "./components/product-cards/ProductDetailsCard/types";
+export { SimpleProductCard } from "./components/product-cards/SimpleProductCard/types";
 // CONFIRMATIONS
 export { ConfirmationCard } from "./components/confirmations/ConfirmationCard/types";
 export { ConfirmationCardV2 } from "./components/confirmations/ConfirmationCardV2/types";

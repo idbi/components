@@ -1,4 +1,5 @@
 import React from "react";
+import { createPortal } from "react-dom";
 import Backdrop from "./Backdrop/index";
 import { Content } from "./styles";
 import { IModalContainer } from "./types";
@@ -15,7 +16,7 @@ export const ModalContainer: React.FC<IModalContainer> = ({
   fullWidth,
   styleContainer,
 }) => {
-  return (
+  return createPortal(
     <>
       <Backdrop
         onClose={onClose}
@@ -34,6 +35,7 @@ export const ModalContainer: React.FC<IModalContainer> = ({
       >
         {children}
       </Content>
-    </>
+    </>,
+    document.body
   );
 };
