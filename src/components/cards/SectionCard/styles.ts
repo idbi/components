@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   color: ${({ theme }) => theme.color.PRIMARY[900]};
   border-radius: 8px;
@@ -28,6 +28,7 @@ export const Section = styled.div`
 export const Header = styled.div<{ hasContent?: boolean }>`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 10px;
   margin-bottom: ${({ hasContent }) => (hasContent ? "12px" : 0)};
 `;

@@ -6,6 +6,7 @@ export const SectionCard = ({
   key,
   title,
   icon,
+  headerTop,
   headerAside,
   children,
   sections = [],
@@ -14,6 +15,7 @@ export const SectionCard = ({
 }: ISectionCard) => {
   return (
     <s.Card style={containerStyle}>
+      {headerTop}
       {(title || headerAside) && (
         <s.Header hasContent={!!children && showBody}>
           <s.Title>
