@@ -1,8 +1,14 @@
 import React, { useState } from "react";
-import { ButtonsSelect } from "..";
+import { ButtonsSelect as ButtonsSelectComponent } from "..";
 import { IButtonsSelect } from "../types";
 
-export const Container = (props: IButtonsSelect) => {
+export const ButtonsSelect = (props: IButtonsSelect) => {
   const [selected, setSelected] = useState(props.selected);
-  return <ButtonsSelect {...props} selected={selected} onSelect={(val) => setSelected(val)} />;
+  return (
+    <ButtonsSelectComponent
+      {...props}
+      selected={selected}
+      onSelect={(val) => setSelected(val)}
+    />
+  );
 };
