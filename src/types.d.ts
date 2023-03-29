@@ -15,6 +15,7 @@ export { DropdownMenu } from "./components/dropdowns/DropdownMenu/types";
 export { NoData } from "./components/NoData/types";
 export { Search } from "./components/Search/types";
 export { Navbar } from "./components/Navbar/types";
+export { Separator } from "./components/Separator/types";
 
 // UI
 export { BulletPoint } from "./components/BulletPoint/types";

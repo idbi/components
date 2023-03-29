@@ -15,6 +15,7 @@ export { DropdownMenu } from "@/components/dropdowns/DropdownMenu";
 export { NoData } from "@/components/NoData";
 export { Search } from "@/components/Search";
 export { Navbar } from "@/components/Navbar";
+export { Separator } from "@/components/Separator";
 
 // UI
 export { BulletPoint } from "@/components/BulletPoint";
