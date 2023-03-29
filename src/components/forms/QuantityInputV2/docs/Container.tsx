@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { QuantityInputV2 } from "..";
+import { QuantityInputV2 as QuantityInputV2Component } from "..";
 import { IQuantityInputV2 } from "../types";
 
-export const Container = (props: IQuantityInputV2) => {
+export const QuantityInputV2 = (props: IQuantityInputV2) => {
   const [quantity, setQuantity] = useState(props.quantity);
 
   return (
-    <QuantityInputV2
+    <QuantityInputV2Component
       quantity={quantity}
       onChange={(val) => setQuantity(val)}
       icon={props.icon}
