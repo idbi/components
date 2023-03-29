@@ -13,6 +13,9 @@ export const Container = styled.div<IContainer>`
   background: #fff;
   box-shadow: 0px 5px 10px rgba(153, 181, 255, 0.18);
   z-index: ${({ zIndex }) => zIndex || 100};
+  * {
+    box-sizing: border-box;
+  }
 `;
 
 export const FlexContainer = styled.div`
