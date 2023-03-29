@@ -100,3 +100,15 @@ export { KpiCardV2 } from "./components/reports/KpiCardV2/types";
 export { Map } from "./components/MapsSelection/types";
 // MENUS
 export { CarouselMenu } from "./components/menus/CarouselMenu/types";
+// ICONS
+export { IdiActivity } from "./icons/types";
+export { IdiArrowBottom } from "./icons/types";
+export { IdiArrowLeft } from "./icons/types";
+export { IdiArrowRight } from "./icons/types";
+export { IdiArrowTop } from "./icons/types";
+export { IdiBell } from "./icons/types";
+export { IdiKeyboardBackSpace } from "./icons/types";
+export { IdiLogo } from "./icons/types";
+export { IdiMenu } from "./icons/types";
+export { IdiShopTable } from "./icons/types";
+export { IdiUser } from "./icons/types";

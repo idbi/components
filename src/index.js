@@ -98,3 +98,15 @@ export { KpiCardV2 } from "@/components/reports/KpiCardV2";
 export { Map } from "@/components/MapsSelection";
 // MENUS
 export { CarouselMenu } from "@/components/menus/CarouselMenu";
+// ICONS
+export { IdiActivity } from "./icons/IdiActivity";
+export { IdiArrowBottom } from "./icons/IdiArrowBottom";
+export { IdiArrowLeft } from "./icons/IdiArrowLeft";
+export { IdiArrowRight } from "./icons/IdiArrowRight";
+export { IdiArrowTop } from "./icons/IdiArrowTop";
+export { IdiBell } from "./icons/IdiBell";
+export { IdiKeyboardBackSpace } from "./icons/IdiKeyboardBackSpace";
+export { IdiLogo } from "./icons/IdiLogo";
+export { IdiMenu } from "./icons/IdiMenu";
+export { IdiShopTable } from "./icons/IdiShopTable";
+export { IdiUser } from "./icons/IdiUser";
