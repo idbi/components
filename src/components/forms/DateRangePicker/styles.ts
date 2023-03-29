@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "@/theme";
 
 export const Container = styled.div`
   background: none;
@@ -161,9 +160,9 @@ export const ContainerDate = styled.div<ContainerDateProps>`
   gap: 10px;
   border-radius: 10px;
   background: #fff;
-  border: 1px solid ${theme.color.NEUTRAL[300]};
+  border: 1px solid ${({ theme }) => theme.color.NEUTRAL[300]};
   outline: none;
-  color: ${theme.color.PRIMARY[900]};
+  color: ${({ theme }) => theme.color.PRIMARY[900]};
   cursor: pointer;
   font-family: "Poppins";
   font-style: normal;
@@ -181,7 +180,7 @@ export const TimeInputsContainer = styled.div`
   display: flex;
   gap: 10px;
   flex-grow: 1;
-  color: ${theme.color.NEUTRAL[900]};
+  color: ${({ theme }) => theme.color.NEUTRAL[900]};
 
   input {
     font-size: 14px;

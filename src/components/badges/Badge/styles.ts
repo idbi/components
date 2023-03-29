@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-import { theme } from "@/theme";
 import styled, { css } from "styled-components";
 
 interface IContainer {
@@ -22,8 +21,8 @@ export const Container = styled.span<IContainer>`
   font-size: 0.75rem;
   line-height: 1.125rem;
   letter-spacing: -0.04em;
-  background: ${({ background }) => background || theme.color.STATUS.DEFAULT[0]};
-  color: ${({ color }) => color || theme.color.STATUS.DEFAULT[1]};
+  background: ${({ theme, background }) => background || theme.color.STATUS.DEFAULT[0]};
+  color: ${({ theme, color }) => color || theme.color.STATUS.DEFAULT[1]};
   max-width: ${({ maxWidth }) =>  maxWidth || "auto"};
   ${({ applyFlex }) => applyFlex && (
     css`
@@ -35,7 +34,7 @@ export const Container = styled.span<IContainer>`
     `
   )}
 
-${({ withBorder, color }) => withBorder && (
+${({ theme, withBorder, color }) => withBorder && (
     css`
       border: 1px solid ${color || theme.color.STATUS.DEFAULT[1]};
     `

@@ -1,6 +1,5 @@
+/* eslint-disable no-nested-ternary */
 import styled from "styled-components";
-
-import { theme } from "@/theme";
 
 interface InputContainerProps {
   variant?: "card" | "base";
@@ -21,7 +20,7 @@ export const Container = styled.div`
 `;
 
 export const Span = styled.span<ISpanProps>`
-  color: ${({ isZero, error = false }) =>
+  color: ${({ theme, isZero, error = false }) =>
     isZero
       ? error
         ? theme.color.ALERT[900]
@@ -39,7 +38,7 @@ export const IconWrapper = styled.span`
 `;
 
 export const InputContainer = styled.div<InputContainerProps>`
-  background-color: ${theme.color.NEUTRAL[50]};
+  background-color: ${({ theme }) => theme.color.NEUTRAL[50]};
   border-radius: 100px;
   padding: 3px;
   display: flex;
@@ -50,7 +49,7 @@ export const InputContainer = styled.div<InputContainerProps>`
   transition: 0.3s ease-out;
   width: fit-content;
   align-self: flex-end;
-  border: ${({ error = false }) =>
+  border: ${({ theme, error = false }) =>
     error ? `1px solid ${theme.color.ALERT[900]}` : "1px solid transparent"};
 
   @media (hover: hover) {
@@ -59,12 +58,12 @@ export const InputContainer = styled.div<InputContainerProps>`
       background-color: white;
       box-shadow: 0px 1px 6px rgba(60, 60, 60, 0.2);
       cursor: ${(props) => (props.isDisabled ? "auto" : "pointer")};
-      color: ${(props) => theme.color.SECONDARY[900]};
+      color: ${(props) => props.theme.color.SECONDARY[900]};
     }
   }
 
   button {
-    background-color: ${theme.color.SECONDARY[900]};
+    background-color: ${({ theme }) => theme.color.SECONDARY[900]};
     border: none;
     color: white;
     border-radius: 50%;
@@ -79,32 +78,32 @@ export const InputContainer = styled.div<InputContainerProps>`
     @media (hover: hover) {
       :hover {
         cursor: ${(props) => (props.isDisabled ? "auto" : "pointer")};
-        background-color: ${theme.color.SECONDARY[700]};
+        background-color: ${({ theme }) => theme.color.SECONDARY[700]};
         transition: 0.3s ease-in;
       }
     }
 
     :first-child {
       background-color: ${(props) =>
-        props.minQuantity ? "white" : theme.color.SECONDARY[900]};
+        props.minQuantity ? "white" : props.theme.color.SECONDARY[900]};
       border: ${(props) =>
         `1px solid ${
           props.minQuantity
             ? props.canDelete
-              ? theme.color.ALERT[900]
-              : theme.color.NEUTRAL[400]
+              ? props.theme.color.ALERT[900]
+              : props.theme.color.NEUTRAL[400]
             : "none"
         }`};
       color: ${(props) =>
         props.minQuantity
           ? props.canDelete
-            ? theme.color.ALERT[900]
-            : theme.color.NEUTRAL[400]
+            ? props.theme.color.ALERT[900]
+            : props.theme.color.NEUTRAL[400]
           : "white"};
 
       :hover {
         background-color: ${(props) =>
-          props.minQuantity ? "initial" : theme.color.SECONDARY[700]};
+          props.minQuantity ? "initial" : props.theme.color.SECONDARY[700]};
       }
     }
   }

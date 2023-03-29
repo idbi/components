@@ -1,4 +1,3 @@
-import { theme } from "@/theme";
 import styled, { css } from "styled-components";
 
 interface IToggleSwitchWrapper {
@@ -69,7 +68,7 @@ interface IToggleBall {
 export const ToggleBall = styled.div<IToggleBall>`
   z-index: 2;
   border-radius: 50%;
-  background-color: ${theme.color.SECONDARY[900]};
+  background-color: ${({ theme }) => theme.color.SECONDARY[900]};
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s cubic-bezier(1, 0.19, 0.15, 0.7);
   transition-delay: 0.1s;

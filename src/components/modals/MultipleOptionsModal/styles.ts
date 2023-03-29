@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { theme } from "@/theme";
 
 export const Container = styled.div`
   @media (max-width: 600px) {
@@ -28,7 +27,7 @@ export const Header = styled.div`
 export const OptionsContainer = styled.ul<{
   direction?: "row" | "column";
 }>`
-  color: ${() => theme.color.NEUTRAL[700]};
+  color: ${({ theme }) => theme.color.NEUTRAL[700]};
   padding: 0;
   margin: 10px 0;
   list-style-type: none;
@@ -48,9 +47,9 @@ export const Option = styled.li<{
   optionsInCenter?: boolean;
   iconOrientation?: "vertical" | "horizontal";
 }>`
-  background-color: ${({ alert }) =>
+  background-color: ${({ theme, alert }) =>
     alert ? theme.color.ALERT[100] : "white"};
-  color: ${({ alert }) => (alert ? theme.color.ALERT[900] : "inherit")};
+  color: ${({ theme, alert }) => (alert ? theme.color.ALERT[900] : "inherit")};
   min-height: 50px;
   padding: 0 20px;
   display: flex;

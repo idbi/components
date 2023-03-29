@@ -1,4 +1,3 @@
-import { theme } from "@/theme";
 import styled, { css } from "styled-components";
 import { TSearchSize } from "./types";
 
@@ -67,7 +66,7 @@ export const Search = styled.input<ISearch>`
   padding-right: ${({ addCleanOption }) => (addCleanOption ? "46px" : "15px")};
   color: #4a4a4a;
   border-radius: 10px;
-  border: ${({ alert }) =>
+  border: ${({ theme, alert }) =>
     alert
       ? `1px solid ${theme.color.ALERT[900]}`
       : `1px solid ${theme.color.NEUTRAL[300]}`};
@@ -80,16 +79,16 @@ export const Search = styled.input<ISearch>`
   font-size: 0.875rem;
   line-height: 21px;
   letter-spacing: -0.04em;
-  color: ${theme.color.PRIMARY[900]};
-  background: ${({ disabled }) =>
+  color: ${({ theme }) => theme.color.PRIMARY[900]};
+  background: ${({ theme, disabled }) =>
     disabled ? theme.color.NEUTRAL[100] : "#fff"};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "default")};
 
   ::placeholder {
-    color: ${theme.color.NEUTRAL[500]};
+    color: ${({ theme }) => theme.color.NEUTRAL[500]};
   }
   :focus {
-    border: 1px solid ${theme.color.QUATERNARY[900]};
+    border: 1px solid ${({ theme }) => theme.color.QUATERNARY[900]};
   }
 `;
 
@@ -139,7 +138,7 @@ interface LoaderProps {
 }
 
 export const Loader = styled.div<LoaderProps>`
-  background-color: ${theme.color.QUATERNARY[900]};
+  background-color: ${({ theme }) => theme.color.QUATERNARY[900]};
   height: 1.5px;
   transition: all 0.3s ease;
   ${(props) => {
