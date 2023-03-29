@@ -38,7 +38,7 @@ const Row = styled.div`
   align-items: center;
 `;
 
-const styledText = {
+const styledText: any = {
   color: "NEUTRAL/400",
   size: "xs",
   weight: "regular",
@@ -47,7 +47,7 @@ const styledText = {
   },
 };
 
-const styledAmount = {
+const styledAmount: any = {
   position: "absolute",
   right: 0,
   top: 0,
