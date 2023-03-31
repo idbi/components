@@ -101,14 +101,55 @@ export { Map } from "./components/MapsSelection/types";
 // MENUS
 export { CarouselMenu } from "./components/menus/CarouselMenu/types";
 // ICONS
-export { IdiActivity } from "./icons/types";
-export { IdiArrowBottom } from "./icons/types";
-export { IdiArrowLeft } from "./icons/types";
-export { IdiArrowRight } from "./icons/types";
-export { IdiArrowTop } from "./icons/types";
-export { IdiBell } from "./icons/types";
-export { IdiKeyboardBackSpace } from "./icons/types";
-export { IdiLogo } from "./icons/types";
-export { IdiMenu } from "./icons/types";
-export { IdiShopTable } from "./icons/types";
-export { IdiUser } from "./icons/types";
+export {
+  IdiActivity,
+  IdiArrowBottom,
+  IdiArrowLeft,
+  IdiArrowRight,
+  IdiArrowTop,
+  IdiBell,
+  IdiKeyboardBackSpace,
+  IdiLogo,
+  IdiMenu,
+  IdiShopTable,
+  IdiUser,
+  IdiArrowBack,
+  IdiCheckbox,
+  IdiCheckboxChecked,
+  IdiCheckCircle,
+  IdiCheck,
+  IdiCloseEye,
+  IdiProfile,
+  IdiProfileV2,
+  IdiArrowDown,
+  IdiPer,
+  IdiUsa,
+  IdiGoogle,
+  IdiBag,
+  IdiCalendar,
+  IdiClock,
+  IdiClose,
+  IdiPreparing,
+  IdiArrowRightV2,
+  IdiSearch,
+  IdiTrash,
+  IdiTruck,
+  IdiWarning,
+  IdiImage,
+  IdiMailSent,
+  IdiDollarTemplate,
+  IdiOpenEye,
+  IdiWarningCircle,
+  IdiArea,
+  IdiBagCheck,
+  IdiPlus,
+  IdiMenuV2,
+  IdiStatistic,
+  IdiTicket,
+  IdiUbication,
+  IdiBox,
+  IdiPoint,
+  IdiCheckV2,
+  IdiIdentification,
+  IdiMinus,
+} from "./icons/types";

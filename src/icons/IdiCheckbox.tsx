@@ -2,7 +2,7 @@ import React from "react";
 import { IIcon } from "./types";
 import { SvgWrapper } from "./SvgWrapper";
 
-export const IdiArrowRight: React.FC<IIcon> = ({
+export const IdiCheckbox: React.FC<IIcon> = ({
   size = 20,
   color = "currentColor",
   onClick,
@@ -14,13 +14,13 @@ export const IdiArrowRight: React.FC<IIcon> = ({
       size={size}
       style={style}
       svgProps={{
-        viewBox: "0 0 10 16",
+        viewBox: "0 0 24 25",
       }}
     >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M0.96967 15.5303C0.676777 15.2374 0.676777 14.7626 0.96967 14.4697L7.43934 8L0.96967 1.53033C0.676777 1.23744 0.676777 0.762563 0.96967 0.46967C1.26256 0.176777 1.73744 0.176777 2.03033 0.46967L9.03033 7.46967C9.32322 7.76256 9.32322 8.23744 9.03033 8.53033L2.03033 15.5303C1.73744 15.8232 1.26256 15.8232 0.96967 15.5303Z"
+        d="M5 4.25c-.69 0-1.25.56-1.25 1.25v14c0 .69.56 1.25 1.25 1.25h14c.69 0 1.25-.56 1.25-1.25v-14c0-.69-.56-1.25-1.25-1.25H5ZM2.25 5.5A2.75 2.75 0 0 1 5 2.75h14a2.75 2.75 0 0 1 2.75 2.75v14A2.75 2.75 0 0 1 19 22.25H5a2.75 2.75 0 0 1-2.75-2.75v-14Z"
         fill={color}
       />
     </SvgWrapper>

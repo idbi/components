@@ -2,7 +2,7 @@ import React from "react";
 import { IIcon } from "./types";
 import { SvgWrapper } from "./SvgWrapper";
 
-export const IdiKeyboardBackSpace: React.FC<IIcon> = ({
+export const IdiMinus: React.FC<IIcon> = ({
   size = 20,
   color = "currentColor",
   onClick,
@@ -14,12 +14,16 @@ export const IdiKeyboardBackSpace: React.FC<IIcon> = ({
       size={size}
       style={style}
       svgProps={{
-        viewBox: "0 0 24 24",
+        viewBox: "0 0 15 2",
       }}
     >
       <path
-        fill={color}
-        d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
+        xmlns="http://www.w3.org/2000/svg"
+        d="M1.88086 1H13.8809"
+        stroke={color}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </SvgWrapper>
   );
