@@ -1,6 +1,7 @@
 import { DefaultTheme } from "styled-components";
 import { tagsMap } from ".";
 import { Size } from "../utils";
+import React from "react";
 
 export interface ITextProps
   extends Omit<Partial<HTMLLabelElement>, "children">,
@@ -13,6 +14,7 @@ export interface ITextProps
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   children: React.ReactNode;
+  style?: CSSStyleDeclaration | React.CSSProperties | undefined;
   onClick?: () => void;
   onKeyUpCapture?: (e: React.KeyboardEvent) => void;
 }

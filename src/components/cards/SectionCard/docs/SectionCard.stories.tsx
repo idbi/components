@@ -214,7 +214,7 @@ ProductOutput.parameters = {
                 <IdiArrowBottom
                   size={15}
                   onClick={() => setShowSection((s) => !s)}
-                  styleContainer={{
+                  style={{
                     transition: "0.3s ease all",
                     transform: showSection ? "rotate(180deg)" : "rotate(0deg)"
                   }}

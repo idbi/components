@@ -61,7 +61,7 @@ export const Pagination: React.FC<IPagination> = ({
         <IdiArrowLeft
           size={12}
           color={showIconColor()}
-          styleContainer={{ marginLeft: "-5px" }}
+          style={{ marginLeft: "-5px" }}
         />
       </button>
       <button
@@ -117,7 +117,7 @@ export const Pagination: React.FC<IPagination> = ({
         <IdiArrowRight
           size={12}
           color={showLastIconColor()}
-          styleContainer={{ marginLeft: "-5px" }}
+          style={{ marginLeft: "-5px" }}
         />
       </button>
     </s.Container>
