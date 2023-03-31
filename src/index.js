@@ -107,6 +107,7 @@ export { IdiArrowTop } from "./icons/IdiArrowTop";
 export { IdiBell } from "./icons/IdiBell";
 export { IdiKeyboardBackSpace } from "./icons/IdiKeyboardBackSpace";
 export { IdiLogo } from "./icons/IdiLogo";
+export { IdiLogoV2 } from "./icons/IdiLogoV2";
 export { IdiMenu } from "./icons/IdiMenu";
 export { IdiShopTable } from "./icons/IdiShopTable";
 export { IdiUser } from "./icons/IdiUser";

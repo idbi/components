@@ -16,6 +16,7 @@ export declare const IdiArrowTop: (props: IIcon) => JSX.Element;
 export declare const IdiBell: (props: IIcon) => JSX.Element;
 export declare const IdiKeyboardBackSpace: (props: IIcon) => JSX.Element;
 export declare const IdiLogo: (props: IIcon) => JSX.Element;
+export declare const IdiLogoV2: (props: IIcon) => JSX.Element;
 export declare const IdiMenu: (props: IIcon) => JSX.Element;
 export declare const IdiShopTable: (props: IIcon) => JSX.Element;
 export declare const IdiUser: (props: IIcon) => JSX.Element;

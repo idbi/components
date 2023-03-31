@@ -110,6 +110,7 @@ export {
   IdiBell,
   IdiKeyboardBackSpace,
   IdiLogo,
+  IdiLogoV2,
   IdiMenu,
   IdiShopTable,
   IdiUser,
