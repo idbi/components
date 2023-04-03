@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { OrderStatusType } from "../../../types/OrderStatusType";
-import { theme } from "../../../theme";
 
 interface IContainer {
   statusName?: OrderStatusType;
@@ -20,7 +19,7 @@ export const Container = styled.div<IContainer>`
   color: #404040;
   border-radius: ${({ radius }) => `${radius}px` || "0"};
 
-  ${({ statusName }) => {
+  ${({ theme, statusName }) => {
     if (statusName === "draft")
       return css`
         background: ${theme.color.STATUS.DRAFT[0]};

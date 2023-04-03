@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-import { theme } from "@/theme";
 import MQ from "@/theme/media-query";
 import styled from "styled-components";
 
@@ -22,7 +21,7 @@ export const Id = styled.span`
   font-size: 0.625rem;
   line-height: 0.9375rem;
   letter-spacing: -0.04em;
-  color:${theme.color.NEUTRAL[500]};
+  color:${({ theme }) => theme.color.NEUTRAL[500]};
 `;
 
 export const Name = styled.p`
@@ -30,7 +29,7 @@ export const Name = styled.p`
   font-size: 0.875rem;
   line-height: 0.9375rem;
   letter-spacing: -0.04em;
-  color:${theme.color.PRIMARY[900]};
+  color:${({ theme }) => theme.color.PRIMARY[900]};
 `;
 
 export const ItemPhoto = styled.img`

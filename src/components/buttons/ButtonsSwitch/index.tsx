@@ -10,6 +10,7 @@ export const ButtonsSwitch = ({
   fullWidth,
   model,
   equalBtns,
+  style,
 }: IButtonsSwitch) => {
   return (
     <s.Container
@@ -19,6 +20,7 @@ export const ButtonsSwitch = ({
       }}
       model={model}
       fullWidth={fullWidth}
+      style={style}
     >
       {options.map((option) => (
         <s.Btn

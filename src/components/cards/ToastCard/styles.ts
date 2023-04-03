@@ -1,36 +1,35 @@
-import { theme } from "@/theme";
 import styled, { css } from "styled-components";
 import { IToastCardType } from "./types";
 
 const getColor = (type: IToastCardType) => {
   if (type === "success")
     return css`
-      color: ${theme.color.SUCCESS[900]};
-      background: ${theme.color.SUCCESS[100]};
+      color: ${({ theme }) => theme.color.SUCCESS[900]};
+      background: ${({ theme }) => theme.color.SUCCESS[100]};
     `;
   if (type === "warning")
     return css`
-      color: ${theme.color.STATE[900]};
-      background: ${theme.color.STATE[100]};
+      color: ${({ theme }) => theme.color.STATE[900]};
+      background: ${({ theme }) => theme.color.STATE[100]};
     `;
   if (type === "error")
     return css`
-      color: ${theme.color.ALERT[700]};
-      background: ${theme.color.ALERT[100]};
+      color: ${({ theme }) => theme.color.ALERT[700]};
+      background: ${({ theme }) => theme.color.ALERT[100]};
     `;
   if (type === "quaternary")
     return css`
-      color: ${theme.color.QUATERNARY[900]};
-      background: ${theme.color.QUATERNARY[100]};
+      color: ${({ theme }) => theme.color.QUATERNARY[900]};
+      background: ${({ theme }) => theme.color.QUATERNARY[100]};
     `;
   if (type === "tertiary")
     return css`
-      color: ${theme.color.TERTIARY[900]};
-      background: ${theme.color.TERTIARY[100]};
+      color: ${({ theme }) => theme.color.TERTIARY[900]};
+      background: ${({ theme }) => theme.color.TERTIARY[100]};
     `;
   return css`
-    color: ${theme.color.PRIMARY[900]};
-    background: ${theme.color.PRIMARY[100]};
+    color: ${({ theme }) => theme.color.PRIMARY[900]};
+    background: ${({ theme }) => theme.color.PRIMARY[100]};
   `;
 };
 
@@ -61,7 +60,7 @@ export const Description = styled.p`
 `;
 
 export const Link = styled.span`
-  color: ${theme.color.SECONDARY[900]};
+  color: ${({ theme }) => theme.color.SECONDARY[900]};
   text-decoration: underline;
   cursor: pointer;
 `;

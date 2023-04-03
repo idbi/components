@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { theme } from "@/theme";
-import { getDisabled, getIsLoading } from "@/theme/utils";
+import { getDisabled } from "@/theme/utils";
 import { resetButtonStyles } from "@/theme/utils/resetButtonStyles";
 import styled from "styled-components";
 
@@ -42,7 +42,6 @@ export const Options = styled.div<IOptions>`
 
 interface IButton {
   mode?: "normal" | "danger" | string;
-  isLoading?: boolean;
   disabled?: boolean;
 }
 
@@ -50,6 +49,5 @@ export const Option = styled.button<IButton>`
   ${resetButtonStyles}
   color: ${({ mode }) => mode === "danger" ? theme.color.ALERT[700] : theme.color.PRIMARY[900]};
   border-left: 1px solid ${theme.color.NEUTRAL[200]};
-  ${({ isLoading }) => getIsLoading({ isLoading })};
   ${({ disabled }) => getDisabled({ disabled })};
 `

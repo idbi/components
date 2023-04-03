@@ -17,6 +17,11 @@ export const Container = styled.div<{
   display: inline-flex;
   align-items: stretch;
   gap: 4px;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   ${({ model, theme }) => {
     if (model === "secondary")
@@ -38,7 +43,11 @@ export const Container = styled.div<{
   }}
 `;
 
-export const Btn = styled.button<{ active?: boolean; model?: Model; equal?: boolean }>`
+export const Btn = styled.button<{
+  active?: boolean;
+  model?: Model;
+  equal?: boolean;
+}>`
   background-color: white;
   color: ${({ theme, model }) =>
     model === "secondary" ? "#828282" : theme.color.SECONDARY[500]};
@@ -68,8 +77,12 @@ export const Btn = styled.button<{ active?: boolean; model?: Model; equal?: bool
     if (model === "tertiary") {
       return css`
         background-color: ${active ? theme.color.SECONDARY[50] : "white"};
-        outline: ${active ? `1px solid ${theme.color.SECONDARY[500]}` : "1px solid transparent"};
-        color: ${active ? theme.color.SECONDARY[900] : theme.color.SECONDARY[600]};
+        outline: ${active
+          ? `1px solid ${theme.color.SECONDARY[500]}`
+          : "1px solid transparent"};
+        color: ${active
+          ? theme.color.SECONDARY[900]
+          : theme.color.SECONDARY[600]};
         border-radius: 0;
         min-height: 45px;
         z-index: ${active ? 1 : "auto"};

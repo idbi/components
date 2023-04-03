@@ -10,5 +10,11 @@ export type IButtonsSwitchContainer = Pick<
 export const ButtonsSwitch = (props: IButtonsSwitchContainer) => {
   const [selected, setSelected] = useState(props.options[0].value);
 
-  return <ButtonsSwitchComponent selected={selected} onSelect={(val) => setSelected(val)} {...props} />;
+  return (
+    <ButtonsSwitchComponent
+      selected={selected}
+      onSelect={(val) => setSelected(val)}
+      {...props}
+    />
+  );
 };

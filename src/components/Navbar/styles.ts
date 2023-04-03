@@ -1,4 +1,3 @@
-import { theme } from "@/theme";
 import { styleScroll } from "@/theme/scroll";
 import styled from "styled-components";
 
@@ -13,6 +12,9 @@ export const Container = styled.div<IContainer>`
   background: #fff;
   box-shadow: 0px 5px 10px rgba(153, 181, 255, 0.18);
   z-index: ${({ zIndex }) => zIndex || 100};
+  * {
+    box-sizing: border-box;
+  }
 `;
 
 export const FlexContainer = styled.div`
@@ -48,7 +50,7 @@ export const HeaderLinks = styled.ul`
   padding: 0;
   display: flex;
   flex-direction: row;
-  color: ${theme.color.PRIMARY[900]};
+  color: ${({ theme }) => theme.color.PRIMARY[900]};
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   white-space: nowrap;
@@ -100,21 +102,21 @@ export const Body = styled.nav`
   }
 
   li {
-    color: ${theme.color.PRIMARY[900]};
+    color: ${({ theme }) => theme.color.PRIMARY[900]};
     font-weight: 500;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
     div {
       padding: 10px 0;
     }
-    border-bottom: 1px solid ${theme.color.PRIMARY[50]};
+    border-bottom: 1px solid ${({ theme }) => theme.color.PRIMARY[50]};
 
     ul {
       padding-bottom: 15px;
       li {
         padding: 5px 0;
         padding-left: 10px;
-        color: ${theme.color.NEUTRAL[400]};
+        color: ${({ theme }) => theme.color.NEUTRAL[400]};
         border-bottom: none;
       }
       li:hover {

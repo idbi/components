@@ -1,3 +1,7 @@
+// BASE
+export { IdThemeProvider } from "./theme/IdThemeProvider/types";
+
+// COMPONENTS
 export { Button } from "./components/Button/types";
 export { CodeInput } from "./components/CodeInput/types";
 export { Heading, Text } from "./components/Typography/TextBuilder/types";
@@ -11,6 +15,7 @@ export { DropdownMenu } from "./components/dropdowns/DropdownMenu/types";
 export { NoData } from "./components/NoData/types";
 export { Search } from "./components/Search/types";
 export { Navbar } from "./components/Navbar/types";
+export { Separator } from "./components/Separator/types";
 
 // UI
 export { BulletPoint } from "./components/BulletPoint/types";
@@ -37,10 +42,12 @@ export { SectionCard } from "./components/cards/SectionCard/types";
 export { ClientCard } from "./components/cards/ClientCard/types";
 export { ToastCard } from "./components/cards/ToastCard/types";
 export { IDCard } from "./components/cards/IDCard/types";
+export { OrderCard } from "./components/cards/OrderCard/types";
 // PRODUCT CARDS
 export { CartProduct } from "./components/product-cards/CartProduct/types";
 export { CartProductV2 } from "./components/product-cards/CartProductV2/types";
 export { ProductDetailsCard } from "./components/product-cards/ProductDetailsCard/types";
+export { SimpleProductCard } from "./components/product-cards/SimpleProductCard/types";
 // CONFIRMATIONS
 export { ConfirmationCard } from "./components/confirmations/ConfirmationCard/types";
 export { ConfirmationCardV2 } from "./components/confirmations/ConfirmationCardV2/types";
@@ -58,6 +65,7 @@ export { ToggleSwitch } from "./components/forms/ToggleSwitch/types";
 export { SelectField } from "./components/SelectField/types";
 export { TextField } from "./components/TextField/types";
 export { DateRangePicker } from "./components/forms/DateRangePicker/types";
+export { RadioButton } from "./components/forms/RadioButton/types";
 // MODALS
 export { Backdrop } from "./components/modals/ModalContainer/Backdrop/types";
 export { ModalContainer } from "./components/modals/ModalContainer/types";
@@ -75,9 +83,12 @@ export { UploadMultipleImages } from "./components/files-upload/UploadMultipleIm
 export { GridTable } from "./components/tables/GridTable/types";
 export { Pagination } from "./components/tables/Pagination/types";
 export { Table } from "./components/tables/Table/types";
+export { ShopTable } from "./components/tables/ShopTable/types";
+export { ShopTableList } from "./components/tables/ShopTableList/types";
 // HEADERS
 export { ModalHeader } from "./components/headers/ModalHeader/types";
 export { SectionHeader } from "./components/headers/SectionHeader/types";
+export { OrderTypeHeader } from "./components/headers/OrderTypeHeader/types";
 // FOOTERS
 export { SimpleFooter } from "./components/footers/SimpleFooter/types";
 // SELECTS
@@ -87,3 +98,59 @@ export { KpiCard } from "./components/reports/KpiCard/types";
 export { KpiCardV2 } from "./components/reports/KpiCardV2/types";
 // MAPS
 export { Map } from "./components/MapsSelection/types";
+// MENUS
+export { CarouselMenu } from "./components/menus/CarouselMenu/types";
+// ICONS
+export {
+  IdiActivity,
+  IdiArrowBottom,
+  IdiArrowLeft,
+  IdiArrowRight,
+  IdiArrowTop,
+  IdiBell,
+  IdiKeyboardBackSpace,
+  IdiLogo,
+  IdiLogoV2,
+  IdiMenu,
+  IdiShopTable,
+  IdiUser,
+  IdiArrowBack,
+  IdiCheckbox,
+  IdiCheckboxChecked,
+  IdiCheckCircle,
+  IdiCheck,
+  IdiCloseEye,
+  IdiProfile,
+  IdiProfileV2,
+  IdiArrowDown,
+  IdiPer,
+  IdiUsa,
+  IdiGoogle,
+  IdiBag,
+  IdiCalendar,
+  IdiClock,
+  IdiClose,
+  IdiPreparing,
+  IdiArrowRightV2,
+  IdiSearch,
+  IdiTrash,
+  IdiTruck,
+  IdiWarning,
+  IdiImage,
+  IdiMailSent,
+  IdiDollarTemplate,
+  IdiOpenEye,
+  IdiWarningCircle,
+  IdiArea,
+  IdiBagCheck,
+  IdiPlus,
+  IdiMenuV2,
+  IdiStatistic,
+  IdiTicket,
+  IdiUbication,
+  IdiBox,
+  IdiPoint,
+  IdiCheckV2,
+  IdiIdentification,
+  IdiMinus,
+} from "./icons/types";

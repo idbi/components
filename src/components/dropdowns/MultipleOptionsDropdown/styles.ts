@@ -1,8 +1,7 @@
 import styled, { css } from "styled-components";
-import { theme } from "@/theme";
 
 export const Menu = styled.ul`
-  color: ${() => theme.color.OTHER.color1};
+  color: ${({ theme }) => theme.color.OTHER.color1};
   background-color: white;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   border: 1px solid ${({ theme }) => theme.color.QUATERNARY[300]};
@@ -81,10 +80,10 @@ export const Option = styled.li<{
   ${({ alert }) => {
     if (alert)
       return css`
-        background-color: ${theme.color.ALERT[100]};
-        color: ${theme.color.ALERT[900]};
+        background-color: ${({ theme }) => theme.color.ALERT[100]};
+        color: ${({ theme }) => theme.color.ALERT[900]};
         &:hover {
-          background-color: ${theme.color.ALERT[200]};
+          background-color: ${({ theme }) => theme.color.ALERT[200]};
         }
       `;
   }}

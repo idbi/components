@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { theme } from "@/theme";
 
 export const Container = styled.div`
-  color: 1px solid ${theme.color.NEUTRAL[700]};
+  color: 1px solid ${({ theme }) => theme.color.NEUTRAL[700]};
   display: flex;
   gap: 10px;
   font-size: 12px;
@@ -41,7 +40,7 @@ export const Main = styled.div`
 `;
 
 export const ImgContainer = styled.div`
-  border: 1px solid ${theme.color.NEUTRAL[100]};
+  border: 1px solid ${({ theme }) => theme.color.NEUTRAL[100]};
   border-radius: 4px;
   width: 50px;
   height: 50px;
@@ -56,7 +55,7 @@ export const Img = styled.img`
 `;
 
 export const DiscountLabel = styled.span`
-  background-color: ${theme.color.SECONDARY[900]};
+  background-color: ${({ theme }) => theme.color.SECONDARY[900]};
   color: white;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
@@ -82,7 +81,7 @@ export const Details = styled.div`
     font-weight: 500;
   }
   & > div {
-    color: ${theme.color.NEUTRAL[500]};
+    color: ${({ theme }) => theme.color.NEUTRAL[500]};
   }
 `;
 
@@ -105,7 +104,7 @@ export const Footer = styled.div`
 `;
 
 export const Price = styled.span`
-  color: ${theme.color.PRIMARY[900]};
+  color: ${({ theme }) => theme.color.PRIMARY[900]};
   margin-right: 8px;
   span {
     font-weight: 700;
@@ -114,6 +113,6 @@ export const Price = styled.span`
 
 export const PrevTotal = styled.span`
   display: inline-block;
-  color: ${theme.color.NEUTRAL[400]};
+  color: ${({ theme }) => theme.color.NEUTRAL[400]};
   text-decoration: line-through;
 `;

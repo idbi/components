@@ -4,7 +4,6 @@ import {
   getShape,
   getColor,
   getFullWidth,
-  getIsLoading,
   getDisabled,
   getSize,
   getSpacing,
@@ -31,7 +30,6 @@ export const Button = styled(BaseButton)<IButton>`
   ${({ shape }) => getShape({ shape })};
   ${({ design, color, fontColor }) => getDesign({ design, color, fontColor })};
   ${({ fullWidth }) => getFullWidth({ fullWidth })};
-  ${({ isLoading }) => getIsLoading({ isLoading })};
   ${({ disabled }) => getDisabled({ disabled })};
   ${({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px }) =>
     getSpacing({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px })};

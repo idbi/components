@@ -1,4 +1,3 @@
-import { theme } from "@/theme";
 import styled from "styled-components";
 
 interface IContainer {
@@ -26,19 +25,19 @@ export const Container = styled.div<IContainer>`
     transition: all 0.2s;
 
     &:hover {
-      background: ${theme.color.NEUTRAL[50]} !important;
+      background: ${({ theme }) => theme.color.NEUTRAL[50]} !important;
     }
   }
 
   input {
     border: 1px solid
-      ${({ disabled }) =>
+      ${({ theme, disabled }) =>
         disabled ? theme.color.NEUTRAL[300]: theme.color.SECONDARY[900]};
     border-radius: 5px;
     font: 400 14px Poppins;
     height: 100%;
     width: 50px;
-    color: ${theme.color.NEUTRAL[500]};
+    color: ${({ theme }) => theme.color.NEUTRAL[500]};
     outline: none;
     padding: 0 5px;
     text-align: center;

@@ -1,4 +1,3 @@
-import { theme } from "@/theme";
 import styled from "styled-components";
 
 export const Wrapper = styled.div<{
@@ -22,7 +21,7 @@ export const Wrapper = styled.div<{
     padding: 10px 12px;
     min-height: 45px;
     background: #fff;
-    border: 1px solid ${() => theme.color.NEUTRAL[300]};
+    border: 1px solid ${({ theme }) => theme.color.NEUTRAL[300]};
     border-radius: 0.5rem;
     justify-content: space-between;
   }
@@ -40,12 +39,12 @@ export const Wrapper = styled.div<{
 
   li.selected {
     border-radius: 0.5rem;
-    background-color: ${() => theme.color.QUATERNARY[200]};
+    background-color: ${({ theme }) => theme.color.QUATERNARY[200]};
   }
 
   .options li:hover {
     border-radius: 0.5rem;
-    background-color: ${() => theme.color.QUATERNARY[100]};
+    background-color: ${({ theme }) => theme.color.QUATERNARY[100]};
   }
 `;
 
@@ -75,7 +74,7 @@ export const OptionsManager = styled.ul<{
       margin: 0.5rem 0.313rem;
       &:focus {
         border-radius: 0.5rem;
-        outline: 2px solid ${() => theme.color.SECONDARY[900]};
+        outline: 2px solid ${({ theme }) => theme.color.SECONDARY[900]};
       }
     }
   }

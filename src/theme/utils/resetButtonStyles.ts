@@ -8,3 +8,11 @@ export const resetButtonStyles = css`
   margin: none;
   cursor: pointer;
 `;
+
+export const resetBtnStyles = css`
+  background: none;
+  outline: none;
+  border: none;
+  padding: none;
+  margin: none;
+`;

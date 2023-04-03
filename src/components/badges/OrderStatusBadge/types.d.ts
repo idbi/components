@@ -1,9 +1,7 @@
+import { OrderStatusType } from "@/types/OrderStatusType";
 import { ReactNode } from "react";
-
-export type StatusType = "default" | "draft" | "pending" | "rejected" | "accepted" | "canceled" | "preparing" | "readyforpickup" | "delivered" | "finished";
-
 export interface IOrderStatusBadge {
-  statusName: StatusType;
+  statusName: OrderStatusType;
   removeBackground?: boolean;
   text?: string;
 }

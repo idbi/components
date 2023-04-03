@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-import { theme } from "@/theme";
 import styled, { css } from "styled-components";
 import { getDisabled } from "@/theme/utils";
 
@@ -18,7 +17,7 @@ export const Container = styled.div<IContainer>`
   align-items: center;
   gap: 8px;
   border-radius: 8px;
-  border: 1px solid ${theme.color.NEUTRAL[300]};
+  border: 1px solid ${({ theme }) => theme.color.NEUTRAL[300]};
   background: #fff;
   input {
     width: 100%;
@@ -30,9 +29,9 @@ export const Container = styled.div<IContainer>`
     font-size: 0.875rem;
     line-height: 1.3125rem;
     letter-spacing: -0.04em;
-    color: ${theme.color.NEUTRAL[700]};
+    color: ${({ theme }) => theme.color.NEUTRAL[700]};
     ::placeholder {
-      color: ${theme.color.NEUTRAL[500]};
+      color: ${({ theme }) => theme.color.NEUTRAL[500]};
     }
   }
   ${({readingMode}) => readingMode && css`
@@ -59,7 +58,7 @@ export const Description = styled.span`
   font-size: 0.625rem;
   line-height: 1.125rem;
   letter-spacing: -0.04em;
-  color: ${theme.color.NEUTRAL[500]};
+  color: ${({ theme }) => theme.color.NEUTRAL[500]};
 `
 
 export const Suffix = styled.div`
@@ -67,12 +66,12 @@ export const Suffix = styled.div`
   font-size: 0.75rem;
   line-height: 1.125rem;
   letter-spacing: -0.04em;
-  color: ${theme.color.NEUTRAL[500]};
+  color: ${({ theme }) => theme.color.NEUTRAL[500]};
 `
 
 export const Value = styled.span`
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: ${theme.color.PRIMARY[900]};
+  color: ${({ theme }) => theme.color.PRIMARY[900]};
 `

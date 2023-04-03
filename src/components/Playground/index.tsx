@@ -1,54 +1,41 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable jsx-a11y/control-has-associated-label */
+import { useState } from "react";
 import styled from "styled-components";
-// import { Heading } from "../Typography";
 
-// const Image = styled.img`
-//   display: flex;
-//   flex-flow: column wrap;
-//   align-items: center;
-//   justify-content: center;
-//   border-radius: 10px;
-//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-//   cursor: pointer;
-// `;
-
-const Wrapper = styled.div`
-  width: 100vw;
+const Wrapper = styled.main`
   min-height: 100vh;
-  height: 100%;
-  background-color: ${({ theme }) => theme.color.NEUTRAL[0]};
-  padding-left: 20px;
-  padding-right: 20px;
-
-  /* header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 7vh;
-    gap: 20px;
-  } */
-
-  main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
-    height: 86vh;
-    align-items: center;
-    place-items: center;
-  }
+  padding: 20px;
 `;
+
+const Header = styled.header`
+  margin-bottom: 20px;
+`;
+
 const PlayGround: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [backColor, setBackColor] = useState("#fff");
+
   return (
-    <Wrapper>
-      {/* <header>
-        <Image
-          src="/id-logo.svg"
-          alt="Letter I with color pink and a D with color blue"
-          width={40}
-          height={40}
+    <Wrapper style={{ background: backColor }}>
+      <Header>
+        <h1>test your components and clean when finished</h1>
+        <label htmlFor="color">Cambia el fondo </label>
+        <input
+          id="color"
+          type="color"
+          list="redColors"
+          value={backColor}
+          onChange={(e) => setBackColor(e?.target?.value || "#fff")}
         />
-        <Heading.H1 size="sm">ID Playground</Heading.H1>
-      </header> */}
-      <main>{children}</main>
+        <datalist id="redColors">
+          <option value="#ffffff" />
+          <option value="#000000" />
+          <option value="#242954" />
+          <option value="#4318FF" />
+          <option value="#9f9f9f" />
+        </datalist>
+      </Header>
+      {children}
     </Wrapper>
   );
 };

@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.div<{ minHeight: number; alert?: boolean; disabled?: boolean; fullWidth?: boolean }>`
+export const Container = styled.div<{
+  minHeight: number;
+  alert?: boolean;
+  disabled?: boolean;
+  fullWidth?: boolean;
+}>`
   background-color: white;
-  border: 1px solid ${({ theme, alert }) => (alert ? theme.color.ALERT[900] : theme.color.NEUTRAL[300])};
+  border: 1px solid
+    ${({ theme, alert }) =>
+      alert ? theme.color.ALERT[900] : theme.color.NEUTRAL[300]};
   border-radius: 5px;
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
@@ -11,6 +18,10 @@ export const Container = styled.div<{ minHeight: number; alert?: boolean; disabl
   align-items: center;
   gap: 5px;
   font-size: 14px;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
 
   input {
     border: none;

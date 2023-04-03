@@ -1,11 +1,10 @@
-import { theme } from "@/theme";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 import styled, { keyframes } from "styled-components";
 
 export const CollapsibleSC = styled(CollapsiblePrimitive.Root)`
   width: 100%;
   background-color: #fff;
-  box-shadow: ${() => theme.effect.darkShadow[4]};
+  box-shadow: ${({ theme }) => theme.effect.darkShadow[4]};
   border-radius: 0.5rem;
 `;
 

@@ -17,6 +17,7 @@ const StatusIconsDiccionary = {
   preparing: <IconPreparing color="#F79E1B" />,
   readyforpickup: <IconTruck color="#FF82AF" />,
   delivered: <IconBag color="#2DC96F" />,
+  finished: <> </>,
 };
 
 const StatusDescriptionDiccionary = {
@@ -55,6 +56,10 @@ const StatusDescriptionDiccionary = {
   delivered: {
     title: "Disfruta tu pedido",
     description: "¡Gracias por ordenar!",
+  },
+  finished: {
+    title: "Pedido finalizado",
+    description: "",
   },
 };
 

@@ -71,7 +71,7 @@ export const KpiCardV2: React.FC<IKpiCardV2> = ({
               <IdiKeyboardBackSpace
                 size={14}
                 color={descriptionCompare.isUp ? "#27ae60" : "#ea345f"}
-                styleContainer={{
+                style={{
                   transform: descriptionCompare.isUp
                     ? "rotate(90deg)"
                     : "rotate(-90deg)",

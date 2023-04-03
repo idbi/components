@@ -166,7 +166,7 @@ export const getFullWidth = ({ fullWidth }: Pick<IButton, "fullWidth">) => {
   `;
 };
 
-export const getIsLoading = ({ isLoading }: Pick<IButton, "isLoading">) => {
+export const getIsLoading = ({ isLoading }: { isLoading: boolean }) => {
   if (isLoading) {
     return css`
       cursor: not-allowed;

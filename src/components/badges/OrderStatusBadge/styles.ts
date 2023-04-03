@@ -1,10 +1,9 @@
 /* eslint-disable prettier/prettier */
-import { theme } from "@/theme";
+import { OrderStatusType } from "@/types/OrderStatusType";
 import styled, { css } from "styled-components";
-import { StatusType } from "./types";
 
 interface IContainer {
-  statusName: StatusType;
+  statusName: OrderStatusType;
   removeBackground?: boolean;
 }
 
@@ -17,10 +16,10 @@ export const Container = styled.span<IContainer>`
   font-size: 0.75rem;
   line-height: 1.125rem;
   letter-spacing: -0.04em;
-  background: ${({ removeBackground }) => removeBackground ? "transparent" : theme.color.STATUS.DEFAULT[0]};
-  color: ${theme.color.STATUS.DEFAULT[1]};
+  background: ${({ theme, removeBackground }) => removeBackground ? "transparent" : theme.color.STATUS.DEFAULT[0]};
+  color: ${({theme}) => theme.color.STATUS.DEFAULT[1]};
 
-  ${({ statusName, removeBackground }) => {
+  ${({ theme, statusName, removeBackground }) => {
     if (statusName === "draft")
       return css`
         background: ${removeBackground ? "transparent" : theme.color.STATUS.DRAFT[0]};

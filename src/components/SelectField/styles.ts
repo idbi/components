@@ -1,4 +1,3 @@
-import { theme } from "@/theme";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -34,7 +33,7 @@ export const Container = styled.div`
   > small {
     display: block;
     font: normal 11px Poppins;
-    color: ${() => theme.color.ALERT[900]};
+    color: ${({ theme }) => theme.color.ALERT[900]};
     margin-left: 2px;
     margin-top: 3px;
   }

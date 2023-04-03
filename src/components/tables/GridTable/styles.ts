@@ -1,6 +1,5 @@
 /* eslint-disable no-unsafe-optional-chaining */
 /* eslint-disable prettier/prettier */
-import { theme } from "@/theme";
 import { styleScroll } from "@/theme/scroll";
 import styled, { css } from "styled-components";
 import { IItemRow, ITr, LocationType } from "./types";
@@ -29,13 +28,13 @@ export const Container = styled.div<IContainer>`
   }
   .th {
     font-weight: 500;
-    color: ${theme.color.NEUTRAL[500]};
+    color: ${({ theme }) => theme.color.NEUTRAL[500]};
     padding-bottom: 8px;
     padding: 15px 10px 8px;
   }
   .td {
     font-weight: 400;
-    color: ${theme.color.NEUTRAL[600]};
+    color: ${({ theme }) => theme.color.NEUTRAL[600]};
     padding: 10px;
   }
   .tr {
@@ -43,12 +42,12 @@ export const Container = styled.div<IContainer>`
     grid-template-columns: ${({ gridTemplateColumns }) => gridTemplateColumns || "auto"};
     grid-column: 1 / ${({ gridTemplateColumns }) => gridTemplateColumns ? ( gridTemplateColumns?.split(" ")?.length + 1 ) :  "auto"};
     border-radius: 8px;
-    background: ${theme.color.QUATERNARY[50]};
-    border: 1px solid ${theme.color.QUATERNARY[300]};
+    background: ${({ theme }) => theme.color.QUATERNARY[50]};
+    border: 1px solid ${({ theme }) => theme.color.QUATERNARY[300]};
     padding: 10px 0;
     margin-top: 7px;
     &:hover {
-      background: ${theme.color.QUATERNARY[100]};
+      background: ${({ theme }) => theme.color.QUATERNARY[100]};
     }
   }
   .item-center {
@@ -69,7 +68,7 @@ export const Container = styled.div<IContainer>`
   }
   .separator {
     width: 100%;
-    border-right: 1.5px solid ${theme.color.QUATERNARY[300]};
+    border-right: 1.5px solid ${({ theme }) => theme.color.QUATERNARY[300]};
   }
 `;
 
@@ -105,7 +104,7 @@ const showLocation = (location: LocationType) => {
 const showSeparator = (separator: boolean) => {
   if(separator) return css`
     width: 100%;
-    border-right: 1.5px solid ${theme.color.QUATERNARY[300]};
+    border-right: 1.5px solid ${({ theme }) => theme.color.QUATERNARY[300]};
   `;
 }
 
@@ -126,7 +125,7 @@ const showGridColumn= (gridColumn: string | undefined) => {
 export const Th = styled.div<IItemRow>`
   ${fontStyles}
   font-weight: 500;
-  color: ${theme.color.NEUTRAL[500]};
+  color: ${({ theme }) => theme.color.NEUTRAL[500]};
   padding-bottom: 8px;
   padding: 15px 10px 8px;
   ${({location}) => showLocation(location || "left")}
@@ -138,7 +137,7 @@ export const Th = styled.div<IItemRow>`
 export const Td = styled.div<IItemRow>`
   ${fontStyles}
   font-weight: 400;
-  color: ${theme.color.NEUTRAL[600]};
+  color: ${({ theme }) => theme.color.NEUTRAL[600]};
   padding: 10px;
   ${({location}) => showLocation(location || "left")}
   ${({separator}) => showSeparator(Boolean(separator))}
@@ -151,12 +150,12 @@ export const Tr = styled.div<ITr>`
   grid-template-columns: ${({ gridTemplateColumns }) => gridTemplateColumns || "auto"};
   grid-column: 1 / ${({ gridTemplateColumns }) => gridTemplateColumns ? ( gridTemplateColumns?.split(" ")?.length + 1 ) :  "auto"};
   border-radius: 8px;
-  background: ${theme.color.QUATERNARY[50]};
-  border: 1px solid ${theme.color.QUATERNARY[300]};
+  background: ${({ theme }) => theme.color.QUATERNARY[50]};
+  border: 1px solid ${({ theme }) => theme.color.QUATERNARY[300]};
   padding: 10px 0;
   margin-top: 7px;
   &:hover {
-    background: ${theme.color.QUATERNARY[100]};
+    background: ${({ theme }) => theme.color.QUATERNARY[100]};
   }
   ${({gridColumn}) => showGridColumn(gridColumn)}
 `
