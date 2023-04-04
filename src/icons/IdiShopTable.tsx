@@ -5,6 +5,7 @@ import { SvgWrapper } from "./SvgWrapper";
 export const IdiShopTable: React.FC<IIcon> = ({
   size = 20,
   color = "currentColor",
+  colorStroke = "currentColor",
   onClick,
   style,
 }) => {
@@ -23,6 +24,7 @@ export const IdiShopTable: React.FC<IIcon> = ({
         r="43.072"
         strokeWidth="1.5"
         fill={color}
+        stroke={colorStroke}
       />
       <rect
         x="2.76964"
@@ -33,6 +35,7 @@ export const IdiShopTable: React.FC<IIcon> = ({
         transform="rotate(-45 2.76964 25.2681)"
         strokeWidth="1.5"
         fill={color}
+        stroke={colorStroke}
       />
       <rect
         x="77.5685"
@@ -43,6 +46,7 @@ export const IdiShopTable: React.FC<IIcon> = ({
         transform="rotate(-45 77.5685 95.0493)"
         strokeWidth="1.5"
         fill={color}
+        stroke={colorStroke}
       />
       <rect
         x="100.512"
@@ -53,6 +57,7 @@ export const IdiShopTable: React.FC<IIcon> = ({
         transform="rotate(-135 100.512 30.8417)"
         strokeWidth="1.5"
         fill={color}
+        stroke={colorStroke}
       />
       <rect
         x="25.3936"
@@ -63,6 +68,7 @@ export const IdiShopTable: React.FC<IIcon> = ({
         transform="rotate(-135 25.3936 99.7089)"
         strokeWidth="1.5"
         fill={color}
+        stroke={colorStroke}
       />
     </SvgWrapper>
   );
