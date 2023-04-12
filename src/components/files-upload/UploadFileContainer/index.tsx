@@ -14,18 +14,6 @@ export const UploadFileContainer = ({
   const fileInput = useRef<HTMLInputElement | null>(null);
   const handleClickFile = () => fileInput.current!.click();
 
-  const handleChangeFile = () => {
-    const file = fileInput.current!.files![0];
-    handleFile(file);
-  };
-
-  const handleDropFile = (e: any) => {
-    e.stopPropagation();
-    e.preventDefault();
-    const file = e.dataTransfer.files[0];
-    handleFile(file);
-  };
-
   const validateFileExtension = (fileName: string) => {
     if (!validFileExtensions) return true;
     const regex = new RegExp(`${validFileExtensions!.join("|")}$`, "i");
@@ -47,8 +35,25 @@ export const UploadFileContainer = ({
     onSelectFile(file);
   };
 
+  const handleChangeFile = () => {
+    const file = fileInput.current!.files![0];
+    handleFile(file);
+  };
+
+  const handleDropFile = (e: any) => {
+    e.stopPropagation();
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    handleFile(file);
+  };
+
   return (
-    <div onClick={handleClickFile} onDragOver={(e) => e.preventDefault()} onDrop={handleDropFile} style={style}>
+    <div
+      onClick={handleClickFile}
+      onDragOver={(e) => e.preventDefault()}
+      onDrop={handleDropFile}
+      style={style}
+    >
       {children}
       <input
         ref={fileInput}
