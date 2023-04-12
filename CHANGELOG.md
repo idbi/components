@@ -1,3 +1,16 @@
+# [0.36.0](https://github.com/idbi/components/compare/v0.35.1...v0.36.0) (2023-04-12)
+
+
+### Features
+
+* add noDisplay property in UploadMedia ([72bcd1f](https://github.com/idbi/components/commit/72bcd1fc943d526fef5e1a97b420d4645f3833d5))
+* adjust IdiTrash with IconV2 container ([2b9a0aa](https://github.com/idbi/components/commit/2b9a0aa7452d18fef8ab4908916fd1e6fc2d224f))
+* create UploadMedia component ([58d7b0f](https://github.com/idbi/components/commit/58d7b0f564ae958dfce07bf9d841bd7a01d1e133))
+* create UploadMultiMedia component ([e94815c](https://github.com/idbi/components/commit/e94815cbf4b2d9f746fa38f11f64a1e6e7816aa4))
+* update build ([9b6a2ce](https://github.com/idbi/components/commit/9b6a2cefb0c8d44d5352bce219a332807912dec3))
+
+
+
 ## [0.35.1](https://github.com/idbi/components/compare/v0.35.0...v0.35.1) (2023-04-04)
 
 
@@ -92,10 +105,6 @@
 
 * [POS-14295] create resizable textarea ([d756b75](https://github.com/idbi/components/commit/d756b756847d618dc38c44af5f6e77ca49755b87))
 * [POS-14296] conditional textarea on cart product ([44c2b51](https://github.com/idbi/components/commit/44c2b51d89723c2fae1108c210b27d0c1f03c95d))
-
-
-
-## [0.32.1](https://github.com/idbi/components/compare/v0.32.0...v0.32.1) (2023-02-24)
 
 
 
