@@ -79,6 +79,7 @@ export { ActionOptionsModal } from "./components/modals/ActionOptionsModal/types
 export { UploadFileContainer } from "./components/files-upload/UploadFileContainer/types";
 export { UploadImage } from "./components/files-upload/UploadImage/types";
 export { UploadMultipleImages } from "./components/files-upload/UploadMultipleImages/types";
+export { UploadMedia } from "./components/files-upload/UploadMedia/types";
 // TABLES
 export { GridTable } from "./components/tables/GridTable/types";
 export { Pagination } from "./components/tables/Pagination/types";
