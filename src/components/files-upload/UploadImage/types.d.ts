@@ -1,10 +1,6 @@
 import { ReactNode } from "react";
+import { IUploadMedia } from "../UploadMedia/types";
 
-export interface IUploadImage {
-  initialImgUrl?: string;
-  placeholder?: ReactNode;
-  onChange: (file: File | null, localURL?: string | null) => void;
-  onError?: (errorMessage?: string) => void;
-}
+export type IUploadImage = Omit<IUploadMedia, 'acceptedFiles' | 'validFileExtensions'>;
 
 export declare const UploadImage: (props: IUploadImage) => JSX.Element;

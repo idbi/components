@@ -1,22 +1,27 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Placeholder = styled.div`
+const containerStyles = css`
   min-height: 70px;
   display: flex;
   align-items: center;
+  cursor: default;
+  user-select: none;
+  border-radius: 10px;
+`;
+
+export const Placeholder = styled.div`
+  ${containerStyles}
   justify-content: center;
   gap: 10px;
   width: 100%;
-  cursor: pointer;
   padding: 10px;
   font: normal 14px "Poppins";
   letter-spacing: -0.04em;
   border: 2px dashed ${({ theme }) => theme.color.SECONDARY[900]};
-  border-radius: 10px;
-  cursor: pointer;
 `;
 
-export const DefaultMessage = styled.span`
+export const DefaultMessage = styled.p`
+  transition: 0.3s;
   color: ${({ theme }) => theme.color.NEUTRAL[600]};
   span {
     color: ${({ theme }) => theme.color.SECONDARY[900]};
@@ -27,15 +32,12 @@ export const DefaultMessage = styled.span`
 `;
 
 export const Display = styled.div`
-  min-height: 70px;
+  ${containerStyles}
   padding: 7px 12px;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   background: ${({ theme }) => theme.color.QUATERNARY[200]};
   border: 1.5px solid ${({ theme }) => theme.color.QUATERNARY[400]};
-  border-radius: 10px;
-  cursor: pointer;
+
   img {
     display: block;
     width: 100%;

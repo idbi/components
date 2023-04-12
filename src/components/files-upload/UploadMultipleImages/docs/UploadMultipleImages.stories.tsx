@@ -9,7 +9,9 @@ export default {
   argTypes: {},
 } as ComponentMeta<typeof UploadMultipleImages>;
 
-const Template: ComponentStory<typeof UploadMultipleImages> = (args) => <UploadMultipleImages {...args} />;
+const Template: ComponentStory<typeof UploadMultipleImages> = (args) => (
+  <UploadMultipleImages {...args} />
+);
 
 export const Base = Template.bind({});
 Base.args = {
