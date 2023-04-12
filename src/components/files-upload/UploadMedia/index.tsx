@@ -14,6 +14,7 @@ export const UploadMedia = ({
   onError,
   acceptedFiles,
   validFileExtensions,
+  noDisplay = false,
 }: IUploadMedia) => {
   const [media, setMedia] = useState<File | null>(null);
   const [imgObjUrl, setImgObjUrl] = useState(initialImgUrl || null);
@@ -42,7 +43,7 @@ export const UploadMedia = ({
       acceptedFiles={acceptedFiles}
       validFileExtensions={validFileExtensions}
     >
-      {imgObjUrl ? (
+      {imgObjUrl && !noDisplay ? (
         <s.Display>
           <s.Img>
             {(media?.type.includes("image") ||

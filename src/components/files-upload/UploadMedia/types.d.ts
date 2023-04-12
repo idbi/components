@@ -7,6 +7,7 @@ export interface IUploadMedia {
   onError?: (errorMessage?: string) => void;
   acceptedFiles?: string; // TODO: define some types
   validFileExtensions?: string[];
+  noDisplay?: boolean;
 }
 
 export declare const UploadMedia: (props: IUploadMedia) => JSX.Element;

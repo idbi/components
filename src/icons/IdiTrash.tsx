@@ -1,6 +1,5 @@
 import React from "react";
 import { IIcon } from "./types";
-import { SvgWrapper } from "./SvgWrapper";
 import { IconV2 } from "..";
 
 export const IdiTrash: React.FC<IIcon> = ({
