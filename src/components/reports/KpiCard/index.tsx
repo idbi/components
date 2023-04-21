@@ -1,8 +1,8 @@
 import React from "react";
 import Skeleton from "react-loading-skeleton";
 import { formatNumber as formatter } from "@/utils/formatNumber";
-import { IconPER } from "../../../icons/flags/IconPER";
-import { IconUSA } from "../../../icons/flags/IconUSA";
+import { IconPER } from "../../../icons/Flags/IconPER";
+import { IconUSA } from "../../../icons/Flags/IconUSA";
 import type { IKpiCard } from "./types";
 import * as s from "./styles";
 
@@ -66,12 +66,8 @@ export const KpiCard: React.FC<IKpiCard> = ({
             {(tip_PEN && tip_PEN > 0) || (tip_USD && tip_USD > 0) ? (
               <>
                 <span>Propina: </span>
-                {tip_PEN && tip_PEN > 0 ? (
-                  <span> {` S/${formatNumber(tip_PEN)}`}</span>
-                ) : null}
-                {tip_USD && tip_USD > 0 ? (
-                  <span> {` $/${formatNumber(tip_USD)}`}</span>
-                ) : null}
+                {tip_PEN && tip_PEN > 0 ? <span> {` S/${formatNumber(tip_PEN)}`}</span> : null}
+                {tip_USD && tip_USD > 0 ? <span> {` $/${formatNumber(tip_USD)}`}</span> : null}
               </>
             ) : null}
           </s.Footer>

@@ -57,8 +57,30 @@ const withDisabledOptions: IOptionsModal = {
   ],
 };
 
+const withCustomFooter: IOptionsModal = {
+  title: "Crear cotización",
+  onClose: () => {},
+  onSelect: (value, selected) => {},
+  selected: "first",
+  options: [
+    { value: "first", content: "A first option", icon: <CloseIcon /> },
+    { value: "second", content: "A second option", icon: <CloseIcon />, disabled: true },
+    { value: "third", content: "A third option", icon: <CloseIcon />, disabled: true },
+    { value: "fourth", content: "A fourth option", icon: <CloseIcon /> },
+  ],
+  renderOptions: (options) => (
+    <>
+      {options}
+      <div style={{ padding: 20, fontWeight: 500, marginTop: -25, borderTop: "1px solid #ddd" }}>
+        Some Custom Footer
+      </div>
+    </>
+  ),
+};
+
 export const mock = {
   base,
   withIcons,
   withDisabledOptions,
+  withCustomFooter,
 };

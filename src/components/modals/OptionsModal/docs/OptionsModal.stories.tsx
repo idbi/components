@@ -25,3 +25,8 @@ export const withDisabledOptions = Template.bind({});
 withDisabledOptions.args = {
   ...mock.withDisabledOptions,
 } as IOptionsModal;
+
+export const withCustomFooter = Template.bind({});
+withCustomFooter.args = {
+  ...mock.withCustomFooter,
+} as IOptionsModal;
