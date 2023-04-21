@@ -1,3 +1,12 @@
+# [0.37.0](https://github.com/idbi/components/compare/v0.36.0...v0.37.0) (2023-04-21)
+
+
+### Features
+
+* [POS-15062] options modal render list prop ([81c5a3e](https://github.com/idbi/components/commit/81c5a3e66f96c64e4bb7ed9d4f9a358d34f57f04))
+
+
+
 # [0.36.0](https://github.com/idbi/components/compare/v0.35.1...v0.36.0) (2023-04-12)
 
 
@@ -95,16 +104,6 @@
 ### Features
 
 * update dist ([4011d7b](https://github.com/idbi/components/commit/4011d7b0dcd68086770905bdba0648e4944e62bf))
-
-
-
-# [0.33.0](https://github.com/idbi/components/compare/v0.32.1...v0.33.0) (2023-03-10)
-
-
-### Features
-
-* [POS-14295] create resizable textarea ([d756b75](https://github.com/idbi/components/commit/d756b756847d618dc38c44af5f6e77ca49755b87))
-* [POS-14296] conditional textarea on cart product ([44c2b51](https://github.com/idbi/components/commit/44c2b51d89723c2fae1108c210b27d0c1f03c95d))
 
 
 
