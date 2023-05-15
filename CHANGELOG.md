@@ -1,3 +1,12 @@
+# [0.38.0](https://github.com/idbi/components/compare/v0.37.0...v0.38.0) (2023-05-15)
+
+
+### Features
+
+* adjust ButtonsSwitch, fix wrapper of icons and create BaseTextArea ([f75eb0f](https://github.com/idbi/components/commit/f75eb0f372ae98aa13bc218813fc1d0bdf7851bb))
+
+
+
 # [0.37.0](https://github.com/idbi/components/compare/v0.36.0...v0.37.0) (2023-04-21)
 
 
@@ -89,21 +98,6 @@
 * update docs about install and modify theme ([fa9a5b5](https://github.com/idbi/components/commit/fa9a5b52218f3896f5c374f46a9981a34f030565))
 * update IdiLogo ([e5cb1e5](https://github.com/idbi/components/commit/e5cb1e5fd30251f571d0de4b120178a263daff48))
 * update OrderStatusType ([62e1313](https://github.com/idbi/components/commit/62e13137a4d8721c1e620115cf18f5cbaa98e4f2))
-
-
-
-# [0.34.0](https://github.com/idbi/components/compare/v0.33.0...v0.34.0) (2023-03-10)
-
-
-### Bug Fixes
-
-* change import of theme ([5126a46](https://github.com/idbi/components/commit/5126a46290ea0dabe3cf73cbe4a25be1a4097152))
-* update icon imports ([190ace7](https://github.com/idbi/components/commit/190ace7ace8d3124b800465d9c8eff8371467878))
-
-
-### Features
-
-* update dist ([4011d7b](https://github.com/idbi/components/commit/4011d7b0dcd68086770905bdba0648e4944e62bf))
 
 
 
