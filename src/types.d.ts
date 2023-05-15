@@ -60,6 +60,7 @@ export { QuantityInputV2 } from "./components/forms/QuantityInputV2/types";
 export { ButtonsSwitch } from "./components/buttons/ButtonsSwitch/types";
 export { SupplyInput } from "./components/forms/SupplyInput/types";
 export { BaseInput } from "./components/forms/BaseInput/types";
+export { BaseTextArea } from "./components/forms/BaseTextArea/types";
 export { Textarea } from "./components/forms/Textarea/types";
 export { ToggleSwitch } from "./components/forms/ToggleSwitch/types";
 export { SelectField } from "./components/SelectField/types";
