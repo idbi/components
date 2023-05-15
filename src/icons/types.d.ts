@@ -19,6 +19,8 @@ export declare const IdiLogo: (props: IIcon) => JSX.Element;
 export declare const IdiLogoV2: (props: IIcon) => JSX.Element;
 export declare const IdiMenu: (props: IIcon) => JSX.Element;
 export declare const IdiShopTable: (props: IIcon) => JSX.Element;
+export declare const IdiShopTableV2: (props: IIcon) => JSX.Element;
+export declare const IdiShopTableV3: (props: IIcon) => JSX.Element;V
 export declare const IdiUser: (props: IIcon) => JSX.Element;
 
 export declare const IdiArrowBack: (props: IIcon) => JSX.Element;
@@ -60,4 +62,4 @@ export declare const IdiPoint: (props: IIcon) => JSX.Element;
 export declare const IdiCheckV2: (props: IIcon) => JSX.Element;
 export declare const IdiIdentification: (props: IIcon) => JSX.Element;
 export declare const IdiMinus: (props: IIcon) => JSX.Element;
-
+export declare const IdiPickup: (props: IIcon) => JSX.Element;
