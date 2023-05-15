@@ -116,6 +116,8 @@ export {
   IdiLogoV2,
   IdiMenu,
   IdiShopTable,
+  IdiShopTableV2,
+  IdiShopTableV3,
   IdiUser,
   IdiArrowBack,
   IdiCheckbox,
@@ -156,4 +158,5 @@ export {
   IdiCheckV2,
   IdiIdentification,
   IdiMinus,
+  IdiPickup,
 } from "./icons/types";
