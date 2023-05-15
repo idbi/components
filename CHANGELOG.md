@@ -1,3 +1,12 @@
+## [0.38.2](https://github.com/idbi/components/compare/v0.38.1...v0.38.2) (2023-05-15)
+
+
+### Bug Fixes
+
+* export icons ([b881cda](https://github.com/idbi/components/commit/b881cdaf98efccda8b5171cd99e0b3217c1fc8aa))
+
+
+
 ## [0.38.1](https://github.com/idbi/components/compare/v0.38.0...v0.38.1) (2023-05-15)
 
 
@@ -35,15 +44,6 @@
 * create UploadMedia component ([58d7b0f](https://github.com/idbi/components/commit/58d7b0f564ae958dfce07bf9d841bd7a01d1e133))
 * create UploadMultiMedia component ([e94815c](https://github.com/idbi/components/commit/e94815cbf4b2d9f746fa38f11f64a1e6e7816aa4))
 * update build ([9b6a2ce](https://github.com/idbi/components/commit/9b6a2cefb0c8d44d5352bce219a332807912dec3))
-
-
-
-## [0.35.1](https://github.com/idbi/components/compare/v0.35.0...v0.35.1) (2023-04-04)
-
-
-### Bug Fixes
-
-* show border in ShopTable ([6943124](https://github.com/idbi/components/commit/6943124dd1994ceca176080a6de20229258f8148))
 
 
 
