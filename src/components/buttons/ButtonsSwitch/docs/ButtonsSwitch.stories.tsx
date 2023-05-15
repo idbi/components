@@ -21,13 +21,17 @@ Primary.parameters = {
   docs: {
     source: {
       code: dedent`
-      import { ButtonsSwitch, IdThemeProvider } from '@idbi/components'
+      import { ButtonsSwitch, IdThemeProvider, IdiBox } from '@idbi/components'
       import { useState } from 'react'
       
       const options = [
         {
-          label: 'Agregar productos',
-          value: 'ADD'
+          label: (
+            <>
+              <IdiBox style={{ margin: "0 5px" }} /> Agregar productos
+            </>
+          ),
+          value: "ADD",
         },
         {
           label: 'Detalles de la cotización',
@@ -64,13 +68,17 @@ PrimaryFullWidth.parameters = {
   docs: {
     source: {
       code: dedent`
-      import { ButtonsSwitch, IdThemeProvider } from '@idbi/components'
+      import { ButtonsSwitch, IdThemeProvider, IdiBox } from '@idbi/components'
       import { useState } from 'react'
       
       const options = [
         {
-          label: 'Agregar productos',
-          value: 'ADD'
+          label: (
+            <>
+              <IdiBox style={{ margin: "0 5px" }} /> Agregar productos
+            </>
+          ),
+          value: "ADD",
         },
         {
           label: 'Detalles de la cotización',
@@ -108,11 +116,18 @@ PrimaryMultipleOptions.parameters = {
   docs: {
     source: {
       code: dedent`
-      import { ButtonsSwitch, IdThemeProvider } from '@idbi/components'
+      import { ButtonsSwitch, IdThemeProvider, IdiBox } from '@idbi/components'
       import { useState } from 'react'
       
       const options = [
-        { label: "Agregar productos", value: "ADD" },
+        {
+          label: (
+            <>
+              <IdiBox style={{ margin: "0 5px" }} /> Agregar productos
+            </>
+          ),
+          value: "ADD",
+        },
         { label: "Detalles de la cotización", value: "DETAILS" },
         { label: "Otra opción", value: "OTHER" },
         { label: "Test", value: "TEST" },
@@ -148,11 +163,18 @@ PrimaryDisabled.parameters = {
   docs: {
     source: {
       code: dedent`
-      import { ButtonsSwitch, IdThemeProvider } from '@idbi/components'
+      import { ButtonsSwitch, IdThemeProvider, IdiBox } from '@idbi/components'
       import { useState } from 'react'
       
       const options = [
-        { label: "Agregar productos", value: "ADD" },
+        {
+          label: (
+            <>
+              <IdiBox style={{ margin: "0 5px" }} /> Agregar productos
+            </>
+          ),
+          value: "ADD",
+        },
         { label: "Detalles de la cotización", value: "DETAILS" },
         { label: "Otra opción", value: "OTHER" },
         { label: "Test", value: "TEST" },
@@ -226,11 +248,18 @@ SecondaryMultipleOptions.parameters = {
   docs: {
     source: {
       code: dedent`
-      import { ButtonsSwitch, IdThemeProvider } from '@idbi/components'
+      import { ButtonsSwitch, IdThemeProvider, IdiBox } from '@idbi/components'
       import { useState } from 'react'
       
       const options = [
-        { label: "Agregar productos", value: "ADD" },
+        {
+          label: (
+            <>
+              <IdiBox style={{ margin: "0 5px" }} /> Agregar productos
+            </>
+          ),
+          value: "ADD",
+        },
         { label: "Detalles de la cotización", value: "DETAILS" },
         { label: "Otra opción", value: "OTHER" },
         { label: "Test", value: "TEST" },
@@ -265,11 +294,18 @@ tertiary.parameters = {
   docs: {
     source: {
       code: dedent`
-      import { ButtonsSwitch, IdThemeProvider } from '@idbi/components'
+      import { ButtonsSwitch, IdThemeProvider, IdiBox } from '@idbi/components'
       import { useState } from 'react'
       
       const options = [
-        { label: "Agregar productos", value: "ADD" },
+        {
+          label: (
+            <>
+              <IdiBox style={{ margin: "0 5px" }} /> Agregar productos
+            </>
+          ),
+          value: "ADD",
+        },
         { label: "Detalles de la cotización", value: "DETAILS" },
       ]
       
@@ -302,11 +338,18 @@ tertiaryMultipleOptions.parameters = {
   docs: {
     source: {
       code: dedent`
-      import { ButtonsSwitch, IdThemeProvider } from '@idbi/components'
+      import { ButtonsSwitch, IdThemeProvider, IdiBox } from '@idbi/components'
       import { useState } from 'react'
       
       const options = [
-        { label: "Agregar productos", value: "ADD" },
+        {
+          label: (
+            <>
+              <IdiBox style={{ margin: "0 5px" }} /> Agregar productos
+            </>
+          ),
+          value: "ADD",
+        },
         { label: "Detalles de la cotización", value: "DETAILS" },
         { label: "Otra opción", value: "OTHER" },
         { label: "Test", value: "TEST" },

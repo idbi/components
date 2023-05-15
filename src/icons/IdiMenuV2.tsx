@@ -1,6 +1,6 @@
 import React from "react";
 import { IIcon } from "./types";
-import { SvgWrapper } from "./SvgWrapper";
+import { IconV2 } from "../icons-v2/IconV2";
 
 export const IdiMenuV2: React.FC<IIcon> = ({
   size = 20,
@@ -9,13 +9,12 @@ export const IdiMenuV2: React.FC<IIcon> = ({
   style,
 }) => {
   return (
-    <SvgWrapper
+    <IconV2
       onClick={onClick}
       size={size}
       style={style}
-      svgProps={{
-        viewBox: "0 0 13 13",
-      }}
+      viewBox="0 0 13 13"
+      fill="transparent"
     >
       <path
         d="M1 1.84615C1 1.37884 1.37884 1 1.84615 1H11.1538C11.6212 1 12 1.37884 12 1.84615V2.26923C12 2.73655 11.6212 3.11538 11.1538 3.11538H1.84615C1.37884 3.11538 1 2.73655 1 2.26923V1.84615Z"
@@ -32,6 +31,6 @@ export const IdiMenuV2: React.FC<IIcon> = ({
         stroke={color}
         strokeLinecap="round"
       />
-    </SvgWrapper>
+    </IconV2>
   );
 };

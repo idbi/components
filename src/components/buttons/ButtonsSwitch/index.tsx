@@ -11,6 +11,7 @@ export const ButtonsSwitch = ({
   model,
   equalBtns,
   style,
+  styleButtons,
 }: IButtonsSwitch) => {
   return (
     <s.Container
@@ -30,6 +31,7 @@ export const ButtonsSwitch = ({
           disabled={disabled}
           model={model}
           equal={equalBtns}
+          style={styleButtons}
         >
           {option.label}
         </s.Btn>

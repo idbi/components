@@ -1,6 +1,6 @@
 import React from "react";
 import { IIcon } from "./types";
-import { SvgWrapper } from "./SvgWrapper";
+import { IconV2 } from "../icons-v2/IconV2";
 
 export const IdiWarning: React.FC<IIcon> = ({
   size = 20,
@@ -9,14 +9,7 @@ export const IdiWarning: React.FC<IIcon> = ({
   style,
 }) => {
   return (
-    <SvgWrapper
-      onClick={onClick}
-      size={size}
-      style={style}
-      svgProps={{
-        viewBox: "0 0 23 18",
-      }}
-    >
+    <IconV2 onClick={onClick} size={size} style={style} viewBox="0 0 23 18">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -29,6 +22,6 @@ export const IdiWarning: React.FC<IIcon> = ({
         d="M11.001 5.985c.426 0 .77.298.77.665v5.7c0 .367-.344.665-.77.665-.425 0-.77-.298-.77-.665v-5.7c0-.367.345-.665.77-.665ZM11.001 13.585c.426 0 .77.297.77.665v.95c0 .367-.344.665-.77.665-.425 0-.77-.298-.77-.665v-.95c0-.368.345-.665.77-.665Z"
         fill={color}
       />
-    </SvgWrapper>
+    </IconV2>
   );
 };

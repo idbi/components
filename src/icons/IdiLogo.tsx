@@ -1,6 +1,6 @@
 import React from "react";
 import { IIcon } from "./types";
-import { SvgWrapper } from "./SvgWrapper";
+import { IconV2 } from "../icons-v2/IconV2";
 
 export const IdiLogo: React.FC<IIcon> = ({
   size = 20,
@@ -9,13 +9,11 @@ export const IdiLogo: React.FC<IIcon> = ({
   style,
 }) => {
   return (
-    <SvgWrapper
+    <IconV2
       onClick={onClick}
       size={size}
       style={style}
-      svgProps={{
-        viewBox: "0 0 356.35 356.37",
-      }}
+      viewBox="0 0 356.35 356.37"
     >
       <path
         fill={color || "#ff82af"}
@@ -33,6 +31,6 @@ export const IdiLogo: React.FC<IIcon> = ({
         rx="38.07"
         transform="translate(-110.41 77.25) rotate(-44.99)"
       />
-    </SvgWrapper>
+    </IconV2>
   );
 };
