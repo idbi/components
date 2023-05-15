@@ -1,6 +1,6 @@
 import React from "react";
 import { IIcon } from "./types";
-import { SvgWrapper } from "./SvgWrapper";
+import { IconV2 } from "../icons-v2/IconV2";
 
 export const IdiPoint: React.FC<IIcon> = ({
   size = 20,
@@ -9,14 +9,7 @@ export const IdiPoint: React.FC<IIcon> = ({
   style,
 }) => {
   return (
-    <SvgWrapper
-      onClick={onClick}
-      size={size}
-      style={style}
-      svgProps={{
-        viewBox: "0 0 8 8",
-      }}
-    >
+    <IconV2 onClick={onClick} size={size} style={style} viewBox="0 0 8 8">
       <circle
         xmlns="http://www.w3.org/2000/svg"
         cx="4"
@@ -24,6 +17,6 @@ export const IdiPoint: React.FC<IIcon> = ({
         r="4"
         fill={color}
       />
-    </SvgWrapper>
+    </IconV2>
   );
 };

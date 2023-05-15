@@ -1,6 +1,6 @@
 import React from "react";
 import { IIcon } from "./types";
-import { SvgWrapper } from "./SvgWrapper";
+import { IconV2 } from "../icons-v2/IconV2";
 
 export const IdiClock: React.FC<IIcon> = ({
   size = 20,
@@ -9,13 +9,12 @@ export const IdiClock: React.FC<IIcon> = ({
   style,
 }) => {
   return (
-    <SvgWrapper
+    <IconV2
       onClick={onClick}
       size={size}
       style={style}
-      svgProps={{
-        viewBox: "0 0 22 21",
-      }}
+      viewBox="0 0 22 21"
+      fill="transparent"
     >
       <path
         d="M20.167 11c0 5.06-4.106 9.167-9.166 9.167-5.06 0-9.167-4.107-9.167-9.167s4.107-9.166 9.167-9.166S20.167 5.94 20.167 11Z"
@@ -31,6 +30,6 @@ export const IdiClock: React.FC<IIcon> = ({
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </SvgWrapper>
+    </IconV2>
   );
 };

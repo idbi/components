@@ -1,17 +1,10 @@
 import React from "react";
 import { IIcon } from "./types";
-import { SvgWrapper } from "./SvgWrapper";
+import { IconV2 } from "../icons-v2/IconV2";
 
 export const IdiUsa: React.FC<IIcon> = ({ size = 20, onClick, style }) => {
   return (
-    <SvgWrapper
-      onClick={onClick}
-      size={size}
-      style={style}
-      svgProps={{
-        viewBox: "0 0 20 18",
-      }}
-    >
+    <IconV2 onClick={onClick} size={size} style={style} viewBox="0 0 20 18">
       <g>
         <path
           d="M17.7225 3.5C17.376 2.9045 16.7385 2.5 16 2.5H9V3.5H17.7225ZM0 12.5H18V13.5H0V12.5ZM9 8.5H18V9.5H9V8.5ZM9 6.5H18V7.5H9V6.5ZM0 10.5H18V11.5H0V10.5ZM2 15.5H16C16.7385 15.5 17.376 15.0955 17.7225 14.5H0.2775C0.624 15.0955 1.2615 15.5 2 15.5ZM9 4.5H18V5.5H9V4.5Z"
@@ -30,6 +23,6 @@ export const IdiUsa: React.FC<IIcon> = ({ size = 20, onClick, style }) => {
           fill="white"
         />
       </g>
-    </SvgWrapper>
+    </IconV2>
   );
 };

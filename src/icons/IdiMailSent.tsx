@@ -1,6 +1,6 @@
 import React from "react";
 import { IIcon } from "./types";
-import { SvgWrapper } from "./SvgWrapper";
+import { IconV2 } from "../icons-v2/IconV2";
 
 export const IdiMailSent: React.FC<IIcon> = ({
   size = 20,
@@ -9,13 +9,12 @@ export const IdiMailSent: React.FC<IIcon> = ({
   style,
 }) => {
   return (
-    <SvgWrapper
+    <IconV2
       onClick={onClick}
       size={size}
       style={style}
-      svgProps={{
-        viewBox: "0 0 14 14",
-      }}
+      viewBox="0 0 14 14"
+      fill="transparent"
     >
       <path
         d="M1.16602 4.95573C1.16602 2.91406 2.33268 2.03906 4.08268 2.03906H9.91602C11.666 2.03906 12.8327 2.91406 12.8327 4.95573V9.03906C12.8327 11.0807 11.666 11.9557 9.91602 11.9557H4.08268"
@@ -45,6 +44,6 @@ export const IdiMailSent: React.FC<IIcon> = ({
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </SvgWrapper>
+    </IconV2>
   );
 };

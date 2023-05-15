@@ -1,7 +1,15 @@
+import { IdiBox } from "@/icons/IdiBox";
 import { IButtonsSwitchContainer } from "./Container";
 
 const options = [
-  { label: "Agregar productos", value: "ADD" },
+  {
+    label: (
+      <>
+        <IdiBox style={{ margin: "0 5px" }} /> Agregar productos
+      </>
+    ),
+    value: "ADD",
+  },
   { label: "Detalles de la cotización", value: "DETAILS" },
   { label: "Otra opción", value: "OTHER" },
   { label: "Test", value: "TEST" },
@@ -13,6 +21,8 @@ const primary: IButtonsSwitchContainer = {
   fullWidth: false,
   equalBtns: false,
   options: options.slice(0, 2),
+  style: {},
+  styleButtons: {},
 };
 
 const primaryFullWidth: IButtonsSwitchContainer = {
