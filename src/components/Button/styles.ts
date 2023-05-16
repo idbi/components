@@ -44,11 +44,11 @@ export const Button = styled(BaseButton)<IButton>`
   }
 
   &:active {
-    background-color: ${({ color, design }) => {
+    background-color: ${({ color, design, theme }) => {
       if (design === "link") {
         return "transparent";
       }
-      return getColor({ color, design, hover: true });
+      return getColor({ color, design, hover: true, theme });
     }};
   }
 

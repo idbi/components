@@ -6,81 +6,18 @@ import {
 } from "@/components/Typography/TextBuilder/types";
 import { IButton } from "@/components/Button/types";
 import { Size } from "@/components/Typography/utils";
-import { theme } from ".";
-
-export const getShape = ({ shape }: Pick<IButton, "shape">) => {
-  switch (shape) {
-    case "rounded":
-      return css`
-        border-radius: 0.625rem;
-      `;
-    case "squared":
-      return css`
-        border-radius: 0;
-      `;
-    case "circular":
-      return css`
-        border-radius: 10rem;
-      `;
-    default:
-      return css`
-        border-radius: 0.625rem;
-      `;
-  }
-};
-
-export const getDesign = ({
-  design,
-  color,
-  fontColor,
-}: Pick<IButton, "design" | "color" | "fontColor">) => {
-  switch (design) {
-    case "solid":
-      return css`
-        background-color: ${() => getColor({ color })};
-        color: ${fontColor ? getColor({ color: fontColor }) : "#fff"};
-      `;
-    case "outline":
-      return css`
-        background-color: white;
-        border: 1px solid ${() => getColor({ color })};
-        color: ${() => getColor({ color })};
-      `;
-    case "flat":
-      return css`
-        background-color: white;
-        border: none;
-        color: ${() => getColor({ color })};
-      `;
-
-    case "link": {
-      return css`
-        background-color: transparent;
-        border: none;
-        color: ${() => getColor({ color })};
-
-        &:hover {
-          color: ${() => getColor({ color, hover: true })};
-          text-decoration: underline;
-        }
-      `;
-    }
-    default:
-      return css`
-        background-color: ${() => getColor({ color })};
-        color: #fff;
-      `;
-  }
-};
+import { theme as themeByDefault } from ".";
 
 export const getColor = ({
   color = "SECONDARY/900",
   design,
   hover,
+  theme = themeByDefault,
 }: {
   design?: "solid" | "outline" | "flat" | "link";
   color?: TColor;
   hover?: boolean;
+  theme?: any;
 }) => {
   const colorSplitted = color.split("/");
   const colorName = colorSplitted[0];
@@ -153,6 +90,71 @@ export const getColor = ({
     return theme.color[colorName][900];
   }
   return theme.color.PRIMARY[900];
+};
+
+export const getShape = ({ shape }: Pick<IButton, "shape">) => {
+  switch (shape) {
+    case "rounded":
+      return css`
+        border-radius: 0.625rem;
+      `;
+    case "squared":
+      return css`
+        border-radius: 0;
+      `;
+    case "circular":
+      return css`
+        border-radius: 10rem;
+      `;
+    default:
+      return css`
+        border-radius: 0.625rem;
+      `;
+  }
+};
+
+export const getDesign = ({
+  design,
+  color,
+  fontColor,
+}: Pick<IButton, "design" | "color" | "fontColor">) => {
+  switch (design) {
+    case "solid":
+      return css`
+        background-color: ${() => getColor({ color })};
+        color: ${fontColor ? getColor({ color: fontColor }) : "#fff"};
+      `;
+    case "outline":
+      return css`
+        background-color: white;
+        border: 1px solid ${() => getColor({ color })};
+        color: ${() => getColor({ color })};
+      `;
+    case "flat":
+      return css`
+        background-color: white;
+        border: none;
+        color: ${() => getColor({ color })};
+      `;
+
+    case "link": {
+      return css`
+        background-color: transparent;
+        border: none;
+        color: ${() => getColor({ color })};
+
+        &:hover {
+          color: ${() => getColor({ color, hover: true })};
+          text-decoration: underline;
+        }
+      `;
+    }
+    default:
+      return css`
+        background-color: ${() => getColor({ color })};
+        color: #fff;
+      `;
+  }
 };
 
 export const getFullWidth = ({ fullWidth }: Pick<IButton, "fullWidth">) => {
