@@ -113,45 +113,45 @@ export const getShape = ({ shape }: Pick<IButton, "shape">) => {
   }
 };
 
-export const getDesign = ({
-  design,
-  color,
-  fontColor,
-}: Pick<IButton, "design" | "color" | "fontColor">) => {
+interface IgetDesign extends Pick<IButton, "design" | "color" | "fontColor"> {
+  theme: any;
+}
+
+export const getDesign = ({ design, color, fontColor, theme }: IgetDesign) => {
   switch (design) {
     case "solid":
       return css`
-        background-color: ${() => getColor({ color })};
-        color: ${fontColor ? getColor({ color: fontColor }) : "#fff"};
+        background-color: ${() => getColor({ color, theme })};
+        color: ${fontColor ? getColor({ color: fontColor, theme }) : "#fff"};
       `;
     case "outline":
       return css`
         background-color: white;
-        border: 1px solid ${() => getColor({ color })};
-        color: ${() => getColor({ color })};
+        border: 1px solid ${() => getColor({ color, theme })};
+        color: ${() => getColor({ color, theme })};
       `;
     case "flat":
       return css`
         background-color: white;
         border: none;
-        color: ${() => getColor({ color })};
+        color: ${() => getColor({ color, theme })};
       `;
 
     case "link": {
       return css`
         background-color: transparent;
         border: none;
-        color: ${() => getColor({ color })};
+        color: ${() => getColor({ color, theme })};
 
         &:hover {
-          color: ${() => getColor({ color, hover: true })};
+          color: ${() => getColor({ color, hover: true, theme })};
           text-decoration: underline;
         }
       `;
     }
     default:
       return css`
-        background-color: ${() => getColor({ color })};
+        background-color: ${() => getColor({ color, theme })};
         color: #fff;
       `;
   }

@@ -270,43 +270,39 @@ const E = {
         border-radius: 0.625rem;
       `;
   }
-}, of = ({
-  design: t,
-  color: e,
-  fontColor: a
-}) => {
+}, of = ({ design: t, color: e, fontColor: a, theme: n }) => {
   switch (t) {
     case "solid":
       return P`
-        background-color: ${() => X({ color: e })};
-        color: ${a ? X({ color: a }) : "#fff"};
+        background-color: ${() => X({ color: e, theme: n })};
+        color: ${a ? X({ color: a, theme: n }) : "#fff"};
       `;
     case "outline":
       return P`
         background-color: white;
-        border: 1px solid ${() => X({ color: e })};
-        color: ${() => X({ color: e })};
+        border: 1px solid ${() => X({ color: e, theme: n })};
+        color: ${() => X({ color: e, theme: n })};
       `;
     case "flat":
       return P`
         background-color: white;
         border: none;
-        color: ${() => X({ color: e })};
+        color: ${() => X({ color: e, theme: n })};
       `;
     case "link":
       return P`
         background-color: transparent;
         border: none;
-        color: ${() => X({ color: e })};
+        color: ${() => X({ color: e, theme: n })};
 
         &:hover {
-          color: ${() => X({ color: e, hover: !0 })};
+          color: ${() => X({ color: e, hover: !0, theme: n })};
           text-decoration: underline;
         }
       `;
     default:
       return P`
-        background-color: ${() => X({ color: e })};
+        background-color: ${() => X({ color: e, theme: n })};
         color: #fff;
       `;
   }
@@ -385,13 +381,13 @@ const E = {
 
   ${({ size: t }) => Me({ size: t })};
   ${({ shape: t }) => nf({ shape: t })};
-  ${({ design: t, color: e, fontColor: a }) => of({ design: t, color: e, fontColor: a })};
+  ${({ design: t, color: e, fontColor: a, theme: n }) => of({ design: t, color: e, fontColor: a, theme: n })};
   ${({ fullWidth: t }) => Al({ fullWidth: t })};
   ${({ disabled: t }) => xu({ disabled: t })};
   ${({ m: t, mb: e, mt: a, mr: n, ml: i, my: d, mx: o, p: r, pb: s, pt: u, pr: l, pl: h, py: v, px: f }) => Wl({ m: t, mb: e, mt: a, mr: n, ml: i, my: d, mx: o, p: r, pb: s, pt: u, pr: l, pl: h, py: v, px: f })};
 
   &:hover:not(:disabled) {
-    background-color: ${({ color: t, design: e }) => e === "link" ? "transparent" : X({ color: t, design: e, hover: !0 })};
+    background-color: ${({ color: t, design: e, theme: a }) => e === "link" ? "transparent" : X({ color: t, design: e, hover: !0, theme: a })};
   }
 
   &:active {

@@ -6,28 +6,28 @@
         border-radius: 10rem;
       `;default:return P.css`
         border-radius: 0.625rem;
-      `}},ks=({design:t,color:e,fontColor:a})=>{switch(t){case"solid":return P.css`
-        background-color: ${()=>V({color:e})};
-        color: ${a?V({color:a}):"#fff"};
+      `}},ks=({design:t,color:e,fontColor:a,theme:n})=>{switch(t){case"solid":return P.css`
+        background-color: ${()=>V({color:e,theme:n})};
+        color: ${a?V({color:a,theme:n}):"#fff"};
       `;case"outline":return P.css`
         background-color: white;
-        border: 1px solid ${()=>V({color:e})};
-        color: ${()=>V({color:e})};
+        border: 1px solid ${()=>V({color:e,theme:n})};
+        color: ${()=>V({color:e,theme:n})};
       `;case"flat":return P.css`
         background-color: white;
         border: none;
-        color: ${()=>V({color:e})};
+        color: ${()=>V({color:e,theme:n})};
       `;case"link":return P.css`
         background-color: transparent;
         border: none;
-        color: ${()=>V({color:e})};
+        color: ${()=>V({color:e,theme:n})};
 
         &:hover {
-          color: ${()=>V({color:e,hover:!0})};
+          color: ${()=>V({color:e,hover:!0,theme:n})};
           text-decoration: underline;
         }
       `;default:return P.css`
-        background-color: ${()=>V({color:e})};
+        background-color: ${()=>V({color:e,theme:n})};
         color: #fff;
       `}},Su=({fullWidth:t})=>t?P.css`
       width: 100%;
@@ -101,13 +101,13 @@
 
   ${({size:t})=>xe({size:t})};
   ${({shape:t})=>Ps({shape:t})};
-  ${({design:t,color:e,fontColor:a})=>ks({design:t,color:e,fontColor:a})};
+  ${({design:t,color:e,fontColor:a,theme:n})=>ks({design:t,color:e,fontColor:a,theme:n})};
   ${({fullWidth:t})=>Su({fullWidth:t})};
   ${({disabled:t})=>ye({disabled:t})};
   ${({m:t,mb:e,mt:a,mr:n,ml:i,my:d,mx:o,p:r,pb:s,pt:u,pr:l,pl:h,py:v,px:c})=>ju({m:t,mb:e,mt:a,mr:n,ml:i,my:d,mx:o,p:r,pb:s,pt:u,pr:l,pl:h,py:v,px:c})};
 
   &:hover:not(:disabled) {
-    background-color: ${({color:t,design:e})=>e==="link"?"transparent":V({color:t,design:e,hover:!0})};
+    background-color: ${({color:t,design:e,theme:a})=>e==="link"?"transparent":V({color:t,design:e,hover:!0,theme:a})};
   }
 
   &:active {
