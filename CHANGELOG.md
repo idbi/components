@@ -1,3 +1,12 @@
+## [0.38.3](https://github.com/idbi/components/compare/v0.38.2...v0.38.3) (2023-05-16)
+
+
+### Bug Fixes
+
+* support theme change for Button color ([5be6ecd](https://github.com/idbi/components/commit/5be6ecd4bf12be653f41bbd3b9be40564e7852df))
+
+
+
 ## [0.38.2](https://github.com/idbi/components/compare/v0.38.1...v0.38.2) (2023-05-15)
 
 
@@ -31,19 +40,6 @@
 ### Features
 
 * [POS-15062] options modal render list prop ([81c5a3e](https://github.com/idbi/components/commit/81c5a3e66f96c64e4bb7ed9d4f9a358d34f57f04))
-
-
-
-# [0.36.0](https://github.com/idbi/components/compare/v0.35.1...v0.36.0) (2023-04-12)
-
-
-### Features
-
-* add noDisplay property in UploadMedia ([72bcd1f](https://github.com/idbi/components/commit/72bcd1fc943d526fef5e1a97b420d4645f3833d5))
-* adjust IdiTrash with IconV2 container ([2b9a0aa](https://github.com/idbi/components/commit/2b9a0aa7452d18fef8ab4908916fd1e6fc2d224f))
-* create UploadMedia component ([58d7b0f](https://github.com/idbi/components/commit/58d7b0f564ae958dfce07bf9d841bd7a01d1e133))
-* create UploadMultiMedia component ([e94815c](https://github.com/idbi/components/commit/e94815cbf4b2d9f746fa38f11f64a1e6e7816aa4))
-* update build ([9b6a2ce](https://github.com/idbi/components/commit/9b6a2cefb0c8d44d5352bce219a332807912dec3))
 
 
 
