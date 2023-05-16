@@ -1,3 +1,12 @@
+## [0.38.4](https://github.com/idbi/components/compare/v0.38.3...v0.38.4) (2023-05-16)
+
+
+### Bug Fixes
+
+* change button color by theme ([5aa55f6](https://github.com/idbi/components/commit/5aa55f65f8c09f640ee2effd0b740d6477a39f97))
+
+
+
 ## [0.38.3](https://github.com/idbi/components/compare/v0.38.2...v0.38.3) (2023-05-16)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * adjust ButtonsSwitch, fix wrapper of icons and create BaseTextArea ([f75eb0f](https://github.com/idbi/components/commit/f75eb0f372ae98aa13bc218813fc1d0bdf7851bb))
-
-
-
-# [0.37.0](https://github.com/idbi/components/compare/v0.36.0...v0.37.0) (2023-04-21)
-
-
-### Features
-
-* [POS-15062] options modal render list prop ([81c5a3e](https://github.com/idbi/components/commit/81c5a3e66f96c64e4bb7ed9d4f9a358d34f57f04))
 
 
 
