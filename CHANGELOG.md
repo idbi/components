@@ -1,3 +1,12 @@
+## [0.39.1](https://github.com/idbi/components/compare/v0.39.0...v0.39.1) (2023-05-17)
+
+
+### Bug Fixes
+
+* convert type imports to relative paths ([099ff23](https://github.com/idbi/components/commit/099ff237ae6f85b80320431b47965d272591f746))
+
+
+
 # [0.39.0](https://github.com/idbi/components/compare/v0.38.4...v0.39.0) (2023-05-17)
 
 
@@ -46,15 +55,6 @@
 ### Bug Fixes
 
 * export icons ([b881cda](https://github.com/idbi/components/commit/b881cdaf98efccda8b5171cd99e0b3217c1fc8aa))
-
-
-
-## [0.38.1](https://github.com/idbi/components/compare/v0.38.0...v0.38.1) (2023-05-15)
-
-
-### Bug Fixes
-
-* export BaseTextArea ([546d692](https://github.com/idbi/components/commit/546d692c31d191cda308aa75de3a0299cbc90dbc))
 
 
 
