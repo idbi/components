@@ -1,6 +1,6 @@
 import React from "react";
 import { IIcon } from "./types";
-import { SvgWrapper } from "./SvgWrapper";
+import { IconV2 } from "../icons-v2/IconV2";
 
 export const IdiMinus: React.FC<IIcon> = ({
   size = 20,
@@ -9,14 +9,7 @@ export const IdiMinus: React.FC<IIcon> = ({
   style,
 }) => {
   return (
-    <SvgWrapper
-      onClick={onClick}
-      size={size}
-      style={style}
-      svgProps={{
-        viewBox: "0 0 15 2",
-      }}
-    >
+    <IconV2 onClick={onClick} size={size} style={style} viewBox="0 0 15 2">
       <path
         xmlns="http://www.w3.org/2000/svg"
         d="M1.88086 1H13.8809"
@@ -25,6 +18,6 @@ export const IdiMinus: React.FC<IIcon> = ({
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </SvgWrapper>
+    </IconV2>
   );
 };

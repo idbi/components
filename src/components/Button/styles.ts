@@ -28,27 +28,28 @@ export const Button = styled(BaseButton)<IButton>`
 
   ${({ size }) => getSize({ size })};
   ${({ shape }) => getShape({ shape })};
-  ${({ design, color, fontColor }) => getDesign({ design, color, fontColor })};
+  ${({ design, color, fontColor, theme }) =>
+    getDesign({ design, color, fontColor, theme })};
   ${({ fullWidth }) => getFullWidth({ fullWidth })};
   ${({ disabled }) => getDisabled({ disabled })};
   ${({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px }) =>
     getSpacing({ m, mb, mt, mr, ml, my, mx, p, pb, pt, pr, pl, py, px })};
 
   &:hover:not(:disabled) {
-    background-color: ${({ color, design }) => {
+    background-color: ${({ color, design, theme }) => {
       if (design === "link") {
         return "transparent";
       }
-      return getColor({ color, design, hover: true });
+      return getColor({ color, design, hover: true, theme });
     }};
   }
 
   &:active {
-    background-color: ${({ color, design }) => {
+    background-color: ${({ color, design, theme }) => {
       if (design === "link") {
         return "transparent";
       }
-      return getColor({ color, design, hover: true });
+      return getColor({ color, design, hover: true, theme });
     }};
   }
 

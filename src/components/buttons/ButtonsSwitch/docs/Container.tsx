@@ -4,7 +4,13 @@ import { IButtonsSwitch } from "../types";
 
 export type IButtonsSwitchContainer = Pick<
   IButtonsSwitch,
-  "options" | "model" | "disabled" | "fullWidth" | "equalBtns"
+  | "options"
+  | "model"
+  | "disabled"
+  | "fullWidth"
+  | "equalBtns"
+  | "style"
+  | "styleButtons"
 >;
 
 export const ButtonsSwitch = (props: IButtonsSwitchContainer) => {
