@@ -43,6 +43,7 @@ export { ClientCard } from "@/components/cards/ClientCard";
 export { ToastCard } from "@/components/cards/ToastCard";
 export { IDCard } from "@/components/cards/IDCard";
 export { OrderCard } from "@/components/cards/OrderCard";
+export { SectionedCard } from "@/components/cards/SectionedCard";
 // PRODUCT CARDS
 export { CartProduct } from "@/components/product-cards/CartProduct";
 export { CartProductV2 } from "@/components/product-cards/CartProductV2";
@@ -66,6 +67,8 @@ export { SelectField } from "@/components/SelectField";
 export { TextField } from "@/components/TextField";
 export { DateRangePicker } from "@/components/forms/DateRangePicker";
 export { RadioButton } from "@/components/forms/RadioButton";
+export { DetailedField } from "@/components/forms/DetailedField";
+export { DetailedInput } from "@/components/forms/DetailedInput";
 // MODALS
 export { CardModal } from "@/components/modals/CardModal";
 export { MultipleOptionsModal } from "@/components/modals/MultipleOptionsModal";
@@ -91,6 +94,7 @@ export { SectionHeader } from "@/components/headers/SectionHeader";
 export { OrderTypeHeader } from "@/components/headers/OrderTypeHeader";
 // FOOTERS
 export { SimpleFooter } from "@/components/footers/SimpleFooter";
+export { Footer } from "@/components/footers/Footer";
 // SELECTS
 export { ButtonsSelect } from "@/components/ButtonsSelect";
 // REPORTS
@@ -100,6 +104,13 @@ export { KpiCardV2 } from "@/components/reports/KpiCardV2";
 export { Map } from "@/components/MapsSelection";
 // MENUS
 export { CarouselMenu } from "@/components/menus/CarouselMenu";
+// ITEMS
+export { ProductItem } from "@/components/items/ProductItem";
+export { UserItem } from "@/components/items/UserItem";
+// UTILS
+export { Characteristics } from "@/components/utils/Characteristics";
+export { TotalFooter } from "@/components/utils/TotalFooter";
+export { Reference } from "@/components/utils/Reference";
 // ICONS
 export { IdiActivity } from "./icons/IdiActivity";
 export { IdiArrowBottom } from "./icons/IdiArrowBottom";

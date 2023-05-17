@@ -43,6 +43,7 @@ export { ClientCard } from "./components/cards/ClientCard/types";
 export { ToastCard } from "./components/cards/ToastCard/types";
 export { IDCard } from "./components/cards/IDCard/types";
 export { OrderCard } from "./components/cards/OrderCard/types";
+export { SectionedCard } from "@/components/cards/SectionedCard/types";
 // PRODUCT CARDS
 export { CartProduct } from "./components/product-cards/CartProduct/types";
 export { CartProductV2 } from "./components/product-cards/CartProductV2/types";
@@ -66,6 +67,8 @@ export { SelectField } from "./components/SelectField/types";
 export { TextField } from "./components/TextField/types";
 export { DateRangePicker } from "./components/forms/DateRangePicker/types";
 export { RadioButton } from "./components/forms/RadioButton/types";
+export { DetailedField } from "@/components/forms/DetailedField/types";
+export { DetailedInput } from "@/components/forms/DetailedInput/types";
 // MODALS
 export { Backdrop } from "./components/modals/ModalContainer/Backdrop/types";
 export { ModalContainer } from "./components/modals/ModalContainer/types";
@@ -93,6 +96,7 @@ export { SectionHeader } from "./components/headers/SectionHeader/types";
 export { OrderTypeHeader } from "./components/headers/OrderTypeHeader/types";
 // FOOTERS
 export { SimpleFooter } from "./components/footers/SimpleFooter/types";
+export { Footer } from "@/components/footers/Footer/types";
 // SELECTS
 export { ButtonsSelect } from "./components/ButtonsSelect/types";
 // REPORTS
@@ -102,6 +106,13 @@ export { KpiCardV2 } from "./components/reports/KpiCardV2/types";
 export { Map } from "./components/MapsSelection/types";
 // MENUS
 export { CarouselMenu } from "./components/menus/CarouselMenu/types";
+// ITEMS
+export { ProductItem } from "@/components/items/ProductItem/types";
+export { UserItem } from "@/components/items/UserItem/types";
+// UTILS
+export { Characteristics } from "@/components/utils/Characteristics/types";
+export { TotalFooter } from "@/components/utils/TotalFooter/types";
+export { Reference } from "@/components/utils/Reference/types";
 // ICONS
 export {
   IdiActivity,
