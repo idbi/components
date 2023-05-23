@@ -129,6 +129,7 @@ export const StyledCardModal = styled.div<CardModalType>`
 interface CloseIconProps {
   closeIcon?: boolean;
   closeIconInDesktop?: boolean;
+  zIndex?: number;
 }
 
 export const CloseIcon = styled.div<CloseIconProps>`
@@ -145,6 +146,7 @@ export const CloseIcon = styled.div<CloseIconProps>`
   right: 20px;
   font-size: 11px;
   cursor: pointer;
+  z-index: ${({ zIndex }) => zIndex || 1};
   @media screen and (min-width: 1024px) {
     display: ${({ closeIconInDesktop }) =>
       closeIconInDesktop ? "flex" : "none"};

@@ -22,6 +22,7 @@ export const CardModal: React.FC<ICardModal> = ({
   contentLocationInDesktop = "center",
   closeIcon,
   closeIconInDesktop,
+  closeIcon_zIndex = 1,
   background = "#fff",
   boxShadow,
   boxShadowInDesktop,
@@ -58,6 +59,7 @@ export const CardModal: React.FC<ICardModal> = ({
             onClick={onClose}
             closeIconInDesktop={closeIconInDesktop}
             closeIcon={closeIcon}
+            zIndex={closeIcon_zIndex}
           >
             <IconClose />
           </CloseIcon>
