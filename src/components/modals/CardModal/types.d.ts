@@ -19,6 +19,7 @@ export interface ICardModal extends IModalContainer {
   boxShadow?: string;
   boxShadowInDesktop?: string;
   styleContainer?: CSSProperties;
+  closeIcon_zIndex?: number;
 }
 
 export declare const CardModal: (props: ICardModal) => JSX.Element;
