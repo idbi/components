@@ -1,3 +1,12 @@
+## [0.39.3](https://github.com/idbi/components/compare/v0.39.2...v0.39.3) (2023-05-31)
+
+
+### Bug Fixes
+
+* adjust RadioButton for wide text ([665f12b](https://github.com/idbi/components/commit/665f12b8f82a10df3297bebb3022660d549254ce))
+
+
+
 ## [0.39.2](https://github.com/idbi/components/compare/v0.39.1...v0.39.2) (2023-05-23)
 
 
@@ -46,15 +55,6 @@
 ### Bug Fixes
 
 * change button color by theme ([5aa55f6](https://github.com/idbi/components/commit/5aa55f65f8c09f640ee2effd0b740d6477a39f97))
-
-
-
-## [0.38.3](https://github.com/idbi/components/compare/v0.38.2...v0.38.3) (2023-05-16)
-
-
-### Bug Fixes
-
-* support theme change for Button color ([5be6ecd](https://github.com/idbi/components/commit/5be6ecd4bf12be653f41bbd3b9be40564e7852df))
 
 
 
