@@ -36554,12 +36554,12 @@ const Kh = ({
   });
 }, n0 = x.div`
   width: 100%;
-  height: 50px;
   display: flex;
   gap: 6px;
   align-items: center;
   border-radius: 8px;
-  border: 1px solid ${({ theme: t }) => t.color.SECONDARY[100]};
+  border: 1px solid
+    ${({ isActive: t, theme: e }) => t ? e.color.SECONDARY[900] : e.color.SECONDARY[100]};
   background: #fff;
   position: relative;
   box-sizing: border-box;
@@ -36571,9 +36571,7 @@ const Kh = ({
   }
 
   label {
-    position: absolute;
-    padding: 14px 45px;
-    padding-right: 14px;
+    padding: 14px;
     width: 100%;
     color: ${({ theme: t }) => t.color.NEUTRAL[700]};
     font: normal 16px "Poppins";
@@ -36592,21 +36590,9 @@ const Kh = ({
     padding: 9px;
     border-radius: 50px;
     display: inline-block;
+    position: relative;
     margin: 0;
     margin-left: 13px;
-
-    &:checked::before {
-      content: "";
-      display: block;
-      width: calc(100% + 2px);
-      height: calc(100% + 2px);
-      position: absolute;
-      top: -1px;
-      left: -1px;
-      border-radius: 8px;
-      border: 1.5px solid ${({ theme: t }) => t.color.SECONDARY[900]};
-      cursor: pointer;
-    }
 
     &:checked:after {
       content: " ";
@@ -36614,8 +36600,8 @@ const Kh = ({
       height: 14px;
       border-radius: 50px;
       position: absolute;
-      top: 17px;
-      left: 17px;
+      top: 2px;
+      left: 2px;
       background: ${({ theme: t }) => t.color.SECONDARY[900]};
       text-shadow: 0px;
       font-size: 32px;
@@ -36640,6 +36626,7 @@ const Kh = ({
   text: t,
   ...e
 }) => /* @__PURE__ */ w(n0, {
+  isActive: (e == null ? void 0 : e.checked) || !1,
   children: [/* @__PURE__ */ m("input", {
     type: "radio",
     ...e

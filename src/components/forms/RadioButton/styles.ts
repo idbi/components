@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{ isActive: boolean }>`
   width: 100%;
-  height: 50px;
   display: flex;
   gap: 6px;
   align-items: center;
   border-radius: 8px;
-  border: 1px solid ${({ theme }) => theme.color.SECONDARY[100]};
+  border: 1px solid
+    ${({ isActive, theme }) =>
+      isActive ? theme.color.SECONDARY[900] : theme.color.SECONDARY[100]};
   background: #fff;
   position: relative;
   box-sizing: border-box;
@@ -19,9 +20,7 @@ export const Container = styled.div`
   }
 
   label {
-    position: absolute;
-    padding: 14px 45px;
-    padding-right: 14px;
+    padding: 14px;
     width: 100%;
     color: ${({ theme }) => theme.color.NEUTRAL[700]};
     font: normal 16px "Poppins";
@@ -40,21 +39,9 @@ export const Container = styled.div`
     padding: 9px;
     border-radius: 50px;
     display: inline-block;
+    position: relative;
     margin: 0;
     margin-left: 13px;
-
-    &:checked::before {
-      content: "";
-      display: block;
-      width: calc(100% + 2px);
-      height: calc(100% + 2px);
-      position: absolute;
-      top: -1px;
-      left: -1px;
-      border-radius: 8px;
-      border: 1.5px solid ${({ theme }) => theme.color.SECONDARY[900]};
-      cursor: pointer;
-    }
 
     &:checked:after {
       content: " ";
@@ -62,8 +49,8 @@ export const Container = styled.div`
       height: 14px;
       border-radius: 50px;
       position: absolute;
-      top: 17px;
-      left: 17px;
+      top: 2px;
+      left: 2px;
       background: ${({ theme }) => theme.color.SECONDARY[900]};
       text-shadow: 0px;
       font-size: 32px;

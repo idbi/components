@@ -3335,12 +3335,12 @@ ${({theme:t,withBorder:e,color:a})=>e&&P.css`
   }
 `,Gh=({onGetFilters:t,initState:e,showIconCalendar:a=!0,showTimeInputs:n=!1,direction:i="horizontal",dateFormatDisplayed:d="detailed",initWithToday:o=!1,...r})=>{const s=k.useRef(null),[u,l]=k.useState({from:"00:00",to:"23:59"}),[h,v]=k.useState(!1),[c,p]=k.useState(e?[e]:[{startDate:o?new Date(Date.now()):void 0,endDate:o?new Date(Date.now()):void 0,key:"selection"}]),g=x=>{var m,L;if((c==null?void 0:c.length)>0&&((m=c[0])==null?void 0:m.startDate)&&((L=c[0])==null?void 0:L.endDate)){const{startDate:T,endDate:N}=c[0],j=x==="from"?T:N;let E="";return n?E=d==="simple"?"dd/MM/yyyy HH:mm":"dd 'de' MMMM 'del' YYY hh:mm aaaaa'm'":E=d==="simple"?"dd/MM/yyyy":"dd 'de' MMMM 'del' YYY",bs.format(j,E,{locale:Ne.es})}},w=(x,m)=>{l(L=>({...L,[m]:x}))},y=x=>{var m,L,T,N;if(x)t(null),p([{startDate:void 0,endDate:void 0,key:"selection"}]);else{const[j,E]=(m=u==null?void 0:u.from)==null?void 0:m.split(":"),[$,Nu]=(L=u==null?void 0:u.to)==null?void 0:L.split(":");let R,oe;if((T=c[0])!=null&&T.startDate&&(R=new Date(c[0].startDate),R.setHours(Number(j||0),Number(E||0),0)),(N=c[0])!=null&&N.endDate&&(oe=new Date(c[0].endDate),oe.setHours(Number($||23),Number(Nu||59),59)),R&&R){const be={...c[0],startDate:R,endDate:oe};p([be]),t(be)}}v(!1)};return k.useEffect(()=>{const x=m=>{var L;h&&s.current&&!((L=s.current)!=null&&L.contains(m.target))&&v(!1)};return document.addEventListener("mousedown",x),()=>{document.removeEventListener("mousedown",x)}},[h]),f.jsxs(Yh,{ref:s,children:[f.jsxs(Bh,{onClick:()=>v(!0),children:[a&&f.jsx(qh,{}),g("from")?f.jsx("p",{children:`${g("from")} - ${g("to")}`}):f.jsx("p",{style:{fontSize:"0.875rem"},children:"Seleccione una fecha"})]}),h&&f.jsxs(Zh,{children:[f.jsx(ws.DateRange,{onChange:x=>{var L,T;const m=Object.values(x);!Array.isArray(m)||(m==null?void 0:m.length)<1||p([{...c[0],startDate:(L=m[0])==null?void 0:L.startDate,endDate:(T=m[0])==null?void 0:T.endDate}])},showSelectionPreview:!0,moveRangeOnFirstSelection:!1,months:1,ranges:c,direction:i,locale:Ne.es,...r}),f.jsxs(Xh,{children:[n&&f.jsxs(Qh,{children:[f.jsxs("div",{children:[f.jsx(O,{as:"label",htmlFor:"hour-from",children:"desde:"}),f.jsx("input",{type:"time",id:"hour-from",value:u.from,onChange:x=>w(x.target.value,"from")})]}),f.jsxs("div",{children:[f.jsx(O,{as:"label",htmlFor:"hour-to",children:"hasta:"}),f.jsx("input",{type:"time",id:"hour-to",defaultValue:u.to,onChange:x=>w(x.target.value,"to")})]})]}),f.jsx(I,{size:"xs",py:"5px",onClick:()=>y(!1),children:"Aplicar"})]})]})]})},Uh=b.default.div`
   width: 100%;
-  height: 50px;
   display: flex;
   gap: 6px;
   align-items: center;
   border-radius: 8px;
-  border: 1px solid ${({theme:t})=>t.color.SECONDARY[100]};
+  border: 1px solid
+    ${({isActive:t,theme:e})=>t?e.color.SECONDARY[900]:e.color.SECONDARY[100]};
   background: #fff;
   position: relative;
   box-sizing: border-box;
@@ -3352,9 +3352,7 @@ ${({theme:t,withBorder:e,color:a})=>e&&P.css`
   }
 
   label {
-    position: absolute;
-    padding: 14px 45px;
-    padding-right: 14px;
+    padding: 14px;
     width: 100%;
     color: ${({theme:t})=>t.color.NEUTRAL[700]};
     font: normal 16px "Poppins";
@@ -3373,21 +3371,9 @@ ${({theme:t,withBorder:e,color:a})=>e&&P.css`
     padding: 9px;
     border-radius: 50px;
     display: inline-block;
+    position: relative;
     margin: 0;
     margin-left: 13px;
-
-    &:checked::before {
-      content: "";
-      display: block;
-      width: calc(100% + 2px);
-      height: calc(100% + 2px);
-      position: absolute;
-      top: -1px;
-      left: -1px;
-      border-radius: 8px;
-      border: 1.5px solid ${({theme:t})=>t.color.SECONDARY[900]};
-      cursor: pointer;
-    }
 
     &:checked:after {
       content: " ";
@@ -3395,8 +3381,8 @@ ${({theme:t,withBorder:e,color:a})=>e&&P.css`
       height: 14px;
       border-radius: 50px;
       position: absolute;
-      top: 17px;
-      left: 17px;
+      top: 2px;
+      left: 2px;
       background: ${({theme:t})=>t.color.SECONDARY[900]};
       text-shadow: 0px;
       font-size: 32px;
@@ -3417,7 +3403,7 @@ ${({theme:t,withBorder:e,color:a})=>e&&P.css`
         inset 0px 1px 3px rgba(0, 0, 0, 0.1);
     }
   }
-`,Rh=({text:t,...e})=>f.jsxs(Uh,{children:[f.jsx("input",{type:"radio",...e}),f.jsx("label",{htmlFor:e==null?void 0:e.id,children:t})]}),Jh=b.default.div`
+`,Rh=({text:t,...e})=>f.jsxs(Uh,{isActive:(e==null?void 0:e.checked)||!1,children:[f.jsx("input",{type:"radio",...e}),f.jsx("label",{htmlFor:e==null?void 0:e.id,children:t})]}),Jh=b.default.div`
   color: ${({theme:t})=>t.color.NEUTRAL[600]};
   font-size: 14px;
 
