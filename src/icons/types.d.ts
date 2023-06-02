@@ -43,6 +43,7 @@ export declare const IdiPreparing: (props: IIcon) => JSX.Element;
 export declare const IdiArrowRightV2: (props: IIcon) => JSX.Element;
 export declare const IdiSearch: (props: IIcon) => JSX.Element;
 export declare const IdiTrash: (props: IIcon) => JSX.Element;
+export declare const IdiTrashV2: (props: IIcon) => JSX.Element;
 export declare const IdiTruck: (props: IIcon) => JSX.Element;
 export declare const IdiWarning: (props: IIcon) => JSX.Element;
 export declare const IdiImage: (props: IIcon) => JSX.Element;

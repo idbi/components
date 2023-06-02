@@ -147,6 +147,7 @@ export { IdiPreparing } from "./icons/IdiPreparing";
 export { IdiArrowRightV2 } from "./icons/IdiArrowRightV2";
 export { IdiSearch } from "./icons/IdiSearch";
 export { IdiTrash } from "./icons/IdiTrash";
+export { IdiTrashV2 } from "./icons/IdiTrashV2";
 export { IdiTruck } from "./icons/IdiTruck";
 export { IdiWarning } from "./icons/IdiWarning";
 export { IdiImage } from "./icons/IdiImage";

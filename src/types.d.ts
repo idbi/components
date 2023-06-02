@@ -150,6 +150,7 @@ export {
   IdiArrowRightV2,
   IdiSearch,
   IdiTrash,
+  IdiTrashV2,
   IdiTruck,
   IdiWarning,
   IdiImage,
