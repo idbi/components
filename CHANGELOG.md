@@ -1,3 +1,12 @@
+## [0.39.4](https://github.com/idbi/components/compare/v0.39.3...v0.39.4) (2023-06-02)
+
+
+### Bug Fixes
+
+* create icon IdiTrashV2 ([a460a9d](https://github.com/idbi/components/commit/a460a9dfcbac0efd099889699e5027a08b403922))
+
+
+
 ## [0.39.3](https://github.com/idbi/components/compare/v0.39.2...v0.39.3) (2023-05-31)
 
 
@@ -46,15 +55,6 @@
 * [POS-15401-2] create detailed input ([5846b56](https://github.com/idbi/components/commit/5846b56a6d990933e0c415add023fc3b85c64264))
 * [POS-15402] create total footer ([6cab045](https://github.com/idbi/components/commit/6cab045899008db7cd5acfae8df0782cf11ca0e1))
 * [POS-15478-1] export new components-declarations ([b582188](https://github.com/idbi/components/commit/b58218872038862b94e298a3828bf1f97bb2dba7))
-
-
-
-## [0.38.4](https://github.com/idbi/components/compare/v0.38.3...v0.38.4) (2023-05-16)
-
-
-### Bug Fixes
-
-* change button color by theme ([5aa55f6](https://github.com/idbi/components/commit/5aa55f65f8c09f640ee2effd0b740d6477a39f97))
 
 
 
