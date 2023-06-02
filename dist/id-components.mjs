@@ -39872,6 +39872,51 @@ const Ov = x.div`
   onClick: a,
   style: n
 }) => /* @__PURE__ */ w(L, {
+  viewBox: "0 0 40 40",
+  fill: "transparent",
+  size: t,
+  style: n,
+  onClick: a,
+  children: [/* @__PURE__ */ m("path", {
+    d: "M14.6832 3.33331L8.6499 9.38331",
+    stroke: e,
+    strokeWidth: "3",
+    strokeMiterlimit: "10",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /* @__PURE__ */ m("path", {
+    d: "M25.3169 3.33331L31.3502 9.38331",
+    stroke: e,
+    strokeWidth: "3",
+    strokeMiterlimit: "10",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /* @__PURE__ */ m("path", {
+    d: "M3.3335 13.0833C3.3335 10 4.9835 9.75 7.0335 9.75H32.9668C35.0168 9.75 36.6668 10 36.6668 13.0833C36.6668 16.6667 35.0168 16.4167 32.9668 16.4167H7.0335C4.9835 16.4167 3.3335 16.6667 3.3335 13.0833Z",
+    stroke: e,
+    strokeWidth: "3"
+  }), /* @__PURE__ */ m("path", {
+    d: "M16.2666 23.3333V29.25",
+    stroke: e,
+    strokeWidth: "3",
+    strokeLinecap: "round"
+  }), /* @__PURE__ */ m("path", {
+    d: "M23.9331 23.3333V29.25",
+    stroke: e,
+    strokeWidth: "3",
+    strokeLinecap: "round"
+  }), /* @__PURE__ */ m("path", {
+    d: "M5.8335 16.6667L8.1835 31.0667C8.71683 34.3 10.0002 36.6667 14.7668 36.6667H24.8168C30.0002 36.6667 30.7668 34.4 31.3668 31.2667L34.1668 16.6667",
+    stroke: e,
+    strokeWidth: "3",
+    strokeLinecap: "round"
+  })]
+}), t2 = ({
+  size: t = 20,
+  color: e = "currentColor",
+  onClick: a,
+  style: n
+}) => /* @__PURE__ */ w(L, {
   onClick: a,
   size: t,
   style: n,
@@ -39909,7 +39954,7 @@ const Ov = x.div`
     strokeLinecap: "round",
     strokeLinejoin: "round"
   })]
-}), t2 = ({
+}), a2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -39930,7 +39975,7 @@ const Ov = x.div`
     d: "M11.001 5.985c.426 0 .77.298.77.665v5.7c0 .367-.344.665-.77.665-.425 0-.77-.298-.77-.665v-5.7c0-.367.345-.665.77-.665ZM11.001 13.585c.426 0 .77.297.77.665v.95c0 .367-.344.665-.77.665-.425 0-.77-.298-.77-.665v-.95c0-.368.345-.665.77-.665Z",
     fill: e
   })]
-}), a2 = ({
+}), r2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -39944,7 +39989,7 @@ const Ov = x.div`
     d: "M1 5.923H0h1Zm0 22.154H0h1ZM29.77 33v-1 1ZM6.23 33v1-1ZM35 5.923h1-1Zm0 22.154h-1 1ZM29.77 1V0v1ZM6.23 1v1-1Zm2.616 14.77.686-.729a1 1 0 0 0-1.371 0l.685.728Zm17.622 17.958a1 1 0 0 0 1.371-1.456l-1.37 1.456Zm7.847-6.154a1 1 0 0 0 1.37-1.456l-1.37 1.456Zm-7.161-8.113.685-.728a1 1 0 0 0-1.37 0l.685.729Zm-7.192 6.77-.686.728.686-.728ZM29.769 32H6.231v2h23.538v-2ZM34 5.923v22.154h2V5.923h-2ZM29.77 0H6.23v2h23.54V0ZM36 5.923C36 2.596 33.152 0 29.77 0v2C32.163 2 34 3.813 34 5.923h2Zm-34 0C2 3.813 3.836 2 6.23 2V0C2.849 0 0 2.596 0 5.923h2ZM0 28.077C0 31.404 2.848 34 6.23 34v-2C3.837 32 2 30.187 2 28.077H0ZM29.77 34c3.382 0 6.23-2.596 6.23-5.923h-2C34 30.187 32.164 32 29.77 32v2Zm-1-24.385c0 1.431-1.252 2.693-2.924 2.693v2c2.661 0 4.923-2.045 4.923-4.693h-2Zm-2.924 2.693c-1.672 0-2.923-1.262-2.923-2.693h-2c0 2.648 2.262 4.693 4.923 4.693v-2Zm-2.923-2.693c0-1.43 1.25-2.692 2.923-2.692v-2c-2.66 0-4.923 2.045-4.923 4.692h2Zm2.923-2.692c1.672 0 2.923 1.262 2.923 2.692h2c0-2.647-2.262-4.692-4.923-4.692v2Zm9.84 19.195-7.847-7.385-1.37 1.457 7.846 7.384 1.37-1.456ZM8.16 16.498l11.115 10.461 1.37-1.456L9.533 15.04 8.16 16.497Zm11.115 10.461 7.192 6.77 1.371-1.457-7.192-6.77-1.37 1.457Zm7.192-8.226-7.192 6.77 1.37 1.456 7.193-6.77-1.37-1.456ZM0 5.923v17.23h2V5.924H0Zm0 17.23v4.924h2v-4.923H0Zm1.685.729 7.847-7.385-1.371-1.456-7.846 7.385 1.37 1.456Z",
     fill: e
   })
-}), r2 = ({
+}), n2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -39980,7 +40025,7 @@ const Ov = x.div`
     strokeLinecap: "round",
     strokeLinejoin: "round"
   })]
-}), n2 = ({
+}), i2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -39994,7 +40039,7 @@ const Ov = x.div`
     d: "M21.429 6.923h-1 1Zm0 12.692h1-1ZM5.086 23v1-1Zm12.257 0v-1 1ZM1 6.923h1-1Zm0 12.692H0h1ZM17.343 3.538h-1 1Zm0 1.693h1-1Zm-12.257 0h1-1ZM9.42 1.88l.834.551-.834-.551Zm3.586 0 .835-.551-.835.55Zm7.422 5.042v12.692h2V6.923h-2ZM5.086 24h12.257v-2H5.086v2ZM0 6.923v12.692h2V6.923H0Zm2 0c0-1.149 1.197-2.385 3.086-2.385v-2C2.46 2.538 0 4.334 0 6.923h2ZM5.086 22C3.197 22 2 20.764 2 19.615H0C0 22.205 2.461 24 5.086 24v-2Zm15.343-2.385c0 1.15-1.197 2.385-3.086 2.385v2c2.624 0 5.086-1.795 5.086-4.385h-2Zm2-12.692c0-2.59-2.462-4.385-5.086-4.385v2c1.889 0 3.086 1.236 3.086 2.385h2ZM11.214 2c.482 0 .82.223.96.432l1.668-1.102C13.286.49 12.279 0 11.214 0v2Zm-.959.432c.139-.21.477-.432.96-.432V0c-1.066 0-2.073.49-2.628 1.33l1.668 1.102Zm-4.148 1.26H8.15v-2H6.107v2Zm-.021 1.539V3.538h-2v1.693h2Zm10.235-.154H6.107v2h10.214v-2Zm.022-1.539v1.693h2V3.538h-2Zm-2.064.154h2.042v-2H14.28v2Zm4.064-.154c0-1.187-1.09-1.846-2.022-1.846v2c.062 0 .089.022.085.018a.15.15 0 0 1-.034-.046.279.279 0 0 1-.03-.126h2ZM16.32 7.077c.932 0 2.022-.659 2.022-1.846h-2c0-.05.013-.094.029-.126a.15.15 0 0 1 .034-.046c.004-.003-.023.018-.085.018v2ZM4.086 5.23c0 1.187 1.09 1.846 2.021 1.846v-2c-.062 0-.088-.021-.084-.018a.15.15 0 0 1 .034.046.28.28 0 0 1 .029.126h-2Zm2.021-3.539c-.932 0-2.021.659-2.021 1.846h2a.28.28 0 0 1-.03.126.15.15 0 0 1-.033.046c-.004.004.022-.018.084-.018v-2Zm2.48-.362c-.087.13-.183.233-.27.295-.082.058-.134.067-.167.067v2c1.066 0 1.765-.744 2.105-1.26L8.587 1.33Zm3.586 1.102c.34.516 1.04 1.26 2.106 1.26v-2c-.033 0-.085-.009-.167-.067a1.132 1.132 0 0 1-.27-.295l-1.669 1.102ZM14.357 16.003c0 .537-.225 1-.677 1.387-.447.384-1.012.614-1.695.691v1.985h-.683v-1.957a6.957 6.957 0 0 1-1.306-.138 5.329 5.329 0 0 1-1.139-.35v-1.108h.09a4.41 4.41 0 0 0 1.067.526c.395.136.825.221 1.288.258v-2.369c-.1-.022-.222-.047-.366-.076a6.483 6.483 0 0 1-.365-.094c-.6-.15-1.029-.376-1.288-.68-.256-.303-.384-.676-.384-1.118 0-.52.222-.97.665-1.354.444-.384 1.023-.607 1.738-.67v-1.49h.683v1.48c.363.01.739.058 1.126.142.392.08.711.17.959.269v1.086h-.09a5.535 5.535 0 0 0-.923-.461 3.638 3.638 0 0 0-1.072-.241v2.357c.132.026.254.054.365.083l.3.066c.543.117.963.32 1.258.608.3.289.45.678.45 1.168Zm-3.055-2.007v-2.27c-.36.03-.661.137-.905.324-.244.182-.365.438-.365.767 0 .326.088.578.263.757.18.175.516.316 1.007.422Zm1.923 2.15c0-.344-.096-.598-.287-.763-.192-.164-.51-.288-.953-.372v2.275c.407-.044.715-.155.923-.334.211-.183.317-.452.317-.806Z",
     fill: e
   })
-}), i2 = ({
+}), o2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40012,7 +40057,7 @@ const Ov = x.div`
     stroke: e,
     strokeLinecap: "round"
   })
-}), o2 = ({
+}), d2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40032,7 +40077,7 @@ const Ov = x.div`
       d: "M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"
     })]
   })
-}), d2 = ({
+}), u2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40048,7 +40093,7 @@ const Ov = x.div`
     stroke: e,
     strokeWidth: "1.5"
   })
-}), u2 = ({
+}), l2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40089,7 +40134,7 @@ const Ov = x.div`
     strokeWidth: "1.5",
     strokeLinecap: "round"
   })]
-}), l2 = ({
+}), s2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40106,7 +40151,7 @@ const Ov = x.div`
     d: "M5.99935 0.166992C6.31623 0.166992 6.57312 0.446814 6.57312 0.791992V5.37532L11.2589 5.37532C11.5758 5.37532 11.8327 5.65515 11.8327 6.00032C11.8327 6.3455 11.5758 6.62532 11.2589 6.62532L6.57312 6.62532V11.2087C6.57312 11.5538 6.31623 11.8337 5.99935 11.8337C5.68246 11.8337 5.42558 11.5538 5.42558 11.2087V6.62532L0.739786 6.62533C0.422901 6.62533 0.166016 6.3455 0.166016 6.00033C0.166016 5.65515 0.422901 5.37533 0.739786 5.37533L5.42558 5.37532V0.791992C5.42558 0.446814 5.68246 0.166992 5.99935 0.166992Z",
     fill: e
   })
-}), s2 = ({
+}), f2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40130,7 +40175,7 @@ const Ov = x.div`
     stroke: e,
     strokeLinecap: "round"
   })]
-}), f2 = ({
+}), m2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40146,7 +40191,7 @@ const Ov = x.div`
       fill: e
     })
   })
-}), m2 = ({
+}), c2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40166,7 +40211,7 @@ const Ov = x.div`
     d: "M6.81641 5.85938C6.40219 5.85938 6.06641 6.19516 6.06641 6.60938C6.06641 7.02359 6.40219 7.35938 6.81641 7.35938V5.85938ZM11.4098 7.35938C11.824 7.35938 12.1598 7.02359 12.1598 6.60938C12.1598 6.19516 11.824 5.85938 11.4098 5.85938V7.35938ZM6.81641 8.73025C6.40219 8.73025 6.06641 9.06604 6.06641 9.48025C6.06641 9.89447 6.40219 10.2303 6.81641 10.2303V8.73025ZM11.4098 10.2303C11.824 10.2303 12.1598 9.89447 12.1598 9.48025C12.1598 9.06604 11.824 8.73025 11.4098 8.73025V10.2303ZM6.81641 7.35938H11.4098V5.85938H6.81641V7.35938ZM6.81641 10.2303H11.4098V8.73025H6.81641V10.2303Z",
     fill: e
   })]
-}), c2 = ({
+}), h2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40190,7 +40235,7 @@ const Ov = x.div`
     strokeWidth: "1.5",
     strokeLinejoin: "round"
   })]
-}), h2 = ({
+}), v2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40209,7 +40254,7 @@ const Ov = x.div`
       fill: e
     })]
   })
-}), v2 = ({
+}), p2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40226,7 +40271,7 @@ const Ov = x.div`
     r: "4",
     fill: e
   })
-}), p2 = ({
+}), g2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40245,7 +40290,7 @@ const Ov = x.div`
     strokeLinecap: "round",
     strokeLinejoin: "round"
   })
-}), g2 = ({
+}), x2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40283,7 +40328,7 @@ const Ov = x.div`
     d: "M8.6875 5.65625C9.29156 5.65625 9.78125 5.16656 9.78125 4.5625C9.78125 3.95844 9.29156 3.46875 8.6875 3.46875C8.08344 3.46875 7.59375 3.95844 7.59375 4.5625C7.59375 5.16656 8.08344 5.65625 8.6875 5.65625ZM8.6875 6.125C9.55044 6.125 10.25 5.42544 10.25 4.5625C10.25 3.69956 9.55044 3 8.6875 3C7.82456 3 7.125 3.69956 7.125 4.5625C7.125 5.42544 7.82456 6.125 8.6875 6.125Z",
     fill: e
   })]
-}), x2 = ({
+}), y2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40301,7 +40346,7 @@ const Ov = x.div`
     strokeLinecap: "round",
     strokeLinejoin: "round"
   })
-}), y2 = ({
+}), b2 = ({
   size: t = 20,
   color: e = "currentColor",
   onClick: a,
@@ -40360,7 +40405,7 @@ export {
   L as IconV2,
   xp as IdThemeProvider,
   bv as IdiActivity,
-  d2 as IdiArea,
+  u2 as IdiArea,
   jg as IdiArrowBack,
   _g as IdiArrowBottom,
   Yg as IdiArrowDown,
@@ -40369,34 +40414,34 @@ export {
   Kg as IdiArrowRightV2,
   Lg as IdiArrowTop,
   Bg as IdiBag,
-  u2 as IdiBagCheck,
+  l2 as IdiBagCheck,
   cm as IdiBell,
-  h2 as IdiBox,
+  v2 as IdiBox,
   Qg as IdiCalendar,
   Hg as IdiCheck,
   Og as IdiCheckCircle,
-  p2 as IdiCheckV2,
+  g2 as IdiCheckV2,
   Eg as IdiCheckbox,
   Sg as IdiCheckboxChecked,
   Gg as IdiClock,
   Ug as IdiClose,
   Ig as IdiCloseEye,
-  n2 as IdiDollarTemplate,
+  i2 as IdiDollarTemplate,
   Zg as IdiGoogle,
-  g2 as IdiIdentification,
-  a2 as IdiImage,
+  x2 as IdiIdentification,
+  r2 as IdiImage,
   wv as IdiKeyboardBackSpace,
   ju as IdiLogo,
   zg as IdiLogoV2,
-  r2 as IdiMailSent,
+  n2 as IdiMailSent,
   Rg as IdiMenu,
-  s2 as IdiMenuV2,
-  x2 as IdiMinus,
-  i2 as IdiOpenEye,
+  f2 as IdiMenuV2,
+  y2 as IdiMinus,
+  o2 as IdiOpenEye,
   qg as IdiPer,
-  y2 as IdiPickup,
-  l2 as IdiPlus,
-  v2 as IdiPoint,
+  b2 as IdiPickup,
+  s2 as IdiPlus,
+  p2 as IdiPoint,
   Jg as IdiPreparing,
   Fg as IdiProfile,
   Vg as IdiProfileV2,
@@ -40404,15 +40449,16 @@ export {
   Jl as IdiShopTable,
   Ng as IdiShopTableV2,
   Tg as IdiShopTableV3,
-  f2 as IdiStatistic,
-  m2 as IdiTicket,
+  m2 as IdiStatistic,
+  c2 as IdiTicket,
   T0 as IdiTrash,
-  e2 as IdiTruck,
-  c2 as IdiUbication,
+  e2 as IdiTrashV2,
+  t2 as IdiTruck,
+  h2 as IdiUbication,
   Xg as IdiUsa,
   Yc as IdiUser,
-  t2 as IdiWarning,
-  o2 as IdiWarningCircle,
+  a2 as IdiWarning,
+  d2 as IdiWarningCircle,
   bg as KpiCard,
   wg as KpiCardV2,
   Mp as Loader,
