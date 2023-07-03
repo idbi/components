@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import React, { DragEvent, useRef } from "react";
 import { validateFileSize } from "@/utils/validators";
 import { IUploadFile } from "./types";
 
-export const UploadFileContainer = ({
+export const UploadFileContainer = <T extends boolean = false>({
   onSelectFile,
   maxKBSize,
   onError = () => {},
@@ -10,7 +10,8 @@ export const UploadFileContainer = ({
   validFileExtensions,
   children,
   style,
-}: IUploadFile) => {
+  multiple,
+}: IUploadFile<T>) => {
   const fileInput = useRef<HTMLInputElement | null>(null);
   const handleClickFile = () => fileInput.current!.click();
 
@@ -20,31 +21,33 @@ export const UploadFileContainer = ({
     return regex.exec(fileName.toLowerCase());
   };
 
-  const handleFile = (file: File) => {
-    if (!file) return;
-    if (!validateFileExtension(file.name)) {
-      onError("Tipo de archivo no permitido");
-      return;
-    }
-    const result = validateFileSize(file, maxKBSize);
-    if (!result.success) {
-      onError(result.error?.message);
-      return;
-    }
+  const handleFile = (files: File[]) => {
+    if (files.length === 0) return;
 
-    onSelectFile(file);
+    try {
+      files.forEach((file) => {
+        if (!validateFileExtension(file.name)) throw new Error("Tipo de archivo no permitido");
+        if (maxKBSize !== null) {
+          const result = validateFileSize(file, maxKBSize);
+          if (!result.success && result.error) throw new Error(result.error.message);
+        }
+      });
+      onSelectFile((multiple ? files : files[0]) as any);
+    } catch (err) {
+      if (err instanceof Error) onError(err.message);
+    }
   };
 
   const handleChangeFile = () => {
-    const file = fileInput.current!.files![0];
-    handleFile(file);
+    const { files } = fileInput.current!;
+    if (files) handleFile(Array.from(files));
   };
 
-  const handleDropFile = (e: any) => {
+  const handleDropFile = (e: DragEvent<HTMLDivElement>) => {
     e.stopPropagation();
     e.preventDefault();
-    const file = e.dataTransfer.files[0];
-    handleFile(file);
+    const { files } = e.dataTransfer;
+    handleFile(Array.from(files));
   };
 
   return (
@@ -61,6 +64,7 @@ export const UploadFileContainer = ({
         onChange={handleChangeFile}
         type="file"
         accept={acceptedFiles}
+        multiple={multiple}
       />
     </div>
   );

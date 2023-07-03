@@ -1,6 +1,7 @@
-export interface IUploadFile {
-  onSelectFile: (file: File) => void;
-  maxKBSize?: number;
+export interface IUploadFile<Multi extends boolean> {
+  multiple?: Multi;
+  onSelectFile: (file: Multi extends true ? File[] : File) => void;
+  maxKBSize?: number | null;
   onError?: (message?: string) => void;
   acceptedFiles?: string;
   validFileExtensions?: string[];
