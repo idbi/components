@@ -1,3 +1,7 @@
+## [0.40.1](https://github.com/idbi/components/compare/v0.40.0...v0.40.1) (2023-07-03)
+
+
+
 # [0.40.0](https://github.com/idbi/components/compare/v0.39.4...v0.40.0) (2023-07-03)
 
 
@@ -31,15 +35,6 @@
 ### Bug Fixes
 
 * add closeIcon_zIndex property in CardModal component ([8c8b6a6](https://github.com/idbi/components/commit/8c8b6a6254a757ab0d1696bcec4dd5ff94a17725))
-
-
-
-## [0.39.1](https://github.com/idbi/components/compare/v0.39.0...v0.39.1) (2023-05-17)
-
-
-### Bug Fixes
-
-* convert type imports to relative paths ([099ff23](https://github.com/idbi/components/commit/099ff237ae6f85b80320431b47965d272591f746))
 
 
 
