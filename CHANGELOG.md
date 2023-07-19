@@ -1,3 +1,12 @@
+# [0.41.0](https://github.com/idbi/components/compare/v0.40.1...v0.41.0) (2023-07-19)
+
+
+### Features
+
+* [POS-16425] handle edit quantity input maximum value ([b2e5c80](https://github.com/idbi/components/commit/b2e5c8021ad147db4a782b64e9cd1864d321e1b3))
+
+
+
 ## [0.40.1](https://github.com/idbi/components/compare/v0.40.0...v0.40.1) (2023-07-03)
 
 
@@ -26,15 +35,6 @@
 ### Bug Fixes
 
 * adjust RadioButton for wide text ([665f12b](https://github.com/idbi/components/commit/665f12b8f82a10df3297bebb3022660d549254ce))
-
-
-
-## [0.39.2](https://github.com/idbi/components/compare/v0.39.1...v0.39.2) (2023-05-23)
-
-
-### Bug Fixes
-
-* add closeIcon_zIndex property in CardModal component ([8c8b6a6](https://github.com/idbi/components/commit/8c8b6a6254a757ab0d1696bcec4dd5ff94a17725))
 
 
 
