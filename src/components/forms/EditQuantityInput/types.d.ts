@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 type ChangeType = "INCREMENT" | "DECREMENT" | "UPDATE";
 
@@ -6,8 +6,9 @@ export interface IEditQuantityInput {
   value: number | string | null;
   onSetQuantity: (value: number, type?: ChangeType) => void;
   onDelete?: () => void;
-  measureUnit?: string;
+  measureUnit?: ReactNode;
   minimumQuantity?: number;
+  maximumQuantity?: number | null;
   onlyIntegers?: boolean;
   blockInputModal?: boolean;
   disabled?: boolean;

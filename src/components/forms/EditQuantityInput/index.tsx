@@ -10,6 +10,7 @@ export const EditQuantityInput = ({
   onSetQuantity,
   onDelete,
   minimumQuantity = 1,
+  maximumQuantity = null,
   measureUnit,
   onlyIntegers,
   blockInputModal,
@@ -27,11 +28,12 @@ export const EditQuantityInput = ({
 
   const valueNum = Number(value || 0);
   const isMinimumQuantity = value === null || valueNum <= minimumQuantity;
+  const isMaximumQuantity = maximumQuantity !== null && Number(value) >= maximumQuantity;
 
   const handleIncrease = (e: MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     const newValue = valueNum % 1 !== 0 ? Math.ceil(valueNum) : valueNum + 1;
-    onSetQuantity(newValue);
+    onSetQuantity(maximumQuantity !== null ? Math.min(maximumQuantity, newValue) : newValue);
   };
 
   const handleDecrease = (e: MouseEvent<HTMLButtonElement>) => {
@@ -42,12 +44,13 @@ export const EditQuantityInput = ({
     }
 
     const newValue = valueNum % 1 > 0 ? Math.floor(valueNum) : valueNum - 1;
-    onSetQuantity(newValue);
+    onSetQuantity(Math.max(newValue, minimumQuantity));
   };
 
   const confirmQuantityChange = (value: number) => {
     const inputVal = onlyIntegers ? Math.round(value) : value;
-    onSetQuantity(inputVal <= minimumQuantity ? minimumQuantity : inputVal);
+    const minValidatedValue = Math.max(inputVal, minimumQuantity);
+    onSetQuantity(maximumQuantity !== null ? Math.min(maximumQuantity, minValidatedValue) : minValidatedValue);
     setShowModal(false);
   };
 
@@ -68,7 +71,11 @@ export const EditQuantityInput = ({
           style={style}
         >
           {!noDecrement && (
-            <button disabled={disabled} onClick={handleDecrease}>
+            <s.ActionButton
+              disabled={disabled || (isMinimumQuantity && !onDelete)}
+              alert={isMinimumQuantity && !!onDelete}
+              onClick={handleDecrease}
+            >
               {isMinimumQuantity && onDelete ? (
                 <s.IconWrapper>
                   <TrashIcon color={theme.color.ALERT[900]} />
@@ -76,15 +83,15 @@ export const EditQuantityInput = ({
               ) : (
                 "-"
               )}
-            </button>
+            </s.ActionButton>
           )}
 
           <s.Span>{`${value === null ? "-" : value} ${(value !== null && measureUnit) || ""}`}</s.Span>
 
           {!noIncrement && (
-            <button onClick={handleIncrease} disabled={disabled}>
+            <s.ActionButton type="button" onClick={handleIncrease} disabled={disabled || isMaximumQuantity}>
               +
-            </button>
+            </s.ActionButton>
           )}
         </s.InputContainer>
       </s.Container>
