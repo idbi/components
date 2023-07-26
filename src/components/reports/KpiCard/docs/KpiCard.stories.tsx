@@ -28,9 +28,19 @@ USACard.args = {
   ...mockKpiCardProps.USACard,
 } as IKpiCard;
 
+export const WithQuantityCard = Template.bind({});
+WithQuantityCard.args = {
+  ...mockKpiCardProps.withQuantityCard,
+} as IKpiCard;
+
 export const MainCard = Template.bind({});
 MainCard.args = {
   ...mockKpiCardProps.mainCard,
+} as IKpiCard;
+
+export const bigAmountsCard = Template.bind({});
+bigAmountsCard.args = {
+  ...mockKpiCardProps.bigAmountsCard,
 } as IKpiCard;
 
 export const LoadingCard = Template.bind({});
