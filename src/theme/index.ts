@@ -41,7 +41,7 @@ export const theme = {
       600: "#8a6fff",
       700: "#7252ff",
       800: "#5b35ff",
-      900: "#4318FF",
+      900: "red",
     },
 
     TERTIARY: {

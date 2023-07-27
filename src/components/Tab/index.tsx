@@ -1,4 +1,3 @@
-import { theme } from "@/theme";
 import React from "react";
 import { ITab } from "./types";
 import * as s from "./styles";
@@ -9,7 +8,7 @@ export const Tab = ({
   tabWidth = 24,
   tabHeight = 4,
   bold = false,
-  activeColor = theme.color.SECONDARY[900],
+  activeColor = "",
   ...rest
 }: ITab) => {
   return (
