@@ -1,3 +1,12 @@
+## [0.41.1](https://github.com/idbi/components/compare/v0.41.0...v0.41.1) (2023-07-27)
+
+
+### Bug Fixes
+
+* use theme in Radio and Tab components ([63eb992](https://github.com/idbi/components/commit/63eb992d4b192e57b99913b6d86f3a679d5afb2a))
+
+
+
 # [0.41.0](https://github.com/idbi/components/compare/v0.40.1...v0.41.0) (2023-07-19)
 
 
@@ -26,15 +35,6 @@
 ### Bug Fixes
 
 * create icon IdiTrashV2 ([a460a9d](https://github.com/idbi/components/commit/a460a9dfcbac0efd099889699e5027a08b403922))
-
-
-
-## [0.39.3](https://github.com/idbi/components/compare/v0.39.2...v0.39.3) (2023-05-31)
-
-
-### Bug Fixes
-
-* adjust RadioButton for wide text ([665f12b](https://github.com/idbi/components/commit/665f12b8f82a10df3297bebb3022660d549254ce))
 
 
 
