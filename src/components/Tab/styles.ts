@@ -34,10 +34,11 @@ export const Tab = styled.button<{
   ${({ isActive, rounded, activeColor, tabWidth, tabFullWidth, tabHeight }) =>
     isActive &&
     css`
-      color: ${activeColor};
+      color: ${({ theme }) => activeColor || theme.color.SECONDARY[900]};
       ::before {
         content: "";
-        background-color: ${activeColor};
+        background-color: ${({ theme }) =>
+          activeColor || theme.color.SECONDARY[900]};
         border-radius: ${rounded ? "8px" : 0};
         width: ${tabFullWidth ? "100%" : `${tabWidth}px`};
         height: ${tabHeight}px;

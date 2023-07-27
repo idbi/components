@@ -25,7 +25,9 @@ export const RadioContainer = styled.div<IRadioContainer>`
 
   input[type="radio"] {
     -webkit-appearance: none !important;
-    border: 2px solid ${({ disabled }) => (disabled ? "gray" : "#4318FF")};
+    border: 2px solid
+      ${({ disabled, theme }) =>
+        disabled ? "gray" : theme.color.SECONDARY[900]};
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
     padding: 9px;
     border-radius: 50px;
@@ -42,7 +44,8 @@ export const RadioContainer = styled.div<IRadioContainer>`
       top: 7px;
       left: 4px;
       // SECONDARY[900]
-      background: ${({ disabled }) => (disabled ? "gray" : "#4318FF")};
+      background: ${({ disabled, theme }) =>
+        disabled ? "gray" : theme.color.SECONDARY[900]};
       text-shadow: 0px;
       font-size: 32px;
     }
