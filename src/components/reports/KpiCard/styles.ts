@@ -12,15 +12,22 @@ export const Container = styled.div<ContainerProps>`
   border-radius: 15px;
   letter-spacing: -0.04em;
   background: ${({ main }) =>
-    main
-      ? "linear-gradient(102.45deg, rgba(211, 217, 255, 0.76) 0.8%, #9BA8FF 101.76%)"
-      : ""};
+    main ? "linear-gradient(102.45deg, rgba(211, 217, 255, 0.76) 0.8%, #9BA8FF 101.76%)" : ""};
   box-shadow: 0 10px 30px 0 rgb(0 0 0 / 8%);
+  display: flex;
 
   @media screen and (min-width: 768px) {
     max-width: ${({ autoWidth }) => (autoWidth ? "auto" : "300px")};
     margin-bottom: 0;
   }
+`;
+
+export const QuantitySection = styled.div`
+  border-right: 1px solid ${({ theme }) => theme.color.NEUTRAL[200]};
+  width: 120px;
+  padding-right: 15px;
+  margin-right: 15px;
+  flex-shrink: 2;
 `;
 
 export const Title = styled.span`
@@ -37,12 +44,12 @@ export const Body = styled.div`
   font-weight: bold;
 `;
 
-export const Money = styled.div`
+export const Money = styled.div<{ big?: boolean }>`
   display: inline-flex;
   align-items: center;
   gap: 5px;
   color: #1b2559;
-  font-size: 18px;
+  font-size: ${({ big }) => (big ? 24 : 18)}px;
 `;
 
 export const Footer = styled.span`

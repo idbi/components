@@ -32,6 +32,15 @@ const USACard: IKpiCard = {
   noDecimals: false,
 };
 
+const withQuantityCard: IKpiCard = {
+  title: "Efectivo",
+  total_USD: 1010.1,
+  main: false,
+  loading: false,
+  noDecimals: false,
+  quantity: { title: "N° de órdenes", value: 20 },
+};
+
 const mainCard: IKpiCard = {
   title: "Efectivo sin decimales and size to 100% ",
   total_USD: 1010.5,
@@ -39,6 +48,17 @@ const mainCard: IKpiCard = {
   tip_USD: 3500,
   main: true,
   noDecimals: true,
+};
+
+const bigAmountsCard: IKpiCard = {
+  title: "Efectivo sin decimales and size to 100% ",
+  total_USD: 1010.5,
+  total_PEN: 1010.5,
+  autoWidth: true,
+  tip_USD: 3500,
+  main: true,
+  noDecimals: true,
+  big: true,
 };
 
 const loadingCard: IKpiCard = {
@@ -53,6 +73,8 @@ export const mockKpiCardProps = {
   defaultCard,
   PERCard,
   USACard,
+  withQuantityCard,
   mainCard,
   loadingCard,
+  bigAmountsCard,
 };

@@ -11,6 +11,8 @@ export interface IKpiCard {
   loading?: boolean;
   noDecimals?: boolean;
   containerStyle?: CSSProperties;
+  quantity?: { title: string; value: number };
+  big?: boolean;
 }
 
 export declare const KpiCard: (props: IKpiCard) => JSX.Element;
