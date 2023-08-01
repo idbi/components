@@ -1,3 +1,7 @@
+## [0.42.1](https://github.com/idbi/components/compare/v0.42.0...v0.42.1) (2023-08-01)
+
+
+
 # [0.42.0](https://github.com/idbi/components/compare/v0.41.1...v0.42.0) (2023-08-01)
 
 
@@ -32,15 +36,6 @@
 
 
 ## [0.40.1](https://github.com/idbi/components/compare/v0.40.0...v0.40.1) (2023-07-03)
-
-
-
-# [0.40.0](https://github.com/idbi/components/compare/v0.39.4...v0.40.0) (2023-07-03)
-
-
-### Features
-
-* [POS-16176] handle multiple files ([37d757b](https://github.com/idbi/components/commit/37d757bb4eae708ae885b9e6296ddeaf904088e7))
 
 
 
