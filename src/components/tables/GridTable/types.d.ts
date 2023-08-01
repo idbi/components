@@ -32,4 +32,4 @@ export interface IGridTable {
   Tr: StyledComponent<"div", DefaultTheme, ITr, never>;
 }
 
-export declare const GridTable: (props: IGridTable) => JSX.Element;
+export declare const GridTable: IGridTable;
