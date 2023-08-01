@@ -101,6 +101,7 @@ export { ButtonsSelect } from "@/components/ButtonsSelect";
 // REPORTS
 export { KpiCard } from "@/components/reports/KpiCard";
 export { KpiCardV2 } from "@/components/reports/KpiCardV2";
+export { SectionedKpi } from "@/components/reports/SectionedKpi";
 // MAPS
 export { Map } from "@/components/MapsSelection";
 // MENUS
