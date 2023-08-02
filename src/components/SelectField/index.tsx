@@ -1,8 +1,8 @@
 import { theme } from "@/theme";
 import React from "react";
-import Skeleton from "react-loading-skeleton";
 import Select from "react-select";
 import { Text } from "../Typography";
+import { Skeleton } from "../skeleton/styles";
 
 import { Container } from "./styles";
 import type { OptionType, SelectFieldProps } from "./types";

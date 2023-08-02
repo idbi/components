@@ -1,5 +1,5 @@
 import React from "react";
-import Skeleton from "react-loading-skeleton";
+import { Skeleton } from "@/components/skeleton/styles";
 import { IconPER } from "@/icons/flags-icons/IconPER";
 import { IconUSA } from "@/icons/flags-icons/IconUSA";
 import { formatNumber } from "@/utils/formatNumber";

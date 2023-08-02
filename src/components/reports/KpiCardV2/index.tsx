@@ -1,5 +1,5 @@
 import React from "react";
-import Skeleton from "react-loading-skeleton";
+import { Skeleton } from "@/components/skeleton/styles";
 import { formatNumber as formatter } from "@/utils/formatNumber";
 import { IdiActivity } from "@/icons/IdiActivity";
 import { IdiKeyboardBackSpace } from "@/icons/IdiKeyboardBackSpace";
@@ -72,9 +72,7 @@ export const KpiCardV2: React.FC<IKpiCardV2> = ({
                 size={14}
                 color={descriptionCompare.isUp ? "#27ae60" : "#ea345f"}
                 style={{
-                  transform: descriptionCompare.isUp
-                    ? "rotate(90deg)"
-                    : "rotate(-90deg)",
+                  transform: descriptionCompare.isUp ? "rotate(90deg)" : "rotate(-90deg)",
                 }}
               />
               {descriptionCompare.value}

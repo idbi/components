@@ -1,5 +1,5 @@
 import React from "react";
-import Skeleton from "react-loading-skeleton";
+import { Skeleton } from "@/components/skeleton/styles";
 import { formatNumber as formatter } from "@/utils/formatNumber";
 import { IconPER } from "../../../icons/flags-icons/IconPER";
 import { IconUSA } from "../../../icons/flags-icons/IconUSA";
@@ -29,24 +29,24 @@ export const KpiCard: React.FC<IKpiCard> = ({
       {loading ? (
         <div>
           <s.Title>
-            <Skeleton width="150px" height="15px" />
+            <Skeleton width="150px" height="16px" />
           </s.Title>
           <s.Body>
             <s.Money style={{ marginRight: "30px" }}>
               <IconPER />{" "}
               <span>
-                <Skeleton width="50px" height="15px" />
+                <Skeleton width="50px" height="16px" />
               </span>
             </s.Money>
             <s.Money>
               <IconUSA />{" "}
               <span>
-                <Skeleton width="50px" height="15px" />
+                <Skeleton width="50px" height="16px" />
               </span>
             </s.Money>
           </s.Body>
           <s.Footer>
-            <Skeleton width="150px" height="15px" />
+            <Skeleton width="150px" height="16px" />
           </s.Footer>
         </div>
       ) : (
