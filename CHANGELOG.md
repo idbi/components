@@ -1,3 +1,7 @@
+## [0.42.2](https://github.com/idbi/components/compare/v0.42.1...v0.42.2) (2023-08-02)
+
+
+
 ## [0.42.1](https://github.com/idbi/components/compare/v0.42.0...v0.42.1) (2023-08-01)
 
 
@@ -32,10 +36,6 @@
 ### Features
 
 * [POS-16425] handle edit quantity input maximum value ([b2e5c80](https://github.com/idbi/components/commit/b2e5c8021ad147db4a782b64e9cd1864d321e1b3))
-
-
-
-## [0.40.1](https://github.com/idbi/components/compare/v0.40.0...v0.40.1) (2023-07-03)
 
 
 
