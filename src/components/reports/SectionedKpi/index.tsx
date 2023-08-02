@@ -1,5 +1,5 @@
 import React from "react";
-import Skeleton from "react-loading-skeleton";
+import { Skeleton } from "@/components/skeleton/styles";
 import { IconPER } from "@/icons/flags-icons/IconPER";
 import { IconUSA } from "@/icons/flags-icons/IconUSA";
 import { formatNumber } from "@/utils/formatNumber";
@@ -26,13 +26,13 @@ export const SectionedKpi: React.FC<ISectionedKpi> = ({ title, sections, onlyInt
               </s.SkeletonWrapper>
             ) : (
               <s.InnerSections>
-                {section.PEN && (
+                {!!section.PEN && (
                   <s.AmountWrapper>
                     <IconPER size={22} />
                     {format(section.PEN)}
                   </s.AmountWrapper>
                 )}
-                {section.USD && (
+                {!!section.USD && (
                   <s.AmountWrapper>
                     <IconUSA size={22} />
                     {format(section.USD)}

@@ -1,8 +1,8 @@
 import React, { UIEvent, useLayoutEffect, useRef, useState } from "react";
-import Skeleton from "react-loading-skeleton";
 import useHorizontalScroll from "@/hooks/useHorizontalScroll";
-import type { ITable } from "./types";
+import { Skeleton } from "@/components/skeleton/styles";
 import { Pagination } from "../Pagination";
+import type { ITable } from "./types";
 import * as s from "./styles";
 
 export const Table: React.FC<ITable> = ({
