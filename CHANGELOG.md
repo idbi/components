@@ -1,3 +1,17 @@
+# [0.43.0](https://github.com/idbi/components/compare/v0.42.2...v0.43.0) (2023-08-02)
+
+
+### Bug Fixes
+
+* fix kpi conditional currencies ([cfe84ab](https://github.com/idbi/components/commit/cfe84abb9ee1c3271ebb4e329f75c2870829dddd))
+
+
+### Features
+
+* create skeleton component ([1521ca5](https://github.com/idbi/components/commit/1521ca517a8712ca89c98675998f7992714907b2))
+
+
+
 ## [0.42.2](https://github.com/idbi/components/compare/v0.42.1...v0.42.2) (2023-08-02)
 
 
@@ -27,15 +41,6 @@
 ### Bug Fixes
 
 * use theme in Radio and Tab components ([63eb992](https://github.com/idbi/components/commit/63eb992d4b192e57b99913b6d86f3a679d5afb2a))
-
-
-
-# [0.41.0](https://github.com/idbi/components/compare/v0.40.1...v0.41.0) (2023-07-19)
-
-
-### Features
-
-* [POS-16425] handle edit quantity input maximum value ([b2e5c80](https://github.com/idbi/components/commit/b2e5c8021ad147db4a782b64e9cd1864d321e1b3))
 
 
 
