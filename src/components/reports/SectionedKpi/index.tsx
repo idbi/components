@@ -26,13 +26,13 @@ export const SectionedKpi: React.FC<ISectionedKpi> = ({ title, sections, onlyInt
               </s.SkeletonWrapper>
             ) : (
               <s.InnerSections>
-                {section.PEN && (
+                {!!section.PEN && (
                   <s.AmountWrapper>
                     <IconPER size={22} />
                     {format(section.PEN)}
                   </s.AmountWrapper>
                 )}
-                {section.USD && (
+                {!!section.USD && (
                   <s.AmountWrapper>
                     <IconUSA size={22} />
                     {format(section.USD)}
