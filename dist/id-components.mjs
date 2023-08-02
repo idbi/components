@@ -405,7 +405,7 @@ const E = {
   b {
     font-weight: bold;
   }
-`, Y = ({
+`, q = ({
   children: t,
   ...e
 }) => /* @__PURE__ */ w(pf, {
@@ -1072,7 +1072,7 @@ const Nf = x.div`
         src: t || "/default-profile.svg",
         alt: "profile",
         referrerPolicy: "no-referrer"
-      }), /* @__PURE__ */ m(Y, {
+      }), /* @__PURE__ */ m(q, {
         type: "button",
         size: "lg",
         design: "flat",
@@ -4365,7 +4365,7 @@ const Kc = x.div`
         value: o,
         onChange: s,
         ref: d
-      }), /* @__PURE__ */ m(Y, {
+      }), /* @__PURE__ */ m(q, {
         design: "solid",
         size: "xs",
         onClick: () => t(u),
@@ -4501,8 +4501,8 @@ const Kc = x.div`
       style: p,
       children: /* @__PURE__ */ w(l1, {
         isDisabled: s,
-        onClick: (F) => {
-          F.stopPropagation(), !(r || s) && M(!0);
+        onClick: (V) => {
+          V.stopPropagation(), !(r || s) && M(!0);
         },
         minQuantity: C,
         canDelete: !!a,
@@ -5632,7 +5632,7 @@ const Kc = x.div`
           },
           disabled: a.disabled,
           children: a.text
-        }), /* @__PURE__ */ m(Y, {
+        }), /* @__PURE__ */ m(q, {
           design: "solid",
           fullWidth: !0,
           onClick: () => n.onClick(),
@@ -5644,7 +5644,7 @@ const Kc = x.div`
           children: n.text
         })]
       })]
-    }), !i && /* @__PURE__ */ m(Y, {
+    }), !i && /* @__PURE__ */ m(q, {
       design: "flat",
       fullWidth: !0,
       onClick: () => a.onClick(),
@@ -5741,7 +5741,7 @@ const Kc = x.div`
     })]
   }), n.length > 0 && /* @__PURE__ */ m(sl, {
     bottom: !0,
-    children: n.map((i, d) => /* @__PURE__ */ m(Y, {
+    children: n.map((i, d) => /* @__PURE__ */ m(q, {
       design: "flat",
       size: "xs",
       fullWidth: !0,
@@ -9104,12 +9104,12 @@ var st = { exports: {} }, ie = { exports: {} };
     return u.getTime() === l.getTime();
   }
   t.exports = e.default;
-})(V, V.exports);
+})(F, F.exports);
 (function(t, e) {
   Object.defineProperty(e, "__esModule", {
     value: !0
   }), e.default = u;
-  var a = n(V.exports);
+  var a = n(F.exports);
   function n(l) {
     return l && l.__esModule ? l : { default: l };
   }
@@ -9529,7 +9529,7 @@ var pt = { exports: {} };
   Object.defineProperty(e, "__esModule", {
     value: !0
   }), e.default = u;
-  var a = n(V.exports);
+  var a = n(F.exports);
   function n(l) {
     return l && l.__esModule ? l : { default: l };
   }
@@ -20783,7 +20783,7 @@ var Mn = { exports: {} };
   Object.defineProperty(e, "__esModule", {
     value: !0
   }), e.default = u;
-  var a = n(V.exports);
+  var a = n(F.exports);
   function n(l) {
     return l && l.__esModule ? l : { default: l };
   }
@@ -22061,7 +22061,7 @@ var In = { exports: {} };
   Object.defineProperty(e, "__esModule", {
     value: !0
   }), e.default = u;
-  var a = n(V.exports);
+  var a = n(F.exports);
   function n(l) {
     return l && l.__esModule ? l : { default: l };
   }
@@ -24250,7 +24250,7 @@ var pi = { exports: {} };
   Object.defineProperty(e, "__esModule", {
     value: !0
   }), e.default = o;
-  var a = n(V.exports);
+  var a = n(F.exports);
   function n(r) {
     return r && r.__esModule ? r : { default: r };
   }
@@ -24655,7 +24655,7 @@ var Mi = { exports: {} };
   Object.defineProperty(e, "__esModule", {
     value: !0
   }), e.default = u;
-  var a = n(V.exports);
+  var a = n(F.exports);
   function n(l) {
     return l && l.__esModule ? l : { default: l };
   }
@@ -27202,7 +27202,7 @@ var fo = { exports: {} };
   Object.defineProperty(e, "__esModule", {
     value: !0
   }), e.default = v;
-  var a = n(V.exports);
+  var a = n(F.exports);
   function n(f) {
     return f && f.__esModule ? f : { default: f };
   }
@@ -28878,7 +28878,7 @@ var jo = { exports: {} };
   Object.defineProperty(e, "__esModule", {
     value: !0
   }), e.default = u;
-  var a = n(V.exports);
+  var a = n(F.exports);
   function n(l) {
     return l && l.__esModule ? l : { default: l };
   }
@@ -29392,7 +29392,7 @@ var Vo = { exports: {} };
   Object.defineProperty(e, "__esModule", {
     value: !0
   }), e.default = u;
-  var a = n(V.exports);
+  var a = n(F.exports);
   function n(l) {
     return l && l.__esModule ? l : { default: l };
   }
@@ -33974,7 +33974,7 @@ var Bd = { exports: {} };
   Object.defineProperty(e, "__esModule", {
     value: !0
   }), e.default = u;
-  var a = n(V.exports);
+  var a = n(F.exports);
   function n(l) {
     return l && l.__esModule ? l : { default: l };
   }
@@ -35188,7 +35188,7 @@ var fu = { exports: {} };
   Object.defineProperty(e, "__esModule", {
     value: !0
   }), e.default = o;
-  var a = n(V.exports);
+  var a = n(F.exports);
   function n(r) {
     return r && r.__esModule ? r : { default: r };
   }
@@ -35964,7 +35964,7 @@ var yu = { exports: {} };
   }), Object.defineProperty(t, "eu", {
     enumerable: !0,
     get: function() {
-      return F.default;
+      return V.default;
     }
   }), Object.defineProperty(t, "faIR", {
     enumerable: !0,
@@ -36553,7 +36553,7 @@ const t0 = ({
               onChange: (M) => y(M.target.value, "to")
             })]
           })]
-        }), /* @__PURE__ */ m(Y, {
+        }), /* @__PURE__ */ m(q, {
           size: "xs",
           py: "5px",
           onClick: () => b(!1),
@@ -38258,7 +38258,7 @@ const pv = x.div`
   boxShadow: a == null ? void 0 : a.boxShadow,
   children: [t && /* @__PURE__ */ m("div", {
     children: t
-  }), e == null ? void 0 : e.map((n) => /* @__PURE__ */ m(Y, {
+  }), e == null ? void 0 : e.map((n) => /* @__PURE__ */ m(q, {
     ...n
   }, crypto.randomUUID()))]
 }), as = x.div`
@@ -38883,11 +38883,11 @@ const pv = x.div`
         return;
       const C = M[0], N = C.address_components.find((O) => O.types.includes("locality")), R = (N == null ? void 0 : N.long_name) || "", S = C.formatted_address;
       C.geometry && r(C.geometry), l((O) => {
-        const F = h != null && h.current ? O.address : S;
+        const V = h != null && h.current ? O.address : S;
         return {
           ...b,
           locality: R,
-          address: F
+          address: V
         };
       });
     });
