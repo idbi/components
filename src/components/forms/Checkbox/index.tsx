@@ -30,13 +30,7 @@ export const Checkbox: React.FC<ICheckbox> = ({
         }}
         checked={isChecked}
       />
-      <span>
-        {isChecked ? (
-          <IconChecked color={disabled ? "gray" : "#4318FF"} />
-        ) : (
-          <IconNotChecked color={disabled ? "gray" : "#4318FF"} />
-        )}
-      </span>
+      <span>{isChecked ? <IconChecked /> : <IconNotChecked />}</span>
       {children}
     </Label>
   );
