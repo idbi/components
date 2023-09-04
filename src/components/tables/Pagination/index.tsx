@@ -34,48 +34,46 @@ export const Pagination: React.FC<IPagination> = ({
     onChangePage(Number(value) || 1);
   };
 
-  const showBorderColor = () =>
-    Number(pageInput) <= 1 ? "1px solid #BFBFBF" : "1px solid #4318FF";
+  const showBorderColor = Number(pageInput) <= 1;
 
-  const showIconColor = () => (Number(pageInput) <= 1 ? "#BFBFBF" : "#4318FF");
+  const showIconColor = Number(pageInput) <= 1;
 
-  const showLastIconColor = () =>
-    Number(pageInput) === lastPage ? "#BFBFBF" : "#4318FF";
+  const showLastIconColor = Number(pageInput) === lastPage;
+
+  const showLastBorderColor = Number(pageInput) === lastPage;
 
   const validateDisabledInput = () =>
     Number(pageInput) === Number(lastPage) || Number(pageInput) === 1;
 
   return (
     <s.Container disabled={validateDisabledInput()}>
-      <button
+      <s.Button
         type="button"
         disabled={pageInput === "1"}
+        showBorderColor={showBorderColor}
+        showIconColor={showIconColor}
         onClick={() => handleOnChange(String(1))}
         style={{
           padding: "0px",
           backgroundColor: "#fff",
-          border: showBorderColor(),
         }}
       >
-        <IdiArrowLeft size={12} color={showIconColor()} />
-        <IdiArrowLeft
-          size={12}
-          color={showIconColor()}
-          style={{ marginLeft: "-5px" }}
-        />
-      </button>
-      <button
+        <IdiArrowLeft size={12} />
+        <IdiArrowLeft size={12} style={{ marginLeft: "-5px" }} />
+      </s.Button>
+      <s.Button
         type="button"
         disabled={pageInput === "1"}
         onClick={() => handleOnChange(String((Number(pageInput) || 1) - 1))}
+        showBorderColor={showBorderColor}
+        showIconColor={showIconColor}
         style={{
           padding: "0px",
           backgroundColor: "#fff",
-          border: showBorderColor(),
         }}
       >
-        <IdiArrowLeft size={12} color={showIconColor()} />
-      </button>
+        <IdiArrowLeft size={12} />
+      </s.Button>
       <input
         type="number"
         value={Number(pageInput)}
@@ -83,43 +81,33 @@ export const Pagination: React.FC<IPagination> = ({
         onChange={(e) => handleOnChange(e.target.value || "")}
       />
       <p style={{ whiteSpace: "nowrap" }}>de {lastPage}</p>
-      <button
+      <s.Button
         type="button"
         disabled={Number(pageInput) === lastPage}
         onClick={() => handleOnChange(String((Number(pageInput) || 1) + 1))}
+        showBorderColor={showLastBorderColor}
+        showIconColor={showLastIconColor}
         style={{
           padding: "0px",
           backgroundColor: "#fff",
-          border: `${
-            Number(pageInput) === lastPage
-              ? "1px solid #BFBFBF"
-              : "1px solid #4318FF"
-          }`,
         }}
       >
-        <IdiArrowRight size={12} color={showLastIconColor()} />
-      </button>
-      <button
+        <IdiArrowRight size={12} />
+      </s.Button>
+      <s.Button
         type="button"
         disabled={Number(pageInput) === lastPage}
         onClick={() => handleOnChange(String(lastPage))}
+        showBorderColor={showLastBorderColor}
+        showIconColor={showLastIconColor}
         style={{
           padding: "0px",
           backgroundColor: "#fff",
-          border: `${
-            Number(pageInput) === lastPage
-              ? "1px solid #BFBFBF"
-              : "1px solid #4318FF"
-          }`,
         }}
       >
-        <IdiArrowRight size={12} color={showLastIconColor()} />
-        <IdiArrowRight
-          size={12}
-          color={showLastIconColor()}
-          style={{ marginLeft: "-5px" }}
-        />
-      </button>
+        <IdiArrowRight size={12} />
+        <IdiArrowRight size={12} style={{ marginLeft: "-5px" }} />
+      </s.Button>
     </s.Container>
   );
 };

@@ -15,4 +15,8 @@ export const Label = styled.label<ILabel>`
   input {
     display: none;
   }
+  span > svg > path {
+    fill: ${({ disabled, theme }) =>
+      disabled ? "gray" : theme.color.SECONDARY[900]};
+  }
 `;
