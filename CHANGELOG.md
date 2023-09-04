@@ -1,3 +1,7 @@
+## [0.43.1](https://github.com/idbi/components/compare/v0.43.0...v0.43.1) (2023-09-04)
+
+
+
 # [0.43.0](https://github.com/idbi/components/compare/v0.42.2...v0.43.0) (2023-08-02)
 
 
@@ -32,15 +36,6 @@
 
 * add kpi quantity section ([49b5671](https://github.com/idbi/components/commit/49b567182ed5259e3b0cc6c570a811334bd0a549))
 * create sectioned kpi ([1e00efc](https://github.com/idbi/components/commit/1e00efc1c476d90d086b047105b200ca056e5042))
-
-
-
-## [0.41.1](https://github.com/idbi/components/compare/v0.41.0...v0.41.1) (2023-07-27)
-
-
-### Bug Fixes
-
-* use theme in Radio and Tab components ([63eb992](https://github.com/idbi/components/commit/63eb992d4b192e57b99913b6d86f3a679d5afb2a))
 
 
 
