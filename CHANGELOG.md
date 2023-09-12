@@ -1,3 +1,7 @@
+## [0.43.2](https://github.com/idbi/components/compare/v0.43.1...v0.43.2) (2023-09-12)
+
+
+
 ## [0.43.1](https://github.com/idbi/components/compare/v0.43.0...v0.43.1) (2023-09-04)
 
 
@@ -21,21 +25,6 @@
 
 
 ## [0.42.1](https://github.com/idbi/components/compare/v0.42.0...v0.42.1) (2023-08-01)
-
-
-
-# [0.42.0](https://github.com/idbi/components/compare/v0.41.1...v0.42.0) (2023-08-01)
-
-
-### Bug Fixes
-
-* fix grid table type ([d7cce80](https://github.com/idbi/components/commit/d7cce80bf0b3c81cd4d2aebcf6ff6d4dc841a986))
-
-
-### Features
-
-* add kpi quantity section ([49b5671](https://github.com/idbi/components/commit/49b567182ed5259e3b0cc6c570a811334bd0a549))
-* create sectioned kpi ([1e00efc](https://github.com/idbi/components/commit/1e00efc1c476d90d086b047105b200ca056e5042))
 
 
 
