@@ -17,8 +17,8 @@ export const TopSection = styled.div`
 `;
 
 export const Title = styled.div<{ inner?: boolean }>`
-  color: ${({ theme }) => theme.color.NEUTRAL[400]};
-  font-size: 12px;
+  color: ${({ theme }) => theme.color.NEUTRAL[800]};
+  font-size: 14px;
   font-weight: 500;
 
   ${({ inner }) =>
