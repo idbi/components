@@ -38452,7 +38452,7 @@ const yv = x.div`
 }), Av = x.div`
   width: 100%;
   min-width: ${({ autoWidth: t }) => t ? "auto" : "300px"};
-  padding: 15px 30px;
+  padding: 15px 20px;
   border-radius: 15px;
   letter-spacing: -0.04em;
   background: ${({ main: t }) => t ? "linear-gradient(102.45deg, rgba(211, 217, 255, 0.76) 0.8%, #9BA8FF 101.76%)" : ""};
@@ -38738,8 +38738,8 @@ const yv = x.div`
   align-items: center;
   padding: 6px 10px;
 `, kl = x.div`
-  color: ${({ theme: t }) => t.color.NEUTRAL[400]};
-  font-size: 12px;
+  color: ${({ theme: t }) => t.color.NEUTRAL[800]};
+  font-size: 14px;
   font-weight: 500;
 
   ${({ inner: t }) => t && P`
