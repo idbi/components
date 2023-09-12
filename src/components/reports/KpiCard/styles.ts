@@ -8,7 +8,7 @@ type ContainerProps = {
 export const Container = styled.div<ContainerProps>`
   width: 100%;
   min-width: ${({ autoWidth }) => (autoWidth ? "auto" : "300px")};
-  padding: 15px 30px;
+  padding: 15px 20px;
   border-radius: 15px;
   letter-spacing: -0.04em;
   background: ${({ main }) =>
