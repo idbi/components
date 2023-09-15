@@ -11,6 +11,7 @@
     "url": "https://github.com/idbi/components.git",
     "type": "git"
   },
+  "sideEffects": false,
   "scripts": {
     "dev": "vite --port 3015",
     "build": "tsc && vite build",
