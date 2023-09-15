@@ -2,6 +2,7 @@
   "name": "@idbi/components",
   "version": "0.43.2",
   "main": "dist/id-components.mjs",
+  "module": "dist/id-components.mjs",
   "files": [
     "dist/",
     "index.d.ts",
