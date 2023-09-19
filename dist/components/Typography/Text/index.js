@@ -1,0 +1,1 @@
+import{TextBuilder as e}from"../TextBuilder/index.js";import{TextContainer as i}from"./styles.js";import{jsxs as r,jsx as n}from"react/jsx-runtime";const o=t=>t.rightIcon||t.leftIcon?r(i,{children:[t.leftIcon,n(e,{as:t.as||"p",...t}),t.rightIcon]}):n(e,{as:t.as||"p",...t});export{o as Text};

@@ -1,0 +1,1 @@
+import{useEffect as l}from"react";const h=({ref:c,selectionId:r})=>{const u=()=>{var s;if(!((s=c==null?void 0:c.current)!=null&&s.childNodes))return;const n=[...c.current.childNodes].find(o=>(o==null?void 0:o.uuid)===r||(o==null?void 0:o.id)===r);n==null||n.scrollIntoView(!1)};l(()=>{!r||u()},[r])};export{h as useScrollBySelectionId};

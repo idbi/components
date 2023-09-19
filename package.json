@@ -1,8 +1,8 @@
 {
   "name": "@idbi/components",
   "version": "0.43.2",
-  "main": "dist/id-components.mjs",
-  "module": "dist/id-components.mjs",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "files": [
     "dist/",
     "index.d.ts",

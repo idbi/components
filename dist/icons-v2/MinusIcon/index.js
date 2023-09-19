@@ -1,0 +1,1 @@
+import{IconV2 as t}from"../IconV2/index.js";import{jsx as o}from"react/jsx-runtime";const i=r=>o(t,{viewBox:"0 0 15 2",...r,children:o("path",{xmlns:"http://www.w3.org/2000/svg",d:"M1.88086 1H13.8809",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})});export{i as MinusIcon};

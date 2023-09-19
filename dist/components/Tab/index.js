@@ -1,0 +1,1 @@
+import{Tab as m}from"./styles.js";import{jsx as p}from"react/jsx-runtime";const n=({children:r,active:o,tabWidth:t=24,tabHeight:a=4,bold:e=!1,activeColor:s="",...i})=>p(m,{isActive:o,noWrap:!0,activeColor:s,tabWidth:t,tabHeight:a,bold:e,...i,children:r});export{n as Tab};

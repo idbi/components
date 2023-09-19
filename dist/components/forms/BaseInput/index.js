@@ -1,0 +1,1 @@
+import{Container as c}from"./styles.js";import{jsxs as u,jsx as f}from"react/jsx-runtime";const l=({alert:o,fullWidth:s,minHeight:r,startEl:n,endEl:t,inputRef:a,containerProps:e={},...p})=>u(c,{alert:o,fullWidth:s,minHeight:r!=null?r:45,className:"base-input-container",...e,children:[n,f("input",{ref:a,...p}),t]});export{l as BaseInput};

@@ -1,0 +1,1 @@
+import{Svg as p}from"./styles.js";import{jsx as n}from"react/jsx-runtime";const g=({color:o="currentColor",size:r,children:t,...m})=>n(p,{color:o,height:r?`${r}px`:"1em",width:r?`${r}px`:"1em",xmlns:"http://www.w3.org/2000/svg",...m,children:t});export{g as IconV2};

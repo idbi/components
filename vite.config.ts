@@ -16,14 +16,14 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    lib: {
-      entry: path.resolve(__dirname, ENTRY_MODULE),
-      name: "ID-Components",
-      fileName: "id-components",
-    },
+    // lib: {
+    //   entry: path.resolve(__dirname, ENTRY_MODULE),
+    //   name: "ID-Components",
+    //   fileName: "id-components",
+    // },
     rollupOptions: {
       external: [
-        // /node_modules/,
+        /node_modules/,
         "react",
         "react-dom",
         "styled-components",
@@ -36,7 +36,16 @@ export default defineConfig({
         "react-date-range",
         "google-map-react",
       ],
+      preserveEntrySignatures: "strict",
+      input: ["src/index.js"],
       output: {
+        dir: "dist",
+        format: "esm",
+        preserveModules: true,
+        preserveModulesRoot: "src",
+        entryFileNames: ({ name: fileName }) => {
+          return `${fileName}.js`;
+        },
         globals: {
           react: "React",
           "react-dom": "ReactDOM",

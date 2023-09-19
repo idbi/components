@@ -1,0 +1,1 @@
+import{BulletPointIcon as e}from"../../icons-v2/BulletPointIcon/index.js";import{Container as m}from"./styles.js";import{jsxs as l,jsx as p}from"react/jsx-runtime";const u=({children:o,spacing:r,color:t,bulletSize:n,size:i})=>l(m,{color:t,size:i,bulletSize:n,spacing:r,children:[p(e,{}),o]});export{u as BulletPoint};

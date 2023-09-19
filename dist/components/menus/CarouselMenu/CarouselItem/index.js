@@ -1,0 +1,1 @@
+import{Button as s}from"./styles.js";import{jsxs as l}from"react/jsx-runtime";const i=({id:o,text:r,setIsSelected:t,isSelected:e=!1,children:m,model:n})=>l(s,{id:o,isSelected:e,onClick:()=>{t(o)},model:n,children:[r,m]});export{i as CarouselItem};

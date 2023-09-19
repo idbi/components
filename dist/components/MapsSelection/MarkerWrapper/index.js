@@ -1,0 +1,1 @@
+import{MarkerContainer as o}from"./styles.js";import{jsx as t,Fragment as a}from"react/jsx-runtime";const p=({children:r,placement:e})=>e?t(o,{children:r}):t(a,{children:r});export{p as MarkerWrapper};

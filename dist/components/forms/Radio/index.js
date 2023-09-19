@@ -1,0 +1,1 @@
+import{RadioContainer as a}from"./styles.js";import{jsxs as l,jsx as i}from"react/jsx-runtime";const m=({text:d,...o})=>l(a,{disabled:Boolean(o.disabled),children:[i("input",{type:"radio",...o}),i("label",{htmlFor:o==null?void 0:o.id,children:d})]});export{m as Radio};

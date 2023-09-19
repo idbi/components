@@ -1,0 +1,1 @@
+import{Container as m,Division as r}from"./styles.js";import{jsxs as s,jsx as n}from"react/jsx-runtime";const x=({children:t,thickness:i=1,hrMinWidth:o=15})=>s(m,{children:[n(r,{thickness:i,minWidth:o}),t,n(r,{thickness:i,minWidth:o})]});export{x as HorizontalDivision};

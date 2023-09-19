@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useRef, useState } from "react";
 import { format } from "date-fns";
-import { es } from "date-fns/locale";
+import es from "date-fns/locale/es";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { IconCalendar } from "@/icons/IconCalendar";
@@ -44,15 +44,9 @@ export const DateRangePicker: React.FC<IDateRangePicker> = ({
       const date = filter === "from" ? startDate : endDate;
       let formatString = "";
       if (showTimeInputs) {
-        formatString =
-          dateFormatDisplayed === "simple"
-            ? "dd/MM/yyyy HH:mm"
-            : "dd 'de' MMMM 'del' YYY hh:mm aaaaa'm'";
+        formatString = dateFormatDisplayed === "simple" ? "dd/MM/yyyy HH:mm" : "dd 'de' MMMM 'del' YYY hh:mm aaaaa'm'";
       } else {
-        formatString =
-          dateFormatDisplayed === "simple"
-            ? "dd/MM/yyyy"
-            : "dd 'de' MMMM 'del' YYY";
+        formatString = dateFormatDisplayed === "simple" ? "dd/MM/yyyy" : "dd 'de' MMMM 'del' YYY";
       }
       return format(date, formatString, { locale: es });
     }
@@ -129,8 +123,7 @@ export const DateRangePicker: React.FC<IDateRangePicker> = ({
           <DateRange
             onChange={(item) => {
               const newSelection = Object.values(item);
-              if (!Array.isArray(newSelection) || newSelection?.length < 1)
-                return;
+              if (!Array.isArray(newSelection) || newSelection?.length < 1) return;
               setState([
                 {
                   ...state[0],
@@ -174,11 +167,7 @@ export const DateRangePicker: React.FC<IDateRangePicker> = ({
                 </div>
               </s.TimeInputsContainer>
             )}
-            <Button
-              size="xs"
-              py="5px"
-              onClick={() => handleApplyFilterDate(false)}
-            >
+            <Button size="xs" py="5px" onClick={() => handleApplyFilterDate(false)}>
               Aplicar
             </Button>
           </s.FooterDatePicker>

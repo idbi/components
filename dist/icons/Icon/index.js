@@ -1,0 +1,1 @@
+import{WrappSC as d,SvgSC as v}from"./style.js";import{jsx as a}from"react/jsx-runtime";const m=t=>{const{children:n,color:r,size:i,viewBox:s,active:o,borderRadius:c,variant:e}=t;return a(d,{active:o,size:i||24,borderRadius:c||"50%",variant:e||"V1",color:r,children:a(v,{active:o,color:r,size:i||24,viewBox:s||"0 0 32 32",variant:e||"V1",children:n})})};export{m as default};

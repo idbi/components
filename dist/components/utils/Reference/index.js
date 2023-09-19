@@ -1,0 +1,1 @@
+import{Container as o,Reference as i,Description as t}from"./styles.js";import{jsxs as f,jsx as r}from"react/jsx-runtime";const h=({reference:n,onClick:c,description:e})=>f(o,{children:[r(i,{onClick:c,children:n}),e&&r(t,{children:e})]});export{h as Reference};
