@@ -37207,37 +37207,43 @@ const i0 = ({
   onError: n,
   acceptedFiles: i,
   validFileExtensions: d,
-  noDisplay: o = !1
+  noDisplay: o = !1,
+  maxKBSize: r,
+  image: s
 }) => {
-  const [r, s] = z(null), [u, l] = z(t || null), h = Eu();
+  const [u, l] = z(null), [h, v] = z(t || null), f = Eu();
   return j(() => {
-    let v = "";
-    return r && (v = window.URL.createObjectURL(r), l(v)), () => {
-      v && window.URL.revokeObjectURL(v);
+    let p = "";
+    return u && (p = window.URL.createObjectURL(u), v(p)), () => {
+      p && window.URL.revokeObjectURL(p);
     };
-  }, [r]), j(() => {
-    h || a(r, u || null);
-  }, [u]), /* @__PURE__ */ m(Bl, {
+  }, [u]), j(() => {
+    f || a(u, h || null);
+  }, [h]), /* @__PURE__ */ m(Bl, {
     onError: n || alert,
-    onSelectFile: (v) => s(v),
+    onSelectFile: (p) => l(p),
     acceptedFiles: i,
     validFileExtensions: d,
-    children: u && !o ? /* @__PURE__ */ w(T0, {
+    maxKBSize: r,
+    children: h && !o ? /* @__PURE__ */ w(T0, {
       children: [/* @__PURE__ */ w(j0, {
-        children: [((r == null ? void 0 : r.type.includes("image")) || u.includes("jpeg") || u.includes("jpg") || u.includes("webp") || u.includes("png")) && /* @__PURE__ */ m("img", {
-          src: u,
+        children: [(u == null ? void 0 : u.type.includes("image")) || h.includes("jpeg") || h.includes("jpg") || h.includes("webp") || h.includes("png") ? /* @__PURE__ */ m("img", {
+          src: h,
           alt: ""
-        }), /* @__PURE__ */ w(E0, {
+        }) : s ? typeof s == "string" ? /* @__PURE__ */ m("img", {
+          src: s,
+          alt: ""
+        }) : s : null, /* @__PURE__ */ w(E0, {
           children: [/* @__PURE__ */ m("span", {
-            children: (r == null ? void 0 : r.name) || xl(u)[0]
+            children: (u == null ? void 0 : u.name) || xl(h)[0]
           }), /* @__PURE__ */ m("span", {
-            children: (r == null ? void 0 : r.type) || xl(u)[1]
+            children: (u == null ? void 0 : u.type) || xl(h)[1]
           })]
         })]
       }), /* @__PURE__ */ m(Ru, {
         variant: "secondary",
-        onClick: (v) => {
-          v.stopPropagation(), s(null), l(null);
+        onClick: (p) => {
+          p.stopPropagation(), l(null), v(null);
         },
         children: /* @__PURE__ */ m(Gl, {
           size: 12
