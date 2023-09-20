@@ -1,3 +1,12 @@
+# [0.44.0](https://github.com/idbi/components/compare/v0.43.2...v0.44.0) (2023-09-20)
+
+
+### Features
+
+* add upload media custom image ([a20126d](https://github.com/idbi/components/commit/a20126d2ae2328e91b5c2e57e4f830b222c67838))
+
+
+
 ## [0.43.2](https://github.com/idbi/components/compare/v0.43.1...v0.43.2) (2023-09-12)
 
 
@@ -21,10 +30,6 @@
 
 
 ## [0.42.2](https://github.com/idbi/components/compare/v0.42.1...v0.42.2) (2023-08-02)
-
-
-
-## [0.42.1](https://github.com/idbi/components/compare/v0.42.0...v0.42.1) (2023-08-01)
 
 
 
