@@ -3,6 +3,7 @@
   "version": "0.43.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "type": "module",
   "files": [
     "dist/",
     "index.d.ts",

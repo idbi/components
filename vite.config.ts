@@ -23,7 +23,7 @@ export default defineConfig({
     // },
     rollupOptions: {
       external: [
-        /node_modules/,
+        // /node_modules/,
         "react",
         "react-dom",
         "styled-components",
@@ -31,13 +31,15 @@ export default defineConfig({
         "react/jsx-runtime",
         "@radix-ui/react-collapsible",
         "@floating-ui/react-dom",
-        "react-icons",
-        "date-fns",
+        // "react-icons",
+        /^react-icons(?:\/.+)*$/,
+        // "date-fns",
+        /^date-fns(?:\/.+)*$/,
         "react-date-range",
         "google-map-react",
       ],
-      preserveEntrySignatures: "strict",
-      input: ["src/index.js"],
+      preserveEntrySignatures: "exports-only",
+      input: "src/index.js",
       output: {
         dir: "dist",
         format: "esm",
@@ -58,6 +60,7 @@ export default defineConfig({
           "date-fns": "date-fns",
           "react-date-range": "react-date-range",
           "google-map-react": "google-map-react",
+          // 'date-fns/locale/es': 'date-fns-locale-es'
         },
       },
     },
