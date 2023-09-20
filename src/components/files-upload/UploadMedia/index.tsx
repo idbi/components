@@ -15,6 +15,8 @@ export const UploadMedia = ({
   acceptedFiles,
   validFileExtensions,
   noDisplay = false,
+  maxKBSize,
+  image,
 }: IUploadMedia) => {
   const [media, setMedia] = useState<File | null>(null);
   const [imgObjUrl, setImgObjUrl] = useState(initialImgUrl || null);
@@ -42,15 +44,24 @@ export const UploadMedia = ({
       onSelectFile={(img) => setMedia(img)}
       acceptedFiles={acceptedFiles}
       validFileExtensions={validFileExtensions}
+      maxKBSize={maxKBSize}
     >
       {imgObjUrl && !noDisplay ? (
         <s.Display>
           <s.Img>
-            {(media?.type.includes("image") ||
-              imgObjUrl.includes("jpeg") ||
-              imgObjUrl.includes("jpg") ||
-              imgObjUrl.includes("webp") ||
-              imgObjUrl.includes("png")) && <img src={imgObjUrl} alt="" />}
+            {media?.type.includes("image") ||
+            imgObjUrl.includes("jpeg") ||
+            imgObjUrl.includes("jpg") ||
+            imgObjUrl.includes("webp") ||
+            imgObjUrl.includes("png") ? (
+              <img src={imgObjUrl} alt="" />
+            ) : image ? (
+              typeof image === "string" ? (
+                <img src={image} alt="" />
+              ) : (
+                image
+              )
+            ) : null}
             <s.ImgInfo>
               <span>{media?.name || getURLData(imgObjUrl)[0]}</span>
               <span>{media?.type || getURLData(imgObjUrl)[1]}</span>

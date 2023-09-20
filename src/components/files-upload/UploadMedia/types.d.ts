@@ -8,6 +8,8 @@ export interface IUploadMedia {
   acceptedFiles?: string; // TODO: define some types
   validFileExtensions?: string[];
   noDisplay?: boolean;
+  maxKBSize?: number | null;
+  image?: string | ReactNode;
 }
 
 export declare const UploadMedia: (props: IUploadMedia) => JSX.Element;
