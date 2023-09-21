@@ -1,3 +1,12 @@
+## [0.44.1](https://github.com/idbi/components/compare/v0.44.0...v0.44.1) (2023-09-21)
+
+
+### Bug Fixes
+
+* allow reselect file ([591a37c](https://github.com/idbi/components/commit/591a37cb2de01b37ceec69bb97d18b6514188e61))
+
+
+
 # [0.44.0](https://github.com/idbi/components/compare/v0.43.2...v0.44.0) (2023-09-20)
 
 
@@ -26,10 +35,6 @@
 ### Features
 
 * create skeleton component ([1521ca5](https://github.com/idbi/components/commit/1521ca517a8712ca89c98675998f7992714907b2))
-
-
-
-## [0.42.2](https://github.com/idbi/components/compare/v0.42.1...v0.42.2) (2023-08-02)
 
 
 
