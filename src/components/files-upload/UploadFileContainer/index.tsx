@@ -40,7 +40,11 @@ export const UploadFileContainer = <T extends boolean = false>({
 
   const handleChangeFile = () => {
     const { files } = fileInput.current!;
-    if (files) handleFile(Array.from(files));
+    if (files) {
+      handleFile(Array.from(files));
+      // clear selected files - allow reselect same file
+      fileInput.current!.value = "";
+    }
   };
 
   const handleDropFile = (e: DragEvent<HTMLDivElement>) => {
