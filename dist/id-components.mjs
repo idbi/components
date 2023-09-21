@@ -37100,7 +37100,7 @@ const i0 = ({
         const {
           files: p
         } = s.current;
-        p && h(Array.from(p));
+        p && (h(Array.from(p)), s.current.value = "");
       },
       type: "file",
       accept: n,
