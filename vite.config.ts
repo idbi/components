@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import path from "path";
 
 const ENTRY_MODULE = "src/index.js";
@@ -22,20 +23,7 @@ export default defineConfig({
       fileName: "id-components",
     },
     rollupOptions: {
-      external: [
-        // /node_modules/,
-        "react",
-        "react-dom",
-        "styled-components",
-        "react-select",
-        "react/jsx-runtime",
-        "@radix-ui/react-collapsible",
-        "@floating-ui/react-dom",
-        "react-icons",
-        "date-fns",
-        "react-date-range",
-        "google-map-react",
-      ],
+      plugins: [peerDepsExternal()],
       output: {
         globals: {
           react: "React",
