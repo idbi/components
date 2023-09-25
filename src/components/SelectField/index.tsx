@@ -19,8 +19,9 @@ const customStyles = {
     boxShadow: "none",
     cursor: "pointer",
   }),
-  singleValue: () => {
+  singleValue: (provided: any) => {
     return {
+      ...provided,
       color: theme.color.PRIMARY[900],
       fontWeight: 400,
       fontSize: "0.875rem",

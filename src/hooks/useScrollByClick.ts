@@ -12,7 +12,7 @@ export const useScrollByClick = <T extends HTMLElement>({
   intervalTime?: number;
   offsetByInterbal?: number;
 }) => {
-  const interval = useRef<NodeJS.Timer | null>(null);
+  const interval = useRef<NodeJS.Timeout | null>(null);
 
   const getMaxScrollLeft = () => {
     const maxScroll =
