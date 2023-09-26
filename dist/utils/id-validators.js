@@ -1,0 +1,1 @@
+const n=(e,s=8192)=>{let t=!0,r=null;return e.size/1024>s&&(t=!1,r={code:"F0001",message:`El archivo ${e.name} pesa ${(e.size/1024/1024).toFixed(2)} MB. Intenta subir una imagen menor a ${s/1024} MB `}),{success:t,error:r}};export{n as validateFileSize};

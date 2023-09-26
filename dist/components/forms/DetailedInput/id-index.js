@@ -1,0 +1,1 @@
+import{DetailedField as i}from"../DetailedField/id-index.js";import{Container as o,Input as m}from"./id-styles.js";import{jsx as r}from"react/jsx-runtime";const p=({inputProps:t={},...e})=>r(o,{children:r(i,{htmlFor:t.id,...e,children:r(m,{...t})})});export{p as DetailedInput};

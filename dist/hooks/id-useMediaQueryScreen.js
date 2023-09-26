@@ -1,0 +1,1 @@
+import{useState as a,useEffect as s}from"react";function c(t="(min-width: 768px)"){const[n,r]=a({matches:window.innerWidth>(()=>{const e=t.match(/(\d+)/);return e?e[0]:768})()});return s(()=>{let e=window.matchMedia(t);return e.addEventListener("change",r),()=>e.removeEventListener("change",r)},[]),{status:Boolean(n&&n.matches)}}export{c as useMediaQueryScreen};

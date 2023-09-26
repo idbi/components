@@ -1,0 +1,1 @@
+import{TextBuilder as a}from"../TextBuilder/id-index.js";import{jsx as H}from"react/jsx-runtime";const r={H1:s=>H(a,{as:"h1",...s}),H2:s=>H(a,{as:"h2",...s}),H3:s=>H(a,{as:"h3",...s}),H4:s=>H(a,{as:"h4",...s}),H5:s=>H(a,{as:"h5",...s}),H6:s=>H(a,{as:"h6",...s})};export{r as Heading};

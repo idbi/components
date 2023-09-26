@@ -1,0 +1,1 @@
+import{Span as i}from"./id-styles.js";import{getInRangeNum as n}from"./id-utils.js";import{jsx as p}from"react/jsx-runtime";const y=({intensity:o=.8,opacity:r=.5,children:a,style:e={},...m})=>{const s=n(o,0,1),c=n(r,0,1),t=256*s;return p(i,{style:{backgroundColor:`rgba(${t}, ${t}, ${t}, ${c})`,...e},...m,children:a})};export{y as TransparentBadge};

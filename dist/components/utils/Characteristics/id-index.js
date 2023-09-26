@@ -1,0 +1,1 @@
+import{Container as o,Main as s,Title as h,Aside as l}from"./id-styles.js";import{jsxs as e,jsx as i}from"react/jsx-runtime";const a=({title:t,description:n,aside:r,descriptionTop:c})=>e(o,{children:[e(s,{revert:c,children:[i(h,{children:t}),n]}),r&&i(l,{children:r})]});export{a as Characteristics};
