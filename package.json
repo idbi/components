@@ -1,7 +1,9 @@
 {
   "name": "@idbi/components",
   "version": "0.44.1",
-  "main": "dist/id-components.mjs",
+  "main": "dist/id-index.js",
+  "module": "dist/id-index.js",
+  "type": "module",
   "files": [
     "dist/",
     "index.d.ts",
@@ -20,8 +22,9 @@
     "lint:fix": "eslint --ext .tsx,.ts,.js,.jsx --ignore-path .eslintignore . --fix",
     "create-docs": "node scripts/create-docs.js"
   },
+  "sideEffects": false,
   "peerDependencies": {
-    "@floating-ui/react-dom": "1.x",
+    "@floating-ui/react-dom": "0.x || 1.x",
     "@radix-ui/react-collapsible": "1.x",
     "@types/google-map-react": "*",
     "date-fns": "2.x",
