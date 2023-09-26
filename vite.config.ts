@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import path from "path";
 
 const ENTRY_MODULE = "src/index.js";
@@ -16,39 +17,17 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    lib: {
-      entry: path.resolve(__dirname, ENTRY_MODULE),
-      name: "ID-Components",
-      fileName: "id-components",
-    },
     rollupOptions: {
-      external: [
-        // /node_modules/,
-        "react",
-        "react-dom",
-        "styled-components",
-        "react-select",
-        "react/jsx-runtime",
-        "@radix-ui/react-collapsible",
-        "@floating-ui/react-dom",
-        "react-icons",
-        "date-fns",
-        "react-date-range",
-        "google-map-react",
-      ],
+      plugins: [peerDepsExternal()],
+      preserveEntrySignatures: "exports-only",
+      input: "src/index.js",
       output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-          "styled-components": "styled",
-          "react-select": "Select",
-          "react/jsx-runtime": "react/jsx-runtime.js",
-          "@radix-ui/react-collapsible": "@radix-ui/react-collapsible",
-          "@floating-ui/react-dom": "@floating-ui/react-dom",
-          "react-icons": "react-icons",
-          "date-fns": "date-fns",
-          "react-date-range": "react-date-range",
-          "google-map-react": "google-map-react",
+        dir: "dist",
+        format: "esm",
+        preserveModules: true,
+        preserveModulesRoot: "src",
+        entryFileNames: ({ name: fileName }) => {
+          return `id-${fileName}.js`;
         },
       },
     },

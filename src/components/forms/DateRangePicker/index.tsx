@@ -3,13 +3,13 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useRef, useState } from "react";
 import { format } from "date-fns";
-import { es } from "date-fns/locale";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { IconCalendar } from "@/icons/IconCalendar";
 import { DateRange } from "react-date-range";
 import { Text } from "@/components/Typography";
 import { Button } from "@/components/Button";
+import locale from "@/utils/locale";
 import type { IDateRangePicker, IValueKeyDateRange } from "./types";
 import * as s from "./styles";
 
@@ -54,7 +54,7 @@ export const DateRangePicker: React.FC<IDateRangePicker> = ({
             ? "dd/MM/yyyy"
             : "dd 'de' MMMM 'del' YYY";
       }
-      return format(date, formatString, { locale: es });
+      return format(date, formatString, { locale });
     }
     return undefined;
   };
@@ -144,7 +144,7 @@ export const DateRangePicker: React.FC<IDateRangePicker> = ({
             months={1}
             ranges={state}
             direction={direction}
-            locale={es}
+            locale={locale}
             {...rest}
           />
           <s.FooterDatePicker>
