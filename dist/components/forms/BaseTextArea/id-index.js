@@ -1,0 +1,1 @@
+import{Container as c}from"./id-styles.js";import{jsx as e}from"react/jsx-runtime";const f=({alert:a,fullWidth:o,minHeight:r,inputRef:t,containerProps:s={},...n})=>e(c,{alert:a,fullWidth:o,minHeight:r!=null?r:45,className:"base-input-container",...s,children:e("textarea",{ref:t,...n})});export{f as BaseTextArea};

@@ -1,0 +1,1 @@
+import{Card as e,Header as t,Body as d,Footer as a}from"./id-styles.js";import{jsx as m}from"react/jsx-runtime";const o=({children:r})=>m(e,{children:r});o.Header=t;o.Body=d;o.Footer=a;export{o as SectionedCard};

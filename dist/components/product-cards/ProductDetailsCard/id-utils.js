@@ -1,0 +1,1 @@
+const r=e=>{switch(e){case"draft":return"Borrador";case"pending":return"Pendiente";case"accepted":return"Aceptado";case"preparing":return"Preparando";case"prepared":return"Listo";case"collected":return"Enviado";case"delivered":return"Entregado";case"canceled":return"Anulado";default:return""}};export{r as getStatusText};

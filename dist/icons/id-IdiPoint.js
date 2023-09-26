@@ -1,0 +1,1 @@
+import{IconV2 as n}from"../icons-v2/IconV2/id-index.js";import{jsx as r}from"react/jsx-runtime";const m=({size:o=20,color:t="currentColor",onClick:c,style:i})=>r(n,{onClick:c,size:o,style:i,viewBox:"0 0 8 8",children:r("circle",{xmlns:"http://www.w3.org/2000/svg",cx:"4",cy:"4",r:"4",fill:t})});export{m as IdiPoint};

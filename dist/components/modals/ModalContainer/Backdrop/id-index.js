@@ -1,0 +1,1 @@
+import{useEffect as d}from"react";import{StyledBackdrop as i}from"./id-style.js";import{jsx as p}from"react/jsx-runtime";const m=({onClose:o=()=>{},backdropOpacity:t,zIndex:r})=>(d(()=>(document.body.style.overflow="hidden",()=>{document.body.style.overflow="visible"}),[]),p(i,{onClick:e=>{e.stopPropagation(),o()},opacity:t,zIndex:r}));export{m as default};

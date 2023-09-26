@@ -1,0 +1,1 @@
+import{Container as d}from"./id-styles.js";import{jsx as f}from"react/jsx-runtime";const s=({text:r,padding:o,color:t,background:e,applyFlex:i,maxWidth:n,weight:m,borderRadius:p,withBorder:a,style:c})=>f(d,{padding:o,color:t,background:e,applyFlex:i,maxWidth:n,weigth:m,borderRadius:p,withBorder:a,style:c,children:r});export{s as Badge};

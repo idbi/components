@@ -1,0 +1,1 @@
+import{Container as a,Message as e}from"./id-styles.js";import m from"./assets/id-nodata.js";import{jsxs as n,jsx as r}from"react/jsx-runtime";const g=({text:t,marginTop:o,marginBottom:i,style:s})=>n(a,{marginTop:o,marginBottom:i,style:s,children:[r("img",{src:m,alt:"sin datos",width:65,height:65}),r(e,{children:t})]});export{g as NoData};
