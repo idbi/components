@@ -18,7 +18,7 @@ export default defineConfig({
   build: {
     outDir: "dist",
     rollupOptions: {
-      plugins: [peerDepsExternal()],
+      plugins: [peerDepsExternal({ includeDependencies: true })],
       preserveEntrySignatures: "exports-only",
       input: "src/index.js",
       output: {
