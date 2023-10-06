@@ -1,3 +1,12 @@
+## [0.44.4](https://github.com/idbi/components/compare/v0.44.3...v0.44.4) (2023-10-06)
+
+
+### Bug Fixes
+
+* fix icon component imports ([58cb70b](https://github.com/idbi/components/commit/58cb70b710f180fc8d6e801d29877aed554fd8a2))
+
+
+
 ## [0.44.3](https://github.com/idbi/components/compare/v0.44.2...v0.44.3) (2023-09-26)
 
 
@@ -26,10 +35,6 @@
 ### Features
 
 * add upload media custom image ([a20126d](https://github.com/idbi/components/commit/a20126d2ae2328e91b5c2e57e4f830b222c67838))
-
-
-
-## [0.43.2](https://github.com/idbi/components/compare/v0.43.1...v0.43.2) (2023-09-12)
 
 
 
