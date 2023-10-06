@@ -1,6 +1,6 @@
 import React from "react";
 import { IIcon } from "./types";
-import { IconV2 } from "..";
+import { IconV2 } from "../icons-v2/IconV2";
 
 export const IdiTrash: React.FC<IIcon> = ({
   size = 20,
