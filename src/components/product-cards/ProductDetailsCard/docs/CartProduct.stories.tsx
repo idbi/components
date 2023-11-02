@@ -40,3 +40,8 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   ...mockConfirmationCardV2Props.disabled,
 } as IProductDetailsCard;
+
+export const NoTotal = Template.bind({});
+NoTotal.args = {
+  ...mockConfirmationCardV2Props.noTotal,
+} as IProductDetailsCard;

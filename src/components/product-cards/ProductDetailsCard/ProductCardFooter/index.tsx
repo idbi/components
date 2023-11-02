@@ -7,6 +7,10 @@ type IProps = Pick<
   "currencySymbol" | "unitPrice" | "total" | "measureUnit" | "discount" | "disabled"
 > & { bottom?: boolean };
 
+const isNullish = <T extends any>(value: T | undefined | null): value is undefined | null => {
+  return value === undefined || value === null;
+};
+
 export const ProductCardFooter = ({
   currencySymbol,
   unitPrice = null,
@@ -42,10 +46,14 @@ export const ProductCardFooter = ({
             <s.Patch>{discount.label}</s.Patch>
           </>
         )}
-        <span>
-          {currencySymbol}
-          <span>{total.toFixed(2)}</span>
-        </span>
+        {isNullish(total) ? (
+          <span />
+        ) : (
+          <span>
+            {currencySymbol}
+            <span>{total.toFixed(2)}</span>
+          </span>
+        )}
       </s.TotalPrices>
     </s.Footer>
   );
