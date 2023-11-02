@@ -1,3 +1,17 @@
+# [0.45.0](https://github.com/idbi/components/compare/v0.44.4...v0.45.0) (2023-11-02)
+
+
+### Bug Fixes
+
+* remove type module from package.json ([ab7a625](https://github.com/idbi/components/commit/ab7a625b280036a94b8072be2d0a8802044f9d65))
+
+
+### Features
+
+* handle no total product details ([85c2dab](https://github.com/idbi/components/commit/85c2dabcfe955fe90cbb3ad98f48ff2a8c2b9c2b))
+
+
+
 ## [0.44.4](https://github.com/idbi/components/compare/v0.44.3...v0.44.4) (2023-10-06)
 
 
@@ -26,15 +40,6 @@
 ### Bug Fixes
 
 * allow reselect file ([591a37c](https://github.com/idbi/components/commit/591a37cb2de01b37ceec69bb97d18b6514188e61))
-
-
-
-# [0.44.0](https://github.com/idbi/components/compare/v0.43.2...v0.44.0) (2023-09-20)
-
-
-### Features
-
-* add upload media custom image ([a20126d](https://github.com/idbi/components/commit/a20126d2ae2328e91b5c2e57e4f830b222c67838))
 
 
 
