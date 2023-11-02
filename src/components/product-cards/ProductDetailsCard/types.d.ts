@@ -4,8 +4,9 @@ import { ICartProduct } from "../CartProduct/types";
 
 export type IProductDetailsCard = Pick<
   ICartProduct,
-  "name" | "img" | "currencySymbol" | "total" | "quantity" | "measureUnit" | "productDetails"
+  "name" | "img" | "currencySymbol" | "quantity" | "measureUnit" | "productDetails"
 > & {
+  total?: number | null;
   unitPrice?: number | null;
   comment?: string;
   disabled?: boolean;
