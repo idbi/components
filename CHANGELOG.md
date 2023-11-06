@@ -1,3 +1,7 @@
+## [0.45.1](https://github.com/idbi/components/compare/v0.45.0...v0.45.1) (2023-11-06)
+
+
+
 # [0.45.0](https://github.com/idbi/components/compare/v0.44.4...v0.45.0) (2023-11-02)
 
 
@@ -31,15 +35,6 @@
 ### Bug Fixes
 
 * minor fixes ([535160f](https://github.com/idbi/components/commit/535160f49964819455065223016291d667128207))
-
-
-
-## [0.44.1](https://github.com/idbi/components/compare/v0.44.0...v0.44.1) (2023-09-21)
-
-
-### Bug Fixes
-
-* allow reselect file ([591a37c](https://github.com/idbi/components/commit/591a37cb2de01b37ceec69bb97d18b6514188e61))
 
 
 
