@@ -1,7 +1,8 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 export interface IKpiCard {
-  title?: string;
+  icon?: ReactNode;
+  title?: ReactNode;
   total_PEN?: number;
   total_USD?: number;
   tip_PEN?: number;

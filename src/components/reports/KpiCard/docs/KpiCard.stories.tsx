@@ -9,9 +9,7 @@ export default {
   argTypes: {},
 } as ComponentMeta<typeof KpiCard>;
 
-const Template: ComponentStory<typeof KpiCard> = (args) => (
-  <KpiCard {...args} />
-);
+const Template: ComponentStory<typeof KpiCard> = (args) => <KpiCard {...args} />;
 
 export const DefaultCard = Template.bind({});
 DefaultCard.args = {
@@ -46,4 +44,9 @@ bigAmountsCard.args = {
 export const LoadingCard = Template.bind({});
 LoadingCard.args = {
   ...mockKpiCardProps.loadingCard,
+} as IKpiCard;
+
+export const WithIconCard = Template.bind({});
+WithIconCard.args = {
+  ...mockKpiCardProps.withIconCard,
 } as IKpiCard;

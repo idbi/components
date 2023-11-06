@@ -15,11 +15,24 @@ export const Container = styled.div<ContainerProps>`
     main ? "linear-gradient(102.45deg, rgba(211, 217, 255, 0.76) 0.8%, #9BA8FF 101.76%)" : ""};
   box-shadow: 0 10px 30px 0 rgb(0 0 0 / 8%);
   display: flex;
-
+  align-items: center;
   @media screen and (min-width: 768px) {
     max-width: ${({ autoWidth }) => (autoWidth ? "auto" : "300px")};
     margin-bottom: 0;
   }
+`;
+
+export const IconContainer = styled.div`
+  border-radius: 20vw;
+  min-width: 38px;
+  height: 38px;
+  min-height: 38px;
+  height: 38px;
+  background-color: #eff4fd;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const QuantitySection = styled.div`
