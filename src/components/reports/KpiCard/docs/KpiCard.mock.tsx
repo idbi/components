@@ -1,3 +1,4 @@
+import { IdiBag } from "@/icons/IdiBag";
 import { IKpiCard } from "../types";
 
 const defaultCard: IKpiCard = {
@@ -69,6 +70,14 @@ const loadingCard: IKpiCard = {
   loading: true,
 };
 
+const withIconCard: IKpiCard = {
+  title: "Total de ventas",
+  total_PEN: 1234.4,
+  total_USD: 124.2,
+  autoWidth: true,
+  icon: <IdiBag />,
+};
+
 export const mockKpiCardProps = {
   defaultCard,
   PERCard,
@@ -77,4 +86,5 @@ export const mockKpiCardProps = {
   mainCard,
   loadingCard,
   bigAmountsCard,
+  withIconCard,
 };

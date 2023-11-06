@@ -7,6 +7,7 @@ import type { IKpiCard } from "./types";
 import * as s from "./styles";
 
 export const KpiCard: React.FC<IKpiCard> = ({
+  icon,
   title,
   total_PEN,
   total_USD,
@@ -27,28 +28,38 @@ export const KpiCard: React.FC<IKpiCard> = ({
   return (
     <s.Container main={main} autoWidth={autoWidth} style={containerStyle}>
       {loading ? (
-        <div>
-          <s.Title>
-            <Skeleton width="150px" height="16px" />
-          </s.Title>
-          <s.Body>
-            <s.Money style={{ marginRight: "30px" }}>
-              <IconPER />{" "}
-              <span>
-                <Skeleton width="50px" height="16px" />
-              </span>
-            </s.Money>
-            <s.Money>
-              <IconUSA />{" "}
-              <span>
-                <Skeleton width="50px" height="16px" />
-              </span>
-            </s.Money>
-          </s.Body>
-          <s.Footer>
-            <Skeleton width="150px" height="16px" />
-          </s.Footer>
-        </div>
+        <>
+          {icon && (
+            <Skeleton
+              width="38px"
+              height="38px"
+              borderRadius={200}
+              style={{ marginRight: "12px" }}
+            />
+          )}
+          <div>
+            <s.Title>
+              <Skeleton width="150px" height="16px" />
+            </s.Title>
+            <s.Body>
+              <s.Money style={{ marginRight: "30px" }}>
+                <IconPER />{" "}
+                <span>
+                  <Skeleton width="50px" height="16px" />
+                </span>
+              </s.Money>
+              <s.Money>
+                <IconUSA />{" "}
+                <span>
+                  <Skeleton width="50px" height="16px" />
+                </span>
+              </s.Money>
+            </s.Body>
+            <s.Footer>
+              <Skeleton width="150px" height="16px" />
+            </s.Footer>
+          </div>
+        </>
       ) : (
         <>
           {quantity && (
@@ -59,6 +70,7 @@ export const KpiCard: React.FC<IKpiCard> = ({
               </s.Body>
             </s.QuantitySection>
           )}
+          {icon && <s.IconContainer>{icon}</s.IconContainer>}
           <div>
             <s.Title>{title || ""}</s.Title>
             <s.Body>
@@ -77,8 +89,12 @@ export const KpiCard: React.FC<IKpiCard> = ({
               {(tip_PEN && tip_PEN > 0) || (tip_USD && tip_USD > 0) ? (
                 <>
                   <span>Propina: </span>
-                  {tip_PEN && tip_PEN > 0 ? <span> {` S/${formatNumber(tip_PEN)}`}</span> : null}
-                  {tip_USD && tip_USD > 0 ? <span> {` $/${formatNumber(tip_USD)}`}</span> : null}
+                  {tip_PEN && tip_PEN > 0 ? (
+                    <span> {` S/${formatNumber(tip_PEN)}`}</span>
+                  ) : null}
+                  {tip_USD && tip_USD > 0 ? (
+                    <span> {` $/${formatNumber(tip_USD)}`}</span>
+                  ) : null}
                 </>
               ) : null}
             </s.Footer>
