@@ -1,3 +1,7 @@
+## [0.45.2](https://github.com/idbi/components/compare/v0.45.1...v0.45.2) (2023-11-20)
+
+
+
 ## [0.45.1](https://github.com/idbi/components/compare/v0.45.0...v0.45.1) (2023-11-06)
 
 
@@ -26,15 +30,6 @@
 
 
 ## [0.44.3](https://github.com/idbi/components/compare/v0.44.2...v0.44.3) (2023-09-26)
-
-
-
-## [0.44.2](https://github.com/idbi/components/compare/v0.44.1...v0.44.2) (2023-09-26)
-
-
-### Bug Fixes
-
-* minor fixes ([535160f](https://github.com/idbi/components/commit/535160f49964819455065223016291d667128207))
 
 
 

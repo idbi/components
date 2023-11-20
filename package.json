@@ -1,6 +1,6 @@
 {
   "name": "@idbi/components",
-  "version": "0.45.1",
+  "version": "0.45.2",
   "main": "dist/id-index.js",
   "module": "dist/id-index.js",
   "files": [
