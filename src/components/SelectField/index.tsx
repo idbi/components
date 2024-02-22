@@ -96,6 +96,7 @@ export const SelectField: React.FC<SelectFieldProps> = ({
       ) : (
         <Select
           placeholder={placeholder}
+          name="name"
           value={value || undefined}
           defaultValue={initialValue || firstSelectOption}
           options={selectOptions}
