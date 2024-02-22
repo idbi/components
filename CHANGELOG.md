@@ -1,3 +1,12 @@
+## [0.45.3](https://github.com/idbi/components/compare/v0.45.2...v0.45.3) (2024-02-22)
+
+
+### Bug Fixes
+
+* modal title and buttons ([bf6aa58](https://github.com/idbi/components/commit/bf6aa5827c3ab1f1816d9faa8e5597e75d89542a))
+
+
+
 ## [0.45.2](https://github.com/idbi/components/compare/v0.45.1...v0.45.2) (2023-11-20)
 
 
@@ -26,10 +35,6 @@
 ### Bug Fixes
 
 * fix icon component imports ([58cb70b](https://github.com/idbi/components/commit/58cb70b710f180fc8d6e801d29877aed554fd8a2))
-
-
-
-## [0.44.3](https://github.com/idbi/components/compare/v0.44.2...v0.44.3) (2023-09-26)
 
 
 
