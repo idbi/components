@@ -1,3 +1,12 @@
+## [0.45.7](https://github.com/idbi/components/compare/v0.45.6...v0.45.7) (2024-02-26)
+
+
+### Bug Fixes
+
+* remove empty lines ([bd384cc](https://github.com/idbi/components/commit/bd384cc540f320667eb09ebc472708f41ebea708))
+
+
+
 ## [0.45.6](https://github.com/idbi/components/compare/v0.45.4...v0.45.6) (2024-02-26)
 
 
@@ -29,10 +38,6 @@
 
 
 ## [0.45.2](https://github.com/idbi/components/compare/v0.45.1...v0.45.2) (2023-11-20)
-
-
-
-## [0.45.1](https://github.com/idbi/components/compare/v0.45.0...v0.45.1) (2023-11-06)
 
 
 
