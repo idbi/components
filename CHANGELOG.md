@@ -1,3 +1,14 @@
+## [0.45.5](https://github.com/idbi/components/compare/v0.45.4...v0.45.5) (2024-02-26)
+
+
+### Bug Fixes
+
+* github package deployment ([420e91e](https://github.com/idbi/components/commit/420e91e28a85e5d33cc6c3a66cb2e9ea6fc9a075))
+* permissions ([4c6beaf](https://github.com/idbi/components/commit/4c6beaf909af99e79a0e3fe9600d7010148cdd80))
+* token ([ac3b1f4](https://github.com/idbi/components/commit/ac3b1f4efdaa4c61ee48b3dfe5411833185bd634))
+
+
+
 ## [0.45.4](https://github.com/idbi/components/compare/v0.45.3...v0.45.4) (2024-02-22)
 
 
@@ -21,20 +32,6 @@
 
 
 ## [0.45.1](https://github.com/idbi/components/compare/v0.45.0...v0.45.1) (2023-11-06)
-
-
-
-# [0.45.0](https://github.com/idbi/components/compare/v0.44.4...v0.45.0) (2023-11-02)
-
-
-### Bug Fixes
-
-* remove type module from package.json ([ab7a625](https://github.com/idbi/components/commit/ab7a625b280036a94b8072be2d0a8802044f9d65))
-
-
-### Features
-
-* handle no total product details ([85c2dab](https://github.com/idbi/components/commit/85c2dabcfe955fe90cbb3ad98f48ff2a8c2b9c2b))
 
 
 
