@@ -4,7 +4,8 @@ import { useEffect } from "react";
 export default function useCodeInput(
   onChange: (code: string) => void,
   className: string,
-  value?: string
+  value?: string,
+  container?: string
 ) {
   const getCodeInputs = () => {
     const inputs = document.querySelectorAll("input");
@@ -18,8 +19,8 @@ export default function useCodeInput(
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Backspace") {
         setTimeout(() => {
-          const codeInputs = getCodeInputs();
           const currentInput = document.activeElement as HTMLInputElement;
+          const codeInputs = getCodeInputs();
           currentInput.value = "";
           const currentInputIndex = codeInputs.indexOf(currentInput);
           if (currentInputIndex > 0) {
@@ -30,8 +31,8 @@ export default function useCodeInput(
       }
     };
 
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
+    document.getElementById(container || 'root')?.addEventListener("keydown", handleKeyDown);
+    return () => document.getElementById(container || 'root')?.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   useEffect(() => {
@@ -39,10 +40,13 @@ export default function useCodeInput(
       if (e.key !== "Backspace") {
         const keyValue = e.key.toLowerCase();
         setTimeout(() => {
+          const currentInput = document.activeElement as HTMLInputElement;
           if (keyValue.length === 1) {
-            const codeInputs = getCodeInputs();
-            const currentInput = document.activeElement as HTMLInputElement;
             currentInput.value = keyValue;
+            if (!currentInput.value) {
+              return;
+            }
+            const codeInputs = getCodeInputs();
             const currentInputIndex = codeInputs.indexOf(currentInput);
             if (currentInputIndex < codeInputs.length - 1) {
               const nextInput = codeInputs[currentInputIndex + 1];
@@ -53,8 +57,8 @@ export default function useCodeInput(
       }
     };
 
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
+    document.getElementById(container || 'root')?.addEventListener("keydown", handleKeyDown);
+    return () => document.getElementById(container || 'root')?.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   useEffect(() => {
@@ -72,8 +76,8 @@ export default function useCodeInput(
         }
       };
 
-      document.addEventListener("keydown", handleKeyDown);
-      return () => document.removeEventListener("keydown", handleKeyDown);
+      document.getElementById(container || 'root')?.addEventListener("keydown", handleKeyDown);
+      return () => document.getElementById(container || 'root')?.removeEventListener("keydown", handleKeyDown);
     }
   }, []);
 

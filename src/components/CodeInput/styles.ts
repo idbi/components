@@ -8,7 +8,7 @@ export const InputsContainer = styled.div<
   grid-template-columns: repeat(${(props) => props.length}, 1fr);
   grid-gap: 22px;
   align-items: center;
-
+  /* Chrome, Safari, Edge, Opera */
   > input {
     text-align: center;
     width: 100%;
@@ -32,7 +32,6 @@ export const InputsContainer = styled.div<
     font: normal 16px "Poppins";
     letter-spacing: -0.04em;
     color: ${({ theme }) => theme.color.NEUTRAL[700]};
-
     transition: background 0.3s ease-out;
     transition: border 0.3s ease-out;
 
@@ -44,6 +43,14 @@ export const InputsContainer = styled.div<
 
     &:focus {
       border-color: ${({ theme }) => theme.color.QUATERNARY[900]};
+    }
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
   }
 `;

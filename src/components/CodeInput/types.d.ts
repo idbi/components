@@ -5,6 +5,7 @@ export interface ICodeInputProps extends IInputProps {
   errorMessage?: string;
   success?: boolean;
   onChange?: (e: string) => void;
+  type?: "text" | "number";
 }
 
 export declare const CodeInput: (props: ICodeInputProps) => JSX.Element;

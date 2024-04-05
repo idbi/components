@@ -3,7 +3,7 @@ import r from"styled-components";const i=r.div`
   grid-template-columns: repeat(${o=>o.length}, 1fr);
   grid-gap: 22px;
   align-items: center;
-
+  /* Chrome, Safari, Edge, Opera */
   > input {
     text-align: center;
     width: 100%;
@@ -19,7 +19,6 @@ import r from"styled-components";const i=r.div`
     font: normal 16px "Poppins";
     letter-spacing: -0.04em;
     color: ${({theme:o})=>o.color.NEUTRAL[700]};
-
     transition: background 0.3s ease-out;
     transition: border 0.3s ease-out;
 
@@ -32,10 +31,18 @@ import r from"styled-components";const i=r.div`
     &:focus {
       border-color: ${({theme:o})=>o.color.QUATERNARY[900]};
     }
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
-`,l=r.div`
+`,a=r.div`
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 10px;
-`;export{l as CodeInputContainer,i as InputsContainer};
+`;export{a as CodeInputContainer,i as InputsContainer};
