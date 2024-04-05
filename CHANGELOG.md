@@ -1,3 +1,12 @@
+# [0.46.0](https://github.com/idbi/components/compare/v0.45.7...v0.46.0) (2024-04-05)
+
+
+### Features
+
+* fix code input ([6b5eaa7](https://github.com/idbi/components/commit/6b5eaa7ed8cc396e0947b2e63b9712cfc8d67107))
+
+
+
 ## [0.45.7](https://github.com/idbi/components/compare/v0.45.6...v0.45.7) (2024-02-26)
 
 
@@ -34,10 +43,6 @@
 ### Bug Fixes
 
 * modal title and buttons ([bf6aa58](https://github.com/idbi/components/commit/bf6aa5827c3ab1f1816d9faa8e5597e75d89542a))
-
-
-
-## [0.45.2](https://github.com/idbi/components/compare/v0.45.1...v0.45.2) (2023-11-20)
 
 
 
