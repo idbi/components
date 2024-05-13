@@ -1,1 +1,1 @@
-const t="/assets/photo-item.605bb3af.svg";export{t as default};
+const t="/assets/photo-item.77d6552f.svg";export{t as default};

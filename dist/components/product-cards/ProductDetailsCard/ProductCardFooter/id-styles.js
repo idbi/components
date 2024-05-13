@@ -1,4 +1,4 @@
-import o from"styled-components";const i=o.div`
+import e from"styled-components";const i=e.div`
   padding-right: 5px;
   margin: ${({bottom:t})=>t?"0 10px 8px":0};
   display: flex;
@@ -12,7 +12,7 @@ import o from"styled-components";const i=o.div`
       font-weight: 700;
     }
   }
-`,r=o.div`
+`,r=e.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -21,12 +21,13 @@ import o from"styled-components";const i=o.div`
 
   & > span {
     :first-child {
-      color: ${({theme:t})=>t.color.NEUTRAL[500]};
+      color: #6c757d;
+      font-size: 12px;
       font-weight: 500;
       text-decoration: line-through;
     }
     :last-child {
-      color: ${({theme:t,disabled:e})=>e?t.color.NEUTRAL[500]:t.color.PRIMARY[900]};
+      color: ${({theme:t,disabled:o})=>o?t.color.NEUTRAL[500]:t.color.PRIMARY[900]};
       text-decoration: none;
       margin-left: 5px;
       > span {
@@ -34,11 +35,9 @@ import o from"styled-components";const i=o.div`
       }
     }
   }
-`,p=o.span`
-  background-color: ${({theme:t})=>t.color.SECONDARY[900]};
+`,a=e.span`
   border-radius: 50px;
-  padding: 5px 6px;
-  color: white;
-  font-size: 10px;
-  font-weight: 700;
-`;export{i as Footer,p as Patch,r as TotalPrices};
+  color: #24a159;
+  font-size: 12px;
+  font-weight: 600;
+`;export{i as Footer,a as Patch,r as TotalPrices};

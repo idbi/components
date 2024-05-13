@@ -25,7 +25,8 @@ export const TotalPrices = styled.div<{ disabled?: boolean }>`
 
   & > span {
     :first-child {
-      color: ${({ theme }) => theme.color.NEUTRAL[500]};
+      color: #6c757d;
+      font-size: 12px;
       font-weight: 500;
       text-decoration: line-through;
     }
@@ -42,10 +43,8 @@ export const TotalPrices = styled.div<{ disabled?: boolean }>`
 `;
 
 export const Patch = styled.span`
-  background-color: ${({ theme }) => theme.color.SECONDARY[900]};
   border-radius: 50px;
-  padding: 5px 6px;
-  color: white;
-  font-size: 10px;
-  font-weight: 700;
+  color: #24a159;
+  font-size: 12px;
+  font-weight: 600;
 `;
