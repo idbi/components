@@ -1,3 +1,12 @@
+# [0.47.0](https://github.com/idbi/components/compare/v0.46.0...v0.47.0) (2024-05-13)
+
+
+### Features
+
+* update discount styles in ProductDetailsCard ([1016db2](https://github.com/idbi/components/commit/1016db2f0d534c6c76ec48010a7f436c9e996c25))
+
+
+
 # [0.46.0](https://github.com/idbi/components/compare/v0.45.7...v0.46.0) (2024-04-05)
 
 
@@ -34,15 +43,6 @@
 ### Reverts
 
 * Revert "fix: modal title and buttons" ([c334a98](https://github.com/idbi/components/commit/c334a98f5148af8b3becb9a85badfc244663767a))
-
-
-
-## [0.45.3](https://github.com/idbi/components/compare/v0.45.2...v0.45.3) (2024-02-22)
-
-
-### Bug Fixes
-
-* modal title and buttons ([bf6aa58](https://github.com/idbi/components/commit/bf6aa5827c3ab1f1816d9faa8e5597e75d89542a))
 
 
 
