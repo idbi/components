@@ -15,6 +15,18 @@ export const Card = styled.div<{ disabled?: boolean; hasDetails?: boolean }>`
   gap: 5px;
   font-size: 14px;
   overflow: hidden;
+
+  ${({ onClick, theme, disabled }) =>
+    onClick &&
+    !disabled &&
+    css`
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+
+      :hover {
+        background-color: ${theme.color.NEUTRAL[50]};
+      }
+    `};
 `;
 
 export const MainContainer = styled.div`
