@@ -1,3 +1,12 @@
+# [0.48.0](https://github.com/idbi/components/compare/v0.47.0...v0.48.0) (2024-05-21)
+
+
+### Features
+
+* add exportation service tag & onClick in ProductDetailsCard ([829ce79](https://github.com/idbi/components/commit/829ce79a3a50d178807465002fc28049d86cb710))
+
+
+
 # [0.47.0](https://github.com/idbi/components/compare/v0.46.0...v0.47.0) (2024-05-13)
 
 
@@ -34,15 +43,6 @@
 * github package deployment ([420e91e](https://github.com/idbi/components/commit/420e91e28a85e5d33cc6c3a66cb2e9ea6fc9a075))
 * permissions ([4c6beaf](https://github.com/idbi/components/commit/4c6beaf909af99e79a0e3fe9600d7010148cdd80))
 * token ([ac3b1f4](https://github.com/idbi/components/commit/ac3b1f4efdaa4c61ee48b3dfe5411833185bd634))
-
-
-
-## [0.45.4](https://github.com/idbi/components/compare/v0.45.3...v0.45.4) (2024-02-22)
-
-
-### Reverts
-
-* Revert "fix: modal title and buttons" ([c334a98](https://github.com/idbi/components/commit/c334a98f5148af8b3becb9a85badfc244663767a))
 
 
 
