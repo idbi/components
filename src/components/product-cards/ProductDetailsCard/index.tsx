@@ -1,6 +1,6 @@
 import React from "react";
-import { ProductCardFooter } from "./ProductCardFooter";
 import { TransparentBadge } from "@/components/badges/TransparentBadge";
+import { ProductCardFooter } from "./ProductCardFooter";
 import { IProductDetailsCard } from "./types";
 import { getStatusText } from "./utils";
 import * as s from "./styles";
@@ -19,12 +19,14 @@ export const ProductDetailsCard = ({
   status,
   imgLabel,
   discountBottom = true,
+  isExportation = false,
+  onClick,
 }: IProductDetailsCard) => {
   const unit = measureUnit || "u.";
   const hasDetails = discountBottom ? !!(productDetails || discount) : !!productDetails;
 
   return (
-    <s.Card disabled={disabled} hasDetails={!!productDetails}>
+    <s.Card disabled={disabled} hasDetails={!!productDetails} onClick={onClick}>
       <s.MainContainer>
         {img?.src && (
           <s.ImgContainer>
@@ -43,13 +45,17 @@ export const ProductDetailsCard = ({
             {name}
           </s.Main>
 
-          {productDetails && <s.DetailsWrapper>{productDetails}</s.DetailsWrapper>}
+          {productDetails && (
+            <s.DetailsWrapper>{productDetails}</s.DetailsWrapper>
+          )}
           {!hasDetails && (
             <ProductCardFooter
               currencySymbol={currencySymbol}
               unitPrice={unitPrice}
               total={total}
               discount={discount}
+              bottom={false}
+              isExportation={isExportation}
               disabled={disabled}
             />
           )}
@@ -62,6 +68,7 @@ export const ProductDetailsCard = ({
           unitPrice={unitPrice}
           total={total}
           discount={discount}
+          isExportation={isExportation}
           disabled={disabled}
           bottom
         />

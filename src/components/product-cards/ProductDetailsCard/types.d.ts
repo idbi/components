@@ -14,6 +14,8 @@ export type IProductDetailsCard = Pick<
   status?: StatusType;
   imgLabel?: JSX.Element;
   discountBottom?: boolean;
+  isExportation?: boolean;
+  onClick?: () => void;
 };
 
 export declare const ProductDetailsCard: (props: IProductDetailsCard) => JSX.Element;

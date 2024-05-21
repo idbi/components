@@ -1,18 +1,11 @@
-import e from"styled-components";const i=e.div`
+import t from"styled-components";const o=t.div`
   padding-right: 5px;
-  margin: ${({bottom:t})=>t?"0 10px 8px":0};
+  margin: ${({bottom:e})=>e?"0 10px 8px":0};
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   font-weight: 500;
-
-  & > span {
-    flex-shrink: 0;
-    > span {
-      font-weight: 700;
-    }
-  }
-`,r=e.div`
+`,s=t.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -27,17 +20,43 @@ import e from"styled-components";const i=e.div`
       text-decoration: line-through;
     }
     :last-child {
-      color: ${({theme:t,disabled:o})=>o?t.color.NEUTRAL[500]:t.color.PRIMARY[900]};
+      color: ${({theme:e,disabled:n})=>n?e.color.NEUTRAL[500]:e.color.PRIMARY[900]};
       text-decoration: none;
       margin-left: 5px;
+      font-size: 14px;
       > span {
         font-weight: 700;
       }
     }
   }
-`,a=e.span`
+`,a=t.span`
   border-radius: 50px;
   color: #24a159;
   font-size: 12px;
   font-weight: 600;
-`;export{i as Footer,a as Patch,r as TotalPrices};
+`,l=t.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  & > span {
+    flex-shrink: 0;
+    > span {
+      font-weight: 700;
+    }
+  }
+`,p=t.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  width: 100%;
+  padding: 4px 0;
+  color: #cc688c;
+
+  & > span {
+    font-size: 12px;
+    font-weight: 500;
+  }
+`;export{l as Content,p as DetailTag,o as Footer,a as Patch,s as TotalPrices};
