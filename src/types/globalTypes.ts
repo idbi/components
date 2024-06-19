@@ -12,4 +12,5 @@ export type StatusType =
   | "prepared"
   | "collected"
   | "delivered"
-  | "canceled";
+  | "canceled"
+  | "wasted";

@@ -18,6 +18,7 @@ export const ProductDetailsCard = ({
   disabled,
   status,
   imgLabel,
+  reasonBottom,
   discountBottom = true,
   isExportation = false,
   onClick,
@@ -26,7 +27,12 @@ export const ProductDetailsCard = ({
   const hasDetails = discountBottom ? !!(productDetails || discount) : !!productDetails;
 
   return (
-    <s.Card disabled={disabled} hasDetails={!!productDetails} onClick={onClick}>
+    <s.Card
+      disabled={disabled}
+      hasDetails={!!productDetails}
+      hasBottomReason={!!reasonBottom}
+      onClick={onClick}
+    >
       <s.MainContainer>
         {img?.src && (
           <s.ImgContainer>
@@ -39,7 +45,7 @@ export const ProductDetailsCard = ({
             )}
           </s.ImgContainer>
         )}
-        <s.ProductData hasDetails={!!hasDetails}>
+        <s.ProductData>
           <s.Main disabled={disabled}>
             <TransparentBadge opacity={0.4}>{quantity}</TransparentBadge>
             {name}
@@ -48,7 +54,7 @@ export const ProductDetailsCard = ({
           {productDetails && (
             <s.DetailsWrapper>{productDetails}</s.DetailsWrapper>
           )}
-          {!hasDetails && (
+          {(!hasDetails || !!reasonBottom) && (
             <ProductCardFooter
               currencySymbol={currencySymbol}
               unitPrice={unitPrice}
@@ -62,7 +68,7 @@ export const ProductDetailsCard = ({
         </s.ProductData>
       </s.MainContainer>
 
-      {hasDetails && (
+      {hasDetails && !reasonBottom && (
         <ProductCardFooter
           currencySymbol={currencySymbol}
           unitPrice={unitPrice}
@@ -73,6 +79,7 @@ export const ProductDetailsCard = ({
           bottom
         />
       )}
+      {reasonBottom && <s.ReasonContainer>{reasonBottom}</s.ReasonContainer>}
     </s.Card>
   );
 };

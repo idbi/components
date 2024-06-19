@@ -1,28 +1,27 @@
-import l,{css as r}from"styled-components";const n=l.div`
-  background-color: ${({theme:o,disabled:c})=>c?o.color.NEUTRAL[50]:"white"};
+import c,{css as r}from"styled-components";const e=c.div`
+  background-color: ${({theme:o,disabled:l})=>l?o.color.NEUTRAL[50]:"white"};
   border: 1px solid ${({theme:o})=>o.color.NEUTRAL[100]};
   border-radius: 8px;
   min-height: ${({hasDetails:o})=>o?"140px":"unset"};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 10px;
-  gap: 5px;
+  gap: ${({hasBottomReason:o})=>o?"0":"5px"};
   font-size: 14px;
   overflow: hidden;
 
-  ${({onClick:o,theme:c,disabled:i})=>o&&!i&&r`
+  ${({onClick:o,theme:l,disabled:i})=>o&&!i&&r`
       transition: background-color 0.2s ease;
       cursor: pointer;
 
       :hover {
-        background-color: ${c.color.NEUTRAL[50]};
+        background-color: ${l.color.NEUTRAL[50]};
       }
     `};
-`,t=l.div`
+`,t=c.div`
   display: flex;
   align-items: stretch;
-`,a=l.div`
+`,a=c.div`
   width: 75px;
   height: 88px;
   display: flex;
@@ -44,7 +43,7 @@ import l,{css as r}from"styled-components";const n=l.div`
       object-fit: cover;
     }
   }
-`,d=l.div`
+`,d=c.div`
   min-height: 24px;
   width: 100%;
   background-color: ${({theme:o})=>o.color.QUATERNARY[100]};
@@ -55,7 +54,7 @@ import l,{css as r}from"styled-components";const n=l.div`
   font-size: 12px;
   flex-shrink: 0;
 
-  ${({theme:o,status:c})=>{switch(c){case"draft":return r`
+  ${({theme:o,status:l})=>{switch(l){case"draft":return r`
           background-color: ${o.color.NEUTRAL[100]};
           color: ${o.color.NEUTRAL[500]};
         `;case"pending":return r`
@@ -76,22 +75,36 @@ import l,{css as r}from"styled-components";const n=l.div`
         `;case"canceled":return r`
           background-color: ${o.color.ALERT[100]};
           color: ${o.color.ALERT[900]};
+        `;case"wasted":return r`
+          background-color: ${o.color.NEUTRAL[100]};
+          color: ${o.color.NEUTRAL[700]};
+          text-align: center;
+          line-height: 14px;
         `}}}
-`,s=l.div`
+`,s=c.div`
   padding: 8px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: ${({hasDetails:o})=>o?"flex-start":"space-between"};
+  justify-content: space-between;
   gap: 5px;
-`,p=l.div`
-  color: ${({theme:o,disabled:c})=>c?o.color.NEUTRAL[500]:o.color.NEUTRAL[800]};
+`,p=c.div`
+  color: ${({theme:o,disabled:l})=>l?o.color.NEUTRAL[500]:o.color.NEUTRAL[800]};
   display: flex;
   align-items: flex-start;
   gap: 5px;
   font-weight: 500;
-`,f=l.div`
+`,x=c.div`
   color: ${({theme:o})=>o.color.NEUTRAL[500]};
   margin-top: 8px;
   font-size: 12px;
-`;export{n as Card,f as DetailsWrapper,a as ImgContainer,d as ImgLabel,p as Main,t as MainContainer,s as ProductData};
+`,g=c.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: ${({theme:o})=>o.color.QUATERNARY[50]};
+  border-top: 1px solid ${({theme:o})=>o.color.NEUTRAL[100]};
+  color: ${({theme:o})=>o.color.NEUTRAL[600]};
+`;export{e as Card,x as DetailsWrapper,a as ImgContainer,d as ImgLabel,p as Main,t as MainContainer,s as ProductData,g as ReasonContainer};
