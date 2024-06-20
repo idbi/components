@@ -18,6 +18,8 @@ export const getStatusText = (status: StatusType) => {
       return "Entregado";
     case "canceled":
       return "Anulado";
+    case "wasted":
+      return "Dado de baja";
     default:
       return "";
   }

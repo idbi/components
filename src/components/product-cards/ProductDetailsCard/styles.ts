@@ -2,7 +2,11 @@
 import styled, { css } from "styled-components";
 import { StatusType } from "../../../types/globalTypes";
 
-export const Card = styled.div<{ disabled?: boolean; hasDetails?: boolean }>`
+export const Card = styled.div<{
+  disabled?: boolean;
+  hasDetails?: boolean;
+  hasBottomReason?: boolean;
+}>`
   background-color: ${({ theme, disabled }) =>
     disabled ? theme.color.NEUTRAL[50] : "white"};
   border: 1px solid ${({ theme }) => theme.color.NEUTRAL[100]};
@@ -11,8 +15,7 @@ export const Card = styled.div<{ disabled?: boolean; hasDetails?: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 10px;
-  gap: 5px;
+  gap: ${({ hasBottomReason }) => (hasBottomReason ? "0" : "5px")};
   font-size: 14px;
   overflow: hidden;
 
@@ -106,17 +109,23 @@ export const ImgLabel = styled.div<{ status?: StatusType }>`
           background-color: ${theme.color.ALERT[100]};
           color: ${theme.color.ALERT[900]};
         `;
+      case "wasted":
+        return css`
+          background-color: ${theme.color.NEUTRAL[100]};
+          color: ${theme.color.NEUTRAL[700]};
+          text-align: center;
+          line-height: 14px;
+        `;
     }
   }}
 `;
 
-export const ProductData = styled.div<{ hasDetails?: boolean }>`
+export const ProductData = styled.div`
   padding: 8px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: ${({ hasDetails }) =>
-    hasDetails ? "flex-start" : "space-between"};
+  justify-content: space-between;
   gap: 5px;
 `;
 
@@ -133,4 +142,15 @@ export const DetailsWrapper = styled.div`
   color: ${({ theme }) => theme.color.NEUTRAL[500]};
   margin-top: 8px;
   font-size: 12px;
+`;
+
+export const ReasonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: ${({ theme }) => theme.color.QUATERNARY[50]};
+  border-top: 1px solid ${({ theme }) => theme.color.NEUTRAL[100]};
+  color: ${({ theme }) => theme.color.NEUTRAL[600]};
 `;

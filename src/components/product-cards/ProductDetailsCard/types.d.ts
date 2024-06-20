@@ -16,6 +16,7 @@ export type IProductDetailsCard = Pick<
   discountBottom?: boolean;
   isExportation?: boolean;
   onClick?: () => void;
+  reasonBottom?: JSX.Element | string;
 };
 
 export declare const ProductDetailsCard: (props: IProductDetailsCard) => JSX.Element;
