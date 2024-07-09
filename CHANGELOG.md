@@ -1,3 +1,12 @@
+# [0.50.0](https://github.com/idbi/components/compare/v0.49.0...v0.50.0) (2024-07-09)
+
+
+### Features
+
+* move zindex variable to CardProducv2 ([6d2b7fa](https://github.com/idbi/components/commit/6d2b7faf88d93cc174359cb3c04649174b33604f))
+
+
+
 # [0.49.0](https://github.com/idbi/components/compare/v0.48.0...v0.49.0) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * fix code input ([6b5eaa7](https://github.com/idbi/components/commit/6b5eaa7ed8cc396e0947b2e63b9712cfc8d67107))
-
-
-
-## [0.45.7](https://github.com/idbi/components/compare/v0.45.6...v0.45.7) (2024-02-26)
-
-
-### Bug Fixes
-
-* remove empty lines ([bd384cc](https://github.com/idbi/components/commit/bd384cc540f320667eb09ebc472708f41ebea708))
 
 
 
