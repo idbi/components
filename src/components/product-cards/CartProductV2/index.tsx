@@ -20,6 +20,7 @@ export const CartProductV2 = ({
   dishNumber,
   onChangeDishNumber,
   measureUnit,
+  zIndex,
 }: ICartProductV2) => {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -80,6 +81,7 @@ export const CartProductV2 = ({
               renderModal={renderModal}
               onlyIntegers={onlyIntegers}
               measureUnit={measureUnit ?? "u."}
+              zIndex={zIndex}
             />
           </s.Footer>
         </s.ProductInformation>

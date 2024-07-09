@@ -21,6 +21,7 @@ export interface ICartProductV2 {
   onChangeDishNumber?: (value: number) => void;
   renderModal?: (modal: JSX.Element) => JSX.Element;
   measureUnit?: string;
+  zIndex?: number;
 }
 
 export declare const CartProductV2: (props: ICartProductV2) => JSX.Element;
